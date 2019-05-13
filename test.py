@@ -31,6 +31,11 @@ def test() :
     for j in script.listOfMethodOptions :
         print (j)
     print("")
+
+    print("List of Init Options : ")
+    for k in script.listOfInitOptions :
+        print (k)
+    print("")
     
     script.PyLoadGXLGraph('include/gedlib-master/data/datasets/Mutagenicity/data/', 'collections/MUTA_10.xml')
     listID = script.PyGetGraphIds()

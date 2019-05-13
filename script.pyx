@@ -19,6 +19,7 @@ ctypedef np.npy_uint32 UINT32_t
 cdef extern from "src/essai.h" :
     cdef vector[string] getEditCostStringOptions()
     cdef vector[string] getMethodStringOptions()
+    cdef vector[string] getInitStringOptions()
     cdef bool isInitialized()
     cdef int appelle()
     cdef void restartEnv()
@@ -28,7 +29,7 @@ cdef extern from "src/essai.h" :
     cdef string getGraphName(size_t id)
     cdef size_t addGraph(string name, string classe)
     cdef void setEditCost(string editCost)
-    cdef void initEnv()
+    cdef void initEnv(string initOption)
     cdef void setMethod(string method, string options)
     cdef void initMethod()
     cdef double getInitime()
@@ -56,6 +57,9 @@ def PyGetEditCostOptions() :
 def PyGetMethodOptions() :
     return getMethodStringOptions()
 
+def PyGetInitOptions() :
+    return getInitStringOptions()
+
 def PyRestartEnv() :
     restartEnv()
 
@@ -81,8 +85,9 @@ def PySetEditCost(editCost) :
     else :
         raise EditCostError("This edit cost function doesn't exist, please see listOfEditCostOptions for selecting a edit cost function")
 
-def PyInitEnv() :
-    initEnv()
+def PyInitEnv(initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :
+    initB = initOption.encode('utf-8')
+    initEnv(initB)
 
 def PySetMethod(method, options) :
     methodB = method.encode('utf-8')
@@ -121,6 +126,7 @@ def PyQuasimetricCost() :
 
 listOfEditCostOptions = PyGetEditCostOptions()
 listOfMethodOptions = PyGetMethodOptions()
+listOfInitOptions = PyGetInitOptions()
 
 
 ########################

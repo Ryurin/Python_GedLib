@@ -8,6 +8,7 @@
 
 std::vector<std::string> getEditCostStringOptions();
 std::vector<std::string> getMethodStringOptions();
+std::vector<std::string> getInitStringOptions();
 
 bool isInitialized();
 
@@ -24,7 +25,8 @@ std::size_t addGraph(std::string name, std::string classe);
 
 void setEditCost(std::string editCost);
 
-void initEnv();
+/*void initEnv();*/
+void initEnv(std::string initOption);
 
 void setMethod(std::string method, std::string options);
 void initMethod();

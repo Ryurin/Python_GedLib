@@ -97,6 +97,24 @@ std::map<std::string, ged::Options::GEDMethod> methodOptions = {
 	{"STAR"	, ged::Options::GEDMethod::STAR},	
 };
 
+std::vector<std::string> initStringOptions = { 
+	"LAZY_WITHOUT_SHUFFLED_COPIES", 
+	"EAGER_WITHOUT_SHUFFLED_COPIES", 
+	"LAZY_WITH_SHUFFLED_COPIES", 
+	"EAGER_WITH_SHUFFLED_COPIES"
+};
+
+std::vector<std::string> getInitStringOptions(){
+	return initStringOptions;
+}
+ 
+std::map<std::string, ged::Options::InitType> initOptions = {
+	{"LAZY_WITHOUT_SHUFFLED_COPIES", ged::Options::InitType::LAZY_WITHOUT_SHUFFLED_COPIES},
+	{"EAGER_WITHOUT_SHUFFLED_COPIES", ged::Options::InitType::EAGER_WITHOUT_SHUFFLED_COPIES},
+	{"LAZY_WITH_SHUFFLED_COPIES", ged::Options::InitType::LAZY_WITH_SHUFFLED_COPIES},
+	{"EAGER_WITH_SHUFFLED_COPIES", ged::Options::InitType::EAGER_WITH_SHUFFLED_COPIES}
+};
+
 void loadGXLGraph(std::string pathFolder, std::string pathXML){
 	 std::vector<ged::GEDGraph::GraphID> tmp_graph_ids(env.load_gxl_graphs(pathFolder, pathXML));
 }
@@ -122,6 +140,21 @@ std::size_t addGraph(std::string name, std::string classe){
 	return std::stoi(std::to_string(newId));
 }
 
+//void add_node(GEDGraph::GraphID graph_id, const UserNodeID & node_id, const UserNodeLabel & node_label);
+//void add_edge(GEDGraph::GraphID graph_id, const UserNodeID & tail, const UserNodeID & head, const UserEdgeLabel & edge_label, bool ignore_duplicates = true);
+
+void addNode(std::size_t graphId, ged::GXLNodeID nodeId, ged::GXLLabel nodeLabel){
+	env.add_node(graphId, nodeId, nodeLabel);
+}
+
+/*void addEdge(std::size_t graphId, ged::GXLNodeID tail, ged::GXLNodeID head, ged::GXLLabel edgeLabel){
+	env.add_edge(graphId, tail, head, edgeLabel);
+}*/
+
+void addEdge(std::size_t graphId, ged::GXLNodeID tail, ged::GXLNodeID head, ged::GXLLabel edgeLabel, bool ignoreDuplicates){
+	env.add_edge(graphId, tail, head, edgeLabel, ignoreDuplicates);
+}
+
 void restartEnv(){
 	env = ged::GEDEnv<ged::GXLNodeID, ged::GXLLabel, ged::GXLLabel>();
 	initialized = false;
@@ -140,8 +173,22 @@ void setEditCost(std::string editCost){
 	env.set_edit_costs(translateEditCost(editCost));
 }
 
-void initEnv(){
+/*void initEnv(){
 	env.init();
+	initialized = true;
+}*/
+
+ged::Options::InitType translateInitOptions(std::string initOption){
+	 for (int i = 0; i != initStringOptions.size(); i++){
+		 if (initStringOptions[i] == initOption){
+			 return initOptions[initStringOptions[i]];
+		 } 
+	 }
+	 return ged::Options::InitType::EAGER_WITHOUT_SHUFFLED_COPIES;
+}
+
+void initEnv(std::string initOption){
+	env.init(translateInitOptions(initOption));
 	initialized = true;
 }
 
