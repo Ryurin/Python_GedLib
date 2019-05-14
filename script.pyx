@@ -6,6 +6,7 @@
 
 from libcpp.vector cimport vector
 from libcpp.string cimport string
+from libcpp.map cimport map
 from libcpp cimport bool
 
 import ctypes
@@ -28,6 +29,8 @@ cdef extern from "src/essai.h" :
     cdef string getGraphClass(size_t id)
     cdef string getGraphName(size_t id)
     cdef size_t addGraph(string name, string classe)
+    cdef void addNode(size_t graphId, string nodeId, map[string,string] nodeLabel)
+    cdef void addEdge(size_t graphId, string tail, string head, map[string,string] edgeLabel, bool ignoreDuplicates)
     cdef void setEditCost(string editCost)
     cdef void initEnv(string initOption)
     cdef void setMethod(string method, string options)
@@ -36,6 +39,8 @@ cdef extern from "src/essai.h" :
     cdef void runMethod(size_t g, size_t h)
     cdef double getUpperBound(size_t g, size_t h)
     cdef double getLowerBound(size_t g, size_t h)
+    cdef vector[np.npy_uint64] getForwardMap(size_t g, size_t h)
+    cdef vector[np.npy_uint64] getBackwardMap(size_t g, size_t h)
     cdef vector[vector[np.npy_uint64]] getAllMap(size_t g, size_t h)
     cdef double getRuntime(size_t g, size_t h)
     cdef bool quasimetricCosts()
@@ -78,6 +83,12 @@ def PyGetGraphName(id) :
 def PyAddGraph(name, classe) :
     return addGraph(name,classe)
 
+def PyAddNode(graphID, nodeID, nodeLabel):
+    addNode(graphID, nodeID, nodeLabel)
+
+def PyAddEdge(graphID, tail, head, edgeLabel, ignoreDuplicates = True) :
+    addEdge(graphID, tail, head, edgeLabel, ignoreDuplicates)
+
 def PySetEditCost(editCost) :
     editCostB = editCost.encode('utf-8')
     if editCostB in listOfEditCostOptions : 
@@ -87,7 +98,10 @@ def PySetEditCost(editCost) :
 
 def PyInitEnv(initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :
     initB = initOption.encode('utf-8')
-    initEnv(initB)
+    if initB in listOfInitOptions : 
+        initEnv(initB)
+    else :
+        raise InitError("This init option doesn't exist, please see listOfInitOptions for selecting an option. You can choose any options.")
 
 def PySetMethod(method, options) :
     methodB = method.encode('utf-8')
@@ -110,6 +124,12 @@ def PyGetUpperBound(g,h) :
 
 def PyGetLowerBound(g,h) :
     return getLowerBound(g,h)
+
+def PyGetForwardMap(g,h) :
+    return getForwardMap(g,h)
+
+def PyGetBackwardMap(g,h) :
+    return getBackwardMap(g,h)
 
 def PyGetAllMap(g,h) :
     return getAllMap(g,h)
@@ -144,13 +164,17 @@ class MethodError(Error) :
     def __init__(self, message):
         self.message = message
 
+class InitError(Error) :
+    def __init__(self, message):
+        self.message = message
+
 
 ##############################
 ##FONCTIONS PYTHON DE CALCUL##
 ##############################
 
     
-def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, options) :
+def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, options, initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :
 
     PyRestartEnv()
     
@@ -159,7 +183,7 @@ def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, option
     print("Number of graphs = " + str(len(listID)))
 
     PySetEditCost(editCost)
-    PyInitEnv()
+    PyInitEnv(initOption)
     
     PySetMethod(method, options)
     PyInitMethod()

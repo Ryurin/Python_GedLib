@@ -57,7 +57,7 @@ def test() :
 
     script.PyRunMethod(g,h)
     liste = script.PyGetAllMap(g,h)
-    print("Forward map : " ,liste[0], ", Backward map : ", liste[1])
+    print("Forward map : " ,script.PyGetForwardMap(g,h), ", Backward map : ", script.PyGetBackwardMap(g,h))
     print ("Upper Bound = " + str(script.PyGetUpperBound(g,h)) + ", Lower Bound = " + str(script.PyGetLowerBound(g,h)) + ", Runtime = " + str(script.PyGetRuntime(g,h)))
 
 

@@ -164,9 +164,9 @@ public:
 	 */
 	bool operator==(const NodeMap & node_map) const;
 	
-	std::vector<GEDGraph::NodeID> get_forward_map();
+	std::vector<GEDGraph::NodeID> get_forward_map() const;
 	
-	std::vector<GEDGraph::NodeID> get_backward_map();
+	std::vector<GEDGraph::NodeID> get_backward_map() const;
 
 private:
 

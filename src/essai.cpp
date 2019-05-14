@@ -143,7 +143,10 @@ std::size_t addGraph(std::string name, std::string classe){
 //void add_node(GEDGraph::GraphID graph_id, const UserNodeID & node_id, const UserNodeLabel & node_label);
 //void add_edge(GEDGraph::GraphID graph_id, const UserNodeID & tail, const UserNodeID & head, const UserEdgeLabel & edge_label, bool ignore_duplicates = true);
 
-void addNode(std::size_t graphId, ged::GXLNodeID nodeId, ged::GXLLabel nodeLabel){
+//typedef std::map<std::string, std::string> GXLLabel;
+//typedef std::string GXLNodeID;
+
+void addNode(std::size_t graphId, std::string nodeId, std::map<std::string, std::string> nodeLabel){
 	env.add_node(graphId, nodeId, nodeLabel);
 }
 
@@ -151,7 +154,7 @@ void addNode(std::size_t graphId, ged::GXLNodeID nodeId, ged::GXLLabel nodeLabel
 	env.add_edge(graphId, tail, head, edgeLabel);
 }*/
 
-void addEdge(std::size_t graphId, ged::GXLNodeID tail, ged::GXLNodeID head, ged::GXLLabel edgeLabel, bool ignoreDuplicates){
+void addEdge(std::size_t graphId, std::string tail, std::string head, std::map<std::string, std::string> edgeLabel, bool ignoreDuplicates){
 	env.add_edge(graphId, tail, head, edgeLabel, ignoreDuplicates);
 }
 
@@ -173,10 +176,10 @@ void setEditCost(std::string editCost){
 	env.set_edit_costs(translateEditCost(editCost));
 }
 
-/*void initEnv(){
+void initEnv(){
 	env.init();
 	initialized = true;
-}*/
+}
 
 ged::Options::InitType translateInitOptions(std::string initOption){
 	 for (int i = 0; i != initStringOptions.size(); i++){
@@ -225,21 +228,18 @@ double getLowerBound(std::size_t g, std::size_t h){
 	return env.get_lower_bound(g, h);
 }
 
-/*std::vector<long unsigned int> getForwardMap(int g, int h){
+std::vector<long unsigned int> getForwardMap(std::size_t g, std::size_t h){
 	return env.get_node_map(g,h).get_forward_map(); 
 }
 
-std::vector<long unsigned int> getBackwardMap(int g, int h){
+std::vector<long unsigned int> getBackwardMap(std::size_t g, std::size_t h){
 	return env.get_node_map(g,h).get_backward_map(); 
-}*/
+}
 
 std::vector<std::vector<unsigned long int>> getAllMap(std::size_t g, std::size_t h){
-	ged::NodeMap pika = env.get_node_map(g,h);
-	std::vector<unsigned long int> rondou = pika.get_forward_map(); 
-	std::vector<unsigned long int> grodou = pika.get_backward_map(); 
 	std::vector<std::vector<unsigned long int>> res; 
-	res.push_back(rondou);
-	res.push_back(grodou); 
+	res.push_back(getForwardMap(g, h));
+	res.push_back(getBackwardMap(g,h)); 
 	return res;
 }
 
