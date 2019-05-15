@@ -8,6 +8,8 @@ from libcpp.vector cimport vector
 from libcpp.string cimport string
 from libcpp.map cimport map
 from libcpp cimport bool
+from libcpp.pair cimport pair
+from libcpp.list cimport list
 
 import ctypes
 ctypes.c_ulong
@@ -31,6 +33,14 @@ cdef extern from "src/essai.h" :
     cdef size_t addGraph(string name, string classe)
     cdef void addNode(size_t graphId, string nodeId, map[string,string] nodeLabel)
     cdef void addEdge(size_t graphId, string tail, string head, map[string,string] edgeLabel, bool ignoreDuplicates)
+    cdef void clearGraph(size_t graphId)
+    cdef size_t getGraphInternalId(size_t graphId)
+    cdef size_t getGraphNumNodes(size_t graphId)
+    cdef size_t getGraphNumEdges(size_t graphId)
+    cdef vector[string] getGraphOriginalNodeIds(size_t graphId)
+    cdef vector[map[string, string]] getGraphNodeLabels(size_t graphId)
+    cdef vector[pair[pair[size_t,size_t], map[string, string]]] getGraphEdges(size_t graphId)
+    cdef vector[list[pair[size_t, map[string, string]]]] getGraphAdjacenceList(size_t graphId)
     cdef void setEditCost(string editCost)
     cdef void initEnv(string initOption)
     cdef void setMethod(string method, string options)
@@ -88,6 +98,30 @@ def PyAddNode(graphID, nodeID, nodeLabel):
 
 def PyAddEdge(graphID, tail, head, edgeLabel, ignoreDuplicates = True) :
     addEdge(graphID, tail, head, edgeLabel, ignoreDuplicates)
+
+def PyClearGraph(graphID) :
+    clearGraph(graphID)
+
+def PyGetGraphInternalId(graphID) :
+    return getGraphInternalId(graphID)
+
+def PyGetGraphNumNodes(graphID) :
+    return getGraphNumNodes(graphID)
+
+def PyGetGraphNumEdges(graphID) :
+    return getGraphNumEdges(graphID)
+
+def PyGetOriginalNodeIds(graphID) :
+    return getGraphOriginalNodeIds(graphID)
+
+def PyGetGraphNodeLabels(graphID) :
+    return getGraphNodeLabels(graphID)
+
+def PyGetGraphEdges(graphID) :
+    return getGraphEdges(graphID)
+
+def PyGetGraphAdjacenceList(graphID) :
+    return getGraphAdjacenceList(graphID)
 
 def PySetEditCost(editCost) :
     editCostB = editCost.encode('utf-8')
@@ -192,7 +226,7 @@ def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, option
     for g in listID :
         for h in listID :
             PyRunMethod(g,h)
-            res.append((PyGetUpperBound(g,h), PyGetRuntime(g,h)))
+            res.append((PyGetUpperBound(g,h), PyGetForwardMap(g,h), PyGetBackwardMap(g,h), PyGetRuntime(g,h)))
             
     return res
 

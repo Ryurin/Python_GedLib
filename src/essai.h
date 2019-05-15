@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <list>
 
 //On suppose que les GraphID sont des int
 //Les différents enums seront des string de la méthode, transmise par le Python
@@ -25,6 +26,15 @@ std::string getGraphName(std::size_t id);
 std::size_t addGraph(std::string name, std::string classe);
 void addNode(std::size_t graphId, std::string nodeId, std::map<std::string, std::string> nodeLabel);
 void addEdge(std::size_t graphId, std::string tail, std::string head, std::map<std::string, std::string> edgeLabel, bool ignoreDuplicates = true);
+void clearGraph(std::size_t graphId);
+
+std::size_t getGraphInternalId(std::size_t graphId);
+std::size_t getGraphNumNodes(std::size_t graphId);
+std::size_t getGraphNumEdges(std::size_t graphId);
+std::vector<std::string> getGraphOriginalNodeIds(std::size_t graphId);
+std::vector<std::map<std::string, std::string>> getGraphNodeLabels(std::size_t graphId);
+std::vector<std::pair<std::pair<std::size_t, std::size_t>, std::map<std::string, std::string>>> getGraphEdges(std::size_t graphId);
+std::vector<std::list<std::pair<std::size_t, std::map<std::string, std::string>>>> getGraphAdjacenceList(std::size_t graphId);
 
 void setEditCost(std::string editCost);
 

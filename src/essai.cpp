@@ -8,6 +8,8 @@ using namespace std;
 ged::GEDEnv<ged::GXLNodeID, ged::GXLLabel, ged::GXLLabel> env;
 //ged::GEDEnv<int, double, double> env2;
 
+//template<class UserNodeID, class UserNodeLabel, class UserEdgeLabel> struct ExchangeGraph
+
 //typedef std::map<std::string, std::string> GXLLabel;
 //typedef std::string GXLNodeID;
 
@@ -115,6 +117,11 @@ std::map<std::string, ged::Options::InitType> initOptions = {
 	{"EAGER_WITH_SHUFFLED_COPIES", ged::Options::InitType::EAGER_WITH_SHUFFLED_COPIES}
 };
 
+void restartEnv(){
+	env = ged::GEDEnv<ged::GXLNodeID, ged::GXLLabel, ged::GXLLabel>();
+	initialized = false;
+}
+
 void loadGXLGraph(std::string pathFolder, std::string pathXML){
 	 std::vector<ged::GEDGraph::GraphID> tmp_graph_ids(env.load_gxl_graphs(pathFolder, pathXML));
 }
@@ -158,9 +165,40 @@ void addEdge(std::size_t graphId, std::string tail, std::string head, std::map<s
 	env.add_edge(graphId, tail, head, edgeLabel, ignoreDuplicates);
 }
 
-void restartEnv(){
-	env = ged::GEDEnv<ged::GXLNodeID, ged::GXLLabel, ged::GXLLabel>();
-	initialized = false;
+void clearGraph(std::size_t graphId){
+	env.clear_graph(graphId);
+}
+
+ged::ExchangeGraph<ged::GXLNodeID, ged::GXLLabel, ged::GXLLabel> getGraph(std::size_t graphId){
+	return env.get_graph(graphId);
+}
+
+std::size_t getGraphInternalId(std::size_t graphId){
+	return getGraph(graphId).id;
+}
+
+std::size_t getGraphNumNodes(std::size_t graphId){
+	return getGraph(graphId).num_nodes;
+}
+
+std::size_t getGraphNumEdges(std::size_t graphId){
+	return getGraph(graphId).num_edges;
+}
+
+std::vector<std::string> getGraphOriginalNodeIds(std::size_t graphId){
+	return getGraph(graphId).original_node_ids;
+}
+
+std::vector<std::map<std::string, std::string>> getGraphNodeLabels(std::size_t graphId){
+	return getGraph(graphId).node_labels;
+}
+
+std::vector<std::pair<std::pair<std::size_t, std::size_t>, std::map<std::string, std::string>>> getGraphEdges(std::size_t graphId){
+	return getGraph(graphId).edges;
+}
+
+std::vector<std::list<std::pair<std::size_t, std::map<std::string, std::string>>>> getGraphAdjacenceList(std::size_t graphId){
+	return getGraph(graphId).adj_list;
 }
 
 ged::Options::EditCosts translateEditCost(std::string editCost){

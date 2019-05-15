@@ -211,6 +211,15 @@ induced_cost() const {
 	return induced_cost_;
 }
 
+std::vector<GEDGraph::NodeID> NodeMap::get_forward_map() const{
+	return forward_map_;
+}
+	
+std::vector<GEDGraph::NodeID> NodeMap::get_backward_map() const{
+	return backward_map_;
+}
+
+
 bool
 NodeMap::
 operator<(const NodeMap & rhs) const {
@@ -222,15 +231,6 @@ NodeMap::
 operator==(const NodeMap & node_map) const {
 	return ((forward_map_ == node_map.forward_map_) and (backward_map_ == node_map.backward_map_));
 }
-
-std::vector<GEDGraph::NodeID> NodeMap::get_forward_map() const{
-	return forward_map_;
-}
-	
-std::vector<GEDGraph::NodeID> NodeMap::get_backward_map() const{
-	return backward_map_;
-}
-
 
 std::ostream & operator<<(std::ostream & os, const NodeMap & node_map) {
 	std::vector<NodeMap::Assignment> relation;
