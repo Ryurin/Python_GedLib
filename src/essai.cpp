@@ -144,6 +144,7 @@ std::string getGraphName(std::size_t id){
 
 std::size_t addGraph(std::string name, std::string classe){
 	ged::GEDGraph::GraphID newId = env.add_graph(name, classe); 
+	initialized = false;
 	return std::stoi(std::to_string(newId));
 }
 
@@ -155,6 +156,7 @@ std::size_t addGraph(std::string name, std::string classe){
 
 void addNode(std::size_t graphId, std::string nodeId, std::map<std::string, std::string> nodeLabel){
 	env.add_node(graphId, nodeId, nodeLabel);
+	initialized = false;
 }
 
 /*void addEdge(std::size_t graphId, ged::GXLNodeID tail, ged::GXLNodeID head, ged::GXLLabel edgeLabel){
@@ -163,10 +165,12 @@ void addNode(std::size_t graphId, std::string nodeId, std::map<std::string, std:
 
 void addEdge(std::size_t graphId, std::string tail, std::string head, std::map<std::string, std::string> edgeLabel, bool ignoreDuplicates){
 	env.add_edge(graphId, tail, head, edgeLabel, ignoreDuplicates);
+	initialized = false;
 }
 
 void clearGraph(std::size_t graphId){
 	env.clear_graph(graphId);
+	initialized = false;
 }
 
 ged::ExchangeGraph<ged::GXLNodeID, ged::GXLLabel, ged::GXLLabel> getGraph(std::size_t graphId){

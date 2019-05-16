@@ -1,9 +1,15 @@
 # distutils: language = c++
 
+"""
+    This module allow to use a C++ library for edit distance between graphs (GedLib) with Python
+"""
+
 ################################
-##DEFINITION DES FONCTIONS C++##
+##DEFINITIONS OF C++ FUNCTIONS##
 ################################
 
+
+#Types imports for C++ compatibility
 from libcpp.vector cimport vector
 from libcpp.string cimport string
 from libcpp.map cimport map
@@ -11,14 +17,11 @@ from libcpp cimport bool
 from libcpp.pair cimport pair
 from libcpp.list cimport list
 
-import ctypes
-ctypes.c_ulong
-
-#import numpy as np
+#Long unsigned int equivalent
 cimport numpy as np
-
 ctypedef np.npy_uint32 UINT32_t
 
+#Functions importation
 cdef extern from "src/essai.h" :
     cdef vector[string] getEditCostStringOptions()
     cdef vector[string] getMethodStringOptions()
@@ -56,32 +59,95 @@ cdef extern from "src/essai.h" :
     cdef bool quasimetricCosts()
 
     
-############################################
-##REDEFINITION DES FONCTIONS C++ EN PYTHON##
-############################################
+###########################################
+##REDEFINITION OF C++ FUNCTIONS IN PYTHON##
+###########################################
     
 def appel() :
+    """
+        Call an example only in C++. Nothing usefull, that's why you must ignore this function. 
+    """
     appelle()
 
 def PyIsInitialized() :
+    """
+        Check and return if the computation environment is initialized or not.
+ 
+        :return: True if it's initialized, False otherwise
+        :rtype: bool
+        
+        .. note:: This function exists for internals verifications but you can use it for your code. 
+    """
     return isInitialized()
 
 def PyGetEditCostOptions() :
+    """
+        Search the differents edit cost functions and returns the result.
+ 
+        :return: The list of edit cost functions
+        :rtype: list[string]
+ 
+        .. warning:: This function is useless for an external use. Please use directly listOfEditCostOptions. 
+        .. note:: Prefer the listOfEditCostOptions attribute of this module.
+    """
+    
     return getEditCostStringOptions()
 
 def PyGetMethodOptions() :
+    """
+        Search the differents method for edit distance computation between graphs and returns the result.
+ 
+        :return: The list of method to compute the edit distance between graphs
+        :rtype: list[string]
+ 
+        .. warning:: This function is useless for an external use. Please use directly listOfMethodOptions.
+        .. note:: Prefer the listOfMethodOptions attribute of this module.
+    """
     return getMethodStringOptions()
 
 def PyGetInitOptions() :
+    """
+        Search the differents initialization parameters for the environment computation for graphs and returns the result.
+ 
+        :return: The list of options to initialize the computation environment
+        :rtype: list[string]
+ 
+        .. warning:: This function is useless for an external use. Please use directly listOfInitOptions.
+        .. note:: Prefer the listOfInitOptions attribute of this module.
+    """
     return getInitStringOptions()
 
 def PyRestartEnv() :
+    """
+        Restart the environment variable. All data related to it will be delete. 
+ 
+        .. warning:: This function deletes all graphs, computations and more so make sure you don't need anymore your environment. 
+        .. note:: You can now delete and add somes graphs after initialization so you can avoid this function. 
+    """
     restartEnv()
 
 def PyLoadGXLGraph(pathFolder, pathXML) :
+    """
+        Load some GXL graphes on the environment which is in a same folder, and present in the XMLfile. 
+        
+        :param pathFolder: The folder's path which contains GXL graphs
+        :param pathXML: The XML's path which indicates which graphes you want to load
+        :type pathFolder: string
+        :type pathXML: string
+ 
+        .. note:: You can call this function multiple times if you want, but not after an init call. 
+    """
     loadGXLGraph(pathFolder.encode('utf-8'), pathXML.encode('utf-8'))
 
 def PyGetGraphIds() :
+    """
+        Search all the IDs of the loaded graphes in the environment. 
+ 
+        :return: The list of all graphs's Ids 
+        :rtype: list[size_t]
+        
+        .. note:: The last ID is equal to (number of graphs - 1). The order correspond to the loading order. 
+    """
     return getGraphIds()
 
 def PyGetGraphClass(id) :
@@ -174,18 +240,18 @@ def PyGetRuntime(g,h) :
 def PyQuasimetricCost() :
     return quasimetricCosts()
 
-###########################################
-##LISTES DES METHODES ET FONCTION DE COUT##
-###########################################
+#####################################################################
+##LISTS OF EDIT COST FUNCTIONS, METHOD COMPUTATION AND INIT OPTIONS##
+#####################################################################
 
 listOfEditCostOptions = PyGetEditCostOptions()
 listOfMethodOptions = PyGetMethodOptions()
 listOfInitOptions = PyGetInitOptions()
 
 
-########################
-##GESTION DES ERREURS ##
-########################
+#####################
+##ERRORS MANAGEMENT##
+#####################
 
 class Error(Exception):
     pass
@@ -203,9 +269,9 @@ class InitError(Error) :
         self.message = message
 
 
-##############################
-##FONCTIONS PYTHON DE CALCUL##
-##############################
+#########################################
+##PYTHON FUNCTIONS FOR SOME COMPUTATION##
+#########################################
 
     
 def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, options, initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :
