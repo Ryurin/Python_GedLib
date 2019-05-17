@@ -1,13 +1,16 @@
 # distutils: language = c++
 
 """
+    Python GedLib module
+    ======================
+    
     This module allow to use a C++ library for edit distance between graphs (GedLib) with Python.
 
     
     Authors
     -------------------
  
-    David Blumenthal,
+    David Blumenthal
     Natacha Lambert
  
 """
@@ -73,13 +76,13 @@ cdef extern from "src/essai.h" :
     
 def appel() :
     """
-        Call an example only in C++. Nothing usefull, that's why you must ignore this function. 
+        Calls an example only in C++. Nothing usefull, that's why you must ignore this function. 
     """
     appelle()
 
 def PyIsInitialized() :
     """
-        Check and return if the computation environment is initialized or not.
+        Checks and returns if the computation environment is initialized or not.
  
         :return: True if it's initialized, False otherwise
         :rtype: bool
@@ -90,7 +93,7 @@ def PyIsInitialized() :
 
 def PyGetEditCostOptions() :
     """
-        Search the differents edit cost functions and returns the result.
+        Searchs the differents edit cost functions and returns the result.
  
         :return: The list of edit cost functions
         :rtype: list[string]
@@ -103,7 +106,7 @@ def PyGetEditCostOptions() :
 
 def PyGetMethodOptions() :
     """
-        Search the differents method for edit distance computation between graphs and returns the result.
+        Searchs the differents method for edit distance computation between graphs and returns the result.
  
         :return: The list of method to compute the edit distance between graphs
         :rtype: list[string]
@@ -115,7 +118,7 @@ def PyGetMethodOptions() :
 
 def PyGetInitOptions() :
     """
-        Search the differents initialization parameters for the environment computation for graphs and returns the result.
+        Searchs the differents initialization parameters for the environment computation for graphs and returns the result.
  
         :return: The list of options to initialize the computation environment
         :rtype: list[string]
@@ -127,7 +130,7 @@ def PyGetInitOptions() :
 
 def PyRestartEnv() :
     """
-        Restart the environment variable. All data related to it will be delete. 
+        Restarts the environment variable. All data related to it will be delete. 
  
         .. warning:: This function deletes all graphs, computations and more so make sure you don't need anymore your environment. 
         .. note:: You can now delete and add somes graphs after initialization so you can avoid this function. 
@@ -136,7 +139,7 @@ def PyRestartEnv() :
 
 def PyLoadGXLGraph(pathFolder, pathXML) :
     """
-        Load some GXL graphes on the environment which is in a same folder, and present in the XMLfile. 
+        Loads some GXL graphes on the environment which is in a same folder, and present in the XMLfile. 
         
         :param pathFolder: The folder's path which contains GXL graphs
         :param pathXML: The XML's path which indicates which graphes you want to load
@@ -149,7 +152,7 @@ def PyLoadGXLGraph(pathFolder, pathXML) :
 
 def PyGetGraphIds() :
     """
-        Search all the IDs of the loaded graphs in the environment. 
+        Searchs all the IDs of the loaded graphs in the environment. 
  
         :return: The list of all graphs's Ids 
         :rtype: list[size_t]
@@ -160,7 +163,7 @@ def PyGetGraphIds() :
 
 def PyGetGraphClass(id) :
     """
-        Return the class of a graph with its ID.
+        Returns the class of a graph with its ID.
 
         :param id: The ID of the wanted graph
         :type id: size_t
@@ -174,7 +177,7 @@ def PyGetGraphClass(id) :
 
 def PyGetGraphName(id) :
     """
-        Return the name of a graph with its ID. 
+        Returns the name of a graph with its ID. 
 
         :param id: The ID of the wanted graph
         :type id: size_t
@@ -188,7 +191,7 @@ def PyGetGraphName(id) :
 
 def PyAddGraph(name="", classe="") :
     """
-        Add a empty graph on the environment, with its name and its class. Nodes and edges will be add in a second time. 
+        Adds a empty graph on the environment, with its name and its class. Nodes and edges will be add in a second time. 
 
         :param name: The name of the new graph, an empty string by default
         :param classe: The class of the new graph, an empty string by default
@@ -204,7 +207,7 @@ def PyAddGraph(name="", classe="") :
 
 def PyAddNode(graphID, nodeID, nodeLabel):
     """
-        Add a node on a graph selected by its ID. A ID and a label for the node is required. 
+        Adds a node on a graph selected by its ID. A ID and a label for the node is required. 
 
         :param graphID: The ID of the wanted graph
         :param nodeID: The ID of the new node
@@ -220,7 +223,7 @@ def PyAddNode(graphID, nodeID, nodeLabel):
 
 def PyAddEdge(graphID, tail, head, edgeLabel, ignoreDuplicates = True) :
     """
-        Add an edge on a graph selected by its ID. 
+        Adds an edge on a graph selected by its ID. 
 
         :param graphID: The ID of the wanted graph
         :param tail: The ID of the tail node for the new edge
@@ -240,7 +243,7 @@ def PyAddEdge(graphID, tail, head, edgeLabel, ignoreDuplicates = True) :
 
 def PyClearGraph(graphID) :
     """
-        Delete a graph, selected by its ID, to the environment.
+        Deletes a graph, selected by its ID, to the environment.
 
         :param graphID: The ID of the wanted graph
         :type graphID: size_t
@@ -251,7 +254,7 @@ def PyClearGraph(graphID) :
 
 def PyGetGraphInternalId(graphID) :
     """
-        Search and return the internal Id of a graph, selected by its ID. 
+        Searchs and returns the internal Id of a graph, selected by its ID. 
 
         :param graphID: The ID of the wanted graph
         :type graphID: size_t
@@ -265,7 +268,7 @@ def PyGetGraphInternalId(graphID) :
 
 def PyGetGraphNumNodes(graphID) :
     """
-        Search and return the number of nodes on a graph, selected by its ID. 
+        Searchs and returns the number of nodes on a graph, selected by its ID. 
 
         :param graphID: The ID of the wanted graph
         :type graphID: size_t
@@ -279,7 +282,7 @@ def PyGetGraphNumNodes(graphID) :
 
 def PyGetGraphNumEdges(graphID) :
     """
-        Search and return the number of edges on a graph, selected by its ID. 
+        Searchs and returns the number of edges on a graph, selected by its ID. 
 
         :param graphID: The ID of the wanted graph
         :type graphID: size_t
@@ -293,7 +296,7 @@ def PyGetGraphNumEdges(graphID) :
 
 def PyGetOriginalNodeIds(graphID) :
     """
-        Search and return all th Ids of nodes on a graph, selected by its ID. 
+        Searchs and returns all th Ids of nodes on a graph, selected by its ID. 
 
         :param graphID: The ID of the wanted graph
         :type graphID: size_t
@@ -307,7 +310,7 @@ def PyGetOriginalNodeIds(graphID) :
 
 def PyGetGraphNodeLabels(graphID) :
     """
-        Search and return all the labels of nodes on a graph, selected by its ID. 
+        Searchs and returns all the labels of nodes on a graph, selected by its ID. 
 
         :param graphID: The ID of the wanted graph
         :type graphID: size_t
@@ -321,7 +324,7 @@ def PyGetGraphNodeLabels(graphID) :
 
 def PyGetGraphEdges(graphID) :
     """
-        Search and return all th edges on a graph, selected by its ID. 
+        Searchs and returns all th edges on a graph, selected by its ID. 
 
         :param graphID: The ID of the wanted graph
         :type graphID: size_t
@@ -335,7 +338,7 @@ def PyGetGraphEdges(graphID) :
 
 def PyGetGraphAdjacenceList(graphID) :
     """
-        Search and return the adjacence list of a graph, selected by its ID. 
+        Searchs and returns the adjacence list of a graph, selected by its ID. 
 
         :param graphID: The ID of the wanted graph
         :type graphID: size_t
@@ -349,7 +352,7 @@ def PyGetGraphAdjacenceList(graphID) :
 
 def PySetEditCost(editCost) :
     """
-        Set an edit cost function to the environment, if its exists. 
+        Sets an edit cost function to the environment, if its exists. 
 
         :param editCost: The name of the edit cost function
         :type editCost: string
@@ -365,7 +368,7 @@ def PySetEditCost(editCost) :
 
 def PyInitEnv(initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :
     """
-        Initialize the environment with the chosen edit cost function and graphs.
+        Initializes the environment with the chosen edit cost function and graphs.
 
         :param initOption: The name of the init option, "EAGER_WITHOUT_SHUFFLED_COPIES" by default
         :type initOption: string
@@ -382,7 +385,7 @@ def PyInitEnv(initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :
 
 def PySetMethod(method, options="") :
     """
-        Set a computation method to the environment, if its exists. 
+        Sets a computation method to the environment, if its exists. 
 
         :param method: The name of the computation method
         :param options: The options of the method (like bash options), an empty string by default
@@ -400,7 +403,7 @@ def PySetMethod(method, options="") :
 
 def PyInitMethod() :
     """
-        Init the environment with the set method.
+        Inits the environment with the set method.
 
         .. seealso:: PySetMethod(), listOfMethodOptions
         .. note:: Call this function after set the method. You can't launch computation or change the method after that. 
@@ -408,30 +411,144 @@ def PyInitMethod() :
     initMethod()
 
 def PyGetInitime() :
+    """
+        Returns the initialization time.
+
+        :return: The initialization time
+        :rtype: double
+    """
     return getInitime()
 
 def PyRunMethod(g, h) :
+    """
+        Computes the edit distance between two graphs g and h, with the edit cost function and method computation selected.  
+
+        :param g: The Id of the first graph to compare
+        :param h: The Id of the second graph to compare
+        :type g: size_t
+        :type h: size_t
+        
+        .. seealso:: PyGetUpperBound(), PyGetLowerBound(),  PyGetForwardMap(), PyGetBackwardMap(), PyGetRuntime(), PyQuasimetricCost()
+        .. note:: This function only compute the distance between two graphs, without returning a result. Use the differents function to see the result between the two graphs.  
+    """
     runMethod(g,h)
 
 def PyGetUpperBound(g,h) :
+    """
+        Returns the upper bound of the edit distance cost between two graphs g and h. 
+
+        :param g: The Id of the first compared graph 
+        :param h: The Id of the second compared graph
+        :type g: size_t
+        :type h: size_t
+        :return: The upper bound of the edit distance cost
+        :rtype: double
+        
+        .. seealso:: PyRunMethod(), PyGetLowerBound(), PyGetForwardMap(), PyGetBackwardMap(), PyGetRuntime(), PyQuasimetricCost()
+        .. warning:: PyRunMethod() between the same two graph must be called before this function. 
+        .. note:: The upper bound is equivalent to the result of the pessimist edit distance cost. Methods are heuristics so the library can't compute the real perfect result because it's NP-Hard problem.
+    """
     return getUpperBound(g,h)
 
 def PyGetLowerBound(g,h) :
+    """
+         Returns the lower bound of the edit distance cost between two graphs g and h. 
+
+        :param g: The Id of the first compared graph 
+        :param h: The Id of the second compared graph
+        :type g: size_t
+        :type h: size_t
+        :return: The lower bound of the edit distance cost
+        :rtype: double
+        
+        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetForwardMap(), PyGetBackwardMap(), PyGetRuntime(), PyQuasimetricCost()
+        .. warning:: PyRunMethod() between the same two graph must be called before this function. 
+        .. note:: This function can be ignored, because lower bound doesn't have a crucial utility.    
+    """
     return getLowerBound(g,h)
 
 def PyGetForwardMap(g,h) :
+    """
+        Returns the forward map (or the half of the adjacence matrix) between nodes of the two indicated graphs. 
+
+        :param g: The Id of the first compared graph 
+        :param h: The Id of the second compared graph
+        :type g: size_t
+        :type h: size_t
+        :return: The forward map to the adjacence matrix between nodes of the two graphs
+        :rtype: vector[long unsigned int]
+        
+        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(), PyGetBackwardMap(), PyGetRuntime(), PyQuasimetricCost()
+        .. warning:: PyRunMethod() between the same two graph must be called before this function. 
+        .. note:: I don't know how to connect the two map to reconstruct the adjacence matrix. Please come back when I know how it's work ! 
+    """
     return getForwardMap(g,h)
 
 def PyGetBackwardMap(g,h) :
+    """
+        Returns the backward map (or the half of the adjacence matrix) between nodes of the two indicated graphs. 
+
+        :param g: The Id of the first compared graph 
+        :param h: The Id of the second compared graph
+        :type g: size_t
+        :type h: size_t
+        :return: The backward map to the adjacence matrix between nodes of the two graphs
+        :rtype: vector[long unsigned int]
+        
+        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(), PyGetForwardMap(), PyGetRuntime(), PyQuasimetricCost()
+        .. warning:: PyRunMethod() between the same two graph must be called before this function. 
+        .. note:: I don't know how to connect the two map to reconstruct the adjacence matrix. Please come back when I know how it's work ! 
+    """
     return getBackwardMap(g,h)
 
 def PyGetAllMap(g,h) :
+    """
+         Returns a vector which contains the forward and the backward maps between nodes of the two indicated graphs. 
+
+        :param g: The Id of the first compared graph 
+        :param h: The Id of the second compared graph
+        :type g: size_t
+        :type h: size_t
+        :return: The forward and backward maps to the adjacence matrix between nodes of the two graphs
+        :rtype: vector[vector[long unsigned int]]
+        
+        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(),  PyGetForwardMap(), PyGetBackwardMap(), PyGetRuntime(), PyQuasimetricCost()
+        .. warning:: PyRunMethod() between the same two graph must be called before this function. 
+        .. note:: This function duplicates data so please don't use it. I also don't know how to connect the two map to reconstruct the adjacence matrix. Please come back when I know how it's work !  
+    """
     return getAllMap(g,h)
 
 def PyGetRuntime(g,h) :
+    """
+        Returns the runtime to compute the edit distance cost between two graphs g and h  
+
+        :param g: The Id of the first compared graph 
+        :param h: The Id of the second compared graph
+        :type g: size_t
+        :type h: size_t
+        :return: The runtime of the computation of edit distance cost between the two selected graphs
+        :rtype: double
+        
+        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(),  PyGetForwardMap(), PyGetBackwardMap(), PyQuasimetricCost()
+        .. warning:: PyRunMethod() between the same two graph must be called before this function. 
+        .. note:: Python is a bit longer than C++ due to the functions's encapsulate.    
+    """
     return getRuntime(g,h)
 
 def PyQuasimetricCost() :
+    """
+        Checks and returns if the edit costs are quasimetric. 
+
+        :param g: The Id of the first compared graph 
+        :param h: The Id of the second compared graph
+        :type g: size_t
+        :type h: size_t
+        :return: True if it's verified, False otherwise
+        :rtype: bool
+        
+        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(),  PyGetForwardMap(), PyGetBackwardMap(), PyGetRuntime()
+        .. warning:: PyRunMethod() between the same two graph must be called before this function. 
+    """
     return quasimetricCosts()
 
 #####################################################################
@@ -448,18 +565,57 @@ listOfInitOptions = PyGetInitOptions()
 #####################
 
 class Error(Exception):
+    """
+        Class for error's management. This one is general. 
+    """
     pass
 
 class EditCostError(Error) :
+    """
+        Class for Edit Cost Error. Raise an error if an edit cost function doesn't exist in the library (not in listOfEditCostOptions).
+
+        :attribute message: The message to print when an error is detected.
+        :type message: string
+    """
     def __init__(self, message):
+        """
+            Inits the error with its message. 
+
+            :param message: The message to print when the error is detected
+            :type message: string
+        """
         self.message = message
     
 class MethodError(Error) :
+    """
+        Class for Method Error. Raise an error if a computation method doesn't exist in the library (not in listOfMethodOptions).
+
+        :attribute message: The message to print when an error is detected.
+        :type message: string
+    """
     def __init__(self, message):
+        """
+            Inits the error with its message. 
+
+            :param message: The message to print when the error is detected
+            :type message: string
+        """
         self.message = message
 
 class InitError(Error) :
+    """
+        Class for Init Error. Raise an error if an init option doesn't exist in the library (not in listOfInitOptions).
+
+        :attribute message: The message to print when an error is detected.
+        :type message: string
+    """
     def __init__(self, message):
+        """
+            Inits the error with its message. 
+
+            :param message: The message to print when the error is detected
+            :type message: string
+        """
         self.message = message
 
 
@@ -468,7 +624,29 @@ class InitError(Error) :
 #########################################
 
     
-def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, options, initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :
+def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, options="", initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :
+    """
+        Compute all the edit distance cost between each graph and return the result with the adjacence matrix. 
+
+        :param pathFolder: The folder's path which contains GXL graphs
+        :param pathXML: The XML's path which indicates which graphes you want to load
+        :param editCost: The name of the edit cost function
+        :param method: The name of the computation method
+        :param options: The options of the method (like bash options), an empty string by default
+        :param initOption:  The name of the init option, "EAGER_WITHOUT_SHUFFLED_COPIES" by default
+        :type pathFolder: string
+        :type pathXML: string
+        :type editCost: string
+        :type method: string
+        :type options: string
+        :type initOption: string
+        :return: The list of important results, so edit distance cost approximation, adjacence matric and computation runtime
+        :rtype: list[(double,vector[long unsigned int], vector[long unsigned int], double)]
+
+        .. seealseo:: listOfEditCostOptions, listOfMethodOptions, listOfInitOptions 
+        .. note:: Make sure each parameter exists with your architecture and these lists : listOfEditCostOptions, listOfMethodOptions, listOfInitOptions. 
+        
+    """
 
     PyRestartEnv()
     

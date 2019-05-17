@@ -11,9 +11,9 @@ import script
 #linlin.jia@insa-rouen.fr
 
 truc = script.computeEditDistanceOnGXlGraphs('include/gedlib-master/data/datasets/Mutagenicity/data/','collections/MUTA_10.xml',"CHEM_1", "BIPARTITE", "") 
-print(truc)
+#print(truc)
 script.PyRestartEnv()
-#script.appel()
+script.appel()
 
 def test() :
     script.appel()
@@ -61,4 +61,4 @@ def test() :
     print ("Upper Bound = " + str(script.PyGetUpperBound(g,h)) + ", Lower Bound = " + str(script.PyGetLowerBound(g,h)) + ", Runtime = " + str(script.PyGetRuntime(g,h)))
 
 
-test()
+#test()
