@@ -1,7 +1,15 @@
 # distutils: language = c++
 
 """
-    This module allow to use a C++ library for edit distance between graphs (GedLib) with Python
+    This module allow to use a C++ library for edit distance between graphs (GedLib) with Python.
+
+    
+    Authors
+    -------------------
+ 
+    David Blumenthal,
+    Natacha Lambert
+ 
 """
 
 ################################
@@ -141,7 +149,7 @@ def PyLoadGXLGraph(pathFolder, pathXML) :
 
 def PyGetGraphIds() :
     """
-        Search all the IDs of the loaded graphes in the environment. 
+        Search all the IDs of the loaded graphs in the environment. 
  
         :return: The list of all graphs's Ids 
         :rtype: list[size_t]
@@ -151,45 +159,204 @@ def PyGetGraphIds() :
     return getGraphIds()
 
 def PyGetGraphClass(id) :
+    """
+        Return the class of a graph with its ID.
+
+        :param id: The ID of the wanted graph
+        :type id: size_t
+        :return: The class of the graph which correpond to the ID
+        :rtype: string
+        
+        .. seealso:: PyGetGraphClass()
+        .. note:: An empty string can be a class. 
+    """
     return getGraphClass(id)
 
 def PyGetGraphName(id) :
+    """
+        Return the name of a graph with its ID. 
+
+        :param id: The ID of the wanted graph
+        :type id: size_t
+        :return: The name of the graph which correpond to the ID
+        :rtype: string
+        
+        .. seealso:: PyGetGraphClass()
+        .. note:: An empty string can be a name. 
+    """
     return getGraphName(id)
 
-def PyAddGraph(name, classe) :
+def PyAddGraph(name="", classe="") :
+    """
+        Add a empty graph on the environment, with its name and its class. Nodes and edges will be add in a second time. 
+
+        :param name: The name of the new graph, an empty string by default
+        :param classe: The class of the new graph, an empty string by default
+        :type name: string
+        :type classe: string
+        :return: The ID of the newly graphe
+        :rtype: size_t
+        
+        .. seealso::PyAddNode(), PyAddEdge()
+        .. note:: You can call this function without parameters. You can also use this function after initialization, call PyInitEnv() after you're finished your modifications. 
+    """
     return addGraph(name,classe)
 
 def PyAddNode(graphID, nodeID, nodeLabel):
+    """
+        Add a node on a graph selected by its ID. A ID and a label for the node is required. 
+
+        :param graphID: The ID of the wanted graph
+        :param nodeID: The ID of the new node
+        :param nodeLabel: The label of the new node
+        :type graphID: size_t
+        :type nodeID: string
+        :type nodeLabel: map[string,string]
+        
+        .. seealso::PyAddGraph(), PyAddEdge()
+        .. note:: You can also use this function after initialization, but only on a newly added graph. Call PyInitEnv() after you're finished your modifications. 
+    """
     addNode(graphID, nodeID, nodeLabel)
 
 def PyAddEdge(graphID, tail, head, edgeLabel, ignoreDuplicates = True) :
+    """
+        Add an edge on a graph selected by its ID. 
+
+        :param graphID: The ID of the wanted graph
+        :param tail: The ID of the tail node for the new edge
+        :param head: The ID of the head node for the new edge
+        :param edgeLabel: The label of the new edge
+        :param ignoreDuplicates: If True, duplicate edges are ignored, otherwise it's raise an error if an existing edge is added. True by default
+        :type graphID: size_t
+        :type tail: string
+        :type head: string
+        :type edgeLabel: map[string,string]
+        :type ignoreDuplicates: bool
+        
+        .. seealso::PyAddGraph(), PyAddNode()
+        .. note:: You can also use this function after initialization, but only on a newly added graph. Call PyInitEnv() after you're finished your modifications. 
+    """
     addEdge(graphID, tail, head, edgeLabel, ignoreDuplicates)
 
 def PyClearGraph(graphID) :
+    """
+        Delete a graph, selected by its ID, to the environment.
+
+        :param graphID: The ID of the wanted graph
+        :type graphID: size_t
+        
+        .. note:: Call PyInit() after you're finished your modifications. 
+    """
     clearGraph(graphID)
 
 def PyGetGraphInternalId(graphID) :
+    """
+        Search and return the internal Id of a graph, selected by its ID. 
+
+        :param graphID: The ID of the wanted graph
+        :type graphID: size_t
+        :return: The internal ID of the selected graph
+        :rtype: size_t
+        
+        .. seealso::PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphEdges(), PyGetGraphAdjacenceList()
+        .. note:: These functions allow to collect all the graph's informations.
+    """
     return getGraphInternalId(graphID)
 
 def PyGetGraphNumNodes(graphID) :
+    """
+        Search and return the number of nodes on a graph, selected by its ID. 
+
+        :param graphID: The ID of the wanted graph
+        :type graphID: size_t
+        :return: The number of nodes on the selected graph
+        :rtype: size_t
+        
+        .. seealso::PyGetGraphInternalId(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphEdges(), PyGetGraphAdjacenceList()
+        .. note:: These functions allow to collect all the graph's informations.
+    """
     return getGraphNumNodes(graphID)
 
 def PyGetGraphNumEdges(graphID) :
+    """
+        Search and return the number of edges on a graph, selected by its ID. 
+
+        :param graphID: The ID of the wanted graph
+        :type graphID: size_t
+        :return: The number of edges on the selected graph
+        :rtype: size_t
+        
+        .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphEdges(), PyGetGraphAdjacenceList()
+        .. note:: These functions allow to collect all the graph's informations.
+    """
     return getGraphNumEdges(graphID)
 
 def PyGetOriginalNodeIds(graphID) :
+    """
+        Search and return all th Ids of nodes on a graph, selected by its ID. 
+
+        :param graphID: The ID of the wanted graph
+        :type graphID: size_t
+        :return: The list of IDs's nodes on the selected graph
+        :rtype: vector[string]
+        
+        .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetGraphNodeLabels(), PyGetGraphEdges(), PyGetGraphAdjacenceList()
+        .. note:: These functions allow to collect all the graph's informations.
+    """
     return getGraphOriginalNodeIds(graphID)
 
 def PyGetGraphNodeLabels(graphID) :
+    """
+        Search and return all the labels of nodes on a graph, selected by its ID. 
+
+        :param graphID: The ID of the wanted graph
+        :type graphID: size_t
+        :return: The list of labels's nodes on the selected graph
+        :rtype: vector[map[string,string]]
+        
+        .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphEdges(), PyGetGraphAdjacenceList()
+        .. note:: These functions allow to collect all the graph's informations.
+    """
     return getGraphNodeLabels(graphID)
 
 def PyGetGraphEdges(graphID) :
+    """
+        Search and return all th edges on a graph, selected by its ID. 
+
+        :param graphID: The ID of the wanted graph
+        :type graphID: size_t
+        :return: The list of edges on the selected graph
+        :rtype: vector[pair[pair[size_t,size_t], map[string, string]]]
+        
+        .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphAdjacenceList()
+        .. note:: These functions allow to collect all the graph's informations.
+    """
     return getGraphEdges(graphID)
 
 def PyGetGraphAdjacenceList(graphID) :
+    """
+        Search and return the adjacence list of a graph, selected by its ID. 
+
+        :param graphID: The ID of the wanted graph
+        :type graphID: size_t
+        :return: The adjacence list of the selected graph
+        :rtype: vector[list[pair[size_t, map[string, string]]]]
+        
+        .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphEdges()
+        .. note:: These functions allow to collect all the graph's informations.
+    """
     return getGraphAdjacenceList(graphID)
 
 def PySetEditCost(editCost) :
+    """
+        Set an edit cost function to the environment, if its exists. 
+
+        :param editCost: The name of the edit cost function
+        :type editCost: string
+        
+        .. seealso::listOfEditCostOptions
+        .. note:: Try to make sure the edit cost function exists with listOfEditCostOptions, raise an error otherwise. 
+    """
     editCostB = editCost.encode('utf-8')
     if editCostB in listOfEditCostOptions : 
         setEditCost(editCostB)
@@ -197,13 +364,34 @@ def PySetEditCost(editCost) :
         raise EditCostError("This edit cost function doesn't exist, please see listOfEditCostOptions for selecting a edit cost function")
 
 def PyInitEnv(initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :
+    """
+        Initialize the environment with the chosen edit cost function and graphs.
+
+        :param initOption: The name of the init option, "EAGER_WITHOUT_SHUFFLED_COPIES" by default
+        :type initOption: string
+        
+        .. seealso:: listOfInitOptions
+        .. warning:: No modification were allowed after initialization. Try to make sure your choices is correct. You can though clear or add a graph, but recall PyInitEnv() after that. 
+        .. note:: Try to make sure the option exists with listOfInitOptions or choose no options, raise an error otherwise.
+    """
     initB = initOption.encode('utf-8')
     if initB in listOfInitOptions : 
         initEnv(initB)
     else :
         raise InitError("This init option doesn't exist, please see listOfInitOptions for selecting an option. You can choose any options.")
 
-def PySetMethod(method, options) :
+def PySetMethod(method, options="") :
+    """
+        Set a computation method to the environment, if its exists. 
+
+        :param method: The name of the computation method
+        :param options: The options of the method (like bash options), an empty string by default
+        :type method: string
+        :type options: string
+        
+        .. seealso:: PyInitMethod(), listOfMethodOptions
+        .. note:: Try to make sure the edit cost function exists with listOfMethodOptions, raise an error otherwise. Call PyInitMethod() after your set. 
+    """
     methodB = method.encode('utf-8')
     if methodB in listOfMethodOptions :
         setMethod(methodB, options.encode('utf-8'))
@@ -211,6 +399,12 @@ def PySetMethod(method, options) :
         raise MethodError("This method doesn't exist, please see listOfMethodOptions for selecting a method")
 
 def PyInitMethod() :
+    """
+        Init the environment with the set method.
+
+        .. seealso:: PySetMethod(), listOfMethodOptions
+        .. note:: Call this function after set the method. You can't launch computation or change the method after that. 
+    """
     initMethod()
 
 def PyGetInitime() :
