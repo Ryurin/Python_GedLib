@@ -65,6 +65,9 @@ cdef extern from "src/essai.h" :
     cdef double getLowerBound(size_t g, size_t h)
     cdef vector[np.npy_uint64] getForwardMap(size_t g, size_t h)
     cdef vector[np.npy_uint64] getBackwardMap(size_t g, size_t h)
+    cdef size_t getNodeImage(size_t g, size_t h, size_t nodeId)
+    cdef size_t getNodePreImage(size_t g, size_t h, size_t nodeId)
+    cdef vector[pair[size_t,size_t]] getAdjacenceMatrix(size_t g, size_t h)
     cdef vector[vector[np.npy_uint64]] getAllMap(size_t g, size_t h)
     cdef double getRuntime(size_t g, size_t h)
     cdef bool quasimetricCosts()
@@ -501,6 +504,67 @@ def PyGetBackwardMap(g,h) :
     """
     return getBackwardMap(g,h)
 
+def PyGetNodeImage(g,h,nodeID) :
+    """
+        Returns the node's image in the adjacence matrix, if it exists.   
+
+        :param g: The Id of the first compared graph 
+        :param h: The Id of the second compared graph
+        :param nodeID: The ID of the node which you want to see the image
+        :type g: size_t
+        :type h: size_t
+        :type nodeID size_t
+        :return: The ID of the image node
+        :rtype: size_t
+        
+        .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodePreImage()
+        .. warning:: PyRunMethod() between the same two graph must be called before this function. 
+        .. note:: Use BackwardMap's Node to find its images ! You can also use PyGetForwardMap() and PyGetBackwardMap().     
+    """
+    return getNodeImage(g, h, nodeID)
+
+def PyGetNodePreImage(g,h,nodeID) :
+    """
+        Returns the node's preimage in the adjacence matrix, if it exists.   
+
+        :param g: The Id of the first compared graph 
+        :param h: The Id of the second compared graph
+        :param nodeID: The ID of the node which you want to see the preimage
+        :type g: size_t
+        :type h: size_t
+        :type nodeID size_t
+        :return: The ID of the preimage node
+        :rtype: size_t
+        
+        .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodeImage()
+        .. warning:: PyRunMethod() between the same two graph must be called before this function. 
+        .. note:: Use ForwardMap's Node to find its images ! You can also use PyGetForwardMap() and PyGetBackwardMap().     
+    """
+    return getNodePreImage(g, h, nodeID)
+
+def PyGetAdjacenceMatrix(g,h) :
+    """
+        Returns the adjacence matrix, like C++ NodeMap.   
+
+        :param g: The Id of the first compared graph 
+        :param h: The Id of the second compared graph
+        :type g: size_t
+        :type h: size_t
+        :return: The ID of the preimage node
+        :rtype: vector[pair[size_t, size_t]]
+        
+        .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodeImage(), PyGetNodePreImage()
+        .. warning:: PyRunMethod() between the same two graph must be called before this function. 
+        .. note:: This function creates datas so use it if necessary, however you can understand how assignement works with this example.     
+    """
+    ##backwardMap = PyGetBackwardMap(g,h)
+    ##res = []
+    ##for i in range(len(backwardMap)) :
+    ##    res.append((i,PyGetNodeImage(g,h,i)))
+    ##return res
+    return getAdjacenceMatrix(g, h)
+        
+
 def PyGetAllMap(g,h) :
     """
          Returns a vector which contains the forward and the backward maps between nodes of the two indicated graphs. 
@@ -643,7 +707,7 @@ def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, option
         :return: The list of important results, so edit distance cost approximation, adjacence matric and computation runtime
         :rtype: list[(double,vector[long unsigned int], vector[long unsigned int], double)]
 
-        .. seealseo:: listOfEditCostOptions, listOfMethodOptions, listOfInitOptions 
+        .. seealso:: listOfEditCostOptions, listOfMethodOptions, listOfInitOptions 
         .. note:: Make sure each parameter exists with your architecture and these lists : listOfEditCostOptions, listOfMethodOptions, listOfInitOptions. 
         
     """

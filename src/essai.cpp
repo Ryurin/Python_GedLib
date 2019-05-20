@@ -6,7 +6,6 @@ using namespace std;
 
 //ged::GEDEnv<UserNodeID, UserNodeLabel, UserEdgeLabel> env;
 ged::GEDEnv<ged::GXLNodeID, ged::GXLLabel, ged::GXLLabel> env;
-//ged::GEDEnv<int, double, double> env2;
 
 //template<class UserNodeID, class UserNodeLabel, class UserEdgeLabel> struct ExchangeGraph
 
@@ -148,12 +147,6 @@ std::size_t addGraph(std::string name, std::string classe){
 	return std::stoi(std::to_string(newId));
 }
 
-//void add_node(GEDGraph::GraphID graph_id, const UserNodeID & node_id, const UserNodeLabel & node_label);
-//void add_edge(GEDGraph::GraphID graph_id, const UserNodeID & tail, const UserNodeID & head, const UserEdgeLabel & edge_label, bool ignore_duplicates = true);
-
-//typedef std::map<std::string, std::string> GXLLabel;
-//typedef std::string GXLNodeID;
-
 void addNode(std::size_t graphId, std::string nodeId, std::map<std::string, std::string> nodeLabel){
 	env.add_node(graphId, nodeId, nodeLabel);
 	initialized = false;
@@ -278,6 +271,22 @@ std::vector<long unsigned int> getBackwardMap(std::size_t g, std::size_t h){
 	return env.get_node_map(g,h).get_backward_map(); 
 }
 
+std::size_t getNodeImage(std::size_t g, std::size_t h, std::size_t nodeId){
+	 return env.get_node_map(g,h).image(nodeId);
+}
+
+std::size_t getNodePreImage(std::size_t g, std::size_t h, std::size_t nodeId){
+	 return env.get_node_map(g,h).pre_image(nodeId);
+}
+
+std::vector<pair<std::size_t, std::size_t>> getAdjacenceMatrix(std::size_t g, std::size_t h){
+	std::vector<pair<std::size_t, std::size_t>> res; 
+	for (int i = 0; i!=getBackwardMap(g,h).size(); i++){
+		res.push_back(std::make_pair(i,getNodeImage(g,h,i))); 
+	}
+	return res;
+}
+
 std::vector<std::vector<unsigned long int>> getAllMap(std::size_t g, std::size_t h){
 	std::vector<std::vector<unsigned long int>> res; 
 	res.push_back(getForwardMap(g, h));
@@ -366,36 +375,29 @@ int appelle()
     }
 
     std::cout << "Number of graphs = " << listIdInt.size() << ", list of IDs = " << truc << "\n";
-    cout << env.graph_ids().first << ", " << env.graph_ids().second << endl;
+    //cout << env.graph_ids().first << ", " << env.graph_ids().second << endl;
 	setEditCost("CHEM_1");
 	initEnv();
-	setMethod("truc","");
+	setMethod("BIPARTITE","");
 	initMethod();
-	int g = listIdInt[0];
-	int h = listIdInt[1];
+	std::size_t g = listIdInt[0];
+	std::size_t h = listIdInt[1];
 	runMethod(g,h);
-	/*ged::NodeMap pika = env.get_node_map(g,h);
-	std::vector<long unsigned int> rondou = pika.get_forward_map(); 
-	std::vector<long unsigned int> grodou = pika.get_backward_map(); */
-	
-	std::vector<std::vector<unsigned long int>> pichu = getAllMap(g,h);
-	
-	std::string machin = "";
-
-    for (int i = 0; i != pichu[0].size(); i++)
-    {
-        machin += std::to_string(pichu[0][i]) + " ";
-    }
     
-    std::string chose = "";
-    
-    for (int i = 0; i != pichu[1].size(); i++)
-    {
-        chose += std::to_string(pichu[1][i]) + " ";
-    }
+    /*for (int i = 0; i!=pichu[0].size(); i++){
+		//std::cout << env.get_node_map(g,h).pre_image(pichu[1][i]);
+		std::cout << i;
+		std::cout << env.get_node_map(g,h).image(i) << "\n";
+	}*/
+	
+	std::vector<pair<std::size_t, std::size_t>> kirby = getAdjacenceMatrix(g,h);
+	for (int i = 0; i!=kirby.size(); i++){
+		std::cout << kirby[i].first << " " << kirby[i].second << "\n";
+	}
+	
 	
 	std::cout << "\nupper bound = " << getUpperBound(g, h) << ", matrix = " << env.get_node_map(g,h) << ", runtime = " << getRuntime(g, h) << "\n";
-	std::cout << "forward map = " << machin << ", backward map = " << chose << "\n";
+	std::cout << "forward map = " << toStringVectorInt(getForwardMap(g,h)) << ", backward map = " << toStringVectorInt(getBackwardMap(g,h)) << "\n\n";
 
     return 0;
 }

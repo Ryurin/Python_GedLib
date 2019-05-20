@@ -10,13 +10,56 @@ import script
 
 #linlin.jia@insa-rouen.fr
 
-truc = script.computeEditDistanceOnGXlGraphs('include/gedlib-master/data/datasets/Mutagenicity/data/','collections/MUTA_10.xml',"CHEM_1", "BIPARTITE", "") 
+#truc = script.computeEditDistanceOnGXlGraphs('include/gedlib-master/data/datasets/Mutagenicity/data/','collections/MUTA_10.xml',"CHEM_1", "BIPARTITE", "") 
 #print(truc)
-script.PyRestartEnv()
+#script.PyRestartEnv()
 script.appel()
 
+def recuptest() :
+    print("Here is the recuperation Python function !")
+    listID = script.PyGetGraphIds()
+    g = listID[2]
+    h = listID[3]
+
+    print("Forward map : " ,script.PyGetForwardMap(g,h), ", Backward map : ", script.PyGetBackwardMap(g,h))
+    print("Matrix : ", script.PyGetAdjacenceMatrix(g,h))
+    print ("Upper Bound = " + str(script.PyGetUpperBound(g,h)) + ", Lower Bound = " + str(script.PyGetLowerBound(g,h)) + ", Runtime = " + str(script.PyGetRuntime(g,h)))
+
+#recuptest()
+    
+
+def minitest() :
+    script.PyRestartEnv()
+    
+    print("Here is the mini Python function !")
+    
+    script.PyLoadGXLGraph('include/gedlib-master/data/datasets/Mutagenicity/data/', 'collections/MUTA_10.xml')
+    listID = script.PyGetGraphIds()
+    
+    afficheId = ""
+    for i in listID :
+        afficheId+=str(i) + " "
+    print("Number of graphs = " + str(len(listID)) + ", list of Ids = " + afficheId)
+
+    script.PySetEditCost("CHEM_1")
+
+    script.PyInitEnv()
+
+    script.PySetMethod("BIPARTITE", "")
+    script.PyInitMethod()
+
+    g = listID[0]
+    h = listID[1]
+
+    script.PyRunMethod(g,h)
+    print("Forward map : " ,script.PyGetForwardMap(g,h), ", Backward map : ", script.PyGetBackwardMap(g,h))
+    print("Matrix : ", script.PyGetAdjacenceMatrix(g,h))
+    print ("Upper Bound = " + str(script.PyGetUpperBound(g,h)) + ", Lower Bound = " + str(script.PyGetLowerBound(g,h)) + ", Runtime = " + str(script.PyGetRuntime(g,h)))
+
+minitest()
+
 def test() :
-    script.appel()
+    #script.appel()
     
     script.PyRestartEnv()
     
@@ -53,11 +96,12 @@ def test() :
     script.PyInitMethod()
 
     g = listID[0]
-    h = listID[1]
+    h = listID[0]
 
     script.PyRunMethod(g,h)
     liste = script.PyGetAllMap(g,h)
     print("Forward map : " ,script.PyGetForwardMap(g,h), ", Backward map : ", script.PyGetBackwardMap(g,h))
+    print("Matrix : ", script.PyGetAdjacenceMatrix(g,h))
     print ("Upper Bound = " + str(script.PyGetUpperBound(g,h)) + ", Lower Bound = " + str(script.PyGetLowerBound(g,h)) + ", Runtime = " + str(script.PyGetRuntime(g,h)))
 
 
