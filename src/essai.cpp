@@ -1,23 +1,43 @@
+/****************************************************************************
+ *                                                                          *
+ *   Copyright (C) 2019 by Natacha Lambert and David B. Blumenthal          *
+ *                                                                          *
+ *   This file should be used by Python.                                    *
+ * 	 Please call the Python module if you want to use GedLib with this code.* 
+ *                                                                          *
+ * 	 Otherwise, you can directly use GedLib for C++.                        *
+ *                                                                          *
+ ***************************************************************************/
+ 
+/*!
+ * @file essai.cpp
+ * @brief Functions definition to call easly GebLib in Python without Gedlib's types
+ */
+
+//Include standard libraries + GedLib library
 #include <iostream>
 #include "essai.h"
 #include "../include/gedlib-master/src/env/ged_env.hpp"
 
 using namespace std;
 
+//Definition of types and templates used in this code for my human's memory :). 
 //ged::GEDEnv<UserNodeID, UserNodeLabel, UserEdgeLabel> env;
-ged::GEDEnv<ged::GXLNodeID, ged::GXLLabel, ged::GXLLabel> env;
-
 //template<class UserNodeID, class UserNodeLabel, class UserEdgeLabel> struct ExchangeGraph
 
 //typedef std::map<std::string, std::string> GXLLabel;
 //typedef std::string GXLNodeID;
 
-bool initialized = false;
+ged::GEDEnv<ged::GXLNodeID, ged::GXLLabel, ged::GXLLabel> env; //Environment variable
+
+
+bool initialized = false; //Initialization boolean (because Env has one but not accessible). 
 
 bool isInitialized(){
 	return initialized;
 }
 
+//!< List of available edit cost functions readable by Python.  
 std::vector<std::string> editCostStringOptions = { 
 	"CHEM_1", 
 	"CHEM_2", 
@@ -33,7 +53,8 @@ std::vector<std::string> editCostStringOptions = {
 std::vector<std::string> getEditCostStringOptions(){
 	return editCostStringOptions;
 }
- 
+
+//!< Map of available edit cost functions between enum type in C++ and string in Python  
 std::map<std::string, ged::Options::EditCosts> editCostOptions = {
 	{"CHEM_1", ged::Options::EditCosts::CHEM_1},
 	{"CHEM_2", ged::Options::EditCosts::CHEM_2},
@@ -46,6 +67,7 @@ std::map<std::string, ged::Options::EditCosts> editCostOptions = {
 	{"CONSTANT", ged::Options::EditCosts::CONSTANT}	
 };
 
+ //!< List of available computation methods readable by Python.  
 std::vector<std::string> methodStringOptions = { 
 	"BRANCH",
 	"BRANCH_FAST",
@@ -74,6 +96,7 @@ std::vector<std::string> getMethodStringOptions(){
 	return methodStringOptions;
 }
 
+//!< Map of available computation methods readables between enum type in C++ and string in Python  
 std::map<std::string, ged::Options::GEDMethod> methodOptions = {
 	{"BRANCH", ged::Options::GEDMethod::BRANCH},
 	{"BRANCH_FAST", ged::Options::GEDMethod::BRANCH_FAST},
@@ -98,6 +121,7 @@ std::map<std::string, ged::Options::GEDMethod> methodOptions = {
 	{"STAR"	, ged::Options::GEDMethod::STAR},	
 };
 
+//!<List of available initilaization options readable by Python.
 std::vector<std::string> initStringOptions = { 
 	"LAZY_WITHOUT_SHUFFLED_COPIES", 
 	"EAGER_WITHOUT_SHUFFLED_COPIES", 
@@ -108,7 +132,8 @@ std::vector<std::string> initStringOptions = {
 std::vector<std::string> getInitStringOptions(){
 	return initStringOptions;
 }
- 
+
+//!< Map of available initilaization options readables between enum type in C++ and string in Python 
 std::map<std::string, ged::Options::InitType> initOptions = {
 	{"LAZY_WITHOUT_SHUFFLED_COPIES", ged::Options::InitType::LAZY_WITHOUT_SHUFFLED_COPIES},
 	{"EAGER_WITHOUT_SHUFFLED_COPIES", ged::Options::InitType::EAGER_WITHOUT_SHUFFLED_COPIES},
@@ -166,6 +191,11 @@ void clearGraph(std::size_t graphId){
 	initialized = false;
 }
 
+/*!
+ * @brief Returns ged::ExchangeGraph representation.
+ * @param graphId ID of the selected graph.
+ * @return ged::ExchangeGraph representation of the selected graph.
+ */
 ged::ExchangeGraph<ged::GXLNodeID, ged::GXLLabel, ged::GXLLabel> getGraph(std::size_t graphId){
 	return env.get_graph(graphId);
 }
@@ -198,6 +228,11 @@ std::vector<std::list<std::pair<std::size_t, std::map<std::string, std::string>>
 	return getGraph(graphId).adj_list;
 }
 
+/*!
+ * @brief Returns the enum EditCost which correspond to the string parameter
+ * @param editCost Select one of the predefined edit costs in the list.
+ * @return The edit cost function which correspond in the edit cost functions map. 
+ */
 ged::Options::EditCosts translateEditCost(std::string editCost){
 	 for (int i = 0; i != editCostStringOptions.size(); i++){
 		 if (editCostStringOptions[i] == editCost){
@@ -216,6 +251,11 @@ void initEnv(){
 	initialized = true;
 }
 
+/*!
+ * @brief Returns the enum IniType which correspond to the string parameter
+ * @param initOption Select initialization options.
+ * @return The init Type which correspond in the init options map. 
+ */
 ged::Options::InitType translateInitOptions(std::string initOption){
 	 for (int i = 0; i != initStringOptions.size(); i++){
 		 if (initStringOptions[i] == initOption){
@@ -230,6 +270,11 @@ void initEnv(std::string initOption){
 	initialized = true;
 }
 
+/*!
+ * @brief Returns the enum Method which correspond to the string parameter
+ * @param method Select the method that is to be used.
+ * @return The computation method which correspond in the edit cost functions map. 
+ */
 ged::Options::GEDMethod translateMethod(std::string method){
 	 for (int i = 0; i != methodStringOptions.size(); i++){
 		 if (methodStringOptions[i] == method){
@@ -302,6 +347,11 @@ bool quasimetricCosts(){
 	return env.quasimetric_costs();
 }
 
+/*!
+ * @brief Returns the string which contains all element of a int list. 
+ * @param vector The vector to translate. 
+ * @return The string which contains all elements separated with a blank space. 
+ */
 std::string toStringVectorInt(std::vector<int> vector){
 	std::string res = "";
 
@@ -313,6 +363,11 @@ std::string toStringVectorInt(std::vector<int> vector){
     return res;
 }
 
+/*!
+ * @brief Returns the string which contains all element of a unsigned long int list. 
+ * @param vector The vector to translate. 
+ * @return The string which contains all elements separated with a blank space. 
+ */
 std::string toStringVectorInt(std::vector<unsigned long int> vector){
 	std::string res = "";
 

@@ -3463,12 +3463,12 @@ static PyObject *__pyx_pf_6script_36PyGetGraphNodeLabels(CYTHON_UNUSED PyObject 
  * 
  * def PyGetGraphEdges(graphID) :             # <<<<<<<<<<<<<<
  *     """
- *         Searchs and returns all th edges on a graph, selected by its ID.
+ *         Searchs and returns all the edges on a graph, selected by its ID.
  */
 
 /* Python wrapper */
 static PyObject *__pyx_pw_6script_39PyGetGraphEdges(PyObject *__pyx_self, PyObject *__pyx_v_graphID); /*proto*/
-static char __pyx_doc_6script_38PyGetGraphEdges[] = "\n        Searchs and returns all th edges on a graph, selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        :return: The list of edges on the selected graph\n        :rtype: vector[pair[pair[size_t,size_t], map[string, string]]]\n        \n        .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphAdjacenceList()\n        .. note:: These functions allow to collect all the graph's informations.\n    ";
+static char __pyx_doc_6script_38PyGetGraphEdges[] = "\n        Searchs and returns all the edges on a graph, selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        :return: The list of edges on the selected graph\n        :rtype: vector[pair[pair[size_t,size_t], map[string, string]]]\n        \n        .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphAdjacenceList()\n        .. note:: These functions allow to collect all the graph's informations.\n    ";
 static PyMethodDef __pyx_mdef_6script_39PyGetGraphEdges = {"PyGetGraphEdges", (PyCFunction)__pyx_pw_6script_39PyGetGraphEdges, METH_O, __pyx_doc_6script_38PyGetGraphEdges};
 static PyObject *__pyx_pw_6script_39PyGetGraphEdges(PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
   PyObject *__pyx_r = 0;
@@ -3508,7 +3508,7 @@ static PyObject *__pyx_pf_6script_38PyGetGraphEdges(CYTHON_UNUSED PyObject *__py
  * 
  * def PyGetGraphEdges(graphID) :             # <<<<<<<<<<<<<<
  *     """
- *         Searchs and returns all th edges on a graph, selected by its ID.
+ *         Searchs and returns all the edges on a graph, selected by its ID.
  */
 
   /* function exit code */
@@ -10952,7 +10952,7 @@ static int __Pyx_InitCachedConstants(void) {
  * 
  * def PyGetGraphEdges(graphID) :             # <<<<<<<<<<<<<<
  *     """
- *         Searchs and returns all th edges on a graph, selected by its ID.
+ *         Searchs and returns all the edges on a graph, selected by its ID.
  */
   __pyx_tuple__51 = PyTuple_Pack(1, __pyx_n_s_graphID); if (unlikely(!__pyx_tuple__51)) __PYX_ERR(0, 328, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__51);
@@ -11556,7 +11556,7 @@ PyMODINIT_FUNC PyInit_script(void)
  * 
  * def PyGetGraphEdges(graphID) :             # <<<<<<<<<<<<<<
  *     """
- *         Searchs and returns all th edges on a graph, selected by its ID.
+ *         Searchs and returns all the edges on a graph, selected by its ID.
  */
   __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6script_39PyGetGraphEdges, NULL, __pyx_n_s_script); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 328, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);

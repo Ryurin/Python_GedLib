@@ -164,8 +164,17 @@ public:
 	 */
 	bool operator==(const NodeMap & node_map) const;
 	
+	
+	/*!
+	 * @brief  Returns the forward map of Node Map
+	 * @return A vector which contains IDs nodes to the forward map. 
+	 */
 	std::vector<GEDGraph::NodeID> get_forward_map() const;
 	
+	/*!
+	 * @brief  Returns the backward map of Node Map
+	 * @return A vector which contains IDs nodes to the backward map. 
+	 */
 	std::vector<GEDGraph::NodeID> get_backward_map() const;
 
 private:

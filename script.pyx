@@ -327,7 +327,7 @@ def PyGetGraphNodeLabels(graphID) :
 
 def PyGetGraphEdges(graphID) :
     """
-        Searchs and returns all th edges on a graph, selected by its ID. 
+        Searchs and returns all the edges on a graph, selected by its ID. 
 
         :param graphID: The ID of the wanted graph
         :type graphID: size_t
