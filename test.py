@@ -17,7 +17,7 @@ script.appel()
 
 def recuptest() :
     print("Here is the recuperation Python function !")
-    listID = script.PyGetGraphIds()
+    listID = script.PyGetAllGraphIds()
     g = listID[2]
     h = listID[3]
 
@@ -33,13 +33,14 @@ def minitest() :
     
     print("Here is the mini Python function !")
     
-    script.PyLoadGXLGraph('include/gedlib-master/data/datasets/Mutagenicity/data/', 'collections/MUTA_10.xml')
-    listID = script.PyGetGraphIds()
+    #script.PyLoadGXLGraph('include/gedlib-master/data/datasets/Mutagenicity/data/', 'collections/MUTA_10.xml')
+    script.PyLoadGXLGraph("include/gedlib-master/data/datasets/Mutagenicity/data/", "/export/home/lambertn/Documents/Cython_GedLib_2/include/gedlib-master/data/collections/Mutagenicity.xml")
+    listID = script.PyGetAllGraphIds()
     
-    afficheId = ""
-    for i in listID :
-        afficheId+=str(i) + " "
-    print("Number of graphs = " + str(len(listID)) + ", list of Ids = " + afficheId)
+##    afficheId = ""
+##    for i in listID :
+##        afficheId+=str(i) + " "
+##    print("Number of graphs = " + str(len(listID)) + ", list of Ids = " + afficheId)
 
     script.PySetEditCost("CHEM_1")
 
@@ -81,7 +82,7 @@ def test() :
     print("")
     
     script.PyLoadGXLGraph('include/gedlib-master/data/datasets/Mutagenicity/data/', 'collections/MUTA_10.xml')
-    listID = script.PyGetGraphIds()
+    listID = script.PyGetAllGraphIds()
     
     afficheId = ""
     for i in listID :

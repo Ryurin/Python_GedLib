@@ -12,6 +12,8 @@
  
     David Blumenthal
     Natacha Lambert
+
+    Copyright (C) 2019 by all the authors
  
 """
 
@@ -41,7 +43,8 @@ cdef extern from "src/essai.h" :
     cdef int appelle()
     cdef void restartEnv()
     cdef void loadGXLGraph(string pathFolder, string pathXML)
-    cdef vector[size_t] getGraphIds()
+    cdef pair[size_t,size_t] getGraphIds()
+    cdef vector[size_t] getAllGraphIds()
     cdef string getGraphClass(size_t id)
     cdef string getGraphName(size_t id)
     cdef size_t addGraph(string name, string classe)
@@ -155,6 +158,17 @@ def PyLoadGXLGraph(pathFolder, pathXML) :
 
 def PyGetGraphIds() :
     """
+        Searchs the first and last IDs of the loaded graphs in the environment. 
+ 
+        :return: The pair of the first and the last graphs Ids
+        :rtype: pair[size_t, size_t]
+        
+        .. note:: Prefer this function if you have huges structures with lots of graphs.  
+    """
+    return getGraphIds()
+
+def PyGetAllGraphIds() :
+    """
         Searchs all the IDs of the loaded graphs in the environment. 
  
         :return: The list of all graphs's Ids 
@@ -162,7 +176,7 @@ def PyGetGraphIds() :
         
         .. note:: The last ID is equal to (number of graphs - 1). The order correspond to the loading order. 
     """
-    return getGraphIds()
+    return getAllGraphIds()
 
 def PyGetGraphClass(id) :
     """
@@ -716,7 +730,7 @@ def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, option
     
     PyLoadGXLGraph(pathFolder, pathXML)
     listID = PyGetGraphIds()
-    print("Number of graphs = " + str(len(listID)))
+    print("Number of graphs = " + str(listID[1]))
 
     PySetEditCost(editCost)
     PyInitEnv(initOption)
@@ -725,8 +739,8 @@ def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, option
     PyInitMethod()
 
     res = []
-    for g in listID :
-        for h in listID :
+    for g in range(listID[0], listID[1]) :
+        for h in range(listID[0], listID[1]) :
             PyRunMethod(g,h)
             res.append((PyGetUpperBound(g,h), PyGetForwardMap(g,h), PyGetBackwardMap(g,h), PyGetRuntime(g,h)))
             

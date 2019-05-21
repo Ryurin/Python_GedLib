@@ -150,7 +150,11 @@ void loadGXLGraph(std::string pathFolder, std::string pathXML){
 	 std::vector<ged::GEDGraph::GraphID> tmp_graph_ids(env.load_gxl_graphs(pathFolder, pathXML));
 }
 
-std::vector<std::size_t> getGraphIds(){
+std::pair<std::size_t,std::size_t> getGraphIds(){
+	return env.graph_ids();
+}
+
+std::vector<std::size_t> getAllGraphIds(){
 	std::vector<std::size_t> listID;
 	for (std::size_t i = env.graph_ids().first; i != env.graph_ids().second; i++){
 		listID.push_back(i);
@@ -317,11 +321,16 @@ std::vector<long unsigned int> getBackwardMap(std::size_t g, std::size_t h){
 }
 
 std::size_t getNodeImage(std::size_t g, std::size_t h, std::size_t nodeId){
-	 return env.get_node_map(g,h).image(nodeId);
+	if (nodeId < getForwardMap(g,h).size()){
+		return env.get_node_map(g,h).image(nodeId);
+	}
+	else{
+		return -1;
+	}
 }
 
 std::size_t getNodePreImage(std::size_t g, std::size_t h, std::size_t nodeId){
-	 return env.get_node_map(g,h).pre_image(nodeId);
+	return env.get_node_map(g,h).pre_image(nodeId);
 }
 
 std::vector<pair<std::size_t, std::size_t>> getAdjacenceMatrix(std::size_t g, std::size_t h){
@@ -420,23 +429,23 @@ int appelle()
 	env.run_method(g, h); //Demande d'ID des graphes
 	std::cout << "\nupper bound = " << env.get_upper_bound(g, h) << ", matrix = " << env.get_node_map(g,h) << ", runtime = " << env.get_runtime(g, h) << "\n";*/
 	
-	loadGXLGraph("include/gedlib-master/data/datasets/Mutagenicity/data/", "collections/MUTA_10.xml");
-	std::vector<std::size_t> listIdInt = getGraphIds();
-	std::string truc = "";
+	loadGXLGraph("include/gedlib-master/data/datasets/Mutagenicity/data/", "/export/home/lambertn/Documents/Cython_GedLib_2/include/gedlib-master/data/collections/Mutagenicity.xml"); //"collections/MUTA_10.xml"
+	std::pair<std::size_t, std::size_t> listIdInt = getGraphIds();
+	/*std::string truc = "";
 
-    for (int i = 0; i != listIdInt.size(); i++)
+    for (int i = listIdInt.first; i != listIdInt.second; i++)
     {
-        truc += std::to_string(listIdInt[i]) + " ";
-    }
+        truc += std::to_string(i) + " ";
+    }*/
 
-    std::cout << "Number of graphs = " << listIdInt.size() << ", list of IDs = " << truc << "\n";
+    std::cout << "Number of graphs = " << listIdInt.second /*<< ", list of IDs = " << truc*/ << "\n";
     //cout << env.graph_ids().first << ", " << env.graph_ids().second << endl;
 	setEditCost("CHEM_1");
 	initEnv();
 	setMethod("BIPARTITE","");
 	initMethod();
-	std::size_t g = listIdInt[0];
-	std::size_t h = listIdInt[1];
+	std::size_t g = listIdInt.first;
+	std::size_t h = listIdInt.first +1;
 	runMethod(g,h);
     
     /*for (int i = 0; i!=pichu[0].size(); i++){
@@ -445,10 +454,10 @@ int appelle()
 		std::cout << env.get_node_map(g,h).image(i) << "\n";
 	}*/
 	
-	std::vector<pair<std::size_t, std::size_t>> kirby = getAdjacenceMatrix(g,h);
+	/*std::vector<pair<std::size_t, std::size_t>> kirby = getAdjacenceMatrix(g,h);
 	for (int i = 0; i!=kirby.size(); i++){
 		std::cout << kirby[i].first << " " << kirby[i].second << "\n";
-	}
+	}*/
 	
 	
 	std::cout << "\nupper bound = " << getUpperBound(g, h) << ", matrix = " << env.get_node_map(g,h) << ", runtime = " << getRuntime(g, h) << "\n";

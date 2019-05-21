@@ -49,10 +49,17 @@ void restartEnv();
 void loadGXLGraph(std::string pathFolder, std::string pathXML);
 
 /*!
+ * @brief Provides access to the IDs of the graphs contained in the environment.
+ * @return Pair <tt>(ID of first graphs, ID of last graph + 1)</tt> of graph IDs.
+ * If both entries equal 0, the environment does not contain any graphs.
+ */
+std::pair<std::size_t,std::size_t> getGraphIds();
+
+/*!
  * @brief Returns the list of graphs IDs which are loaded in the environment. 
  * @return A vector which contains all the graphs Ids. 
  */
-std::vector<std::size_t> getGraphIds();
+std::vector<std::size_t> getAllGraphIds();
 
 /*!
  * @brief Returns the graph class.
