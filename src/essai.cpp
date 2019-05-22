@@ -325,18 +325,25 @@ std::size_t getNodeImage(std::size_t g, std::size_t h, std::size_t nodeId){
 		return env.get_node_map(g,h).image(nodeId);
 	}
 	else{
-		return -1;
+		return 99;
 	}
 }
 
 std::size_t getNodePreImage(std::size_t g, std::size_t h, std::size_t nodeId){
-	return env.get_node_map(g,h).pre_image(nodeId);
+	if (nodeId < getBackwardMap(g,h).size()){
+		return env.get_node_map(g,h).pre_image(nodeId);
+	}
+	else{
+		return 99;
+	}
 }
 
 std::vector<pair<std::size_t, std::size_t>> getAdjacenceMatrix(std::size_t g, std::size_t h){
 	std::vector<pair<std::size_t, std::size_t>> res; 
-	for (int i = 0; i!=getBackwardMap(g,h).size(); i++){
-		res.push_back(std::make_pair(i,getNodeImage(g,h,i))); 
+	std::vector<ged::NodeMap::Assignment> relation;
+	env.get_node_map(g,h).as_relation(relation);
+	for (const auto & assignment : relation) {
+		res.push_back(std::make_pair(assignment.first, assignment.second)); 
 	}
 	return res;
 }
