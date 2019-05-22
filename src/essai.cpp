@@ -321,21 +321,15 @@ std::vector<long unsigned int> getBackwardMap(std::size_t g, std::size_t h){
 }
 
 std::size_t getNodeImage(std::size_t g, std::size_t h, std::size_t nodeId){
-	if (nodeId < getForwardMap(g,h).size()){
-		return env.get_node_map(g,h).image(nodeId);
-	}
-	else{
-		return 99;
-	}
+	return env.get_node_map(g,h).image(nodeId);
 }
 
 std::size_t getNodePreImage(std::size_t g, std::size_t h, std::size_t nodeId){
-	if (nodeId < getBackwardMap(g,h).size()){
-		return env.get_node_map(g,h).pre_image(nodeId);
-	}
-	else{
-		return 99;
-	}
+	return env.get_node_map(g,h).pre_image(nodeId);
+}
+
+std::size_t getDummyNode(){
+	return ged::GEDGraph::dummy_node();
 }
 
 std::vector<pair<std::size_t, std::size_t>> getAdjacenceMatrix(std::size_t g, std::size_t h){

@@ -10,10 +10,10 @@ import script
 
 #linlin.jia@insa-rouen.fr
 
-#truc = script.computeEditDistanceOnGXlGraphs('include/gedlib-master/data/datasets/Mutagenicity/data/','collections/MUTA_10.xml',"CHEM_1", "BIPARTITE", "") 
-#print(truc)
+truc = script.computeEditDistanceOnGXlGraphs('include/gedlib-master/data/datasets/alkane/','include/gedlib-master/data/collections/alkane.xml',"CHEM_1", "IPFP", "") 
+print(truc)
 #script.PyRestartEnv()
-script.appel()
+#script.appel()
 
 def recuptest() :
     print("Here is the recuperation Python function !")
@@ -34,7 +34,7 @@ def minitest() :
     print("Here is the mini Python function !")
     
     #script.PyLoadGXLGraph('include/gedlib-master/data/datasets/Mutagenicity/data/', 'collections/MUTA_10.xml')
-    script.PyLoadGXLGraph("include/gedlib-master/data/datasets/Mutagenicity/data/", "/export/home/lambertn/Documents/Cython_GedLib_2/include/gedlib-master/data/collections/Mutagenicity.xml")
+    script.PyLoadGXLGraph("include/gedlib-master/data/datasets/Mutagenicity/data/", "include/gedlib-master/data/collections/Mutagenicity.xml")
     listID = script.PyGetAllGraphIds()
     
 ##    afficheId = ""
@@ -53,11 +53,11 @@ def minitest() :
     h = listID[1]
 
     script.PyRunMethod(g,h)
-    print("Forward map : " ,script.PyGetForwardMap(g,h), ", Backward map : ", script.PyGetBackwardMap(g,h))
+    #print("Forward map : " ,script.PyGetForwardMap(g,h), ", Backward map : ", script.PyGetBackwardMap(g,h))
     print("Matrix : ", script.PyGetAdjacenceMatrix(g,h))
     print ("Upper Bound = " + str(script.PyGetUpperBound(g,h)) + ", Lower Bound = " + str(script.PyGetLowerBound(g,h)) + ", Runtime = " + str(script.PyGetRuntime(g,h)))
 
-minitest()
+#minitest()
 
 def test() :
     #script.appel()

@@ -70,6 +70,7 @@ cdef extern from "src/essai.h" :
     cdef vector[np.npy_uint64] getBackwardMap(size_t g, size_t h)
     cdef size_t getNodeImage(size_t g, size_t h, size_t nodeId)
     cdef size_t getNodePreImage(size_t g, size_t h, size_t nodeId)
+    cdef size_t getDummyNode()
     cdef vector[pair[size_t,size_t]] getAdjacenceMatrix(size_t g, size_t h)
     cdef vector[vector[np.npy_uint64]] getAllMap(size_t g, size_t h)
     cdef double getRuntime(size_t g, size_t h)
@@ -556,6 +557,17 @@ def PyGetNodePreImage(g,h,nodeID) :
     """
     return getNodePreImage(g, h, nodeID)
 
+def PyGetDummyNode() :
+    """
+        Returns the ID of a dummy node.
+
+        :return: The ID of the dummy node (18446744073709551614 for my computer, the hugest number possible)
+        :rtype: size_t
+        
+        .. note:: A dummy node is used when a node isn't associated to an other node.      
+    """
+    return getDummyNode()
+
 def PyGetAdjacenceMatrix(g,h) :
     """
         Returns the adjacence matrix, like C++ NodeMap.   
@@ -571,11 +583,6 @@ def PyGetAdjacenceMatrix(g,h) :
         .. warning:: PyRunMethod() between the same two graph must be called before this function. 
         .. note:: This function creates datas so use it if necessary, however you can understand how assignement works with this example.     
     """
-    ##backwardMap = PyGetBackwardMap(g,h)
-    ##res = []
-    ##for i in range(len(backwardMap)) :
-    ##    res.append((i,PyGetNodeImage(g,h,i)))
-    ##return res
     return getAdjacenceMatrix(g, h)
         
 
@@ -726,24 +733,35 @@ def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, option
         
     """
 
-    PyRestartEnv()
-    
+    if PyIsInitialized() :
+        PyRestartEnv()
+
+    print("Loading graphs in progress...")
     PyLoadGXLGraph(pathFolder, pathXML)
     listID = PyGetGraphIds()
+    print("Graphs loaded ! ")
     print("Number of graphs = " + str(listID[1]))
 
     PySetEditCost(editCost)
+    print("Initialization in progress...")
     PyInitEnv(initOption)
+    print("Initialization terminated !")
     
     PySetMethod(method, options)
     PyInitMethod()
 
-    res = []
+    #res = []
     for g in range(listID[0], listID[1]) :
+        print("Computation between graph " + str(g) + " with all the others including himself.")
         for h in range(listID[0], listID[1]) :
+            #print("Computation between graph " + str(g) + " and graph " + str(h))
             PyRunMethod(g,h)
-            res.append((PyGetUpperBound(g,h), PyGetForwardMap(g,h), PyGetBackwardMap(g,h), PyGetRuntime(g,h)))
+            #res.append((PyGetUpperBound(g,h), PyGetAdjacenceMatrix(g,h), PyGetRuntime(g,h)))
             
-    return res
+    #return res
+
+    print ("It's finish ! You can check the result with each ID of graphs ! There are in the return")
+    print ("Please don't restart the environment or recall this function, you will lose your results !")
+    return listID
 
     

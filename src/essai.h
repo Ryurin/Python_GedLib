@@ -244,6 +244,12 @@ std::size_t getNodeImage(std::size_t g, std::size_t h, std::size_t nodeId);
 std::size_t getNodePreImage(std::size_t g, std::size_t h, std::size_t nodeId);
 
 /*!
+ * @brief Returns a dummy node.
+ * @return ID of dummy node.
+ */
+std::size_t getDummyNode();
+
+/*!
  * @brief Returns node map between the input graphs. This function duplicates datas. 
  * @param[in] g ID of an input graph that has been added to the environment.
  * @param[in] h ID of an input graph that has been added to the environment.
