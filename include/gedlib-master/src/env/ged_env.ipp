@@ -270,6 +270,7 @@ read_gxl_label_from_ptree_(const boost::property_tree::ptree::value_type & node_
 					}
 					try {
 						attr_val = val.second.get<std::string>("");
+						//std::cout << file << " " << attr_name << " " << attr_val << std::endl;
 					}
 					catch (const boost::property_tree::ptree_bad_path & error) {
 						throw Error("The file " + file + " has the wrong format: missing content <gxl>.<graph>.<" + info + ">.<attr>.<[TYPENAME]>.___.");
@@ -578,6 +579,7 @@ get_graph(GEDGraph::GraphID graph_id) const {
 	for (GEDGraph::NodeID node_id{0}; node_id < exchange_graph.num_nodes; node_id++) {
 		exchange_graph.original_node_ids.emplace_back(internal_to_original_node_ids_.at(graph_id).at(node_id));
 		exchange_graph.node_labels.emplace_back(ged_data_.node_labels_.at(graph.get_node_label(node_id)));
+		//std::cout << ged_data_.node_labels_.at(graph.get_node_label(node_id)) << std::endl;
 		exchange_graph.adj_list.emplace_back();
 		for (auto eitr = graph.incident_edges(node_id); eitr.first != eitr.second; eitr.first++) {
 			GEDGraph::EdgeID edge(*eitr.first);

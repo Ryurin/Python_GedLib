@@ -255,7 +255,9 @@ std::size_t getDummyNode();
  * @param[in] h ID of an input graph that has been added to the environment.
  * @return Node map computed by the last call to run_method() with arguments @p g and @p h.
  */
-std::vector<std::pair<std::size_t, std::size_t>> getAdjacenceMatrix(std::size_t g, std::size_t h);
+std::vector<std::pair<std::size_t, std::size_t>> getNodeMap(std::size_t g, std::size_t h);
+
+std::vector<std::vector<int>> getAssignmentMatrix(std::size_t g, std::size_t h);
 
 /*!
  * @brief  Returns a vector which contains the forward and the backward maps between nodes of the two indicated graphs. 

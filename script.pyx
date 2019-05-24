@@ -71,7 +71,8 @@ cdef extern from "src/essai.h" :
     cdef size_t getNodeImage(size_t g, size_t h, size_t nodeId)
     cdef size_t getNodePreImage(size_t g, size_t h, size_t nodeId)
     cdef size_t getDummyNode()
-    cdef vector[pair[size_t,size_t]] getAdjacenceMatrix(size_t g, size_t h)
+    cdef vector[pair[size_t,size_t]] getNodeMap(size_t g, size_t h)
+    cdef vector[vector[int]] getAssignmentMatrix(size_t g, size_t h)
     cdef vector[vector[np.npy_uint64]] getAllMap(size_t g, size_t h)
     cdef double getRuntime(size_t g, size_t h)
     cdef bool quasimetricCosts()
@@ -221,7 +222,7 @@ def PyAddGraph(name="", classe="") :
         .. seealso::PyAddNode(), PyAddEdge()
         .. note:: You can call this function without parameters. You can also use this function after initialization, call PyInitEnv() after you're finished your modifications. 
     """
-    return addGraph(name,classe)
+    return addGraph(name.encode('utf-8'),classe.encode('utf-8'))
 
 def PyAddNode(graphID, nodeID, nodeLabel):
     """
@@ -237,7 +238,7 @@ def PyAddNode(graphID, nodeID, nodeLabel):
         .. seealso::PyAddGraph(), PyAddEdge()
         .. note:: You can also use this function after initialization, but only on a newly added graph. Call PyInitEnv() after you're finished your modifications. 
     """
-    addNode(graphID, nodeID, nodeLabel)
+    addNode(graphID, nodeID.encode('utf-8'), encodeYourMap(nodeLabel))
 
 def PyAddEdge(graphID, tail, head, edgeLabel, ignoreDuplicates = True) :
     """
@@ -257,7 +258,7 @@ def PyAddEdge(graphID, tail, head, edgeLabel, ignoreDuplicates = True) :
         .. seealso::PyAddGraph(), PyAddNode()
         .. note:: You can also use this function after initialization, but only on a newly added graph. Call PyInitEnv() after you're finished your modifications. 
     """
-    addEdge(graphID, tail, head, edgeLabel, ignoreDuplicates)
+    addEdge(graphID, tail.encode('utf-8'), head.encode('utf-8'), encodeYourMap(edgeLabel), ignoreDuplicates)
 
 def PyClearGraph(graphID) :
     """
@@ -568,22 +569,25 @@ def PyGetDummyNode() :
     """
     return getDummyNode()
 
-def PyGetAdjacenceMatrix(g,h) :
+def PyGetNodeMap(g,h) : 
     """
-        Returns the adjacence matrix, like C++ NodeMap.   
+        Returns the Node Map, like C++ NodeMap.   
 
         :param g: The Id of the first compared graph 
         :param h: The Id of the second compared graph
         :type g: size_t
         :type h: size_t
-        :return: The ID of the preimage node
+        :return: The Node Map between the two selected graph. 
         :rtype: vector[pair[size_t, size_t]]
         
         .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodeImage(), PyGetNodePreImage()
         .. warning:: PyRunMethod() between the same two graph must be called before this function. 
         .. note:: This function creates datas so use it if necessary, however you can understand how assignement works with this example.     
     """
-    return getAdjacenceMatrix(g, h)
+    return getNodeMap(g, h)
+
+def PyGetAssignmentMatrix(g,h) :
+    return getAssignmentMatrix(g, h)
         
 
 def PyGetAllMap(g,h) :
@@ -708,6 +712,11 @@ class InitError(Error) :
 ##PYTHON FUNCTIONS FOR SOME COMPUTATION##
 #########################################
 
+def encodeYourMap(map) :
+    res = {}
+    for key, value in map.items():
+        res[key.encode('utf-8')] = value.encode('utf-8')
+    return res
     
 def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, options="", initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :
     """
@@ -756,11 +765,11 @@ def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, option
         for h in range(listID[0], listID[1]) :
             #print("Computation between graph " + str(g) + " and graph " + str(h))
             PyRunMethod(g,h)
-            #res.append((PyGetUpperBound(g,h), PyGetAdjacenceMatrix(g,h), PyGetRuntime(g,h)))
+            #res.append((PyGetUpperBound(g,h), PyGetNodeMap(g,h), PyGetRuntime(g,h)))
             
     #return res
 
-    print ("It's finish ! You can check the result with each ID of graphs ! There are in the return")
+    print ("Finish ! You can check the result with each ID of graphs ! There are in the return")
     print ("Please don't restart the environment or recall this function, you will lose your results !")
     return listID
 

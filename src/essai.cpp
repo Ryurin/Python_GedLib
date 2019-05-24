@@ -332,13 +332,48 @@ std::size_t getDummyNode(){
 	return ged::GEDGraph::dummy_node();
 }
 
-std::vector<pair<std::size_t, std::size_t>> getAdjacenceMatrix(std::size_t g, std::size_t h){
+std::vector<pair<std::size_t, std::size_t>> getNodeMap(std::size_t g, std::size_t h){
 	std::vector<pair<std::size_t, std::size_t>> res; 
 	std::vector<ged::NodeMap::Assignment> relation;
 	env.get_node_map(g,h).as_relation(relation);
 	for (const auto & assignment : relation) {
 		res.push_back(std::make_pair(assignment.first, assignment.second)); 
 	}
+	return res;
+}
+
+std::vector<std::vector<int>> getAssignmentMatrix(std::size_t g, std::size_t h){
+	std::vector<std::vector<int>> res;
+	for(std::size_t i = 0; i != getForwardMap(g, h).size(); i++){
+		std::vector<int> newLine;
+		bool have1 = false;
+		for(std::size_t j = 0; j != getBackwardMap(g, h).size(); j++){
+			if (getNodeImage(g, h, i) == j){
+				newLine.push_back(1);
+				have1 = true;
+			}
+			else{
+				newLine.push_back(0);
+			}
+		}
+		if(have1){
+			newLine.push_back(0);
+		}
+		else{
+			newLine.push_back(1);
+		}
+		res.push_back(newLine);
+	}
+	std::vector<int> lastLine;
+	for (size_t k = 0; k != getBackwardMap(g,h).size(); k++){
+		if (getBackwardMap(g,h)[k] ==  ged::GEDGraph::dummy_node()){
+			lastLine.push_back(1);
+		}
+		else{
+			lastLine.push_back(0);
+		}
+	}
+	res.push_back(lastLine);
 	return res;
 }
 
@@ -430,7 +465,8 @@ int appelle()
 	env.run_method(g, h); //Demande d'ID des graphes
 	std::cout << "\nupper bound = " << env.get_upper_bound(g, h) << ", matrix = " << env.get_node_map(g,h) << ", runtime = " << env.get_runtime(g, h) << "\n";*/
 	
-	loadGXLGraph("include/gedlib-master/data/datasets/Mutagenicity/data/", "/export/home/lambertn/Documents/Cython_GedLib_2/include/gedlib-master/data/collections/Mutagenicity.xml"); //"collections/MUTA_10.xml"
+	loadGXLGraph("include/gedlib-master/data/datasets/Mutagenicity/data/", /*"/export/home/lambertn/Documents/Cython_GedLib_2/include/gedlib-master/data/collections/Mutagenicity.xml"); //*/"collections/MUTA_10.xml");
+	//loadGXLGraph("include/gedlib-master/data/datasets/alkane/","include/gedlib-master/data/collections/alkane.xml");
 	std::pair<std::size_t, std::size_t> listIdInt = getGraphIds();
 	/*std::string truc = "";
 
@@ -459,8 +495,12 @@ int appelle()
 	for (int i = 0; i!=kirby.size(); i++){
 		std::cout << kirby[i].first << " " << kirby[i].second << "\n";
 	}*/
+	/*std::vector<std::map<std::string, std::string>> chose = getGraphNodeLabels(7);
+	for (int i = 0; i!=kirby.size(); i++){
+		std::cout << kirby[i].first << " " << kirby[i].second << "\n";
+	}*/
 	
-	
+	std::cout << getGraphNodeLabels(7)[7]["chem"] << "\n";
 	std::cout << "\nupper bound = " << getUpperBound(g, h) << ", matrix = " << env.get_node_map(g,h) << ", runtime = " << getRuntime(g, h) << "\n";
 	std::cout << "forward map = " << toStringVectorInt(getForwardMap(g,h)) << ", backward map = " << toStringVectorInt(getBackwardMap(g,h)) << "\n\n";
 
