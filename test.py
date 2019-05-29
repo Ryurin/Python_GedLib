@@ -36,7 +36,7 @@ def testAddGraph() :
     #print(script.PyGetGraphNodeLabels(7))
     #print(script.PyGetGraphEdges(7))
 
-testAddGraph()
+#testAddGraph()
 
 ##<graph id="molecule_3486" edgeids="true" edgemode="undirected">
 ##<node id="1"><attr name="chem"><string>C</string></attr></node>
@@ -111,7 +111,7 @@ def minitest() :
     afficheMatrix(script.PyGetAssignmentMatrix(g,h))
     print ("Upper Bound = " + str(script.PyGetUpperBound(g,h)) + ", Lower Bound = " + str(script.PyGetLowerBound(g,h)) + ", Runtime = " + str(script.PyGetRuntime(g,h)))
 
-#minitest()
+minitest()
 
 def test() :
     #script.appel()

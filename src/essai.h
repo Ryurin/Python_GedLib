@@ -160,7 +160,7 @@ std::vector<std::list<std::pair<std::size_t, std::map<std::string, std::string>>
  * @brief Sets the edit costs to one of the predefined edit costs.
  * @param[in] editCost Select one of the predefined edit costs.
  */
-void setEditCost(std::string editCost);
+void setEditCost(std::string editCost, std::vector<double> editCostConstants = {});
 
 /*!
  * @brief Initializes the environment.
@@ -257,6 +257,12 @@ std::size_t getDummyNode();
  */
 std::vector<std::pair<std::size_t, std::size_t>> getNodeMap(std::size_t g, std::size_t h);
 
+/*!
+ * @brief Returns assignment matrix between the input graphs. This function duplicates datas. 
+ * @param[in] g ID of an input graph that has been added to the environment.
+ * @param[in] h ID of an input graph that has been added to the environment.
+ * @return Assignment matrix computed by the last call to run_method() with arguments @p g and @p h.
+ */
 std::vector<std::vector<int>> getAssignmentMatrix(std::size_t g, std::size_t h);
 
 /*!

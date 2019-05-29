@@ -58,7 +58,7 @@ cdef extern from "src/essai.h" :
     cdef vector[map[string, string]] getGraphNodeLabels(size_t graphId)
     cdef vector[pair[pair[size_t,size_t], map[string, string]]] getGraphEdges(size_t graphId)
     cdef vector[list[pair[size_t, map[string, string]]]] getGraphAdjacenceList(size_t graphId)
-    cdef void setEditCost(string editCost)
+    cdef void setEditCost(string editCost, vector[double] editCostConstant)
     cdef void initEnv(string initOption)
     cdef void setMethod(string method, string options)
     cdef void initMethod()
@@ -369,7 +369,7 @@ def PyGetGraphAdjacenceList(graphID) :
     """
     return getGraphAdjacenceList(graphID)
 
-def PySetEditCost(editCost) :
+def PySetEditCost(editCost, editCostConstant = []) :
     """
         Sets an edit cost function to the environment, if its exists. 
 
@@ -381,7 +381,7 @@ def PySetEditCost(editCost) :
     """
     editCostB = editCost.encode('utf-8')
     if editCostB in listOfEditCostOptions : 
-        setEditCost(editCostB)
+        setEditCost(editCostB, editCostConstant)
     else :
         raise EditCostError("This edit cost function doesn't exist, please see listOfEditCostOptions for selecting a edit cost function")
 

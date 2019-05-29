@@ -246,8 +246,8 @@ ged::Options::EditCosts translateEditCost(std::string editCost){
 	 return ged::Options::EditCosts::CONSTANT;
 }
 
-void setEditCost(std::string editCost){
-	env.set_edit_costs(translateEditCost(editCost));
+void setEditCost(std::string editCost, std::vector<double> editCostConstants){
+	env.set_edit_costs(translateEditCost(editCost), editCostConstants);
 }
 
 void initEnv(){
@@ -477,6 +477,7 @@ int appelle()
 
     std::cout << "Number of graphs = " << listIdInt.second /*<< ", list of IDs = " << truc*/ << "\n";
     //cout << env.graph_ids().first << ", " << env.graph_ids().second << endl;
+  
 	setEditCost("CHEM_1");
 	initEnv();
 	setMethod("BIPARTITE","");
@@ -499,8 +500,8 @@ int appelle()
 	for (int i = 0; i!=kirby.size(); i++){
 		std::cout << kirby[i].first << " " << kirby[i].second << "\n";
 	}*/
-	
-	std::cout << getGraphNodeLabels(7)[7]["chem"] << "\n";
+		
+	//std::cout << getGraphNodeLabels(7)[7]["chem"] << "\n";
 	std::cout << "\nupper bound = " << getUpperBound(g, h) << ", matrix = " << env.get_node_map(g,h) << ", runtime = " << getRuntime(g, h) << "\n";
 	std::cout << "forward map = " << toStringVectorInt(getForwardMap(g,h)) << ", backward map = " << toStringVectorInt(getBackwardMap(g,h)) << "\n\n";
 

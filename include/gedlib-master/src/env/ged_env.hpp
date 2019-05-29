@@ -64,7 +64,7 @@ public:
 	 * @param[in] edit_costs Select one of the predefined edit costs.
 	 * @param[in] edit_cost_constants Constants passed to the constructor of the edit cost class selected by @p edit_costs.
 	 */
-	void set_edit_costs(Options::EditCosts edit_costs, std::initializer_list<double> edit_cost_constants = {});
+	void set_edit_costs(Options::EditCosts edit_costs,  std::vector<double> edit_cost_constants = {});
 
 	/*!
 	 * @brief Sets the edit costs to user defined edit costs.
