@@ -111,7 +111,7 @@ def minitest() :
     afficheMatrix(script.PyGetAssignmentMatrix(g,h))
     print ("Upper Bound = " + str(script.PyGetUpperBound(g,h)) + ", Lower Bound = " + str(script.PyGetLowerBound(g,h)) + ", Runtime = " + str(script.PyGetRuntime(g,h)))
 
-minitest()
+#minitest()
 
 def test() :
     #script.appel()

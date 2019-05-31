@@ -59,6 +59,7 @@ cdef extern from "src/essai.h" :
     cdef vector[pair[pair[size_t,size_t], map[string, string]]] getGraphEdges(size_t graphId)
     cdef vector[list[pair[size_t, map[string, string]]]] getGraphAdjacenceList(size_t graphId)
     cdef void setEditCost(string editCost, vector[double] editCostConstant)
+    cdef void setPersonalEditCost()
     cdef void initEnv(string initOption)
     cdef void setMethod(string method, string options)
     cdef void initMethod()
@@ -385,6 +386,14 @@ def PySetEditCost(editCost, editCostConstant = []) :
     else :
         raise EditCostError("This edit cost function doesn't exist, please see listOfEditCostOptions for selecting a edit cost function")
 
+def PySetPersonalEditCost() :
+    """
+        Sets an personal edit cost function to the environment.
+        
+        .. note::You have to modify the C++ function to use it. Please see the documentation to add your Edit Cost function. 
+    """
+    setPersonalEditCost()
+
 def PyInitEnv(initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :
     """
         Initializes the environment with the chosen edit cost function and graphs.
@@ -497,7 +506,7 @@ def PyGetForwardMap(g,h) :
         :return: The forward map to the adjacence matrix between nodes of the two graphs
         :rtype: vector[long unsigned int]
         
-        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(), PyGetBackwardMap(), PyGetRuntime(), PyQuasimetricCost()
+        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(), PyGetBackwardMap(), PyGetRuntime(), PyQuasimetricCost(), PyGetNodeMap(), PyGetAssignmentMatrix()
         .. warning:: PyRunMethod() between the same two graph must be called before this function. 
         .. note:: I don't know how to connect the two map to reconstruct the adjacence matrix. Please come back when I know how it's work ! 
     """
@@ -514,7 +523,7 @@ def PyGetBackwardMap(g,h) :
         :return: The backward map to the adjacence matrix between nodes of the two graphs
         :rtype: vector[long unsigned int]
         
-        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(), PyGetForwardMap(), PyGetRuntime(), PyQuasimetricCost()
+        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(), PyGetForwardMap(), PyGetRuntime(), PyQuasimetricCost(), PyGetNodeMap(), PyGetAssignmentMatrix()
         .. warning:: PyRunMethod() between the same two graph must be called before this function. 
         .. note:: I don't know how to connect the two map to reconstruct the adjacence matrix. Please come back when I know how it's work ! 
     """
@@ -533,7 +542,7 @@ def PyGetNodeImage(g,h,nodeID) :
         :return: The ID of the image node
         :rtype: size_t
         
-        .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodePreImage()
+        .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodePreImage(), PyGetNodeMap(), PyGetAssignmentMatrix()
         .. warning:: PyRunMethod() between the same two graph must be called before this function. 
         .. note:: Use BackwardMap's Node to find its images ! You can also use PyGetForwardMap() and PyGetBackwardMap().     
     """
@@ -552,7 +561,7 @@ def PyGetNodePreImage(g,h,nodeID) :
         :return: The ID of the preimage node
         :rtype: size_t
         
-        .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodeImage()
+        .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodeImage(), PyGetNodeMap(), PyGetAssignmentMatrix()
         .. warning:: PyRunMethod() between the same two graph must be called before this function. 
         .. note:: Use ForwardMap's Node to find its images ! You can also use PyGetForwardMap() and PyGetBackwardMap().     
     """
@@ -580,13 +589,27 @@ def PyGetNodeMap(g,h) :
         :return: The Node Map between the two selected graph. 
         :rtype: vector[pair[size_t, size_t]]
         
-        .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodeImage(), PyGetNodePreImage()
+        .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodeImage(), PyGetNodePreImage(), PyGetAssignmentMatrix()
         .. warning:: PyRunMethod() between the same two graph must be called before this function. 
         .. note:: This function creates datas so use it if necessary, however you can understand how assignement works with this example.     
     """
     return getNodeMap(g, h)
 
 def PyGetAssignmentMatrix(g,h) :
+    """
+        Returns the Assignment Matrix between two selected graphs g and h.   
+
+        :param g: The Id of the first compared graph 
+        :param h: The Id of the second compared graph
+        :type g: size_t
+        :type h: size_t
+        :return: The Assignment Matrix between the two selected graph. 
+        :rtype: vector[vector[int]]
+        
+        .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodeImage(), PyGetNodePreImage(), PyGetNodeMap()
+        .. warning:: PyRunMethod() between the same two graph must be called before this function. 
+        .. note:: This function creates datas so use it if necessary.     
+    """
     return getAssignmentMatrix(g, h)
         
 
@@ -717,10 +740,37 @@ def encodeYourMap(map) :
     for key, value in map.items():
         res[key.encode('utf-8')] = value.encode('utf-8')
     return res
+
+def addNxGraph(name, classe, listOfNodes, listOfEdges, ignoreDuplicates=True) :
+    """
+        Add a Graph (made by networkx) on the environment. Be careful to respect the same format as GXL graphs for labelling nodes and edges. 
+
+        :param name: The name of the new graph, can be an empty string
+        :param classe: The class of the new graph, can be an empty string
+        :param listOfNodes: The list of nodes. You have to convert the nx.data with list(G.nodes.data())
+        :param listOfEdges: The list of edges. You have to convert the nx.data with list(G.edges.data()) 
+        :param ignoreDuplicates: If True, duplicate edges are ignored, otherwise it's raise an error if an existing edge is added. True by default
+        :type name: string
+        :type classe: string
+        :type listOfNodes: list[pair[size_t, map[string,string]]]
+        :type listOfEdges: list[vector[size_t, size_t, map[string,string]]]
+        :type ignoreDuplicates: bool
+        :return: The ID of the newly added graphe
+        :rtype: size_t
+
+        .. note:: You have to give the list of nodes and edges with the good type (map labels aren't an option), please see how a GXL graph is construct.  
+        
+    """
+    id = PyAddGraph(name, classe)
+    for node in listOfNodes :
+        PyAddNode(id, node[0], node[1])
+    for edge in listOfEdges :
+        PyAddEdge(id, edge[0], edge[1], edge[2], ignoreDuplicates)
+    return id
     
 def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, options="", initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :
     """
-        Compute all the edit distance cost between each graph and return the result with the adjacence matrix. 
+        . 
 
         :param pathFolder: The folder's path which contains GXL graphs
         :param pathXML: The XML's path which indicates which graphes you want to load

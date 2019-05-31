@@ -163,6 +163,12 @@ std::vector<std::list<std::pair<std::size_t, std::map<std::string, std::string>>
 void setEditCost(std::string editCost, std::vector<double> editCostConstants = {});
 
 /*!
+ * @brief Sets the edit costs to a personal Edit Cost Class.
+ * @note You have to add your class, which should inherit from EditCost class, in the function. After that, you can compile and use it in Python
+ */
+void setPersonalEditCost();
+
+/*!
  * @brief Initializes the environment.
  * @param[in] initOption Select initialization options.
  */

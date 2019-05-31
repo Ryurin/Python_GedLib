@@ -250,6 +250,10 @@ void setEditCost(std::string editCost, std::vector<double> editCostConstants){
 	env.set_edit_costs(translateEditCost(editCost), editCostConstants);
 }
 
+void setPersonalEditCost(){
+	//env.set_edit_costs("Your EditCost Class");
+}
+
 void initEnv(){
 	env.init();
 	initialized = true;
