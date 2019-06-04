@@ -219,7 +219,6 @@ std::vector<GEDGraph::NodeID> NodeMap::get_backward_map() const{
 	return backward_map_;
 }
 
-
 bool
 NodeMap::
 operator<(const NodeMap & rhs) const {

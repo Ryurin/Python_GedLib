@@ -33,10 +33,11 @@ def testAddGraph() :
     print(script.PyGetGraphEdges(10))
     
     #print(script.PyGetGraphName(7))
-    #print(script.PyGetGraphNodeLabels(7))
+    for i in listID : 
+        print(script.PyGetGraphNodeLabels(i))
     #print(script.PyGetGraphEdges(7))
 
-#testAddGraph()
+testAddGraph()
 
 ##<graph id="molecule_3486" edgeids="true" edgemode="undirected">
 ##<node id="1"><attr name="chem"><string>C</string></attr></node>

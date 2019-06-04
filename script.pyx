@@ -823,4 +823,5 @@ def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, option
     print ("Please don't restart the environment or recall this function, you will lose your results !")
     return listID
 
+pouit = 0
     

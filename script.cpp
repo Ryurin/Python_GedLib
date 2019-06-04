@@ -1705,6 +1705,7 @@ static const char __pyx_k_Error[] = "Error";
 static const char __pyx_k_appel[] = "appel";
 static const char __pyx_k_initB[] = "initB";
 static const char __pyx_k_items[] = "items";
+static const char __pyx_k_pouit[] = "pouit";
 static const char __pyx_k_print[] = "print";
 static const char __pyx_k_range[] = "range";
 static const char __pyx_k_utf_8[] = "utf-8";
@@ -1939,6 +1940,7 @@ static PyObject *__pyx_kp_s_numpy_core_umath_failed_to_impor;
 static PyObject *__pyx_n_s_options;
 static PyObject *__pyx_n_s_pathFolder;
 static PyObject *__pyx_n_s_pathXML;
+static PyObject *__pyx_n_s_pouit;
 static PyObject *__pyx_n_s_prepare;
 static PyObject *__pyx_n_s_print;
 static PyObject *__pyx_n_s_qualname;
@@ -2002,6 +2004,7 @@ static PyObject *__pyx_pf_6script_84addNxGraph(CYTHON_UNUSED PyObject *__pyx_sel
 static PyObject *__pyx_pf_6script_86computeEditDistanceOnGXlGraphs(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_pathFolder, PyObject *__pyx_v_pathXML, PyObject *__pyx_v_editCost, PyObject *__pyx_v_method, PyObject *__pyx_v_options, PyObject *__pyx_v_initOption); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
+static PyObject *__pyx_int_0;
 static PyObject *__pyx_k__9;
 static PyObject *__pyx_tuple_;
 static PyObject *__pyx_tuple__2;
@@ -7823,7 +7826,7 @@ static PyObject *__pyx_pf_6script_86computeEditDistanceOnGXlGraphs(CYTHON_UNUSED
  *     print ("Please don't restart the environment or recall this function, you will lose your results !")
  *     return listID             # <<<<<<<<<<<<<<
  * 
- * 
+ * pouit = 0
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_listID);
@@ -12007,6 +12010,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_options, __pyx_k_options, sizeof(__pyx_k_options), 0, 0, 1, 1},
   {&__pyx_n_s_pathFolder, __pyx_k_pathFolder, sizeof(__pyx_k_pathFolder), 0, 0, 1, 1},
   {&__pyx_n_s_pathXML, __pyx_k_pathXML, sizeof(__pyx_k_pathXML), 0, 0, 1, 1},
+  {&__pyx_n_s_pouit, __pyx_k_pouit, sizeof(__pyx_k_pouit), 0, 0, 1, 1},
   {&__pyx_n_s_prepare, __pyx_k_prepare, sizeof(__pyx_k_prepare), 0, 0, 1, 1},
   {&__pyx_n_s_print, __pyx_k_print, sizeof(__pyx_k_print), 0, 0, 1, 1},
   {&__pyx_n_s_qualname, __pyx_k_qualname, sizeof(__pyx_k_qualname), 0, 0, 1, 1},
@@ -12811,6 +12815,7 @@ static int __Pyx_InitCachedConstants(void) {
 
 static int __Pyx_InitGlobals(void) {
   if (__Pyx_InitStrings(__pyx_string_tab) < 0) __PYX_ERR(0, 1, __pyx_L1_error);
+  __pyx_int_0 = PyInt_FromLong(0); if (unlikely(!__pyx_int_0)) __PYX_ERR(0, 1, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -13708,6 +13713,14 @@ PyMODINIT_FUNC PyInit_script(void)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_computeEditDistanceOnGXlGraphs, __pyx_t_2) < 0) __PYX_ERR(0, 771, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+  /* "script.pyx":826
+ *     return listID
+ * 
+ * pouit = 0             # <<<<<<<<<<<<<<
+ * 
+ */
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_pouit, __pyx_int_0) < 0) __PYX_ERR(0, 826, __pyx_L1_error)
 
   /* "script.pyx":1
  * # distutils: language = c++             # <<<<<<<<<<<<<<
