@@ -484,7 +484,7 @@ int appelle()
   
 	setEditCost("CHEM_1");
 	initEnv();
-	setMethod("BIPARTITE","");
+	setMethod("IPFP","");
 	initMethod();
 	std::size_t g = listIdInt.first;
 	std::size_t h = listIdInt.first +1;

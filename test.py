@@ -35,9 +35,10 @@ def testAddGraph() :
     #print(script.PyGetGraphName(7))
     for i in listID : 
         print(script.PyGetGraphNodeLabels(i))
+        print(script.PyGetGraphEdges(i))
     #print(script.PyGetGraphEdges(7))
 
-testAddGraph()
+#testAddGraph()
 
 ##<graph id="molecule_3486" edgeids="true" edgemode="undirected">
 ##<node id="1"><attr name="chem"><string>C</string></attr></node>
@@ -115,7 +116,7 @@ def minitest() :
 #minitest()
 
 def test() :
-    #script.appel()
+    script.appel()
     
     script.PyRestartEnv()
     
@@ -148,7 +149,7 @@ def test() :
 
     script.PyInitEnv()
 
-    script.PySetMethod("BIPARTITE", "")
+    script.PySetMethod("IPFP", "")
     script.PyInitMethod()
 
     g = listID[0]
@@ -161,4 +162,8 @@ def test() :
     print ("Upper Bound = " + str(script.PyGetUpperBound(g,h)) + ", Lower Bound = " + str(script.PyGetLowerBound(g,h)) + ", Runtime = " + str(script.PyGetRuntime(g,h)))
 
 
-#test()
+test()
+
+runtime = 0.000883781
+Runtime = 0.000154826
+

@@ -741,7 +741,15 @@ def encodeYourMap(map) :
         res[key.encode('utf-8')] = value.encode('utf-8')
     return res
 
-def addNxGraph(name, classe, listOfNodes, listOfEdges, ignoreDuplicates=True) :
+def addRandomGraph(name, classe, listOfNodes, listOfEdges, ignoreDuplicates=True) :
+    id = PyAddGraph(name, classe)
+    for node in listOfNodes :
+        PyAddNode(id, node[0], node[1])
+    for edge in listOfEdges :
+        PyAddEdge(id, edge[0], edge[1], edge[2], ignoreDuplicates)
+    return id
+
+def addNxGraph(g, classe, ignoreDuplicates=True) :
     """
         Add a Graph (made by networkx) on the environment. Be careful to respect the same format as GXL graphs for labelling nodes and edges. 
 
@@ -761,12 +769,70 @@ def addNxGraph(name, classe, listOfNodes, listOfEdges, ignoreDuplicates=True) :
         .. note:: You have to give the list of nodes and edges with the good type (map labels aren't an option), please see how a GXL graph is construct.  
         
     """
-    id = PyAddGraph(name, classe)
-    for node in listOfNodes :
+    id = PyAddGraph(g.name, classe)
+    for node in g.nodes :
         PyAddNode(id, node[0], node[1])
-    for edge in listOfEdges :
+    for edge in g.edges :
         PyAddEdge(id, edge[0], edge[1], edge[2], ignoreDuplicates)
     return id
+
+
+def computeGedOnTwoGraphs(g1,g2, editCost, method, options, initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :
+    if PyIsInitialized() :
+        PyRestartEnv()
+
+    g = addNxGraph(g1, "")
+    h = addNxGraph(g2, "")
+
+    PySetEditCost(editCost)
+    PyInitEnv(initOption)
+    
+    PySetMethod(method, options)
+    PyInitMethod()
+
+    resDistance = 0
+    resMapping = []
+    PyRunMethod(g,h)
+    resDistance = PyGetUpperBound(g,h)
+    resMapping = PyGetNodeMap(g,h)
+
+    return resDistance, resMapping
+
+def computeEditDistanceOnNxGraphs(dataset, classes, editCost, method, options, initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :
+    
+    if PyIsInitialized() :
+        PyRestartEnv()
+
+    print("Loading graphs in progress...")
+    for graph in dataset :
+        addNxGraph(graph, classes)
+        truc = 0
+    listID = PyGetGraphIds()
+    print("Graphs loaded ! ")
+    print("Number of graphs = " + str(listID[1]))
+
+    PySetEditCost(editCost)
+    print("Initialization in progress...")
+    PyInitEnv(initOption)
+    print("Initialization terminated !")
+    
+    PySetMethod(method, options)
+    PyInitMethod()
+
+    resDistance = [[]]
+    resMapping = [[]]
+    for g in range(listID[0], listID[1]) :
+        print("Computation between graph " + str(g) + " with all the others including himself.")
+        for h in range(listID[0], listID[1]) :
+            #print("Computation between graph " + str(g) + " and graph " + str(h))
+            PyRunMethod(g,h)
+            resDistance[g][h] = PyGetUpperBound(g,h)
+            resMapping[g][h] = PyGetNodeMap(g,h)
+
+    print("Finish ! The return contains edit distances and NodeMap but you can check the result with graphs'ID until you restart the environment")
+    return resDistance, resMapping
+    
+    
     
 def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, options="", initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :
     """
@@ -823,5 +889,5 @@ def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, option
     print ("Please don't restart the environment or recall this function, you will lose your results !")
     return listID
 
-pouit = 0
+
     
