@@ -164,7 +164,7 @@ def PyGetGraphIds() :
         Searchs the first and last IDs of the loaded graphs in the environment. 
  
         :return: The pair of the first and the last graphs Ids
-        :rtype: pair[size_t, size_t]
+        :rtype: tuple(size_t, size_t)
         
         .. note:: Prefer this function if you have huges structures with lots of graphs.  
     """
@@ -234,7 +234,7 @@ def PyAddNode(graphID, nodeID, nodeLabel):
         :param nodeLabel: The label of the new node
         :type graphID: size_t
         :type nodeID: string
-        :type nodeLabel: map[string,string]
+        :type nodeLabel: dict{string : string}
         
         .. seealso::PyAddGraph(), PyAddEdge()
         .. note:: You can also use this function after initialization, but only on a newly added graph. Call PyInitEnv() after you're finished your modifications. 
@@ -253,7 +253,7 @@ def PyAddEdge(graphID, tail, head, edgeLabel, ignoreDuplicates = True) :
         :type graphID: size_t
         :type tail: string
         :type head: string
-        :type edgeLabel: map[string,string]
+        :type edgeLabel: dict{string : string}
         :type ignoreDuplicates: bool
         
         .. seealso::PyAddGraph(), PyAddNode()
@@ -321,7 +321,7 @@ def PyGetOriginalNodeIds(graphID) :
         :param graphID: The ID of the wanted graph
         :type graphID: size_t
         :return: The list of IDs's nodes on the selected graph
-        :rtype: vector[string]
+        :rtype: list[string]
         
         .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetGraphNodeLabels(), PyGetGraphEdges(), PyGetGraphAdjacenceList()
         .. note:: These functions allow to collect all the graph's informations.
@@ -335,7 +335,7 @@ def PyGetGraphNodeLabels(graphID) :
         :param graphID: The ID of the wanted graph
         :type graphID: size_t
         :return: The list of labels's nodes on the selected graph
-        :rtype: vector[map[string,string]]
+        :rtype: list[dict{string : string}]
         
         .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphEdges(), PyGetGraphAdjacenceList()
         .. note:: These functions allow to collect all the graph's informations.
@@ -349,7 +349,7 @@ def PyGetGraphEdges(graphID) :
         :param graphID: The ID of the wanted graph
         :type graphID: size_t
         :return: The list of edges on the selected graph
-        :rtype: vector[pair[pair[size_t,size_t], map[string, string]]]
+        :rtype: list[tuple(tuple(size_t,size_t), dict{string : string})]
         
         .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphAdjacenceList()
         .. note:: These functions allow to collect all the graph's informations.
@@ -363,7 +363,7 @@ def PyGetGraphAdjacenceList(graphID) :
         :param graphID: The ID of the wanted graph
         :type graphID: size_t
         :return: The adjacence list of the selected graph
-        :rtype: vector[list[pair[size_t, map[string, string]]]]
+        :rtype: list[list[tuple(size_t, dict{string : string})]]
         
         .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphEdges()
         .. note:: These functions allow to collect all the graph's informations.
@@ -504,7 +504,7 @@ def PyGetForwardMap(g,h) :
         :type g: size_t
         :type h: size_t
         :return: The forward map to the adjacence matrix between nodes of the two graphs
-        :rtype: vector[long unsigned int]
+        :rtype: list[npy_uint32]
         
         .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(), PyGetBackwardMap(), PyGetRuntime(), PyQuasimetricCost(), PyGetNodeMap(), PyGetAssignmentMatrix()
         .. warning:: PyRunMethod() between the same two graph must be called before this function. 
@@ -521,7 +521,7 @@ def PyGetBackwardMap(g,h) :
         :type g: size_t
         :type h: size_t
         :return: The backward map to the adjacence matrix between nodes of the two graphs
-        :rtype: vector[long unsigned int]
+        :rtype: list[npy_uint32]
         
         .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(), PyGetForwardMap(), PyGetRuntime(), PyQuasimetricCost(), PyGetNodeMap(), PyGetAssignmentMatrix()
         .. warning:: PyRunMethod() between the same two graph must be called before this function. 
@@ -587,7 +587,7 @@ def PyGetNodeMap(g,h) :
         :type g: size_t
         :type h: size_t
         :return: The Node Map between the two selected graph. 
-        :rtype: vector[pair[size_t, size_t]]
+        :rtype: list[tuple(size_t, size_t)]
         
         .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodeImage(), PyGetNodePreImage(), PyGetAssignmentMatrix()
         .. warning:: PyRunMethod() between the same two graph must be called before this function. 
@@ -604,7 +604,7 @@ def PyGetAssignmentMatrix(g,h) :
         :type g: size_t
         :type h: size_t
         :return: The Assignment Matrix between the two selected graph. 
-        :rtype: vector[vector[int]]
+        :rtype: list[list[int]]
         
         .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodeImage(), PyGetNodePreImage(), PyGetNodeMap()
         .. warning:: PyRunMethod() between the same two graph must be called before this function. 
@@ -622,7 +622,7 @@ def PyGetAllMap(g,h) :
         :type g: size_t
         :type h: size_t
         :return: The forward and backward maps to the adjacence matrix between nodes of the two graphs
-        :rtype: vector[vector[long unsigned int]]
+        :rtype: list[list[npy_uint32]]
         
         .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(),  PyGetForwardMap(), PyGetBackwardMap(), PyGetRuntime(), PyQuasimetricCost()
         .. warning:: PyRunMethod() between the same two graph must be called before this function. 
@@ -736,12 +736,42 @@ class InitError(Error) :
 #########################################
 
 def encodeYourMap(map) :
+    """
+        Encodes a string dictionnary to utf-8 for C++ functions
+
+        :param map: The map to encode
+        :type map: dict{string : string}
+        :return: The encoded map
+        :rtype: dict{'b'string : 'b'string}
+
+        .. note:: This function is used for type connection.  
+        
+    """
     res = {}
     for key, value in map.items():
         res[key.encode('utf-8')] = value.encode('utf-8')
     return res
 
 def addRandomGraph(name, classe, listOfNodes, listOfEdges, ignoreDuplicates=True) :
+    """
+        Add a Graph (not GXL) on the environment. Be careful to respect the same format as GXL graphs for labelling nodes and edges. 
+
+        :param name: The name of the graph to add, can be an empty string
+        :param classe: The classe of the graph to add, can be an empty string
+        :param listOfNodes: The list of nodes to add
+        :param listOfEdges: The list of edges to add
+        :param ignoreDuplicates: If True, duplicate edges are ignored, otherwise it's raise an error if an existing edge is added. True by default
+        :type name: string
+        :type classe: string
+        :type listOfNodes: list[tuple(size_t, dict{string : string})]
+        :type listOfEdges: list[tuple(tuple(size_t,size_t), dict{string : string})]
+        :type ignoreDuplicates: bool
+        :return: The ID of the newly added graphe
+        :rtype: size_t
+
+        .. note:: The graph must respect the GXL structure. Please see how a GXL graph is construct.  
+        
+    """
     id = PyAddGraph(name, classe)
     for node in listOfNodes :
         PyAddNode(id, node[0], node[1])
@@ -753,20 +783,14 @@ def addNxGraph(g, classe, ignoreDuplicates=True) :
     """
         Add a Graph (made by networkx) on the environment. Be careful to respect the same format as GXL graphs for labelling nodes and edges. 
 
-        :param name: The name of the new graph, can be an empty string
-        :param classe: The class of the new graph, can be an empty string
-        :param listOfNodes: The list of nodes. You have to convert the nx.data with list(G.nodes.data())
-        :param listOfEdges: The list of edges. You have to convert the nx.data with list(G.edges.data()) 
+        :param g: The graph to add (networkx graph)
         :param ignoreDuplicates: If True, duplicate edges are ignored, otherwise it's raise an error if an existing edge is added. True by default
-        :type name: string
-        :type classe: string
-        :type listOfNodes: list[pair[size_t, map[string,string]]]
-        :type listOfEdges: list[vector[size_t, size_t, map[string,string]]]
+        :type g: networkx.graph
         :type ignoreDuplicates: bool
         :return: The ID of the newly added graphe
         :rtype: size_t
 
-        .. note:: You have to give the list of nodes and edges with the good type (map labels aren't an option), please see how a GXL graph is construct.  
+        .. note:: The NX graph must respect the GXL structure. Please see how a GXL graph is construct.  
         
     """
     id = PyAddGraph(g.name, classe)
@@ -778,6 +802,28 @@ def addNxGraph(g, classe, ignoreDuplicates=True) :
 
 
 def computeGedOnTwoGraphs(g1,g2, editCost, method, options, initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :
+    """
+        Computes the edit distance between two NX graphs. 
+        
+        :param g1: The first graph to add and compute
+        :param g2: The second graph to add and compute
+        :param editCost: The name of the edit cost function
+        :param method: The name of the computation method
+        :param options: The options of the method (like bash options), an empty string by default
+        :param initOption:  The name of the init option, "EAGER_WITHOUT_SHUFFLED_COPIES" by default
+        :type g1: networksx.graph
+        :type g2: networksx.graph
+        :type editCost: string
+        :type method: string
+        :type options: string
+        :type initOption: string
+        :return: The edit distance between the two graphs and the nodeMap between them. 
+        :rtype: double, list[tuple(size_t, size_t)]
+
+        .. seealso:: listOfEditCostOptions, listOfMethodOptions, listOfInitOptions 
+        .. note:: Make sure each parameter exists with your architecture and these lists : listOfEditCostOptions, listOfMethodOptions, listOfInitOptions. The structure of graphs must be similar as GXL. 
+        
+    """
     if PyIsInitialized() :
         PyRestartEnv()
 
@@ -799,7 +845,29 @@ def computeGedOnTwoGraphs(g1,g2, editCost, method, options, initOption = "EAGER_
     return resDistance, resMapping
 
 def computeEditDistanceOnNxGraphs(dataset, classes, editCost, method, options, initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :
-    
+    """
+
+        Computes all the edit distance between each NX graphs on the dataset. 
+        
+        :param dataset: The list of graphs to add and compute
+        :param classes: The classe of all the graph, can be an empty string
+        :param editCost: The name of the edit cost function
+        :param method: The name of the computation method
+        :param options: The options of the method (like bash options), an empty string by default
+        :param initOption:  The name of the init option, "EAGER_WITHOUT_SHUFFLED_COPIES" by default
+        :type dataset: list[networksx.graph]
+        :type classes: string
+        :type editCost: string
+        :type method: string
+        :type options: string
+        :type initOption: string
+        :return: Two matrix, the first with edit distances between graphs and the second the nodeMap between graphs. The result between g and h is one the [g][h] coordinates.
+        :rtype: list[list[double]], list[list[list[tuple(size_t, size_t)]]]
+
+        .. seealso:: listOfEditCostOptions, listOfMethodOptions, listOfInitOptions 
+        .. note:: Make sure each parameter exists with your architecture and these lists : listOfEditCostOptions, listOfMethodOptions, listOfInitOptions. The structure of graphs must be similar as GXL. 
+        
+    """
     if PyIsInitialized() :
         PyRestartEnv()
 
@@ -836,8 +904,8 @@ def computeEditDistanceOnNxGraphs(dataset, classes, editCost, method, options, i
     
 def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, options="", initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :
     """
-        . 
-
+        Computes all the edit distance between each GXL graphs on the folder and the XMl file. 
+        
         :param pathFolder: The folder's path which contains GXL graphs
         :param pathXML: The XML's path which indicates which graphes you want to load
         :param editCost: The name of the edit cost function
@@ -850,8 +918,8 @@ def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, option
         :type method: string
         :type options: string
         :type initOption: string
-        :return: The list of important results, so edit distance cost approximation, adjacence matric and computation runtime
-        :rtype: list[(double,vector[long unsigned int], vector[long unsigned int], double)]
+        :return: The list of the first and last-1 ID of graphs
+        :rtype: tuple(size_t, size_t)
 
         .. seealso:: listOfEditCostOptions, listOfMethodOptions, listOfInitOptions 
         .. note:: Make sure each parameter exists with your architecture and these lists : listOfEditCostOptions, listOfMethodOptions, listOfInitOptions. 
