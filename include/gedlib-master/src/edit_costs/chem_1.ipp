@@ -89,6 +89,7 @@ edge_rel_cost_fun(const GXLLabel & edge_label_1, const GXLLabel & edge_label_2) 
 	return 0.0;
 }
 
+
 }
 
 #endif /* SRC_EDIT_COSTS_CHEM_1_IPP_ */

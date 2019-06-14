@@ -14,6 +14,9 @@
     Natacha Lambert
 
     Copyright (C) 2019 by all the authors
+
+    Classes & Functions
+    -------------------
  
 """
 
@@ -82,7 +85,7 @@ cdef extern from "src/essai.h" :
 ###########################################
 ##REDEFINITION OF C++ FUNCTIONS IN PYTHON##
 ###########################################
-    
+   
 def appel() :
     """
         Calls an example only in C++. Nothing usefull, that's why you must ignore this function. 

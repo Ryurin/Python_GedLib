@@ -251,7 +251,7 @@ void setEditCost(std::string editCost, std::vector<double> editCostConstants){
 }
 
 void setPersonalEditCost(){
-	//env.set_edit_costs("Your EditCost Class");
+	//env.set_edit_costs(Your EditCost Class);
 }
 
 void initEnv(){
@@ -489,7 +489,7 @@ int appelle()
 	std::size_t g = listIdInt.first;
 	std::size_t h = listIdInt.first +1;
 	runMethod(g,h);
-    
+	
     /*for (int i = 0; i!=pichu[0].size(); i++){
 		//std::cout << env.get_node_map(g,h).pre_image(pichu[1][i]);
 		std::cout << i;

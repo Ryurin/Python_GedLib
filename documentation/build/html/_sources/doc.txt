@@ -1,0 +1,2 @@
+.. automodule:: script
+   :members:

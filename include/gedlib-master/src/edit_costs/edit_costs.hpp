@@ -115,6 +115,7 @@ public:
 	 * @note May be implemented by derived classes of ged::EditCosts.
 	 */
 	virtual void vectorize_edge_label(const UserEdgeLabel & edge_label, std::vector<double> & vector_representation) const;
+	
 };
 
 }
