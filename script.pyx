@@ -379,6 +379,8 @@ def PySetEditCost(editCost, editCostConstant = []) :
 
         :param editCost: The name of the edit cost function
         :type editCost: string
+        :param editCostConstant: The parameters you will add to the editCost, empty by default
+        :type editCostConstant: list
         
         .. seealso::listOfEditCostOptions
         .. note:: Try to make sure the edit cost function exists with listOfEditCostOptions, raise an error otherwise. 
