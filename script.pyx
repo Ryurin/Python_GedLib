@@ -59,8 +59,8 @@ cdef extern from "src/essai.h" :
     cdef size_t getGraphNumEdges(size_t graphId)
     cdef vector[string] getGraphOriginalNodeIds(size_t graphId)
     cdef vector[map[string, string]] getGraphNodeLabels(size_t graphId)
-    cdef vector[pair[pair[size_t,size_t], map[string, string]]] getGraphEdges(size_t graphId)
-    cdef vector[list[pair[size_t, map[string, string]]]] getGraphAdjacenceList(size_t graphId)
+    cdef map[pair[size_t,size_t], map[string,string]] getGraphEdges(size_t graphId)
+    cdef vector[vector[size_t]] getGraphAdjacenceMatrix(size_t graphId)
     cdef void setEditCost(string editCost, vector[double] editCostConstant)
     cdef void setPersonalEditCost()
     cdef void initEnv(string initOption)
@@ -352,26 +352,26 @@ def PyGetGraphEdges(graphID) :
         :param graphID: The ID of the wanted graph
         :type graphID: size_t
         :return: The list of edges on the selected graph
-        :rtype: list[tuple(tuple(size_t,size_t), dict{string : string})]
+        :rtype: dict{tuple(size_t,size_t) : dict{string : string}}
         
         .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphAdjacenceList()
         .. note:: These functions allow to collect all the graph's informations.
     """
     return getGraphEdges(graphID)
 
-def PyGetGraphAdjacenceList(graphID) :
+def PyGetGraphAdjacenceMatrix(graphID) :
     """
         Searchs and returns the adjacence list of a graph, selected by its ID. 
 
         :param graphID: The ID of the wanted graph
         :type graphID: size_t
         :return: The adjacence list of the selected graph
-        :rtype: list[list[tuple(size_t, dict{string : string})]]
+        :rtype: list[list[size_t]]
         
         .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphEdges()
         .. note:: These functions allow to collect all the graph's informations.
     """
-    return getGraphAdjacenceList(graphID)
+    return getGraphAdjacenceMatrix(graphID)
 
 def PySetEditCost(editCost, editCostConstant = []) :
     """

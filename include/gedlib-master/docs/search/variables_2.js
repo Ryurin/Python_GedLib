@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initialized_5f',['initialized_',['../classged_1_1GEDMethod.html#a2d41ce72f5d29a4658f76ef2350114d0',1,'ged::GEDMethod']]]
+  ['edge_5flabels',['edge_labels',['../structged_1_1ExchangeGraph.html#a2cab2f1c23c92e2df7e38661c1f92710',1,'ged::ExchangeGraph']]]
 ];

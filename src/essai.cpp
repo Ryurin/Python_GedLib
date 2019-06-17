@@ -224,12 +224,12 @@ std::vector<std::map<std::string, std::string>> getGraphNodeLabels(std::size_t g
 	return getGraph(graphId).node_labels;
 }
 
-std::vector<std::pair<std::pair<std::size_t, std::size_t>, std::map<std::string, std::string>>> getGraphEdges(std::size_t graphId){
-	return getGraph(graphId).edges;
+std::map<std::pair<std::size_t, std::size_t>, std::map<std::string, std::string>> getGraphEdges(std::size_t graphId){
+	return getGraph(graphId).edge_labels;
 }
 
-std::vector<std::list<std::pair<std::size_t, std::map<std::string, std::string>>>> getGraphAdjacenceList(std::size_t graphId){
-	return getGraph(graphId).adj_list;
+std::vector<std::vector<std::size_t>> getGraphAdjacenceMatrix(std::size_t graphId){
+	return getGraph(graphId).adj_matrix;
 }
 
 /*!
@@ -504,6 +504,7 @@ int appelle()
 	for (int i = 0; i!=kirby.size(); i++){
 		std::cout << kirby[i].first << " " << kirby[i].second << "\n";
 	}*/
+	
 		
 	//std::cout << getGraphNodeLabels(7)[7]["chem"] << "\n";
 	std::cout << "\nupper bound = " << getUpperBound(g, h) << ", matrix = " << env.get_node_map(g,h) << ", runtime = " << getRuntime(g, h) << "\n";

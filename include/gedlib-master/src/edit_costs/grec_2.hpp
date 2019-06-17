@@ -78,7 +78,6 @@ public:
 	virtual double edge_del_cost_fun(const UserEdgeLabel & edge_label) const final;
 
 	virtual double edge_rel_cost_fun(const UserEdgeLabel & edge_label_1, const UserEdgeLabel & edge_label_2) const final;
-	
 
 private:
 

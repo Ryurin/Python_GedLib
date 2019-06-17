@@ -52,7 +52,7 @@ ged_method_{nullptr} {}
 template<class UserNodeID, class UserNodeLabel, class UserEdgeLabel>
 void
 GEDEnv<UserNodeID, UserNodeLabel, UserEdgeLabel>::
-set_edit_costs(Options::EditCosts edit_costs, std::vector<double> edit_cost_constants) {
+set_edit_costs(Options::EditCosts edit_costs,  std::vector<double> edit_cost_constants) {
 	ged_data_.set_edit_costs_(edit_costs, edit_cost_constants);
 }
 
@@ -67,6 +67,9 @@ template<class UserNodeID, class UserNodeLabel, class UserEdgeLabel>
 GEDGraph::GraphID
 GEDEnv<UserNodeID, UserNodeLabel, UserEdgeLabel>::
 add_graph(const std::string & name, const std::string & graph_class) {
+	for (auto & graph : ged_data_.graphs_) {
+		graph.un_init();
+	}
 	initialized_ = false;
 	GEDGraph::GraphID graph_id{ged_data_.num_graphs_without_shuffled_copies_++};
 	new_graph_ids_.push_back(graph_id);
@@ -74,8 +77,8 @@ add_graph(const std::string & name, const std::string & graph_class) {
 	ged_data_.graph_names_.insert(ged_data_.graph_names_.begin() + graph_id, name);
 	ged_data_.graph_classes_.insert(ged_data_.graph_classes_.begin() + graph_id, graph_class);
 	original_to_internal_node_ids_.insert(original_to_internal_node_ids_.begin() + graph_id, std::map<UserNodeID, GEDGraph::NodeID>());
-	ged_data_.strings_to_internal_node_ids_.insert(ged_data_.strings_to_internal_node_ids_.begin() + graph_id, std::map<std::string, GEDGraph::NodeID>());
 	internal_to_original_node_ids_.insert(internal_to_original_node_ids_.begin() + graph_id, std::map<GEDGraph::NodeID, UserNodeID>());
+	ged_data_.strings_to_internal_node_ids_.insert(ged_data_.strings_to_internal_node_ids_.begin() + graph_id, std::map<std::string, GEDGraph::NodeID>());
 	ged_data_.internal_node_ids_to_strings_.insert(ged_data_.internal_node_ids_to_strings_.begin() + graph_id, std::map<GEDGraph::NodeID, std::string>());
 	return graph_id;
 }
@@ -88,19 +91,46 @@ clear_graph(GEDGraph::GraphID graph_id) {
 		throw Error("The graph " + get_graph_name(graph_id) + " has not been added to the environment.");
 	}
 	ged_data_.graphs_[graph_id].clear();
+	original_to_internal_node_ids_[graph_id].clear();
+	internal_to_original_node_ids_[graph_id].clear();
+	ged_data_.strings_to_internal_node_ids_[graph_id].clear();
+	ged_data_.internal_node_ids_to_strings_[graph_id].clear();
 	initialized_ = false;
+}
+
+template<class UserNodeID, class UserNodeLabel, class UserEdgeLabel>
+GEDGraph::GraphID
+GEDEnv<UserNodeID, UserNodeLabel, UserEdgeLabel>::
+load_exchange_graph(const ged::ExchangeGraph<UserNodeID, UserNodeLabel, UserEdgeLabel> & exchange_graph, GEDGraph::GraphID graph_id, const std::string & graph_name, const std::string & graph_class) {
+	if (graph_id == ged::undefined()) {
+		graph_id = add_graph(graph_name, graph_class);
+	}
+	else {
+		clear_graph(graph_id);
+	}
+	for (GEDGraph::NodeID node_id{0}; node_id < exchange_graph.num_nodes; node_id++) {
+		add_node(graph_id, exchange_graph.original_node_ids.at(node_id), exchange_graph.node_labels.at(node_id));
+	}
+	for (GEDGraph::NodeID i{0}; i < exchange_graph.num_nodes; i++) {
+		for (GEDGraph::NodeID j{i + 1}; j < exchange_graph.num_nodes; j++) {
+			if (exchange_graph.adj_matrix.at(i).at(j) == 1) {
+				add_edge(graph_id, exchange_graph.original_node_ids.at(i), exchange_graph.original_node_ids.at(j), exchange_graph.edge_labels.at(std::make_pair(i, j)));
+			}
+		}
+	}
+	return graph_id;
 }
 
 template<>
 GEDGraph::GraphID
 GEDEnv<GXLNodeID, GXLLabel, GXLLabel>::
-read_graph_from_gxl_(const std::string & dir, const std::string & filename, const std::string & graph_class, Options::GXLNodeEdgeType node_type, Options::GXLNodeEdgeType edge_type,
-		const std::unordered_set<std::string> & irrelevant_node_attributes, const std::unordered_set<std::string> & irrelevant_edge_attributes) {
+load_gxl_graph(const std::string & filename, Options::GXLNodeEdgeType node_type, Options::GXLNodeEdgeType edge_type,
+		const std::unordered_set<std::string> & irrelevant_node_attributes, const std::unordered_set<std::string> & irrelevant_edge_attributes, GEDGraph::GraphID graph_id, const std::string & graph_class) {
 
 	// read the file into a property tree
 	boost::property_tree::ptree root;
 	try {
-		read_xml(dir + filename, root);
+		read_xml(filename, root);
 	}
 	catch (const boost::property_tree::xml_parser_error & error) {
 		throw Error(std::string("Error reading file ") + filename + ": " + error.message() + ".");
@@ -123,7 +153,12 @@ read_graph_from_gxl_(const std::string & dir, const std::string & filename, cons
 	root = root.get_child("graph");
 
 	// add new graph to the environment
-	GEDGraph::GraphID graph_id{add_graph(filename, graph_class)};
+	if (graph_id == ged::undefined()) {
+		graph_id = add_graph(filename, graph_class);
+	}
+	else {
+		clear_graph(graph_id);
+	}
 
 	// initialize local variables needed for construction of the graph
 	GXLLabel label;
@@ -231,7 +266,7 @@ load_gxl_graphs(const std::string & graph_dir, const std::string & file, Options
 			catch (const boost::property_tree::ptree_bad_data & error) {
 				throw Error("The file " + file + " has the wrong format: corrupted content in xml-attribute \"class\" of element <GraphCollection>.<graph>");
 			}
-			graph_ids.push_back(read_graph_from_gxl_(graph_dir, gxl_file, graph_class, node_type, edge_type, irrelevant_node_attributes, irrelevant_edge_attributes));
+			graph_ids.push_back(load_gxl_graph(graph_dir + gxl_file, node_type, edge_type, irrelevant_node_attributes, irrelevant_edge_attributes, ged::undefined(), graph_class));
 		}
 		else if (val.first != "<xmlattr>") {
 			throw Error("The file " + file + " has the wrong format: unexpected element <GraphCollection>.<" + val.first + ">.");
@@ -474,6 +509,13 @@ graph_ids() const {
 }
 
 template<class UserNodeID, class UserNodeLabel, class UserEdgeLabel>
+std::size_t
+GEDEnv<UserNodeID, UserNodeLabel, UserEdgeLabel>::
+num_graphs() const {
+	return ged_data_.num_graphs_without_shuffled_copies();
+}
+
+template<class UserNodeID, class UserNodeLabel, class UserEdgeLabel>
 void
 GEDEnv<UserNodeID, UserNodeLabel, UserEdgeLabel>::
 init_method() {
@@ -571,18 +613,17 @@ get_graph(GEDGraph::GraphID graph_id) const {
 	exchange_graph.id = graph.id();
 	exchange_graph.num_nodes = graph.num_nodes();
 	exchange_graph.num_edges = graph.num_edges();
-	for (auto eitr = graph.edges(); eitr.first != eitr.second; eitr.first++) {
-		GEDGraph::EdgeID edge(*eitr.first);
-		exchange_graph.edges.emplace_back(std::pair<std::size_t, std::size_t>(graph.tail(edge), graph.head(edge)), ged_data_.edge_labels_.at(graph.get_edge_label(edge) - 1));
-	}
+	exchange_graph.adj_matrix = std::vector<std::vector<std::size_t>>(exchange_graph.num_nodes, std::vector<std::size_t>(exchange_graph.num_nodes, 0));
 	for (GEDGraph::NodeID node_id{0}; node_id < exchange_graph.num_nodes; node_id++) {
 		exchange_graph.original_node_ids.emplace_back(internal_to_original_node_ids_.at(graph_id).at(node_id));
 		exchange_graph.node_labels.emplace_back(ged_data_.node_labels_.at(graph.get_node_label(node_id) - 1));
-		exchange_graph.adj_list.emplace_back();
-		for (auto eitr = graph.incident_edges(node_id); eitr.first != eitr.second; eitr.first++) {
-			GEDGraph::EdgeID edge(*eitr.first);
-			exchange_graph.adj_list[node_id].emplace_back(graph.head(edge), ged_data_.edge_labels_.at(graph.get_edge_label(edge) - 1));
-		}
+	}
+	for (auto eitr = graph.edges(); eitr.first != eitr.second; eitr.first++) {
+		GEDGraph::EdgeID edge(*eitr.first);
+		exchange_graph.adj_matrix[graph.tail(edge)][graph.head(edge)] = 1;
+		exchange_graph.adj_matrix[graph.head(edge)][graph.tail(edge)] = 1;
+		exchange_graph.edge_labels[std::make_pair(graph.tail(edge),graph.head(edge))] = ged_data_.edge_labels_.at(graph.get_edge_label(edge) - 1);
+		exchange_graph.edge_labels[std::make_pair(graph.head(edge),graph.tail(edge))] = ged_data_.edge_labels_.at(graph.get_edge_label(edge) - 1);
 	}
 	return exchange_graph;
 }
@@ -592,6 +633,13 @@ double
 GEDEnv<UserNodeID, UserNodeLabel, UserEdgeLabel>::
 get_init_time() const {
 	return ged_method_->get_init_time().count();
+}
+
+template<class UserNodeID, class UserNodeLabel, class UserEdgeLabel>
+void
+GEDEnv<UserNodeID, UserNodeLabel, UserEdgeLabel>::
+compute_induced_cost(GEDGraph::GraphID g_id, GEDGraph::GraphID h_id, NodeMap & node_map) const {
+	ged_data_.compute_induced_cost(ged_data_.graphs_.at(g_id), ged_data_.graphs_.at(h_id), node_map);
 }
 
 template<class UserNodeID, class UserNodeLabel, class UserEdgeLabel>
@@ -627,10 +675,12 @@ init(Options::InitType init_type) {
 	}
 
 	// Re-initialize adjacency matrices (also previously initialized graphs must be re-initialized because of possible re-allocation).
-	for (GEDGraph::GraphID graph_id{0}; graph_id < ged_data_.num_graphs(); graph_id++) {
-		ged_data_.graphs_[graph_id].setup_adjacency_matrix();
-		ged_data_.max_num_nodes_ = std::max(ged_data_.max_num_nodes_, ged_data_.graphs_.at(graph_id).num_nodes());
-		ged_data_.max_num_edges_ = std::max(ged_data_.max_num_edges_, ged_data_.graphs_.at(graph_id).num_edges());
+	for (auto & graph : ged_data_.graphs_) {
+		if (not graph.initialized()) {
+			graph.setup_adjacency_matrix();
+			ged_data_.max_num_nodes_ = std::max(ged_data_.max_num_nodes_, graph.num_nodes());
+			ged_data_.max_num_edges_ = std::max(ged_data_.max_num_edges_, graph.num_edges());
+		}
 	}
 
 	// Initialize cost matrices if necessary.

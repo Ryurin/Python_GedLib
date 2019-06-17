@@ -164,7 +164,6 @@ public:
 	 */
 	bool operator==(const NodeMap & node_map) const;
 	
-	
 	/*!
 	 * @brief  Returns the forward map of Node Map
 	 * @return A vector which contains IDs nodes to the forward map. 

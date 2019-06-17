@@ -1098,23 +1098,6 @@ static CYTHON_INLINE PyObject* __Pyx_dict_iterator(PyObject* dict, int is_dict, 
 static CYTHON_INLINE int __Pyx_dict_iter_next(PyObject* dict_or_iter, Py_ssize_t orig_length, Py_ssize_t* ppos,
                                               PyObject** pkey, PyObject** pvalue, PyObject** pitem, int is_dict);
 
-/* ListAppend.proto */
-#if CYTHON_COMPILING_IN_CPYTHON
-static CYTHON_INLINE int __Pyx_PyList_Append(PyObject* list, PyObject* x) {
-    PyListObject* L = (PyListObject*) list;
-    Py_ssize_t len = Py_SIZE(list);
-    if (likely(L->allocated > len) & likely(len > (L->allocated >> 1))) {
-        Py_INCREF(x);
-        PyList_SET_ITEM(list, len, x);
-        Py_SIZE(list) = len+1;
-        return 0;
-    }
-    return PyList_Append(list, x);
-}
-#else
-#define __Pyx_PyList_Append(L,x) PyList_Append(L,x)
-#endif
-
 /* CalculateMetaclass.proto */
 static PyObject *__Pyx_CalculateMetaclass(PyTypeObject *metaclass, PyObject *bases);
 
@@ -1412,11 +1395,8 @@ static PyObject *__pyx_convert_vector_to_py_size_t(const std::vector<size_t>  &)
 static std::map<std::string,std::string>  __pyx_convert_map_from_py_std_3a__3a_string__and_std_3a__3a_string(PyObject *); /*proto*/
 static PyObject *__pyx_convert_map_to_py_std_3a__3a_string____std_3a__3a_string(std::map<std::string,std::string>  const &); /*proto*/
 static PyObject *__pyx_convert_vector_to_py_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___(const std::vector<std::map<std::string,std::string> >  &); /*proto*/
-static PyObject *__pyx_convert_pair_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___(std::pair<std::pair<size_t,size_t> ,std::map<std::string,std::string> >  const &); /*proto*/
-static PyObject *__pyx_convert_vector_to_py_std_3a__3a_pair_3c_std_3a__3a_pair_3c_size_t_2c_size_t_3e____2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___(const std::vector<std::pair<std::pair<size_t,size_t> ,std::map<std::string,std::string> > >  &); /*proto*/
-static PyObject *__pyx_convert_pair_to_py_size_t____std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___(std::pair<size_t,std::map<std::string,std::string> >  const &); /*proto*/
-static PyObject *__pyx_convert_list_to_py_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___(std::list<std::pair<size_t,std::map<std::string,std::string> > >  const &); /*proto*/
-static PyObject *__pyx_convert_vector_to_py_std_3a__3a_list_3c_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e____3e___(const std::vector<std::list<std::pair<size_t,std::map<std::string,std::string> > > >  &); /*proto*/
+static PyObject *__pyx_convert_map_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___(std::map<std::pair<size_t,size_t> ,std::map<std::string,std::string> >  const &); /*proto*/
+static PyObject *__pyx_convert_vector_to_py_std_3a__3a_vector_3c_size_t_3e___(const std::vector<std::vector<size_t> >  &); /*proto*/
 static std::vector<double>  __pyx_convert_vector_from_py_double(PyObject *); /*proto*/
 static PyObject *__pyx_convert_vector_to_py_npy_uint64(const std::vector<npy_uint64>  &); /*proto*/
 static PyObject *__pyx_convert_vector_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e___(const std::vector<std::pair<size_t,size_t> >  &); /*proto*/
@@ -1551,9 +1531,9 @@ static const char __pyx_k_PyGetAssignmentMatrix[] = "PyGetAssignmentMatrix";
 static const char __pyx_k_PySetPersonalEditCost[] = "PySetPersonalEditCost";
 static const char __pyx_k_computeGedOnTwoGraphs[] = "computeGedOnTwoGraphs";
 static const char __pyx_k_listOfEditCostOptions[] = "listOfEditCostOptions";
-static const char __pyx_k_PyGetGraphAdjacenceList[] = "PyGetGraphAdjacenceList";
 static const char __pyx_k_Computation_between_graph[] = "Computation between graph ";
 static const char __pyx_k_Initialization_terminated[] = "Initialization terminated !";
+static const char __pyx_k_PyGetGraphAdjacenceMatrix[] = "PyGetGraphAdjacenceMatrix";
 static const char __pyx_k_Initialization_in_progress[] = "Initialization in progress...";
 static const char __pyx_k_Loading_graphs_in_progress[] = "Loading graphs in progress...";
 static const char __pyx_k_ndarray_is_not_C_contiguous[] = "ndarray is not C contiguous";
@@ -1614,7 +1594,7 @@ static PyObject *__pyx_n_s_PyGetBackwardMap;
 static PyObject *__pyx_n_s_PyGetDummyNode;
 static PyObject *__pyx_n_s_PyGetEditCostOptions;
 static PyObject *__pyx_n_s_PyGetForwardMap;
-static PyObject *__pyx_n_s_PyGetGraphAdjacenceList;
+static PyObject *__pyx_n_s_PyGetGraphAdjacenceMatrix;
 static PyObject *__pyx_n_s_PyGetGraphClass;
 static PyObject *__pyx_n_s_PyGetGraphEdges;
 static PyObject *__pyx_n_s_PyGetGraphIds;
@@ -1745,7 +1725,7 @@ static PyObject *__pyx_pf_6script_34PyGetGraphNumEdges(CYTHON_UNUSED PyObject *_
 static PyObject *__pyx_pf_6script_36PyGetOriginalNodeIds(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID); /* proto */
 static PyObject *__pyx_pf_6script_38PyGetGraphNodeLabels(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID); /* proto */
 static PyObject *__pyx_pf_6script_40PyGetGraphEdges(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID); /* proto */
-static PyObject *__pyx_pf_6script_42PyGetGraphAdjacenceList(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID); /* proto */
+static PyObject *__pyx_pf_6script_42PyGetGraphAdjacenceMatrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID); /* proto */
 static PyObject *__pyx_pf_6script_44PySetEditCost(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_editCost, PyObject *__pyx_v_editCostConstant); /* proto */
 static PyObject *__pyx_pf_6script_46PySetPersonalEditCost(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
 static PyObject *__pyx_pf_6script_48PyInitEnv(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_initOption); /* proto */
@@ -3483,7 +3463,7 @@ static PyObject *__pyx_pf_6script_38PyGetGraphNodeLabels(CYTHON_UNUSED PyObject 
 
 /* Python wrapper */
 static PyObject *__pyx_pw_6script_41PyGetGraphEdges(PyObject *__pyx_self, PyObject *__pyx_v_graphID); /*proto*/
-static char __pyx_doc_6script_40PyGetGraphEdges[] = "\n        Searchs and returns all the edges on a graph, selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        :return: The list of edges on the selected graph\n        :rtype: list[tuple(tuple(size_t,size_t), dict{string : string})]\n        \n        .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphAdjacenceList()\n        .. note:: These functions allow to collect all the graph's informations.\n    ";
+static char __pyx_doc_6script_40PyGetGraphEdges[] = "\n        Searchs and returns all the edges on a graph, selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        :return: The list of edges on the selected graph\n        :rtype: dict{tuple(size_t,size_t) : dict{string : string}}\n        \n        .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphAdjacenceList()\n        .. note:: These functions allow to collect all the graph's informations.\n    ";
 static PyMethodDef __pyx_mdef_6script_41PyGetGraphEdges = {"PyGetGraphEdges", (PyCFunction)__pyx_pw_6script_41PyGetGraphEdges, METH_O, __pyx_doc_6script_40PyGetGraphEdges};
 static PyObject *__pyx_pw_6script_41PyGetGraphEdges(PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
   PyObject *__pyx_r = 0;
@@ -3508,11 +3488,11 @@ static PyObject *__pyx_pf_6script_40PyGetGraphEdges(CYTHON_UNUSED PyObject *__py
  *     """
  *     return getGraphEdges(graphID)             # <<<<<<<<<<<<<<
  * 
- * def PyGetGraphAdjacenceList(graphID) :
+ * def PyGetGraphAdjacenceMatrix(graphID) :
  */
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 360, __pyx_L1_error)
-  __pyx_t_2 = __pyx_convert_vector_to_py_std_3a__3a_pair_3c_std_3a__3a_pair_3c_size_t_2c_size_t_3e____2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___(getGraphEdges(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 360, __pyx_L1_error)
+  __pyx_t_2 = __pyx_convert_map_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___(getGraphEdges(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 360, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -3540,43 +3520,43 @@ static PyObject *__pyx_pf_6script_40PyGetGraphEdges(CYTHON_UNUSED PyObject *__py
 /* "script.pyx":362
  *     return getGraphEdges(graphID)
  * 
- * def PyGetGraphAdjacenceList(graphID) :             # <<<<<<<<<<<<<<
+ * def PyGetGraphAdjacenceMatrix(graphID) :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs and returns the adjacence list of a graph, selected by its ID.
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6script_43PyGetGraphAdjacenceList(PyObject *__pyx_self, PyObject *__pyx_v_graphID); /*proto*/
-static char __pyx_doc_6script_42PyGetGraphAdjacenceList[] = "\n        Searchs and returns the adjacence list of a graph, selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        :return: The adjacence list of the selected graph\n        :rtype: list[list[tuple(size_t, dict{string : string})]]\n        \n        .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphEdges()\n        .. note:: These functions allow to collect all the graph's informations.\n    ";
-static PyMethodDef __pyx_mdef_6script_43PyGetGraphAdjacenceList = {"PyGetGraphAdjacenceList", (PyCFunction)__pyx_pw_6script_43PyGetGraphAdjacenceList, METH_O, __pyx_doc_6script_42PyGetGraphAdjacenceList};
-static PyObject *__pyx_pw_6script_43PyGetGraphAdjacenceList(PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
+static PyObject *__pyx_pw_6script_43PyGetGraphAdjacenceMatrix(PyObject *__pyx_self, PyObject *__pyx_v_graphID); /*proto*/
+static char __pyx_doc_6script_42PyGetGraphAdjacenceMatrix[] = "\n        Searchs and returns the adjacence list of a graph, selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        :return: The adjacence list of the selected graph\n        :rtype: list[list[size_t]]\n        \n        .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphEdges()\n        .. note:: These functions allow to collect all the graph's informations.\n    ";
+static PyMethodDef __pyx_mdef_6script_43PyGetGraphAdjacenceMatrix = {"PyGetGraphAdjacenceMatrix", (PyCFunction)__pyx_pw_6script_43PyGetGraphAdjacenceMatrix, METH_O, __pyx_doc_6script_42PyGetGraphAdjacenceMatrix};
+static PyObject *__pyx_pw_6script_43PyGetGraphAdjacenceMatrix(PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("PyGetGraphAdjacenceList (wrapper)", 0);
-  __pyx_r = __pyx_pf_6script_42PyGetGraphAdjacenceList(__pyx_self, ((PyObject *)__pyx_v_graphID));
+  __Pyx_RefNannySetupContext("PyGetGraphAdjacenceMatrix (wrapper)", 0);
+  __pyx_r = __pyx_pf_6script_42PyGetGraphAdjacenceMatrix(__pyx_self, ((PyObject *)__pyx_v_graphID));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6script_42PyGetGraphAdjacenceList(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
+static PyObject *__pyx_pf_6script_42PyGetGraphAdjacenceMatrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
-  __Pyx_RefNannySetupContext("PyGetGraphAdjacenceList", 0);
+  __Pyx_RefNannySetupContext("PyGetGraphAdjacenceMatrix", 0);
 
   /* "script.pyx":374
  *         .. note:: These functions allow to collect all the graph's informations.
  *     """
- *     return getGraphAdjacenceList(graphID)             # <<<<<<<<<<<<<<
+ *     return getGraphAdjacenceMatrix(graphID)             # <<<<<<<<<<<<<<
  * 
  * def PySetEditCost(editCost, editCostConstant = []) :
  */
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 374, __pyx_L1_error)
-  __pyx_t_2 = __pyx_convert_vector_to_py_std_3a__3a_list_3c_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e____3e___(getGraphAdjacenceList(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 374, __pyx_L1_error)
+  __pyx_t_2 = __pyx_convert_vector_to_py_std_3a__3a_vector_3c_size_t_3e___(getGraphAdjacenceMatrix(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 374, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -3585,7 +3565,7 @@ static PyObject *__pyx_pf_6script_42PyGetGraphAdjacenceList(CYTHON_UNUSED PyObje
   /* "script.pyx":362
  *     return getGraphEdges(graphID)
  * 
- * def PyGetGraphAdjacenceList(graphID) :             # <<<<<<<<<<<<<<
+ * def PyGetGraphAdjacenceMatrix(graphID) :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs and returns the adjacence list of a graph, selected by its ID.
  */
@@ -3593,7 +3573,7 @@ static PyObject *__pyx_pf_6script_42PyGetGraphAdjacenceList(CYTHON_UNUSED PyObje
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("script.PyGetGraphAdjacenceList", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("script.PyGetGraphAdjacenceMatrix", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3602,7 +3582,7 @@ static PyObject *__pyx_pf_6script_42PyGetGraphAdjacenceList(CYTHON_UNUSED PyObje
 }
 
 /* "script.pyx":376
- *     return getGraphAdjacenceList(graphID)
+ *     return getGraphAdjacenceMatrix(graphID)
  * 
  * def PySetEditCost(editCost, editCostConstant = []) :             # <<<<<<<<<<<<<<
  *     """
@@ -3754,7 +3734,7 @@ static PyObject *__pyx_pf_6script_44PySetEditCost(CYTHON_UNUSED PyObject *__pyx_
   __pyx_L3:;
 
   /* "script.pyx":376
- *     return getGraphAdjacenceList(graphID)
+ *     return getGraphAdjacenceMatrix(graphID)
  * 
  * def PySetEditCost(editCost, editCostConstant = []) :             # <<<<<<<<<<<<<<
  *     """
@@ -12141,253 +12121,84 @@ static PyObject *__pyx_convert_vector_to_py_std_3a__3a_map_3c_std_3a__3a_string_
   return __pyx_r;
 }
 
-/* "pair.to_py":180
+/* "map.to_py":227
  * 
- * @cname("__pyx_convert_pair_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___")
- * cdef object __pyx_convert_pair_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___(const pair[X,Y]& p):             # <<<<<<<<<<<<<<
- *     return X_to_py(p.first), Y_to_py(p.second)
- * 
+ * @cname("__pyx_convert_map_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___")
+ * cdef object __pyx_convert_map_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___(const map[X,Y]& s):             # <<<<<<<<<<<<<<
+ *     o = {}
+ *     cdef const map[X,Y].value_type *key_value
  */
 
-static PyObject *__pyx_convert_pair_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___(std::pair<std::pair<size_t,size_t> ,std::map<std::string,std::string> >  const &__pyx_v_p) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  PyObject *__pyx_t_2 = NULL;
-  PyObject *__pyx_t_3 = NULL;
-  __Pyx_RefNannySetupContext("__pyx_convert_pair_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___", 0);
-
-  /* "pair.to_py":181
- * @cname("__pyx_convert_pair_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___")
- * cdef object __pyx_convert_pair_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___(const pair[X,Y]& p):
- *     return X_to_py(p.first), Y_to_py(p.second)             # <<<<<<<<<<<<<<
- * 
- * 
- */
-  __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_convert_pair_to_py_size_t____size_t(__pyx_v_p.first); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 181, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __pyx_convert_map_to_py_std_3a__3a_string____std_3a__3a_string(__pyx_v_p.second); if (unlikely(!__pyx_t_2)) __PYX_ERR(2, 181, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(2, 181, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_GIVEREF(__pyx_t_1);
-  PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
-  __Pyx_GIVEREF(__pyx_t_2);
-  PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_2);
-  __pyx_t_1 = 0;
-  __pyx_t_2 = 0;
-  __pyx_r = __pyx_t_3;
-  __pyx_t_3 = 0;
-  goto __pyx_L0;
-
-  /* "pair.to_py":180
- * 
- * @cname("__pyx_convert_pair_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___")
- * cdef object __pyx_convert_pair_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___(const pair[X,Y]& p):             # <<<<<<<<<<<<<<
- *     return X_to_py(p.first), Y_to_py(p.second)
- * 
- */
-
-  /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("pair.to_py.__pyx_convert_pair_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = 0;
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "vector.to_py":67
- * 
- * @cname("__pyx_convert_vector_to_py_std_3a__3a_pair_3c_std_3a__3a_pair_3c_size_t_2c_size_t_3e____2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___")
- * cdef object __pyx_convert_vector_to_py_std_3a__3a_pair_3c_std_3a__3a_pair_3c_size_t_2c_size_t_3e____2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___(vector[X]& v):             # <<<<<<<<<<<<<<
- *     return [X_to_py(v[i]) for i in range(v.size())]
- * 
- */
-
-static PyObject *__pyx_convert_vector_to_py_std_3a__3a_pair_3c_std_3a__3a_pair_3c_size_t_2c_size_t_3e____2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___(const std::vector<std::pair<std::pair<size_t,size_t> ,std::map<std::string,std::string> > >  &__pyx_v_v) {
-  size_t __pyx_v_i;
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  size_t __pyx_t_2;
-  size_t __pyx_t_3;
-  PyObject *__pyx_t_4 = NULL;
-  __Pyx_RefNannySetupContext("__pyx_convert_vector_to_py_std_3a__3a_pair_3c_std_3a__3a_pair_3c_size_t_2c_size_t_3e____2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___", 0);
-
-  /* "vector.to_py":68
- * @cname("__pyx_convert_vector_to_py_std_3a__3a_pair_3c_std_3a__3a_pair_3c_size_t_2c_size_t_3e____2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___")
- * cdef object __pyx_convert_vector_to_py_std_3a__3a_pair_3c_std_3a__3a_pair_3c_size_t_2c_size_t_3e____2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___(vector[X]& v):
- *     return [X_to_py(v[i]) for i in range(v.size())]             # <<<<<<<<<<<<<<
- * 
- * 
- */
-  __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 68, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __pyx_v_v.size();
-  for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
-    __pyx_v_i = __pyx_t_3;
-    __pyx_t_4 = __pyx_convert_pair_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___((__pyx_v_v[__pyx_v_i])); if (unlikely(!__pyx_t_4)) __PYX_ERR(2, 68, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_4))) __PYX_ERR(2, 68, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  }
-  __pyx_r = __pyx_t_1;
-  __pyx_t_1 = 0;
-  goto __pyx_L0;
-
-  /* "vector.to_py":67
- * 
- * @cname("__pyx_convert_vector_to_py_std_3a__3a_pair_3c_std_3a__3a_pair_3c_size_t_2c_size_t_3e____2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___")
- * cdef object __pyx_convert_vector_to_py_std_3a__3a_pair_3c_std_3a__3a_pair_3c_size_t_2c_size_t_3e____2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___(vector[X]& v):             # <<<<<<<<<<<<<<
- *     return [X_to_py(v[i]) for i in range(v.size())]
- * 
- */
-
-  /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("vector.to_py.__pyx_convert_vector_to_py_std_3a__3a_pair_3c_std_3a__3a_pair_3c_size_t_2c_size_t_3e____2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = 0;
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "pair.to_py":180
- * 
- * @cname("__pyx_convert_pair_to_py_size_t____std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___")
- * cdef object __pyx_convert_pair_to_py_size_t____std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___(const pair[X,Y]& p):             # <<<<<<<<<<<<<<
- *     return X_to_py(p.first), Y_to_py(p.second)
- * 
- */
-
-static PyObject *__pyx_convert_pair_to_py_size_t____std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___(std::pair<size_t,std::map<std::string,std::string> >  const &__pyx_v_p) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  PyObject *__pyx_t_2 = NULL;
-  PyObject *__pyx_t_3 = NULL;
-  __Pyx_RefNannySetupContext("__pyx_convert_pair_to_py_size_t____std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___", 0);
-
-  /* "pair.to_py":181
- * @cname("__pyx_convert_pair_to_py_size_t____std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___")
- * cdef object __pyx_convert_pair_to_py_size_t____std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___(const pair[X,Y]& p):
- *     return X_to_py(p.first), Y_to_py(p.second)             # <<<<<<<<<<<<<<
- * 
- * 
- */
-  __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_FromSize_t(__pyx_v_p.first); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 181, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __pyx_convert_map_to_py_std_3a__3a_string____std_3a__3a_string(__pyx_v_p.second); if (unlikely(!__pyx_t_2)) __PYX_ERR(2, 181, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(2, 181, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_GIVEREF(__pyx_t_1);
-  PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
-  __Pyx_GIVEREF(__pyx_t_2);
-  PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_2);
-  __pyx_t_1 = 0;
-  __pyx_t_2 = 0;
-  __pyx_r = __pyx_t_3;
-  __pyx_t_3 = 0;
-  goto __pyx_L0;
-
-  /* "pair.to_py":180
- * 
- * @cname("__pyx_convert_pair_to_py_size_t____std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___")
- * cdef object __pyx_convert_pair_to_py_size_t____std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___(const pair[X,Y]& p):             # <<<<<<<<<<<<<<
- *     return X_to_py(p.first), Y_to_py(p.second)
- * 
- */
-
-  /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("pair.to_py.__pyx_convert_pair_to_py_size_t____std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = 0;
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "list.to_py":103
- * 
- * @cname("__pyx_convert_list_to_py_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___")
- * cdef object __pyx_convert_list_to_py_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___(const cpp_list[X]& v):             # <<<<<<<<<<<<<<
- *     o = []
- *     cdef cpp_list[X].const_iterator iter = v.begin()
- */
-
-static PyObject *__pyx_convert_list_to_py_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___(std::list<std::pair<size_t,std::map<std::string,std::string> > >  const &__pyx_v_v) {
+static PyObject *__pyx_convert_map_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___(std::map<std::pair<size_t,size_t> ,std::map<std::string,std::string> >  const &__pyx_v_s) {
   PyObject *__pyx_v_o = NULL;
-  std::list<std::pair<size_t,std::map<std::string,std::string> > > ::const_iterator __pyx_v_iter;
+  std::map<std::pair<size_t,size_t> ,std::map<std::string,std::string> > ::value_type const *__pyx_v_key_value;
+  std::map<std::pair<size_t,size_t> ,std::map<std::string,std::string> > ::const_iterator __pyx_v_iter;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   int __pyx_t_2;
-  int __pyx_t_3;
-  __Pyx_RefNannySetupContext("__pyx_convert_list_to_py_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___", 0);
+  PyObject *__pyx_t_3 = NULL;
+  __Pyx_RefNannySetupContext("__pyx_convert_map_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___", 0);
 
-  /* "list.to_py":104
- * @cname("__pyx_convert_list_to_py_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___")
- * cdef object __pyx_convert_list_to_py_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___(const cpp_list[X]& v):
- *     o = []             # <<<<<<<<<<<<<<
- *     cdef cpp_list[X].const_iterator iter = v.begin()
- *     while iter != v.end():
+  /* "map.to_py":228
+ * @cname("__pyx_convert_map_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___")
+ * cdef object __pyx_convert_map_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___(const map[X,Y]& s):
+ *     o = {}             # <<<<<<<<<<<<<<
+ *     cdef const map[X,Y].value_type *key_value
+ *     cdef map[X,Y].const_iterator iter = s.begin()
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 104, __pyx_L1_error)
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 228, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_o = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "list.to_py":105
- * cdef object __pyx_convert_list_to_py_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___(const cpp_list[X]& v):
- *     o = []
- *     cdef cpp_list[X].const_iterator iter = v.begin()             # <<<<<<<<<<<<<<
- *     while iter != v.end():
- *         o.append(X_to_py(cython.operator.dereference(iter)))
+  /* "map.to_py":230
+ *     o = {}
+ *     cdef const map[X,Y].value_type *key_value
+ *     cdef map[X,Y].const_iterator iter = s.begin()             # <<<<<<<<<<<<<<
+ *     while iter != s.end():
+ *         key_value = &cython.operator.dereference(iter)
  */
-  __pyx_v_iter = __pyx_v_v.begin();
+  __pyx_v_iter = __pyx_v_s.begin();
 
-  /* "list.to_py":106
- *     o = []
- *     cdef cpp_list[X].const_iterator iter = v.begin()
- *     while iter != v.end():             # <<<<<<<<<<<<<<
- *         o.append(X_to_py(cython.operator.dereference(iter)))
- *         cython.operator.preincrement(iter)
+  /* "map.to_py":231
+ *     cdef const map[X,Y].value_type *key_value
+ *     cdef map[X,Y].const_iterator iter = s.begin()
+ *     while iter != s.end():             # <<<<<<<<<<<<<<
+ *         key_value = &cython.operator.dereference(iter)
+ *         o[X_to_py(key_value.first)] = Y_to_py(key_value.second)
  */
   while (1) {
-    __pyx_t_2 = ((__pyx_v_iter != __pyx_v_v.end()) != 0);
+    __pyx_t_2 = ((__pyx_v_iter != __pyx_v_s.end()) != 0);
     if (!__pyx_t_2) break;
 
-    /* "list.to_py":107
- *     cdef cpp_list[X].const_iterator iter = v.begin()
- *     while iter != v.end():
- *         o.append(X_to_py(cython.operator.dereference(iter)))             # <<<<<<<<<<<<<<
+    /* "map.to_py":232
+ *     cdef map[X,Y].const_iterator iter = s.begin()
+ *     while iter != s.end():
+ *         key_value = &cython.operator.dereference(iter)             # <<<<<<<<<<<<<<
+ *         o[X_to_py(key_value.first)] = Y_to_py(key_value.second)
+ *         cython.operator.preincrement(iter)
+ */
+    __pyx_v_key_value = (&(*__pyx_v_iter));
+
+    /* "map.to_py":233
+ *     while iter != s.end():
+ *         key_value = &cython.operator.dereference(iter)
+ *         o[X_to_py(key_value.first)] = Y_to_py(key_value.second)             # <<<<<<<<<<<<<<
  *         cython.operator.preincrement(iter)
  *     return o
  */
-    __pyx_t_1 = __pyx_convert_pair_to_py_size_t____std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___((*__pyx_v_iter)); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 107, __pyx_L1_error)
+    __pyx_t_1 = __pyx_convert_map_to_py_std_3a__3a_string____std_3a__3a_string(__pyx_v_key_value->second); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 233, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = __Pyx_PyList_Append(__pyx_v_o, __pyx_t_1); if (unlikely(__pyx_t_3 == -1)) __PYX_ERR(2, 107, __pyx_L1_error)
+    __pyx_t_3 = __pyx_convert_pair_to_py_size_t____size_t(__pyx_v_key_value->first); if (unlikely(!__pyx_t_3)) __PYX_ERR(2, 233, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    if (unlikely(PyDict_SetItem(__pyx_v_o, __pyx_t_3, __pyx_t_1) < 0)) __PYX_ERR(2, 233, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "list.to_py":108
- *     while iter != v.end():
- *         o.append(X_to_py(cython.operator.dereference(iter)))
+    /* "map.to_py":234
+ *         key_value = &cython.operator.dereference(iter)
+ *         o[X_to_py(key_value.first)] = Y_to_py(key_value.second)
  *         cython.operator.preincrement(iter)             # <<<<<<<<<<<<<<
  *     return o
  * 
@@ -12395,8 +12206,8 @@ static PyObject *__pyx_convert_list_to_py_std_3a__3a_pair_3c_size_t_2c_std_3a__3
     (++__pyx_v_iter);
   }
 
-  /* "list.to_py":109
- *         o.append(X_to_py(cython.operator.dereference(iter)))
+  /* "map.to_py":235
+ *         o[X_to_py(key_value.first)] = Y_to_py(key_value.second)
  *         cython.operator.preincrement(iter)
  *     return o             # <<<<<<<<<<<<<<
  * 
@@ -12407,18 +12218,19 @@ static PyObject *__pyx_convert_list_to_py_std_3a__3a_pair_3c_size_t_2c_std_3a__3
   __pyx_r = __pyx_v_o;
   goto __pyx_L0;
 
-  /* "list.to_py":103
+  /* "map.to_py":227
  * 
- * @cname("__pyx_convert_list_to_py_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___")
- * cdef object __pyx_convert_list_to_py_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___(const cpp_list[X]& v):             # <<<<<<<<<<<<<<
- *     o = []
- *     cdef cpp_list[X].const_iterator iter = v.begin()
+ * @cname("__pyx_convert_map_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___")
+ * cdef object __pyx_convert_map_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___(const map[X,Y]& s):             # <<<<<<<<<<<<<<
+ *     o = {}
+ *     cdef const map[X,Y].value_type *key_value
  */
 
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("list.to_py.__pyx_convert_list_to_py_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_AddTraceback("map.to_py.__pyx_convert_map_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_o);
@@ -12429,13 +12241,13 @@ static PyObject *__pyx_convert_list_to_py_std_3a__3a_pair_3c_size_t_2c_std_3a__3
 
 /* "vector.to_py":67
  * 
- * @cname("__pyx_convert_vector_to_py_std_3a__3a_list_3c_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e____3e___")
- * cdef object __pyx_convert_vector_to_py_std_3a__3a_list_3c_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e____3e___(vector[X]& v):             # <<<<<<<<<<<<<<
+ * @cname("__pyx_convert_vector_to_py_std_3a__3a_vector_3c_size_t_3e___")
+ * cdef object __pyx_convert_vector_to_py_std_3a__3a_vector_3c_size_t_3e___(vector[X]& v):             # <<<<<<<<<<<<<<
  *     return [X_to_py(v[i]) for i in range(v.size())]
  * 
  */
 
-static PyObject *__pyx_convert_vector_to_py_std_3a__3a_list_3c_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e____3e___(const std::vector<std::list<std::pair<size_t,std::map<std::string,std::string> > > >  &__pyx_v_v) {
+static PyObject *__pyx_convert_vector_to_py_std_3a__3a_vector_3c_size_t_3e___(const std::vector<std::vector<size_t> >  &__pyx_v_v) {
   size_t __pyx_v_i;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -12443,11 +12255,11 @@ static PyObject *__pyx_convert_vector_to_py_std_3a__3a_list_3c_std_3a__3a_pair_3
   size_t __pyx_t_2;
   size_t __pyx_t_3;
   PyObject *__pyx_t_4 = NULL;
-  __Pyx_RefNannySetupContext("__pyx_convert_vector_to_py_std_3a__3a_list_3c_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e____3e___", 0);
+  __Pyx_RefNannySetupContext("__pyx_convert_vector_to_py_std_3a__3a_vector_3c_size_t_3e___", 0);
 
   /* "vector.to_py":68
- * @cname("__pyx_convert_vector_to_py_std_3a__3a_list_3c_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e____3e___")
- * cdef object __pyx_convert_vector_to_py_std_3a__3a_list_3c_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e____3e___(vector[X]& v):
+ * @cname("__pyx_convert_vector_to_py_std_3a__3a_vector_3c_size_t_3e___")
+ * cdef object __pyx_convert_vector_to_py_std_3a__3a_vector_3c_size_t_3e___(vector[X]& v):
  *     return [X_to_py(v[i]) for i in range(v.size())]             # <<<<<<<<<<<<<<
  * 
  * 
@@ -12458,7 +12270,7 @@ static PyObject *__pyx_convert_vector_to_py_std_3a__3a_list_3c_std_3a__3a_pair_3
   __pyx_t_2 = __pyx_v_v.size();
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
-    __pyx_t_4 = __pyx_convert_list_to_py_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e___((__pyx_v_v[__pyx_v_i])); if (unlikely(!__pyx_t_4)) __PYX_ERR(2, 68, __pyx_L1_error)
+    __pyx_t_4 = __pyx_convert_vector_to_py_size_t((__pyx_v_v[__pyx_v_i])); if (unlikely(!__pyx_t_4)) __PYX_ERR(2, 68, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_4))) __PYX_ERR(2, 68, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -12469,8 +12281,8 @@ static PyObject *__pyx_convert_vector_to_py_std_3a__3a_list_3c_std_3a__3a_pair_3
 
   /* "vector.to_py":67
  * 
- * @cname("__pyx_convert_vector_to_py_std_3a__3a_list_3c_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e____3e___")
- * cdef object __pyx_convert_vector_to_py_std_3a__3a_list_3c_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e____3e___(vector[X]& v):             # <<<<<<<<<<<<<<
+ * @cname("__pyx_convert_vector_to_py_std_3a__3a_vector_3c_size_t_3e___")
+ * cdef object __pyx_convert_vector_to_py_std_3a__3a_vector_3c_size_t_3e___(vector[X]& v):             # <<<<<<<<<<<<<<
  *     return [X_to_py(v[i]) for i in range(v.size())]
  * 
  */
@@ -12479,7 +12291,7 @@ static PyObject *__pyx_convert_vector_to_py_std_3a__3a_list_3c_std_3a__3a_pair_3
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("vector.to_py.__pyx_convert_vector_to_py_std_3a__3a_list_3c_std_3a__3a_pair_3c_size_t_2c_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e____3e____3e___", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("vector.to_py.__pyx_convert_vector_to_py_std_3a__3a_vector_3c_size_t_3e___", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -12932,7 +12744,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_PyGetDummyNode, __pyx_k_PyGetDummyNode, sizeof(__pyx_k_PyGetDummyNode), 0, 0, 1, 1},
   {&__pyx_n_s_PyGetEditCostOptions, __pyx_k_PyGetEditCostOptions, sizeof(__pyx_k_PyGetEditCostOptions), 0, 0, 1, 1},
   {&__pyx_n_s_PyGetForwardMap, __pyx_k_PyGetForwardMap, sizeof(__pyx_k_PyGetForwardMap), 0, 0, 1, 1},
-  {&__pyx_n_s_PyGetGraphAdjacenceList, __pyx_k_PyGetGraphAdjacenceList, sizeof(__pyx_k_PyGetGraphAdjacenceList), 0, 0, 1, 1},
+  {&__pyx_n_s_PyGetGraphAdjacenceMatrix, __pyx_k_PyGetGraphAdjacenceMatrix, sizeof(__pyx_k_PyGetGraphAdjacenceMatrix), 0, 0, 1, 1},
   {&__pyx_n_s_PyGetGraphClass, __pyx_k_PyGetGraphClass, sizeof(__pyx_k_PyGetGraphClass), 0, 0, 1, 1},
   {&__pyx_n_s_PyGetGraphEdges, __pyx_k_PyGetGraphEdges, sizeof(__pyx_k_PyGetGraphEdges), 0, 0, 1, 1},
   {&__pyx_n_s_PyGetGraphIds, __pyx_k_PyGetGraphIds, sizeof(__pyx_k_PyGetGraphIds), 0, 0, 1, 1},
@@ -13499,17 +13311,17 @@ static int __Pyx_InitCachedConstants(void) {
   /* "script.pyx":362
  *     return getGraphEdges(graphID)
  * 
- * def PyGetGraphAdjacenceList(graphID) :             # <<<<<<<<<<<<<<
+ * def PyGetGraphAdjacenceMatrix(graphID) :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs and returns the adjacence list of a graph, selected by its ID.
  */
   __pyx_tuple__59 = PyTuple_Pack(1, __pyx_n_s_graphID); if (unlikely(!__pyx_tuple__59)) __PYX_ERR(0, 362, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__59);
   __Pyx_GIVEREF(__pyx_tuple__59);
-  __pyx_codeobj__60 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__59, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetGraphAdjacenceList, 362, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__60)) __PYX_ERR(0, 362, __pyx_L1_error)
+  __pyx_codeobj__60 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__59, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetGraphAdjacenceMatrix, 362, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__60)) __PYX_ERR(0, 362, __pyx_L1_error)
 
   /* "script.pyx":376
- *     return getGraphAdjacenceList(graphID)
+ *     return getGraphAdjacenceMatrix(graphID)
  * 
  * def PySetEditCost(editCost, editCostConstant = []) :             # <<<<<<<<<<<<<<
  *     """
@@ -14205,17 +14017,17 @@ PyMODINIT_FUNC PyInit_script(void)
   /* "script.pyx":362
  *     return getGraphEdges(graphID)
  * 
- * def PyGetGraphAdjacenceList(graphID) :             # <<<<<<<<<<<<<<
+ * def PyGetGraphAdjacenceMatrix(graphID) :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs and returns the adjacence list of a graph, selected by its ID.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6script_43PyGetGraphAdjacenceList, NULL, __pyx_n_s_script); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 362, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6script_43PyGetGraphAdjacenceMatrix, NULL, __pyx_n_s_script); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 362, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetGraphAdjacenceList, __pyx_t_1) < 0) __PYX_ERR(0, 362, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetGraphAdjacenceMatrix, __pyx_t_1) < 0) __PYX_ERR(0, 362, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "script.pyx":376
- *     return getGraphAdjacenceList(graphID)
+ *     return getGraphAdjacenceMatrix(graphID)
  * 
  * def PySetEditCost(editCost, editCostConstant = []) :             # <<<<<<<<<<<<<<
  *     """

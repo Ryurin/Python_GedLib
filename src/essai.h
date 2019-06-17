@@ -147,14 +147,14 @@ std::vector<std::map<std::string, std::string>> getGraphNodeLabels(std::size_t g
  * @param[in] graphId ID of an input graph that has been added to the environment.
  * @return The list of edges on the selected graph
  */
-std::vector<std::pair<std::pair<std::size_t, std::size_t>, std::map<std::string, std::string>>> getGraphEdges(std::size_t graphId);
+std::map<std::pair<std::size_t, std::size_t>, std::map<std::string, std::string>> getGraphEdges(std::size_t graphId);
 
 /*!
  * @brief Returns the adjacence list of a graph, selected by its ID.
  * @param[in] graphId ID of an input graph that has been added to the environment.
  * @return The adjacence list of the selected graph
  */
-std::vector<std::list<std::pair<std::size_t, std::map<std::string, std::string>>>> getGraphAdjacenceList(std::size_t graphId);
+std::vector<std::vector<std::size_t>> getGraphAdjacenceMatrix(std::size_t graphId);
 
 /*!
  * @brief Sets the edit costs to one of the predefined edit costs.
