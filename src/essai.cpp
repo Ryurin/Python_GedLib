@@ -396,6 +396,21 @@ bool quasimetricCosts(){
 	return env.quasimetric_costs();
 }
 
+/*double* hungarianSquareLSAP(int nrows, int ncols, double matrixCost[]){
+	double *C = new double[nrows*ncols];
+	int *rho = new int[nrows], *varrho = new int[ncols];
+	double *u = new double[nrows], *v = new double[ncols];
+	lsape::hungarianLSAP<double>(C,nrows,rho,u,v,varrho);
+	return rho,varrho,u,v;
+}*/
+
+double* hungarianLSAPE(int nrows, int ncols,double matrixCost[]){
+	int *rho = new int[nrows-1], *varrho = new int[ncols-1];
+	double *u = new double[nrows], *v = new double[ncols];
+	lsape::hungarianLSAPE<double,int>(matrixCost,nrows,ncols,rho,varrho,u,v);
+	return rho,varrho,u,v;
+}
+
 /*!
  * @brief Returns the string which contains all element of a int list. 
  * @param vector The vector to translate. 
@@ -505,7 +520,6 @@ int appelle()
 		std::cout << kirby[i].first << " " << kirby[i].second << "\n";
 	}*/
 	
-		
 	//std::cout << getGraphNodeLabels(7)[7]["chem"] << "\n";
 	std::cout << "\nupper bound = " << getUpperBound(g, h) << ", matrix = " << env.get_node_map(g,h) << ", runtime = " << getRuntime(g, h) << "\n";
 	std::cout << "forward map = " << toStringVectorInt(getForwardMap(g,h)) << ", backward map = " << toStringVectorInt(getBackwardMap(g,h)) << "\n\n";

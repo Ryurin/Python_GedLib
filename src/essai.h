@@ -292,3 +292,5 @@ double getRuntime(std::size_t g, std::size_t h);
  * @return Boolean @p true if the edit costs are quasimetric and @p false, otherwise.
  */
 bool quasimetricCosts();
+
+double* hungarianLSAPE(int nrows, int ncols,double matrixCost[]);
