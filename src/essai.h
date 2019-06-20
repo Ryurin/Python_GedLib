@@ -293,4 +293,17 @@ double getRuntime(std::size_t g, std::size_t h);
  */
 bool quasimetricCosts();
 
-double* hungarianLSAPE(int nrows, int ncols,double matrixCost[]);
+/*!
+ * @brief Applies the hungarian algorithm (LSAP) to a matrix cost.
+ * @param[in] matrixCost The matrix cost.
+ * @return the values of rho, varrho, u and v, in this order.
+ */
+std::vector<std::vector<size_t>> hungarianLSAP(std::vector<std::vector<std::size_t>> matrixCost);
+
+/*!
+ * @brief Applies the hungarian algorithm (LSAPE) to a matrix cost.
+ * @param[in] matrixCost The matrix cost.
+ * @return the values of rho, varrho, u and v, in this order.
+ */
+std::vector<std::vector<double>>  hungarianLSAPE(std::vector<std::vector<double>> matrixCost);
+

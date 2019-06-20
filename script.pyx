@@ -36,6 +36,7 @@ from libcpp.list cimport list
 #Long unsigned int equivalent
 cimport numpy as np
 ctypedef np.npy_uint32 UINT32_t
+from cpython cimport array
 
 #Functions importation
 cdef extern from "src/essai.h" :
@@ -80,6 +81,9 @@ cdef extern from "src/essai.h" :
     cdef vector[vector[np.npy_uint64]] getAllMap(size_t g, size_t h)
     cdef double getRuntime(size_t g, size_t h)
     cdef bool quasimetricCosts()
+    cdef vector[vector[size_t]] hungarianLSAP(vector[vector[size_t]] matrixCost);
+    cdef vector[vector[double]] hungarianLSAPE(vector[vector[double]] matrixCost);
+
 
     
 ###########################################
@@ -667,6 +671,32 @@ def PyQuasimetricCost() :
         .. warning:: PyRunMethod() between the same two graph must be called before this function. 
     """
     return quasimetricCosts()
+
+def PyHungarianLSAP(matrixCost) :
+    """
+        Applies the hungarian algorithm (LSAP) on a matrix Cost. 
+
+        :param matrixCost: The matrix Cost  
+        :type matrixCost: vector[vector[size_t]]
+        :return: The values of rho, varrho, u and v, in this order
+        :rtype: vector[vector[size_t]]
+        
+        .. seealso::PyHungarianLSAPE(matrixCost) 
+    """
+    return hungarianLSAP(matrixCost)
+
+def PyHungarianLSAPE(matrixCost) :
+    """
+        Applies the hungarian algorithm (LSAPE) on a matrix Cost. 
+
+        :param matrixCost: The matrix Cost 
+        :type matrixCost: vector[vector[double]]
+        :return: The values of rho, varrho, u and v, in this order
+        :rtype: vector[vector[double]]
+        
+        .. seealso::PyHungarianLSAP(matrixCost) 
+    """
+    return hungarianLSAPE(matrixCost)
 
 #####################################################################
 ##LISTS OF EDIT COST FUNCTIONS, METHOD COMPUTATION AND INIT OPTIONS##

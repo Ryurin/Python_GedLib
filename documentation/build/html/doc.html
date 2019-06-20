@@ -408,8 +408,8 @@ Natacha Lambert</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="script.PyGetGraphAdjacenceList">
-<code class="descclassname">script.</code><code class="descname">PyGetGraphAdjacenceList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#script.PyGetGraphAdjacenceList" title="Permalink to this definition">¶</a></dt>
+<dt id="script.PyGetGraphAdjacenceMatrix">
+<code class="descclassname">script.</code><code class="descname">PyGetGraphAdjacenceMatrix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#script.PyGetGraphAdjacenceMatrix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Searchs and returns the adjacence list of a graph, selected by its ID.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -419,7 +419,7 @@ Natacha Lambert</p>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The adjacence list of the selected graph</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list[list[tuple(size_t, dict{string : string})]]</td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list[list[size_t]]</td>
 </tr>
 </tbody>
 </table>
@@ -467,7 +467,7 @@ Natacha Lambert</p>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The list of edges on the selected graph</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list[tuple(tuple(size_t,size_t), dict{string : string})]</td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">dict{tuple(size_t,size_t) : dict{string : string}}</td>
 </tr>
 </tbody>
 </table>
@@ -908,6 +908,42 @@ Natacha Lambert</p>
 <p class="first admonition-title">Note</p>
 <p class="last">The upper bound is equivalent to the result of the pessimist edit distance cost. Methods are heuristics so the library can&#8217;t compute the real perfect result because it&#8217;s NP-Hard problem.</p>
 </div>
+</dd></dl>
+
+<dl class="function">
+<dt id="script.PyHungarianLSAP">
+<code class="descclassname">script.</code><code class="descname">PyHungarianLSAP</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#script.PyHungarianLSAP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the hungarian algorithm (LSAP) on a matrix Cost.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>matrixCost</strong> (<em>vector[vector[size_t]]</em>) &#8211; The matrix Cost</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The values of rho, varrho, u and v, in this order</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">vector[vector[size_t]]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="script.PyHungarianLSAPE">
+<code class="descclassname">script.</code><code class="descname">PyHungarianLSAPE</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#script.PyHungarianLSAPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the hungarian algorithm (LSAPE) on a matrix Cost.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>matrixCost</strong> (<em>vector[vector[double]]</em>) &#8211; The matrix Cost</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The values of rho, varrho, u and v, in this order</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">vector[vector[double]]</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
