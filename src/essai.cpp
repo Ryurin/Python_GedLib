@@ -401,9 +401,8 @@ bool quasimetricCosts(){
  * @param pointer The size_t pointer to convert. 
  * @return The vector which contains the pointer's values. 
  */
-std::vector<size_t> translatePointer(std::size_t* pointer){
+std::vector<size_t> translatePointer(std::size_t* pointer, std::size_t dataSize ){
 	std::vector<size_t> res;
-	std::size_t dataSize = (sizeof(pointer)/sizeof(*pointer));
 	for(int i = 0; i < dataSize; i++){
 		res.push_back(pointer[i]);
 	}
@@ -415,10 +414,9 @@ std::vector<size_t> translatePointer(std::size_t* pointer){
  * @param pointer The double pointer to convert. 
  * @return The vector which contains the pointer's values. 
  */
-std::vector<double> translatePointer(double* pointer){
+std::vector<double> translatePointer(double* pointer, std::size_t dataSize ){
 	std::vector<double> res;
-	std::size_t dataSize = (sizeof(pointer)/sizeof(*pointer));
-	for(int i = 0; i < dataSize; i++){
+	for(std::size_t i = 0; i < dataSize; i++){
 		res.push_back(pointer[i]);
 	}
 	return res;
@@ -429,34 +427,35 @@ std::vector<double> translatePointer(double* pointer){
  * @param pointer The size_t pointer to convert. 
  * @return The vector which contains the pointer's values, with double type. 
  */
-std::vector<double> translateAndConvertPointer(std::size_t* pointer){
+std::vector<double> translateAndConvertPointer(std::size_t* pointer, std::size_t dataSize ){
 	std::vector<double> res;
-	std::size_t dataSize = (sizeof(pointer)/sizeof(*pointer));
-	for(int i = 0; i < dataSize; i++){
+	for(std::size_t i = 0; i < dataSize; i++){
 		res.push_back((double)pointer[i]);
 	}
 	return res;
 }
 
 std::vector<std::vector<size_t>> hungarianLSAP(std::vector<std::vector<std::size_t>> matrixCost){
-	int nrows = matrixCost.size();
-	int ncols = matrixCost[0].size();
+	std::size_t nrows = matrixCost.size();
+	std::size_t ncols = matrixCost[0].size();
 	std::size_t *rho = new std::size_t[nrows], *varrho = new std::size_t[ncols];
 	std::size_t *u = new std::size_t[nrows], *v = new std::size_t[ncols];
 	std::size_t *C = new std::size_t[nrows*ncols];
 	std::size_t i = 0, j;
-	for (; i < nrows; i++)
-		for (j = 0; j < ncols; j++)
-		C[j*nrows+i] = matrixCost[i][j];
+	for (std::size_t i = 0; i < nrows; i++){
+		for (std::size_t j = 0; j < ncols; j++){
+			C[j*nrows+i] = matrixCost[i][j];
+		}
+	}
 	lsape::hungarianLSAP<std::size_t>(C,nrows,ncols,rho,u,v,varrho);
 	/*int optSol = 0;
 	for (int c = 0; c < nbC; c++) optSol += v[c];
 	for (int r = 0; r < nbR; r++) optSol += u[r];*/
 	std::vector<std::vector<size_t>> res;
-	res.push_back(translatePointer(rho));
-	res.push_back(translatePointer(varrho));
-	res.push_back(translatePointer(u));
-	res.push_back(translatePointer(v));
+	res.push_back(translatePointer(rho, nrows));
+	res.push_back(translatePointer(varrho, ncols));
+	res.push_back(translatePointer(u, nrows));
+	res.push_back(translatePointer(v, ncols));
 	return res;
 }
 
@@ -466,16 +465,17 @@ std::vector<std::vector<double>> hungarianLSAPE(std::vector<std::vector<double>>
 	std::size_t *rho = new std::size_t[nrows-1], *varrho = new std::size_t[ncols-1];
 	double *u = new double[nrows], *v = new double[ncols];
 	double *C = new double[nrows*ncols];
-	std::size_t i = 0, j;
-	for (; i < nrows; i++)
-		for (j = 0; j < ncols; j++)
-		C[j*nrows+i] = matrixCost[i][j];
+	for (std::size_t i = 0; i < nrows; i++){
+		for (std::size_t j = 0; j < ncols; j++){
+			C[j*nrows+i] = matrixCost[i][j];
+		}
+	}
 	lsape::hungarianLSAPE<double,std::size_t>(C,nrows,ncols,rho,varrho,u,v);
 	std::vector<std::vector<double>> res;
-	res.push_back(translateAndConvertPointer(rho));
-	res.push_back(translateAndConvertPointer(varrho));
-	res.push_back(translatePointer(u));
-	res.push_back(translatePointer(v));
+	res.push_back(translateAndConvertPointer(rho, nrows-1));
+	res.push_back(translateAndConvertPointer(varrho, ncols-1));
+	res.push_back(translatePointer(u, nrows));
+	res.push_back(translatePointer(v, ncols));
 	return res;
 }
 

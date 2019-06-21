@@ -162,8 +162,8 @@ def test() :
     print ("Upper Bound = " + str(script.PyGetUpperBound(g,h)) + ", Lower Bound = " + str(script.PyGetLowerBound(g,h)) + ", Runtime = " + str(script.PyGetRuntime(g,h)))
 
 
-test()
+#test()
 
-runtime = 0.000883781
-Runtime = 0.000154826
-
+m=[[7, 11, 9, 8, 9, 10],[2, 8, 8, 5, 7, 3], [1, 7, 6, 6, 9, 5], [3, 7, 6, 2, 2, 3], [4, 2, 2, 7, 8, 0]]
+truc = script.PyHungarianLSAP(m)
+print (truc)
