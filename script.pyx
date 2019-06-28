@@ -227,7 +227,7 @@ def PyAddGraph(name="", classe="") :
         :return: The ID of the newly graphe
         :rtype: size_t
         
-        .. seealso::PyAddNode(), PyAddEdge()
+        .. seealso::PyAddNode(), PyAddEdge() , PyAddSymmetricalEdge()
         .. note:: You can call this function without parameters. You can also use this function after initialization, call PyInitEnv() after you're finished your modifications. 
     """
     return addGraph(name.encode('utf-8'),classe.encode('utf-8'))
@@ -243,7 +243,7 @@ def PyAddNode(graphID, nodeID, nodeLabel):
         :type nodeID: string
         :type nodeLabel: dict{string : string}
         
-        .. seealso::PyAddGraph(), PyAddEdge()
+        .. seealso::PyAddGraph(), PyAddEdge(), PyAddSymmetricalEdge()
         .. note:: You can also use this function after initialization, but only on a newly added graph. Call PyInitEnv() after you're finished your modifications. 
     """
     addNode(graphID, nodeID.encode('utf-8'), encodeYourMap(nodeLabel))
@@ -263,10 +263,32 @@ def PyAddEdge(graphID, tail, head, edgeLabel, ignoreDuplicates = True) :
         :type edgeLabel: dict{string : string}
         :type ignoreDuplicates: bool
         
-        .. seealso::PyAddGraph(), PyAddNode()
+        .. seealso::PyAddGraph(), PyAddNode(), PyAddSymmetricalEdge()
         .. note:: You can also use this function after initialization, but only on a newly added graph. Call PyInitEnv() after you're finished your modifications. 
     """
     addEdge(graphID, tail.encode('utf-8'), head.encode('utf-8'), encodeYourMap(edgeLabel), ignoreDuplicates)
+
+def PyAddSymmetricalEdge(graphID, tail, head, edgeLabel) :
+    """
+        Adds a symmetrical edge on a graph selected by its ID. 
+
+        :param graphID: The ID of the wanted graph
+        :param tail: The ID of the tail node for the new edge
+        :param head: The ID of the head node for the new edge
+        :param edgeLabel: The label of the new edge
+        :type graphID: size_t
+        :type tail: string
+        :type head: string
+        :type edgeLabel: dict{string : string}
+        
+        .. seealso::PyAddGraph(), PyAddNode(), PyAddEdge()
+        .. note:: You can also use this function after initialization, but only on a newly added graph. Call PyInitEnv() after you're finished your modifications. 
+    """
+    tailB = tail.encode('utf-8')
+    headB = head.encode('utf-8')
+    edgeLabelB = encodeYourMap(edgeLabel)
+    addEdge(graphID, tailB, headB, edgeLabelB, True)
+    addEdge(graphID, headB, tailB, edgeLabelB, True)
 
 def PyClearGraph(graphID) :
     """

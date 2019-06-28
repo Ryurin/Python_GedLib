@@ -181,6 +181,30 @@ Natacha Lambert</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="script.PyAddSymmetricalEdge">
+<code class="descclassname">script.</code><code class="descname">PyAddSymmetricalEdge</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#script.PyAddSymmetricalEdge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a symmetrical edge on a graph selected by its ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>graphID</strong> (<em>size_t</em>) &#8211; The ID of the wanted graph</li>
+<li><strong>tail</strong> (<a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.7)"><em>string</em></a>) &#8211; The ID of the tail node for the new edge</li>
+<li><strong>head</strong> (<a class="reference external" href="https://docs.python.org/3/library/string.html#module-string" title="(in Python v3.7)"><em>string</em></a>) &#8211; The ID of the head node for the new edge</li>
+<li><strong>edgeLabel</strong> (<em>dict{string : string}</em>) &#8211; The label of the new edge</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can also use this function after initialization, but only on a newly added graph. Call PyInitEnv() after you&#8217;re finished your modifications.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
 <dt id="script.PyClearGraph">
 <code class="descclassname">script.</code><code class="descname">PyClearGraph</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#script.PyClearGraph" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes a graph, selected by its ID, to the environment.</p>
