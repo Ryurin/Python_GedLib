@@ -1,4 +1,4 @@
-Cython_GedLib
+Python_GedLib
 ====================================
 
 Please Read https://dbblumenthal.github.io/gedlib/ before using Python code.

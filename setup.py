@@ -7,8 +7,8 @@ from Cython.Build import cythonize
 
 #setup(ext_modules=cythonize("script.pyx"))
 
-extensions = [Extension("script",
-                        sources=["script.pyx", "src/essai.cpp"],
+extensions = [Extension("PythonGedLib",
+                        sources=["PythonGedLib.pyx", "src/GedLibBind.cpp"],
                         include_dirs=["include","include/lsape", "include/Eigen", "include/nomad", "include/sgtelib", "include/libsvm.3.22", "include/fann", "include/boost_1_69_0"],
                         library_dirs=["lib/fann","lib/gedlib", "lib/libsvm.3.22","lib/nomad"],
                         libraries=["doublefann","sgtelib", "svm", "nomad"],
