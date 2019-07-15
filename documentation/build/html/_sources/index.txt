@@ -6,7 +6,7 @@
 .. export LD_LIBRARY_PATH=.:/export/home/lambertn/Documents/Cython_GedLib_2/lib/fann/:/export/home/lambertn/Documents/Cython_GedLib_2/lib/libsvm.3.22:/export/home/lambertn/Documents/Cython_GedLib_2/lib/nomad
 
 
-Welcome to Python_GedLib's documentation!
+Welcome to Cython_GedLib's documentation!
 =========================================
 
 .. toctree::
