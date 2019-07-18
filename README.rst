@@ -49,12 +49,12 @@ How to use this library
 
 This library allow to compute edit distance between two graphs. You have to follow these steps to use it : 
 
--Add your graphs (GXL files, NX Structures or your structure, make sure that the internal type is the same)
--Choose your cost function 
--Init your environnment (After that, the cost function and your graphs can't be modified)
--Choose your method computation
--Run the computation with the IDs of the two graphs. You can have the ID when you add the graph or with some functions
--Find the result with differents functions (NodeMap, edit distance, etc)
+- Add your graphs (GXL files, NX Structures or your structure, make sure that the internal type is the same)
+- Choose your cost function 
+- Init your environnment (After that, the cost function and your graphs can't be modified)
+- Choose your method computation
+- Run the computation with the IDs of the two graphs. You can have the ID when you add the graph or with some functions
+- Find the result with differents functions (NodeMap, edit distance, etc)
 
 Here is an example of code with GXL graphs::
 
