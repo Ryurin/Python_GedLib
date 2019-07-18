@@ -1,4 +1,4 @@
-#export LD_LIBRARY_PATH=.:/export/home/lambertn/Documents/Cython_GedLib_2/lib/fann/:/export/home/lambertn/Documents/Cython_GedLib_2/lib/libsvm.3.22:/export/home/lambertn/Documents/Cython_GedLib_2/lib/nomad
+#export LD_LIBRARY_PATH=.:/export/home/lambertn/Documents/Python_GedLib/lib/fann/:/export/home/lambertn/Documents/Python_GedLib/lib/libsvm.3.22:/export/home/lambertn/Documents/Python_GedLib/lib/nomad
 
 #Pour que "import script" trouve les librairies qu'a besoin GedLib
 #Equivalent à définir la variable d'environnement LD_LIBRARY_PATH sur un bash

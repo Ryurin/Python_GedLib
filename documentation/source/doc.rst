@@ -1,2 +1,2 @@
-.. automodule:: script
+.. automodule:: PythonGedLib
    :members:
