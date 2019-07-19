@@ -1,0 +1,10 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}Python GedLib module}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Authors}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Classes \& Functions}{1}{section.1.2}
+\contentsline {chapter}{\numberline {2}How to add your own editCost class}{17}{chapter.2}
+\contentsline {section}{\numberline {2.1}C++ side}{17}{section.2.1}
+\contentsline {section}{\numberline {2.2}Python side}{17}{section.2.2}
+\contentsline {chapter}{\numberline {3}Indices and tables}{19}{chapter.3}
+\contentsline {chapter}{Python Module Index}{21}{section*.58}
+\contentsline {chapter}{Index}{23}{section*.59}
