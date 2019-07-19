@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Cython_GedLib documentation build configuration file, created by
+# Python_GedLib documentation build configuration file, created by
 # sphinx-quickstart on Thu Jun 13 16:10:06 2019.
 #
 # This file is execfile()d with the current directory set to its
@@ -52,7 +52,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Cython_GedLib'
+project = u'Python_GedLib'
 copyright = u'2019, Natacha Lambert'
 author = u'Natacha Lambert'
 
@@ -118,7 +118,7 @@ html_sidebars = {
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Cython_GedLibdoc'
+htmlhelp_basename = 'Python_GedLibdoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -145,7 +145,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Cython_GedLib.tex', u'Cython\\_GedLib Documentation',
+    (master_doc, 'Python_GedLib.tex', u'Python\\_GedLib Documentation',
      u'Natacha Lambert', 'manual'),
 ]
 
@@ -155,7 +155,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'cython_gedlib', u'Cython_GedLib Documentation',
+    (master_doc, 'python_gedlib', u'Python_GedLib Documentation',
      [author], 1)
 ]
 
@@ -166,8 +166,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Cython_GedLib', u'Cython_GedLib Documentation',
-     author, 'Cython_GedLib', 'One line description of project.',
+    (master_doc, 'Python_GedLib', u'Python_GedLib Documentation',
+     author, 'Python_GedLib', 'One line description of project.',
      'Miscellaneous'),
 ]
 
