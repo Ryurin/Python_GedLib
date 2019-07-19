@@ -159,14 +159,16 @@ std::vector<std::vector<std::size_t>> getGraphAdjacenceMatrix(std::size_t graphI
 /*!
  * @brief Sets the edit costs to one of the predefined edit costs.
  * @param[in] editCost Select one of the predefined edit costs.
+ * @param[in] editCostConstants Parameters for the edit cost, empty by default.
  */
 void setEditCost(std::string editCost, std::vector<double> editCostConstants = {});
 
 /*!
  * @brief Sets the edit costs to a personal Edit Cost Class.
+ * @param[in] editCostConstants Parameters for the edit cost, empty by default.
  * @note You have to add your class, which should inherit from EditCost class, in the function. After that, you can compile and use it in Python
  */
-void setPersonalEditCost();
+void setPersonalEditCost(std::vector<double> editCostConstants = {});
 
 /*!
  * @brief Initializes the environment.

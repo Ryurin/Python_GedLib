@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Here is how to add your editCost class ! &mdash; Cython_GedLib 1.0 documentation</title>
+    <title>How to add your own editCost class &mdash; Cython_GedLib 1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="Cython_GedLib 1.0 documentation" href="index.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="doc.html" />
+    <link rel="prev" title="Python GedLib module" href="doc.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -41,12 +41,38 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="here-is-how-to-add-your-editcost-class">
-<h1>Here is how to add your editCost class !<a class="headerlink" href="#here-is-how-to-add-your-editcost-class" title="Permalink to this headline">¶</a></h1>
-<p>And...
-it&#8217;s class ;) !</p>
-<p>On construct so ...
-Be patient please :)</p>
+  <div class="section" id="how-to-add-your-own-editcost-class">
+<h1>How to add your own editCost class<a class="headerlink" href="#how-to-add-your-own-editcost-class" title="Permalink to this headline">¶</a></h1>
+<p>When you choose your cost function, you can decide some parameters to personalize the function. But if you have some graphs which its type doesn&#8217;t correpond to the choices, you can create your edit cost function.</p>
+<p>For this, you have to write it in C++.</p>
+<div class="section" id="c-side">
+<h2>C++ side<a class="headerlink" href="#c-side" title="Permalink to this headline">¶</a></h2>
+<p>You class must inherit to EditCost class, which is an asbtract class. You can find it here : include/gedlib-master/src/edit_costs</p>
+<p>You can inspire you to the others to understand how to use it. You have to override these functions :</p>
+<ul class="simple">
+<li>virtual double node_ins_cost_fun(const UserNodeLabel &amp; node_label) const final;</li>
+<li>virtual double node_del_cost_fun(const UserNodeLabel &amp; node_label) const final;</li>
+<li>virtual double node_rel_cost_fun(const UserNodeLabel &amp; node_label_1, const UserNodeLabel &amp; node_label_2) const final;</li>
+<li>virtual double edge_ins_cost_fun(const UserEdgeLabel &amp; edge_label) const final;</li>
+<li>virtual double edge_del_cost_fun(const UserEdgeLabel &amp; edge_label) const final;</li>
+<li>virtual double edge_rel_cost_fun(const UserEdgeLabel &amp; edge_label_1, const UserEdgeLabel &amp; edge_label_2) const final;</li>
+</ul>
+<p>You can add some attributes for parameters use or more functions, but these are unavoidable.</p>
+<p>When your class is ready, please go to the C++ Bind here : src/GedLibBind.cpp . The function is :</p>
+<blockquote>
+<div>void setPersonalEditCost(std::vector&lt;double&gt; editCostConstants){env.set_edit_costs(Your EditCost Class(editCostConstants));}</div></blockquote>
+<p>You have just to initialize your class. Parameters aren&#8217;t mandatory, empty by default. If your class doesn&#8217;t have one, you can skip this. After that, you have to recompile the project.</p>
+</div>
+<div class="section" id="python-side">
+<h2>Python side<a class="headerlink" href="#python-side" title="Permalink to this headline">¶</a></h2>
+<p>For this, use setup.py with this command in a linux shell:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build_ext</span> <span class="o">--</span><span class="n">inplace</span>
+</pre></div>
+</div>
+<p>You can also make it in Python 2.</p>
+<p>Now you can use your edit cost function with the Python function PySetPersonalEditCost(editCostConstant).</p>
+<p>If you want more informations on C++, you can check the documentation of the original library here : <a class="reference external" href="https://github.com/dbblumenthal/gedlib">https://github.com/dbblumenthal/gedlib</a></p>
+</div>
 </div>
 
 
@@ -58,7 +84,7 @@ Be patient please :)</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="doc.html" title="previous chapter">&lt;no title&gt;</a></li>
+      <li>Previous: <a href="doc.html" title="previous chapter">Python GedLib module</a></li>
   </ul></li>
 </ul>
 </div>

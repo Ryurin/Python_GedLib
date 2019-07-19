@@ -63,7 +63,7 @@ cdef extern from "src/GedLibBind.h" :
     cdef map[pair[size_t,size_t], map[string,string]] getGraphEdges(size_t graphId)
     cdef vector[vector[size_t]] getGraphAdjacenceMatrix(size_t graphId)
     cdef void setEditCost(string editCost, vector[double] editCostConstant)
-    cdef void setPersonalEditCost()
+    cdef void setPersonalEditCost(vector[double] editCostConstant)
     cdef void initEnv(string initOption)
     cdef void setMethod(string method, string options)
     cdef void initMethod()
@@ -417,13 +417,16 @@ def PySetEditCost(editCost, editCostConstant = []) :
     else :
         raise EditCostError("This edit cost function doesn't exist, please see listOfEditCostOptions for selecting a edit cost function")
 
-def PySetPersonalEditCost() :
+def PySetPersonalEditCost(editCostConstant = []) :
     """
         Sets an personal edit cost function to the environment.
+
+        :param editCostConstant: The parameters you will add to the editCost, empty by default
+        :type editCostConstant: list
         
         .. note::You have to modify the C++ function to use it. Please see the documentation to add your Edit Cost function. 
     """
-    setPersonalEditCost()
+    setPersonalEditCost(editCostConstant)
 
 def PyInitEnv(initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :
     """
@@ -576,6 +579,7 @@ def PyGetNodeImage(g,h,nodeID) :
         .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodePreImage(), PyGetNodeMap(), PyGetAssignmentMatrix()
         .. warning:: PyRunMethod() between the same two graph must be called before this function. 
         .. note:: Use BackwardMap's Node to find its images ! You can also use PyGetForwardMap() and PyGetBackwardMap().     
+
     """
     return getNodeImage(g, h, nodeID)
 
@@ -595,6 +599,7 @@ def PyGetNodePreImage(g,h,nodeID) :
         .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodeImage(), PyGetNodeMap(), PyGetAssignmentMatrix()
         .. warning:: PyRunMethod() between the same two graph must be called before this function. 
         .. note:: Use ForwardMap's Node to find its images ! You can also use PyGetForwardMap() and PyGetBackwardMap().     
+
     """
     return getNodePreImage(g, h, nodeID)
 
