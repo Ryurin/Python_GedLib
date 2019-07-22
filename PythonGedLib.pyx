@@ -936,7 +936,6 @@ def computeEditDistanceOnNxGraphs(dataset, classes, editCost, method, options, i
     print("Loading graphs in progress...")
     for graph in dataset :
         addNxGraph(graph, classes)
-        truc = 0
     listID = PyGetGraphIds()
     print("Graphs loaded ! ")
     print("Number of graphs = " + str(listID[1]))

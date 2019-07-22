@@ -13,6 +13,7 @@ Welcome to Python_GedLib's documentation!
 
    doc
    editcost
+   examples
 
 Indices and tables
 ==================
