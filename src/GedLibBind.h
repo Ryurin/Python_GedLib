@@ -31,12 +31,6 @@ std::vector<std::string> getInitStringOptions();  //!<List of available initilai
 bool isInitialized();
 
 /*!
- * @brief Executes an example of the GedLib's use.  
- * @return 0 if the function have finished. 
- */
-int appelle();
-
-/*!
  * @brief Restart the environment (recall a new empty environment).
  */
 void restartEnv();

@@ -1,6 +1,15 @@
 Examples
 ==============
 
+Before using each example, please make sure to put these lines on the beginnig of your code : 
+
+.. code-block:: python 
+
+  import librariesImport
+  import PythonGedLib
+
+Use your path to access it, without changing the library architecture. After that, you are ready to use the library. 
+
 Classique case with GXL graphs
 ------------------------------------
 .. code-block:: python 

@@ -63,8 +63,6 @@ def minitest() :
 #minitest()
 
 def test() :
-    PythonGedLib.appel()
-    
     PythonGedLib.PyRestartEnv()
     
     print("Here is the Python function !")

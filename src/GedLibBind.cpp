@@ -448,9 +448,6 @@ std::vector<std::vector<size_t>> hungarianLSAP(std::vector<std::vector<std::size
 		}
 	}
 	lsape::hungarianLSAP<std::size_t>(C,nrows,ncols,rho,u,v,varrho);
-	/*int optSol = 0;
-	for (int c = 0; c < nbC; c++) optSol += v[c];
-	for (int r = 0; r < nbR; r++) optSol += u[r];*/
 	std::vector<std::vector<size_t>> res;
 	res.push_back(translatePointer(rho, nrows));
 	res.push_back(translatePointer(varrho, ncols));
@@ -510,88 +507,3 @@ std::string toStringVectorInt(std::vector<unsigned long int> vector){
     
     return res;
 }
-
-int appelle()
-{
-    cout << "Hello world!" << endl;
-    cout << "Here is the C++ function !" << endl;
-
-    //On ne peut pas créer l'XML tout seul, les GXL n'ont pas leur classe. Faire un créateur de XML, pourquoi pas, mais il faut que l'utilisateur
-    //renseigne certaines choses
-
-    //Chargement des graphes, on utilise un XML pour notifier lesquelles // Graph_ids le seul moyen d'avoir les ID
-    //On peut loader à la suite deux univers, juste il faut rassembler la liste des ids je pense
-    /*std::vector<ged::GEDGraph::GraphID> graph_ids(env.load_gxl_graphs("include/gedlib-master/data/datasets/Mutagenicity/data/", "collections/MUTA_10.xml"));
-    std::vector<ged::GEDGraph::GraphID> graph_ids2(env.load_gxl_graphs("include/gedlib-master/data/datasets/Mutagenicity/data/", "collections/MUTA_102.xml"));
-
-    std::string truc = "";
-
-    graph_ids.insert( graph_ids.end(), graph_ids2.begin(), graph_ids2.end() );
-
-    for (int i = 0; i != graph_ids.size(); i++)
-    {
-        truc += std::to_string(graph_ids[i]) + " ";
-    }
-
-    std::cout << "Number of graphs = " << graph_ids.size() << ", list of IDs = " << truc << "\n";
-
-    //Selon l'option dans l'enum
-    env.set_edit_costs(ged::Options::EditCosts::CHEM_1);
-    env.init();
-
-    //selon l'enum + string pour les options en mode bash
-    env.set_method(ged::Options::GEDMethod::BIPARTITE,"");
-    //env.set_method(ged::Options::GEDMethod::BRANCH_TIGHT,"");
-    //env.set_method(ged::Options::GEDMethod::REFINE, "--threads 1 --initial-solutions 40 --randomness PSEUDO");
-    env.init_method();
-
-    //Pour sélectionner deux graphes
-    ged::GEDGraph::GraphID g {graph_ids[0]};
-	ged::GEDGraph::GraphID h {graph_ids[1]};
-
-	env.run_method(g, h); //Demande d'ID des graphes
-	std::cout << "\nupper bound = " << env.get_upper_bound(g, h) << ", matrix = " << env.get_node_map(g,h) << ", runtime = " << env.get_runtime(g, h) << "\n";*/
-	
-	loadGXLGraph("include/gedlib-master/data/datasets/Mutagenicity/data/", /*"/export/home/lambertn/Documents/Cython_GedLib_2/include/gedlib-master/data/collections/Mutagenicity.xml"); //*/"collections/MUTA_10.xml");
-	//loadGXLGraph("include/gedlib-master/data/datasets/alkane/","include/gedlib-master/data/collections/alkane.xml");
-	std::pair<std::size_t, std::size_t> listIdInt = getGraphIds();
-	/*std::string truc = "";
-
-    for (int i = listIdInt.first; i != listIdInt.second; i++)
-    {
-        truc += std::to_string(i) + " ";
-    }*/
-
-    std::cout << "Number of graphs = " << listIdInt.second /*<< ", list of IDs = " << truc*/ << "\n";
-    //cout << env.graph_ids().first << ", " << env.graph_ids().second << endl;
-  
-	setEditCost("CHEM_1");
-	initEnv();
-	setMethod("IPFP","");
-	initMethod();
-	std::size_t g = listIdInt.first;
-	std::size_t h = listIdInt.first +1;
-	runMethod(g,h);
-	
-    /*for (int i = 0; i!=pichu[0].size(); i++){
-		//std::cout << env.get_node_map(g,h).pre_image(pichu[1][i]);
-		std::cout << i;
-		std::cout << env.get_node_map(g,h).image(i) << "\n";
-	}*/
-	
-	/*std::vector<pair<std::size_t, std::size_t>> kirby = getAdjacenceMatrix(g,h);
-	for (int i = 0; i!=kirby.size(); i++){
-		std::cout << kirby[i].first << " " << kirby[i].second << "\n";
-	}*/
-	/*std::vector<std::map<std::string, std::string>> chose = getGraphNodeLabels(7);
-	for (int i = 0; i!=kirby.size(); i++){
-		std::cout << kirby[i].first << " " << kirby[i].second << "\n";
-	}*/
-	
-	//std::cout << getGraphNodeLabels(7)[7]["chem"] << "\n";
-	std::cout << "\nupper bound = " << getUpperBound(g, h) << ", matrix = " << env.get_node_map(g,h) << ", runtime = " << getRuntime(g, h) << "\n";
-	std::cout << "forward map = " << toStringVectorInt(getForwardMap(g,h)) << ", backward map = " << toStringVectorInt(getBackwardMap(g,h)) << "\n\n";
-
-    return 0;
-}
-

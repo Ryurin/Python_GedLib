@@ -44,7 +44,6 @@ cdef extern from "src/GedLibBind.h" :
     cdef vector[string] getMethodStringOptions()
     cdef vector[string] getInitStringOptions()
     cdef bool isInitialized()
-    cdef int appelle()
     cdef void restartEnv()
     cdef void loadGXLGraph(string pathFolder, string pathXML)
     cdef pair[size_t,size_t] getGraphIds()
@@ -89,12 +88,6 @@ cdef extern from "src/GedLibBind.h" :
 ###########################################
 ##REDEFINITION OF C++ FUNCTIONS IN PYTHON##
 ###########################################
-   
-def appel() :
-    """
-        Calls an example only in C++. Nothing usefull, that's why you must ignore this function. 
-    """
-    appelle()
 
 def PyIsInitialized() :
     """

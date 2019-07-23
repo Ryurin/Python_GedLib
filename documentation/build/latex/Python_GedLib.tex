@@ -33,7 +33,7 @@
 
 
 \title{Python\_GedLib Documentation}
-\date{Jul 22, 2019}
+\date{Jul 23, 2019}
 \release{1.0}
 \author{Natacha Lambert}
 \newcommand{\sphinxlogo}{}
@@ -144,10 +144,311 @@
 \tableofcontents
 \phantomsection\label{index::doc}
 
+
+This module allow to use a C++ library for edit distance between graphs (GedLib) with Python.
+
+Before using, please read the first section to ensure a good start with the library. Then, you can follow some examples or informations about each method.
+
+
+\chapter{How to install this library}
+\label{readme:welcome-to-python-gedlib-s-documentation}\label{readme:how-to-install-this-library}\label{readme::doc}
+Please Read \url{https://dbblumenthal.github.io/gedlib/} before using Python code.
+You can also find this module documentation in documentation/build/html folder.
+
+
+\section{Running the script}
+\label{readme:running-the-script}
+After donwloading the entire folder, you can run test.py to ensure the library works.
+
+For your code, you have to make two imports:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{librariesImport}
+\PYG{k+kn}{import} \PYG{n+nn}{PythonGedLib}
+\end{Verbatim}
+
+You can call each function in the library with this. You can't move any folder or files on the library, please make sure that the architecture remains the same.
+
+This library is compiled for Python3 only. If you want to use it with Python 2, you have to recompile it with setup.py. You have to use this command on your favorite shell:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{python} \PYG{n}{setup}\PYG{o}{.}\PYG{n}{py} \PYG{n}{build\PYGZus{}ext} \PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{n}{inplace}
+\end{Verbatim}
+
+After this step, you can use the same lines as Python3 for import, it will be ok. Check the documentation inside the documentation/build/html folder before using function. You can also copy the tests examples for basic use.
+
+
+\section{A problem with the library ?}
+\label{readme:a-problem-with-the-library}
+Maybe the version of GedLib or another library can be a problem. If it is, you can re-install GedLib for your computer. You can download it on this git : \url{https://dbblumenthal.github.io/gedlib/}
+
+You have to install Gedlib with the Python installer after that.
+Just call:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{python3} \PYG{n}{install}\PYG{o}{.}\PYG{n}{py}
+\end{Verbatim}
+
+Make the links like indicate on the documentation. Use the same architecture like this library, but just change the .so and folders with your installation.
+
+After that, if it's doesn't work, you can recompile the Python library. Please delete PythonGedLib.so, PythonGedLib.cpp and build folder. Then use this command on a linux shell
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{python3} \PYG{n}{setup}\PYG{o}{.}\PYG{n}{py} \PYG{n}{build\PYGZus{}ext} \PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{n}{inplace}
+\end{Verbatim}
+
+You can make it with Python 2 but make sure you use the same version with your code and the compilation.
+
+If you have a problem, you can contact me on : \href{mailto:natacha.lambert@unicaen.fr}{natacha.lambert@unicaen.fr}
+
+
+\section{How to use this library}
+\label{readme:how-to-use-this-library}
+This library allow to compute edit distance between two graphs. You have to follow these steps to use it :
+\begin{itemize}
+\item {} 
+Add your graphs (GXL files, NX Structures or your structure, make sure that the internal type is the same)
+
+\item {} 
+Choose your cost function
+
+\item {} 
+Init your environnment (After that, the cost function and your graphs can't be modified)
+
+\item {} 
+Choose your method computation
+
+\item {} 
+Run the computation with the IDs of the two graphs. You can have the ID when you add the graph or with some functions
+
+\item {} 
+Find the result with differents functions (NodeMap, edit distance, etc)
+
+\end{itemize}
+
+Here is an example of code with GXL graphs :
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyLoadGXLGraph}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{include/gedlib\PYGZhy{}master/data/datasets/Mutagenicity/data/}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{collections/MUTA\PYGZus{}10.xml}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{listID} \PYG{o}{=} \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetAllGraphIds}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PySetEditCost}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{CHEM\PYGZus{}1}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyInitEnv}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PySetMethod}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{IPFP}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyInitMethod}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{g} \PYG{o}{=} \PYG{n}{listID}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+\PYG{n}{h} \PYG{o}{=} \PYG{n}{listID}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}
+
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyRunMethod}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}
+
+\PYG{k}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Node Map : }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetNodeMap}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}\PYG{p}{)}
+\PYG{k}{print} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Upper Bound = }\PYG{l+s+s2}{\PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetUpperBound}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{, Lower Bound = }\PYG{l+s+s2}{\PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetLowerBound}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{, Runtime = }\PYG{l+s+s2}{\PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetRuntime}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}
+\end{Verbatim}
+
+Please read the documentation for more examples and functions.
+
+
+\section{An advice if you don't code in a shell}
+\label{readme:an-advice-if-you-don-t-code-in-a-shell}
+Python library don't indicate each C++ error. If you have a restart causing by an error in your code, please use on a linux shell for having C++ errors.
+
+
+\chapter{How to add your own editCost class}
+\label{editcost:how-to-add-your-own-editcost-class}\label{editcost::doc}
+When you choose your cost function, you can decide some parameters to personalize the function. But if you have some graphs which its type doesn't correpond to the choices, you can create your edit cost function.
+
+For this, you have to write it in C++.
+
+
+\section{C++ side}
+\label{editcost:c-side}
+You class must inherit to EditCost class, which is an asbtract class. You can find it here : include/gedlib-master/src/edit\_costs
+
+You can inspire you to the others to understand how to use it. You have to override these functions :
+\begin{itemize}
+\item {} 
+virtual double node\_ins\_cost\_fun(const UserNodeLabel \& node\_label) const final;
+
+\item {} 
+virtual double node\_del\_cost\_fun(const UserNodeLabel \& node\_label) const final;
+
+\item {} 
+virtual double node\_rel\_cost\_fun(const UserNodeLabel \& node\_label\_1, const UserNodeLabel \& node\_label\_2) const final;
+
+\item {} 
+virtual double edge\_ins\_cost\_fun(const UserEdgeLabel \& edge\_label) const final;
+
+\item {} 
+virtual double edge\_del\_cost\_fun(const UserEdgeLabel \& edge\_label) const final;
+
+\item {} 
+virtual double edge\_rel\_cost\_fun(const UserEdgeLabel \& edge\_label\_1, const UserEdgeLabel \& edge\_label\_2) const final;
+
+\end{itemize}
+
+You can add some attributes for parameters use or more functions, but these are unavoidable.
+
+When your class is ready, please go to the C++ Bind here : src/GedLibBind.cpp . The function is :
+\begin{quote}
+
+void setPersonalEditCost(std::vector\textless{}double\textgreater{} editCostConstants)\{env.set\_edit\_costs(Your EditCost Class(editCostConstants));\}
+\end{quote}
+
+You have just to initialize your class. Parameters aren't mandatory, empty by default. If your class doesn't have one, you can skip this. After that, you have to recompile the project.
+
+
+\section{Python side}
+\label{editcost:python-side}
+For this, use setup.py with this command in a linux shell:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{python3} \PYG{n}{setup}\PYG{o}{.}\PYG{n}{py} \PYG{n}{build\PYGZus{}ext} \PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{n}{inplace}
+\end{Verbatim}
+
+You can also make it in Python 2.
+
+Now you can use your edit cost function with the Python function PySetPersonalEditCost(editCostConstant).
+
+If you want more informations on C++, you can check the documentation of the original library here : \url{https://github.com/dbblumenthal/gedlib}
+
+
+\chapter{Examples}
+\label{examples:examples}\label{examples::doc}
+Before using each example, please make sure to put these lines on the beginnig of your code :
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{librariesImport}
+\PYG{k+kn}{import} \PYG{n+nn}{PythonGedLib}
+\end{Verbatim}
+
+Use your path to access it, without changing the library architecture. After that, you are ready to use the library.
+
+
+\section{Classique case with GXL graphs}
+\label{examples:classique-case-with-gxl-graphs}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyLoadGXLGraph}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{include/gedlib\PYGZhy{}master/data/datasets/Mutagenicity/data/}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{collections/MUTA\PYGZus{}10.xml}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{listID} \PYG{o}{=} \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetAllGraphIds}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PySetEditCost}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{CHEM\PYGZus{}1}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyInitEnv}\PYG{p}{(}\PYG{p}{)}
+
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PySetMethod}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{IPFP}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyInitMethod}\PYG{p}{(}\PYG{p}{)}
+
+\PYG{n}{g} \PYG{o}{=} \PYG{n}{listID}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+\PYG{n}{h} \PYG{o}{=} \PYG{n}{listID}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}
+
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyRunMethod}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}
+
+\PYG{k}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Node Map : }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetNodeMap}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}\PYG{p}{)}
+\PYG{k}{print} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Upper Bound = }\PYG{l+s+s2}{\PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetUpperBound}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{, Lower Bound = }\PYG{l+s+s2}{\PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetLowerBound}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{, Runtime = }\PYG{l+s+s2}{\PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetRuntime}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}
+\end{Verbatim}
+
+You can also use this function :
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{computeEditDistanceOnGXlGraphs}\PYG{p}{(}\PYG{n}{pathFolder}\PYG{p}{,} \PYG{n}{pathXML}\PYG{p}{,} \PYG{n}{editCost}\PYG{p}{,} \PYG{n}{method}\PYG{p}{,} \PYG{n}{options}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{initOption} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{EAGER\PYGZus{}WITHOUT\PYGZus{}SHUFFLED\PYGZus{}COPIES}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}
+
+This function compute all edit distance between all graphs, even itself. You can see the result with some functions and graphs IDs. Please see the documentation of the function for more informations.
+
+
+\section{Classique case with NX graphs}
+\label{examples:classique-case-with-nx-graphs}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{for} \PYG{n}{graph} \PYG{o+ow}{in} \PYG{n}{dataset} \PYG{p}{:}
+  \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{addNxGraph}\PYG{p}{(}\PYG{n}{graph}\PYG{p}{,} \PYG{n}{classes}\PYG{p}{)}
+\PYG{n}{listID} \PYG{o}{=} \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetGraphIds}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PySetEditCost}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{CHEM\PYGZus{}1}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyInitEnv}\PYG{p}{(}\PYG{p}{)}
+
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PySetMethod}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{IPFP}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyInitMethod}\PYG{p}{(}\PYG{p}{)}
+
+\PYG{n}{g} \PYG{o}{=} \PYG{n}{listID}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+\PYG{n}{h} \PYG{o}{=} \PYG{n}{listID}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}
+
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyRunMethod}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}
+
+\PYG{k}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Node Map : }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetNodeMap}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}\PYG{p}{)}
+\PYG{k}{print} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Upper Bound = }\PYG{l+s+s2}{\PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetUpperBound}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{, Lower Bound = }\PYG{l+s+s2}{\PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetLowerBound}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{, Runtime = }\PYG{l+s+s2}{\PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetRuntime}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}
+\end{Verbatim}
+
+You can also use this function :
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{computeEditDistanceOnNxGraphs}\PYG{p}{(}\PYG{n}{dataset}\PYG{p}{,} \PYG{n}{classes}\PYG{p}{,} \PYG{n}{editCost}\PYG{p}{,} \PYG{n}{method}\PYG{p}{,} \PYG{n}{options}\PYG{p}{,} \PYG{n}{initOption} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{EAGER\PYGZus{}WITHOUT\PYGZus{}SHUFFLED\PYGZus{}COPIES}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}
+
+This function compute all edit distance between all graphs, even itself. You can see the result in the return and with some functions and graphs IDs. Please see the documentation of the function for more informations.
+
+Or this function :
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{ccomputeGedOnTwoGraphs}\PYG{p}{(}\PYG{n}{g1}\PYG{p}{,}\PYG{n}{g2}\PYG{p}{,} \PYG{n}{editCost}\PYG{p}{,} \PYG{n}{method}\PYG{p}{,} \PYG{n}{options}\PYG{p}{,} \PYG{n}{initOption} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{EAGER\PYGZus{}WITHOUT\PYGZus{}SHUFFLED\PYGZus{}COPIES}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}
+
+This function allow to compute the edit distance just for two graphs. Please see the documentation of the function for more informations.
+
+
+\section{Add a graph from scratch}
+\label{examples:add-a-graph-from-scratch}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{currentID} \PYG{o}{=} \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyAddGraph}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyAddNode}\PYG{p}{(}\PYG{n}{currentID}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZus{}1}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{chem}\PYG{l+s+s2}{\PYGZdq{}} \PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{C}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{\PYGZcb{}}\PYG{p}{)}
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyAddNode}\PYG{p}{(}\PYG{n}{currentID}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZus{}2}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{chem}\PYG{l+s+s2}{\PYGZdq{}} \PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{O}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{\PYGZcb{}}\PYG{p}{)}
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyAddEdge}\PYG{p}{(}\PYG{n}{currentID}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZus{}1}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZus{}2}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}  \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{valence}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{1}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{\PYGZcb{}} \PYG{p}{)}
+\end{Verbatim}
+
+Please make sure as the type are the same (string for Ids and a dictionnary for labels). If you want a symmetrical graph, you can use this function to ensure the symmetry :
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{PyAddSymmetricalEdge}\PYG{p}{(}\PYG{n}{graphID}\PYG{p}{,} \PYG{n}{tail}\PYG{p}{,} \PYG{n}{head}\PYG{p}{,} \PYG{n}{edgeLabel}\PYG{p}{)}
+\end{Verbatim}
+
+If you have a Nx structure, you can use directly this function :
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{addNxGraph}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,} \PYG{n}{classe}\PYG{p}{,} \PYG{n}{ignoreDuplicates}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{)}
+\end{Verbatim}
+
+Even if you have another structure, you can use this function :
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{addRandomGraph}\PYG{p}{(}\PYG{n}{name}\PYG{p}{,} \PYG{n}{classe}\PYG{p}{,} \PYG{n}{listOfNodes}\PYG{p}{,} \PYG{n}{listOfEdges}\PYG{p}{,} \PYG{n}{ignoreDuplicates}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{)}
+\end{Verbatim}
+
+Please read the documentation before using and respect the types.
+
+
+\section{Median computation}
+\label{examples:median-computation}
+Coming soon ...
+Please ask Benoît Gauzere for this example !
+
+
+\section{Hungarian algorithm}
+\label{examples:hungarian-algorithm}
+
+\subsection{LSAPE}
+\label{examples:lsape}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{result} \PYG{o}{=} \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyHungarianLSAPE}\PYG{p}{(}\PYG{n}{matrixCost}\PYG{p}{)}
+\PYG{k}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Rho = }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{result}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ Varrho = }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{result}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ u = }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{result}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ v = }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{result}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{)}
+\end{Verbatim}
+
+
+\subsection{LSAP}
+\label{examples:lsap}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{result} \PYG{o}{=} \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyHungarianLSAP}\PYG{p}{(}\PYG{n}{matrixCost}\PYG{p}{)}
+\PYG{k}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Rho = }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{result}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ u = }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{result}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ v = }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{result}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ Varrho = }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{result}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{)}
+\end{Verbatim}
 \phantomsection\label{doc:module-PythonGedLib}\index{PythonGedLib (module)}
 
 \chapter{Python GedLib module}
-\label{doc:welcome-to-python-gedlib-s-documentation}\label{doc::doc}\label{doc:python-gedlib-module}
+\label{doc:python-gedlib-module}\label{doc::doc}
 This module allow to use a C++ library for edit distance between graphs (GedLib) with Python.
 
 
@@ -1475,14 +1776,6 @@ The graph must respect the GXL structure. Please see how a GXL graph is construc
 
 \end{fulllineitems}
 
-\index{appel() (in module PythonGedLib)}
-
-\begin{fulllineitems}
-\phantomsection\label{doc:PythonGedLib.appel}\pysiglinewithargsret{\sphinxcode{PythonGedLib.}\sphinxbfcode{appel}}{}{}
-Calls an example only in C++. Nothing usefull, that's why you must ignore this function.
-
-\end{fulllineitems}
-
 \index{computeEditDistanceOnGXlGraphs() (in module PythonGedLib)}
 
 \begin{fulllineitems}
@@ -1655,190 +1948,17 @@ This function is used for type connection.
 
 
 
-\chapter{How to add your own editCost class}
-\label{editcost::doc}\label{editcost:how-to-add-your-own-editcost-class}
-When you choose your cost function, you can decide some parameters to personalize the function. But if you have some graphs which its type doesn't correpond to the choices, you can create your edit cost function.
-
-For this, you have to write it in C++.
-
-
-\section{C++ side}
-\label{editcost:c-side}
-You class must inherit to EditCost class, which is an asbtract class. You can find it here : include/gedlib-master/src/edit\_costs
-
-You can inspire you to the others to understand how to use it. You have to override these functions :
-\begin{itemize}
+\chapter{Authors}
+\label{index:authors}\begin{itemize}
 \item {} 
-virtual double node\_ins\_cost\_fun(const UserNodeLabel \& node\_label) const final;
+David Blumenthal for C++ module
 
 \item {} 
-virtual double node\_del\_cost\_fun(const UserNodeLabel \& node\_label) const final;
-
-\item {} 
-virtual double node\_rel\_cost\_fun(const UserNodeLabel \& node\_label\_1, const UserNodeLabel \& node\_label\_2) const final;
-
-\item {} 
-virtual double edge\_ins\_cost\_fun(const UserEdgeLabel \& edge\_label) const final;
-
-\item {} 
-virtual double edge\_del\_cost\_fun(const UserEdgeLabel \& edge\_label) const final;
-
-\item {} 
-virtual double edge\_rel\_cost\_fun(const UserEdgeLabel \& edge\_label\_1, const UserEdgeLabel \& edge\_label\_2) const final;
+Natacha Lambert for Python module
 
 \end{itemize}
 
-You can add some attributes for parameters use or more functions, but these are unavoidable.
-
-When your class is ready, please go to the C++ Bind here : src/GedLibBind.cpp . The function is :
-\begin{quote}
-
-void setPersonalEditCost(std::vector\textless{}double\textgreater{} editCostConstants)\{env.set\_edit\_costs(Your EditCost Class(editCostConstants));\}
-\end{quote}
-
-You have just to initialize your class. Parameters aren't mandatory, empty by default. If your class doesn't have one, you can skip this. After that, you have to recompile the project.
-
-
-\section{Python side}
-\label{editcost:python-side}
-For this, use setup.py with this command in a linux shell:
-
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{python3} \PYG{n}{setup}\PYG{o}{.}\PYG{n}{py} \PYG{n}{build\PYGZus{}ext} \PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{n}{inplace}
-\end{Verbatim}
-
-You can also make it in Python 2.
-
-Now you can use your edit cost function with the Python function PySetPersonalEditCost(editCostConstant).
-
-If you want more informations on C++, you can check the documentation of the original library here : \url{https://github.com/dbblumenthal/gedlib}
-
-
-\chapter{Examples}
-\label{examples::doc}\label{examples:examples}
-
-\section{Classique case with GXL graphs}
-\label{examples:classique-case-with-gxl-graphs}
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyLoadGXLGraph}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{include/gedlib\PYGZhy{}master/data/datasets/Mutagenicity/data/}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{collections/MUTA\PYGZus{}10.xml}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
-\PYG{n}{listID} \PYG{o}{=} \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetAllGraphIds}\PYG{p}{(}\PYG{p}{)}
-\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PySetEditCost}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{CHEM\PYGZus{}1}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
-
-\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyInitEnv}\PYG{p}{(}\PYG{p}{)}
-
-\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PySetMethod}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{IPFP}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
-\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyInitMethod}\PYG{p}{(}\PYG{p}{)}
-
-\PYG{n}{g} \PYG{o}{=} \PYG{n}{listID}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
-\PYG{n}{h} \PYG{o}{=} \PYG{n}{listID}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}
-
-\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyRunMethod}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}
-
-\PYG{k}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Node Map : }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetNodeMap}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}\PYG{p}{)}
-\PYG{k}{print} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Upper Bound = }\PYG{l+s+s2}{\PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetUpperBound}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{, Lower Bound = }\PYG{l+s+s2}{\PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetLowerBound}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{, Runtime = }\PYG{l+s+s2}{\PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetRuntime}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}
-\end{Verbatim}
-
-You can also use this function :
-
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{computeEditDistanceOnGXlGraphs}\PYG{p}{(}\PYG{n}{pathFolder}\PYG{p}{,} \PYG{n}{pathXML}\PYG{p}{,} \PYG{n}{editCost}\PYG{p}{,} \PYG{n}{method}\PYG{p}{,} \PYG{n}{options}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{initOption} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{EAGER\PYGZus{}WITHOUT\PYGZus{}SHUFFLED\PYGZus{}COPIES}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
-\end{Verbatim}
-
-This function compute all edit distance between all graphs, even itself. You can see the result with some functions and graphs IDs. Please see the documentation of the function for more informations.
-
-
-\section{Classique case with NX graphs}
-\label{examples:classique-case-with-nx-graphs}
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k}{for} \PYG{n}{graph} \PYG{o+ow}{in} \PYG{n}{dataset} \PYG{p}{:}
-  \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{addNxGraph}\PYG{p}{(}\PYG{n}{graph}\PYG{p}{,} \PYG{n}{classes}\PYG{p}{)}
-\PYG{n}{listID} \PYG{o}{=} \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetGraphIds}\PYG{p}{(}\PYG{p}{)}
-\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PySetEditCost}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{CHEM\PYGZus{}1}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
-
-\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyInitEnv}\PYG{p}{(}\PYG{p}{)}
-
-\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PySetMethod}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{IPFP}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
-\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyInitMethod}\PYG{p}{(}\PYG{p}{)}
-
-\PYG{n}{g} \PYG{o}{=} \PYG{n}{listID}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
-\PYG{n}{h} \PYG{o}{=} \PYG{n}{listID}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}
-
-\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyRunMethod}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}
-
-\PYG{k}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Node Map : }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetNodeMap}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}\PYG{p}{)}
-\PYG{k}{print} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Upper Bound = }\PYG{l+s+s2}{\PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetUpperBound}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{, Lower Bound = }\PYG{l+s+s2}{\PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetLowerBound}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{, Runtime = }\PYG{l+s+s2}{\PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetRuntime}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}
-\end{Verbatim}
-
-You can also use this function :
-
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{computeEditDistanceOnNxGraphs}\PYG{p}{(}\PYG{n}{dataset}\PYG{p}{,} \PYG{n}{classes}\PYG{p}{,} \PYG{n}{editCost}\PYG{p}{,} \PYG{n}{method}\PYG{p}{,} \PYG{n}{options}\PYG{p}{,} \PYG{n}{initOption} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{EAGER\PYGZus{}WITHOUT\PYGZus{}SHUFFLED\PYGZus{}COPIES}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
-\end{Verbatim}
-
-This function compute all edit distance between all graphs, even itself. You can see the result in the return and with some functions and graphs IDs. Please see the documentation of the function for more informations.
-
-Or this function :
-
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{ccomputeGedOnTwoGraphs}\PYG{p}{(}\PYG{n}{g1}\PYG{p}{,}\PYG{n}{g2}\PYG{p}{,} \PYG{n}{editCost}\PYG{p}{,} \PYG{n}{method}\PYG{p}{,} \PYG{n}{options}\PYG{p}{,} \PYG{n}{initOption} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{EAGER\PYGZus{}WITHOUT\PYGZus{}SHUFFLED\PYGZus{}COPIES}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
-\end{Verbatim}
-
-This function allow to compute the edit distance just for two graphs. Please see the documentation of the function for more informations.
-
-
-\section{Add a graph from scratch}
-\label{examples:add-a-graph-from-scratch}
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{currentID} \PYG{o}{=} \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyAddGraph}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyAddNode}\PYG{p}{(}\PYG{n}{currentID}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZus{}1}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{chem}\PYG{l+s+s2}{\PYGZdq{}} \PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{C}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{\PYGZcb{}}\PYG{p}{)}
-\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyAddNode}\PYG{p}{(}\PYG{n}{currentID}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZus{}2}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{chem}\PYG{l+s+s2}{\PYGZdq{}} \PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{O}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{\PYGZcb{}}\PYG{p}{)}
-\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyAddEdge}\PYG{p}{(}\PYG{n}{currentID}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZus{}1}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZus{}2}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}  \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{valence}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{1}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{\PYGZcb{}} \PYG{p}{)}
-\end{Verbatim}
-
-Please make sure as the type are the same (string for Ids and a dictionnary for labels). If you want a symmetrical graph, you can use this function to ensure the symmetry :
-
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{PyAddSymmetricalEdge}\PYG{p}{(}\PYG{n}{graphID}\PYG{p}{,} \PYG{n}{tail}\PYG{p}{,} \PYG{n}{head}\PYG{p}{,} \PYG{n}{edgeLabel}\PYG{p}{)}
-\end{Verbatim}
-
-If you have a Nx structure, you can use directly this function :
-
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{addNxGraph}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,} \PYG{n}{classe}\PYG{p}{,} \PYG{n}{ignoreDuplicates}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{)}
-\end{Verbatim}
-
-Even if you have another structure, you can use this function :
-
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{addRandomGraph}\PYG{p}{(}\PYG{n}{name}\PYG{p}{,} \PYG{n}{classe}\PYG{p}{,} \PYG{n}{listOfNodes}\PYG{p}{,} \PYG{n}{listOfEdges}\PYG{p}{,} \PYG{n}{ignoreDuplicates}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{)}
-\end{Verbatim}
-
-Please read the documentation before using and respect the types.
-
-
-\section{Median computation}
-\label{examples:median-computation}
-Coming soon ...
-Please ask Benoît Gauzere for this example !
-
-
-\section{Hungarian algorithm}
-\label{examples:hungarian-algorithm}
-
-\subsection{LSAPE}
-\label{examples:lsape}
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{result} \PYG{o}{=} \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyHungarianLSAPE}\PYG{p}{(}\PYG{n}{matrixCost}\PYG{p}{)}
-\PYG{k}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Rho = }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{result}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ Varrho = }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{result}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ u = }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{result}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ v = }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{result}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{)}
-\end{Verbatim}
-
-
-\subsection{LSAP}
-\label{examples:lsap}
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{result} \PYG{o}{=} \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyHungarianLSAP}\PYG{p}{(}\PYG{n}{matrixCost}\PYG{p}{)}
-\PYG{k}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Rho = }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{result}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ u = }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{result}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ v = }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{result}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ Varrho = }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{result}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{)}
-\end{Verbatim}
+Copyright (C) 2019 by all the authors
 
 
 \chapter{Indices and tables}

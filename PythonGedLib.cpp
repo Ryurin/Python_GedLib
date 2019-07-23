@@ -1629,9 +1629,7 @@ static const char __pyx_k_node[] = "node";
 static const char __pyx_k_self[] = "self";
 static const char __pyx_k_tail[] = "tail";
 static const char __pyx_k_test[] = "__test__";
-static const char __pyx_k_truc[] = "truc";
 static const char __pyx_k_Error[] = "Error";
-static const char __pyx_k_appel[] = "appel";
 static const char __pyx_k_edges[] = "edges";
 static const char __pyx_k_graph[] = "graph";
 static const char __pyx_k_headB[] = "headB";
@@ -1841,7 +1839,6 @@ static PyObject *__pyx_n_s_ValueError;
 static PyObject *__pyx_kp_s__3;
 static PyObject *__pyx_n_s_addNxGraph;
 static PyObject *__pyx_n_s_addRandomGraph;
-static PyObject *__pyx_n_s_appel;
 static PyObject *__pyx_n_s_classe;
 static PyObject *__pyx_n_s_classes;
 static PyObject *__pyx_n_s_computeEditDistanceOnGXlGraphs;
@@ -1912,64 +1909,62 @@ static PyObject *__pyx_n_s_self;
 static PyObject *__pyx_n_s_tail;
 static PyObject *__pyx_n_s_tailB;
 static PyObject *__pyx_n_s_test;
-static PyObject *__pyx_n_s_truc;
 static PyObject *__pyx_kp_u_unknown_dtype_code_in_numpy_pxd;
 static PyObject *__pyx_kp_s_utf_8;
 static PyObject *__pyx_n_s_value;
 static PyObject *__pyx_kp_s_with_all_the_others_including_h;
-static PyObject *__pyx_pf_12PythonGedLib_appel(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_2PyIsInitialized(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_4PyGetEditCostOptions(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_6PyGetMethodOptions(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_8PyGetInitOptions(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_10PyRestartEnv(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_12PyLoadGXLGraph(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_pathFolder, PyObject *__pyx_v_pathXML); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_14PyGetGraphIds(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_16PyGetAllGraphIds(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_18PyGetGraphClass(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_id); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_20PyGetGraphName(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_id); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_22PyAddGraph(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_name, PyObject *__pyx_v_classe); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_24PyAddNode(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID, PyObject *__pyx_v_nodeID, PyObject *__pyx_v_nodeLabel); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_26PyAddEdge(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID, PyObject *__pyx_v_tail, PyObject *__pyx_v_head, PyObject *__pyx_v_edgeLabel, PyObject *__pyx_v_ignoreDuplicates); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_28PyAddSymmetricalEdge(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID, PyObject *__pyx_v_tail, PyObject *__pyx_v_head, PyObject *__pyx_v_edgeLabel); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_30PyClearGraph(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_32PyGetGraphInternalId(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_34PyGetGraphNumNodes(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_36PyGetGraphNumEdges(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_38PyGetOriginalNodeIds(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_40PyGetGraphNodeLabels(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_42PyGetGraphEdges(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_44PyGetGraphAdjacenceMatrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_46PySetEditCost(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_editCost, PyObject *__pyx_v_editCostConstant); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_48PySetPersonalEditCost(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_editCostConstant); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_50PyInitEnv(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_initOption); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_52PySetMethod(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_method, PyObject *__pyx_v_options); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_54PyInitMethod(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_56PyGetInitime(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_58PyRunMethod(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_60PyGetUpperBound(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_62PyGetLowerBound(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_64PyGetForwardMap(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_66PyGetBackwardMap(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_68PyGetNodeImage(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h, PyObject *__pyx_v_nodeID); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_70PyGetNodePreImage(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h, PyObject *__pyx_v_nodeID); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_72PyGetDummyNode(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_74PyGetNodeMap(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_76PyGetAssignmentMatrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_78PyGetAllMap(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_80PyGetRuntime(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_82PyQuasimetricCost(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_84PyHungarianLSAP(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_matrixCost); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_86PyHungarianLSAPE(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_matrixCost); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_PyIsInitialized(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_2PyGetEditCostOptions(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_4PyGetMethodOptions(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_6PyGetInitOptions(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_8PyRestartEnv(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_10PyLoadGXLGraph(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_pathFolder, PyObject *__pyx_v_pathXML); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_12PyGetGraphIds(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_14PyGetAllGraphIds(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_16PyGetGraphClass(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_id); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_18PyGetGraphName(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_id); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_20PyAddGraph(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_name, PyObject *__pyx_v_classe); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_22PyAddNode(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID, PyObject *__pyx_v_nodeID, PyObject *__pyx_v_nodeLabel); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_24PyAddEdge(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID, PyObject *__pyx_v_tail, PyObject *__pyx_v_head, PyObject *__pyx_v_edgeLabel, PyObject *__pyx_v_ignoreDuplicates); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_26PyAddSymmetricalEdge(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID, PyObject *__pyx_v_tail, PyObject *__pyx_v_head, PyObject *__pyx_v_edgeLabel); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_28PyClearGraph(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_30PyGetGraphInternalId(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_32PyGetGraphNumNodes(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_34PyGetGraphNumEdges(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_36PyGetOriginalNodeIds(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_38PyGetGraphNodeLabels(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_40PyGetGraphEdges(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_42PyGetGraphAdjacenceMatrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_44PySetEditCost(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_editCost, PyObject *__pyx_v_editCostConstant); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_46PySetPersonalEditCost(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_editCostConstant); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_48PyInitEnv(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_initOption); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_50PySetMethod(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_method, PyObject *__pyx_v_options); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_52PyInitMethod(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_54PyGetInitime(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_56PyRunMethod(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_58PyGetUpperBound(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_60PyGetLowerBound(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_62PyGetForwardMap(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_64PyGetBackwardMap(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_66PyGetNodeImage(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h, PyObject *__pyx_v_nodeID); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_68PyGetNodePreImage(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h, PyObject *__pyx_v_nodeID); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_70PyGetDummyNode(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_72PyGetNodeMap(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_74PyGetAssignmentMatrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_76PyGetAllMap(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_78PyGetRuntime(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_80PyQuasimetricCost(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_82PyHungarianLSAP(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_matrixCost); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_84PyHungarianLSAPE(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_matrixCost); /* proto */
 static PyObject *__pyx_pf_12PythonGedLib_13EditCostError___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_message); /* proto */
 static PyObject *__pyx_pf_12PythonGedLib_11MethodError___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_message); /* proto */
 static PyObject *__pyx_pf_12PythonGedLib_9InitError___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_message); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_88encodeYourMap(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_map); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_90addRandomGraph(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_name, PyObject *__pyx_v_classe, PyObject *__pyx_v_listOfNodes, PyObject *__pyx_v_listOfEdges, PyObject *__pyx_v_ignoreDuplicates); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_92addNxGraph(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_classe, PyObject *__pyx_v_ignoreDuplicates); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g1, PyObject *__pyx_v_g2, PyObject *__pyx_v_editCost, PyObject *__pyx_v_method, PyObject *__pyx_v_options, PyObject *__pyx_v_initOption); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_dataset, PyObject *__pyx_v_classes, PyObject *__pyx_v_editCost, PyObject *__pyx_v_method, PyObject *__pyx_v_options, PyObject *__pyx_v_initOption); /* proto */
-static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_pathFolder, PyObject *__pyx_v_pathXML, PyObject *__pyx_v_editCost, PyObject *__pyx_v_method, PyObject *__pyx_v_options, PyObject *__pyx_v_initOption); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_86encodeYourMap(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_map); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_88addRandomGraph(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_name, PyObject *__pyx_v_classe, PyObject *__pyx_v_listOfNodes, PyObject *__pyx_v_listOfEdges, PyObject *__pyx_v_ignoreDuplicates); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_90addNxGraph(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_classe, PyObject *__pyx_v_ignoreDuplicates); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_92computeGedOnTwoGraphs(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g1, PyObject *__pyx_v_g2, PyObject *__pyx_v_editCost, PyObject *__pyx_v_method, PyObject *__pyx_v_options, PyObject *__pyx_v_initOption); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_94computeEditDistanceOnNxGraphs(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_dataset, PyObject *__pyx_v_classes, PyObject *__pyx_v_editCost, PyObject *__pyx_v_method, PyObject *__pyx_v_options, PyObject *__pyx_v_initOption); /* proto */
+static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnGXlGraphs(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_pathFolder, PyObject *__pyx_v_pathXML, PyObject *__pyx_v_editCost, PyObject *__pyx_v_method, PyObject *__pyx_v_options, PyObject *__pyx_v_initOption); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
 static int __pyx_pf_7cpython_5array_5array___getbuffer__(arrayobject *__pyx_v_self, Py_buffer *__pyx_v_info, CYTHON_UNUSED int __pyx_v_flags); /* proto */
@@ -2001,155 +1996,102 @@ static PyObject *__pyx_tuple__24;
 static PyObject *__pyx_tuple__25;
 static PyObject *__pyx_tuple__26;
 static PyObject *__pyx_tuple__27;
-static PyObject *__pyx_tuple__34;
-static PyObject *__pyx_tuple__38;
-static PyObject *__pyx_tuple__40;
-static PyObject *__pyx_tuple__42;
-static PyObject *__pyx_tuple__44;
-static PyObject *__pyx_tuple__46;
-static PyObject *__pyx_tuple__48;
-static PyObject *__pyx_tuple__50;
-static PyObject *__pyx_tuple__52;
-static PyObject *__pyx_tuple__54;
-static PyObject *__pyx_tuple__56;
-static PyObject *__pyx_tuple__58;
-static PyObject *__pyx_tuple__60;
-static PyObject *__pyx_tuple__62;
-static PyObject *__pyx_tuple__64;
-static PyObject *__pyx_tuple__66;
-static PyObject *__pyx_tuple__68;
-static PyObject *__pyx_tuple__70;
-static PyObject *__pyx_tuple__72;
-static PyObject *__pyx_tuple__76;
-static PyObject *__pyx_tuple__78;
-static PyObject *__pyx_tuple__80;
-static PyObject *__pyx_tuple__82;
-static PyObject *__pyx_tuple__84;
-static PyObject *__pyx_tuple__86;
-static PyObject *__pyx_tuple__88;
-static PyObject *__pyx_tuple__91;
-static PyObject *__pyx_tuple__93;
-static PyObject *__pyx_tuple__95;
-static PyObject *__pyx_tuple__97;
-static PyObject *__pyx_tuple__100;
-static PyObject *__pyx_tuple__102;
-static PyObject *__pyx_tuple__104;
-static PyObject *__pyx_tuple__106;
-static PyObject *__pyx_tuple__108;
-static PyObject *__pyx_tuple__110;
-static PyObject *__pyx_tuple__112;
-static PyObject *__pyx_tuple__114;
-static PyObject *__pyx_tuple__116;
-static PyObject *__pyx_tuple__118;
-static PyObject *__pyx_tuple__120;
+static PyObject *__pyx_tuple__33;
+static PyObject *__pyx_tuple__37;
+static PyObject *__pyx_tuple__39;
+static PyObject *__pyx_tuple__41;
+static PyObject *__pyx_tuple__43;
+static PyObject *__pyx_tuple__45;
+static PyObject *__pyx_tuple__47;
+static PyObject *__pyx_tuple__49;
+static PyObject *__pyx_tuple__51;
+static PyObject *__pyx_tuple__53;
+static PyObject *__pyx_tuple__55;
+static PyObject *__pyx_tuple__57;
+static PyObject *__pyx_tuple__59;
+static PyObject *__pyx_tuple__61;
+static PyObject *__pyx_tuple__63;
+static PyObject *__pyx_tuple__65;
+static PyObject *__pyx_tuple__67;
+static PyObject *__pyx_tuple__69;
+static PyObject *__pyx_tuple__71;
+static PyObject *__pyx_tuple__75;
+static PyObject *__pyx_tuple__77;
+static PyObject *__pyx_tuple__79;
+static PyObject *__pyx_tuple__81;
+static PyObject *__pyx_tuple__83;
+static PyObject *__pyx_tuple__85;
+static PyObject *__pyx_tuple__87;
+static PyObject *__pyx_tuple__90;
+static PyObject *__pyx_tuple__92;
+static PyObject *__pyx_tuple__94;
+static PyObject *__pyx_tuple__96;
+static PyObject *__pyx_tuple__99;
+static PyObject *__pyx_tuple__101;
+static PyObject *__pyx_tuple__103;
+static PyObject *__pyx_tuple__105;
+static PyObject *__pyx_tuple__107;
+static PyObject *__pyx_tuple__109;
+static PyObject *__pyx_tuple__111;
+static PyObject *__pyx_tuple__113;
+static PyObject *__pyx_tuple__115;
+static PyObject *__pyx_tuple__117;
+static PyObject *__pyx_tuple__119;
 static PyObject *__pyx_codeobj__28;
 static PyObject *__pyx_codeobj__29;
 static PyObject *__pyx_codeobj__30;
 static PyObject *__pyx_codeobj__31;
 static PyObject *__pyx_codeobj__32;
-static PyObject *__pyx_codeobj__33;
+static PyObject *__pyx_codeobj__34;
 static PyObject *__pyx_codeobj__35;
 static PyObject *__pyx_codeobj__36;
-static PyObject *__pyx_codeobj__37;
-static PyObject *__pyx_codeobj__39;
-static PyObject *__pyx_codeobj__41;
-static PyObject *__pyx_codeobj__43;
-static PyObject *__pyx_codeobj__45;
-static PyObject *__pyx_codeobj__47;
-static PyObject *__pyx_codeobj__49;
-static PyObject *__pyx_codeobj__51;
-static PyObject *__pyx_codeobj__53;
-static PyObject *__pyx_codeobj__55;
-static PyObject *__pyx_codeobj__57;
-static PyObject *__pyx_codeobj__59;
-static PyObject *__pyx_codeobj__61;
-static PyObject *__pyx_codeobj__63;
-static PyObject *__pyx_codeobj__65;
-static PyObject *__pyx_codeobj__67;
-static PyObject *__pyx_codeobj__69;
-static PyObject *__pyx_codeobj__71;
+static PyObject *__pyx_codeobj__38;
+static PyObject *__pyx_codeobj__40;
+static PyObject *__pyx_codeobj__42;
+static PyObject *__pyx_codeobj__44;
+static PyObject *__pyx_codeobj__46;
+static PyObject *__pyx_codeobj__48;
+static PyObject *__pyx_codeobj__50;
+static PyObject *__pyx_codeobj__52;
+static PyObject *__pyx_codeobj__54;
+static PyObject *__pyx_codeobj__56;
+static PyObject *__pyx_codeobj__58;
+static PyObject *__pyx_codeobj__60;
+static PyObject *__pyx_codeobj__62;
+static PyObject *__pyx_codeobj__64;
+static PyObject *__pyx_codeobj__66;
+static PyObject *__pyx_codeobj__68;
+static PyObject *__pyx_codeobj__70;
+static PyObject *__pyx_codeobj__72;
 static PyObject *__pyx_codeobj__73;
 static PyObject *__pyx_codeobj__74;
-static PyObject *__pyx_codeobj__75;
-static PyObject *__pyx_codeobj__77;
-static PyObject *__pyx_codeobj__79;
-static PyObject *__pyx_codeobj__81;
-static PyObject *__pyx_codeobj__83;
-static PyObject *__pyx_codeobj__85;
-static PyObject *__pyx_codeobj__87;
+static PyObject *__pyx_codeobj__76;
+static PyObject *__pyx_codeobj__78;
+static PyObject *__pyx_codeobj__80;
+static PyObject *__pyx_codeobj__82;
+static PyObject *__pyx_codeobj__84;
+static PyObject *__pyx_codeobj__86;
+static PyObject *__pyx_codeobj__88;
 static PyObject *__pyx_codeobj__89;
-static PyObject *__pyx_codeobj__90;
-static PyObject *__pyx_codeobj__92;
-static PyObject *__pyx_codeobj__94;
-static PyObject *__pyx_codeobj__96;
+static PyObject *__pyx_codeobj__91;
+static PyObject *__pyx_codeobj__93;
+static PyObject *__pyx_codeobj__95;
+static PyObject *__pyx_codeobj__97;
 static PyObject *__pyx_codeobj__98;
-static PyObject *__pyx_codeobj__99;
-static PyObject *__pyx_codeobj__101;
-static PyObject *__pyx_codeobj__103;
-static PyObject *__pyx_codeobj__105;
-static PyObject *__pyx_codeobj__107;
-static PyObject *__pyx_codeobj__109;
-static PyObject *__pyx_codeobj__111;
-static PyObject *__pyx_codeobj__113;
-static PyObject *__pyx_codeobj__115;
-static PyObject *__pyx_codeobj__117;
-static PyObject *__pyx_codeobj__119;
-static PyObject *__pyx_codeobj__121;
+static PyObject *__pyx_codeobj__100;
+static PyObject *__pyx_codeobj__102;
+static PyObject *__pyx_codeobj__104;
+static PyObject *__pyx_codeobj__106;
+static PyObject *__pyx_codeobj__108;
+static PyObject *__pyx_codeobj__110;
+static PyObject *__pyx_codeobj__112;
+static PyObject *__pyx_codeobj__114;
+static PyObject *__pyx_codeobj__116;
+static PyObject *__pyx_codeobj__118;
+static PyObject *__pyx_codeobj__120;
 
-/* "PythonGedLib.pyx":93
+/* "PythonGedLib.pyx":92
  * ###########################################
- * 
- * def appel() :             # <<<<<<<<<<<<<<
- *     """
- *         Calls an example only in C++. Nothing usefull, that's why you must ignore this function.
- */
-
-/* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_1appel(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_12PythonGedLib_appel[] = "\n        Calls an example only in C++. Nothing usefull, that's why you must ignore this function. \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_1appel = {"appel", (PyCFunction)__pyx_pw_12PythonGedLib_1appel, METH_NOARGS, __pyx_doc_12PythonGedLib_appel};
-static PyObject *__pyx_pw_12PythonGedLib_1appel(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("appel (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_appel(__pyx_self);
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_12PythonGedLib_appel(CYTHON_UNUSED PyObject *__pyx_self) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("appel", 0);
-
-  /* "PythonGedLib.pyx":97
- *         Calls an example only in C++. Nothing usefull, that's why you must ignore this function.
- *     """
- *     appelle()             # <<<<<<<<<<<<<<
- * 
- * def PyIsInitialized() :
- */
-  appelle();
-
-  /* "PythonGedLib.pyx":93
- * ###########################################
- * 
- * def appel() :             # <<<<<<<<<<<<<<
- *     """
- *         Calls an example only in C++. Nothing usefull, that's why you must ignore this function.
- */
-
-  /* function exit code */
-  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "PythonGedLib.pyx":99
- *     appelle()
  * 
  * def PyIsInitialized() :             # <<<<<<<<<<<<<<
  *     """
@@ -2157,27 +2099,27 @@ static PyObject *__pyx_pf_12PythonGedLib_appel(CYTHON_UNUSED PyObject *__pyx_sel
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_3PyIsInitialized(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_12PythonGedLib_2PyIsInitialized[] = "\n        Checks and returns if the computation environment is initialized or not.\n \n        :return: True if it's initialized, False otherwise\n        :rtype: bool\n        \n        .. note:: This function exists for internals verifications but you can use it for your code. \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_3PyIsInitialized = {"PyIsInitialized", (PyCFunction)__pyx_pw_12PythonGedLib_3PyIsInitialized, METH_NOARGS, __pyx_doc_12PythonGedLib_2PyIsInitialized};
-static PyObject *__pyx_pw_12PythonGedLib_3PyIsInitialized(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_12PythonGedLib_1PyIsInitialized(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_12PythonGedLib_PyIsInitialized[] = "\n        Checks and returns if the computation environment is initialized or not.\n \n        :return: True if it's initialized, False otherwise\n        :rtype: bool\n        \n        .. note:: This function exists for internals verifications but you can use it for your code. \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_1PyIsInitialized = {"PyIsInitialized", (PyCFunction)__pyx_pw_12PythonGedLib_1PyIsInitialized, METH_NOARGS, __pyx_doc_12PythonGedLib_PyIsInitialized};
+static PyObject *__pyx_pw_12PythonGedLib_1PyIsInitialized(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyIsInitialized (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_2PyIsInitialized(__pyx_self);
+  __pyx_r = __pyx_pf_12PythonGedLib_PyIsInitialized(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_2PyIsInitialized(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_12PythonGedLib_PyIsInitialized(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyIsInitialized", 0);
 
-  /* "PythonGedLib.pyx":108
+  /* "PythonGedLib.pyx":101
  *         .. note:: This function exists for internals verifications but you can use it for your code.
  *     """
  *     return isInitialized()             # <<<<<<<<<<<<<<
@@ -2185,14 +2127,14 @@ static PyObject *__pyx_pf_12PythonGedLib_2PyIsInitialized(CYTHON_UNUSED PyObject
  * def PyGetEditCostOptions() :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(isInitialized()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(isInitialized()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":99
- *     appelle()
+  /* "PythonGedLib.pyx":92
+ * ###########################################
  * 
  * def PyIsInitialized() :             # <<<<<<<<<<<<<<
  *     """
@@ -2210,7 +2152,7 @@ static PyObject *__pyx_pf_12PythonGedLib_2PyIsInitialized(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":110
+/* "PythonGedLib.pyx":103
  *     return isInitialized()
  * 
  * def PyGetEditCostOptions() :             # <<<<<<<<<<<<<<
@@ -2219,27 +2161,27 @@ static PyObject *__pyx_pf_12PythonGedLib_2PyIsInitialized(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_5PyGetEditCostOptions(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_12PythonGedLib_4PyGetEditCostOptions[] = "\n        Searchs the differents edit cost functions and returns the result.\n \n        :return: The list of edit cost functions\n        :rtype: list[string]\n \n        .. warning:: This function is useless for an external use. Please use directly listOfEditCostOptions. \n        .. note:: Prefer the listOfEditCostOptions attribute of this module.\n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_5PyGetEditCostOptions = {"PyGetEditCostOptions", (PyCFunction)__pyx_pw_12PythonGedLib_5PyGetEditCostOptions, METH_NOARGS, __pyx_doc_12PythonGedLib_4PyGetEditCostOptions};
-static PyObject *__pyx_pw_12PythonGedLib_5PyGetEditCostOptions(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_12PythonGedLib_3PyGetEditCostOptions(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_12PythonGedLib_2PyGetEditCostOptions[] = "\n        Searchs the differents edit cost functions and returns the result.\n \n        :return: The list of edit cost functions\n        :rtype: list[string]\n \n        .. warning:: This function is useless for an external use. Please use directly listOfEditCostOptions. \n        .. note:: Prefer the listOfEditCostOptions attribute of this module.\n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_3PyGetEditCostOptions = {"PyGetEditCostOptions", (PyCFunction)__pyx_pw_12PythonGedLib_3PyGetEditCostOptions, METH_NOARGS, __pyx_doc_12PythonGedLib_2PyGetEditCostOptions};
+static PyObject *__pyx_pw_12PythonGedLib_3PyGetEditCostOptions(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyGetEditCostOptions (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_4PyGetEditCostOptions(__pyx_self);
+  __pyx_r = __pyx_pf_12PythonGedLib_2PyGetEditCostOptions(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_4PyGetEditCostOptions(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_12PythonGedLib_2PyGetEditCostOptions(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyGetEditCostOptions", 0);
 
-  /* "PythonGedLib.pyx":121
+  /* "PythonGedLib.pyx":114
  *     """
  * 
  *     return getEditCostStringOptions()             # <<<<<<<<<<<<<<
@@ -2247,13 +2189,13 @@ static PyObject *__pyx_pf_12PythonGedLib_4PyGetEditCostOptions(CYTHON_UNUSED PyO
  * def PyGetMethodOptions() :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_convert_vector_to_py_std_3a__3a_string(getEditCostStringOptions()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 121, __pyx_L1_error)
+  __pyx_t_1 = __pyx_convert_vector_to_py_std_3a__3a_string(getEditCostStringOptions()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 114, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":110
+  /* "PythonGedLib.pyx":103
  *     return isInitialized()
  * 
  * def PyGetEditCostOptions() :             # <<<<<<<<<<<<<<
@@ -2272,7 +2214,7 @@ static PyObject *__pyx_pf_12PythonGedLib_4PyGetEditCostOptions(CYTHON_UNUSED PyO
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":123
+/* "PythonGedLib.pyx":116
  *     return getEditCostStringOptions()
  * 
  * def PyGetMethodOptions() :             # <<<<<<<<<<<<<<
@@ -2281,27 +2223,27 @@ static PyObject *__pyx_pf_12PythonGedLib_4PyGetEditCostOptions(CYTHON_UNUSED PyO
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_7PyGetMethodOptions(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_12PythonGedLib_6PyGetMethodOptions[] = "\n        Searchs the differents method for edit distance computation between graphs and returns the result.\n \n        :return: The list of method to compute the edit distance between graphs\n        :rtype: list[string]\n \n        .. warning:: This function is useless for an external use. Please use directly listOfMethodOptions.\n        .. note:: Prefer the listOfMethodOptions attribute of this module.\n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_7PyGetMethodOptions = {"PyGetMethodOptions", (PyCFunction)__pyx_pw_12PythonGedLib_7PyGetMethodOptions, METH_NOARGS, __pyx_doc_12PythonGedLib_6PyGetMethodOptions};
-static PyObject *__pyx_pw_12PythonGedLib_7PyGetMethodOptions(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_12PythonGedLib_5PyGetMethodOptions(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_12PythonGedLib_4PyGetMethodOptions[] = "\n        Searchs the differents method for edit distance computation between graphs and returns the result.\n \n        :return: The list of method to compute the edit distance between graphs\n        :rtype: list[string]\n \n        .. warning:: This function is useless for an external use. Please use directly listOfMethodOptions.\n        .. note:: Prefer the listOfMethodOptions attribute of this module.\n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_5PyGetMethodOptions = {"PyGetMethodOptions", (PyCFunction)__pyx_pw_12PythonGedLib_5PyGetMethodOptions, METH_NOARGS, __pyx_doc_12PythonGedLib_4PyGetMethodOptions};
+static PyObject *__pyx_pw_12PythonGedLib_5PyGetMethodOptions(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyGetMethodOptions (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_6PyGetMethodOptions(__pyx_self);
+  __pyx_r = __pyx_pf_12PythonGedLib_4PyGetMethodOptions(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_6PyGetMethodOptions(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_12PythonGedLib_4PyGetMethodOptions(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyGetMethodOptions", 0);
 
-  /* "PythonGedLib.pyx":133
+  /* "PythonGedLib.pyx":126
  *         .. note:: Prefer the listOfMethodOptions attribute of this module.
  *     """
  *     return getMethodStringOptions()             # <<<<<<<<<<<<<<
@@ -2309,13 +2251,13 @@ static PyObject *__pyx_pf_12PythonGedLib_6PyGetMethodOptions(CYTHON_UNUSED PyObj
  * def PyGetInitOptions() :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_convert_vector_to_py_std_3a__3a_string(getMethodStringOptions()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 133, __pyx_L1_error)
+  __pyx_t_1 = __pyx_convert_vector_to_py_std_3a__3a_string(getMethodStringOptions()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 126, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":123
+  /* "PythonGedLib.pyx":116
  *     return getEditCostStringOptions()
  * 
  * def PyGetMethodOptions() :             # <<<<<<<<<<<<<<
@@ -2334,7 +2276,7 @@ static PyObject *__pyx_pf_12PythonGedLib_6PyGetMethodOptions(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":135
+/* "PythonGedLib.pyx":128
  *     return getMethodStringOptions()
  * 
  * def PyGetInitOptions() :             # <<<<<<<<<<<<<<
@@ -2343,27 +2285,27 @@ static PyObject *__pyx_pf_12PythonGedLib_6PyGetMethodOptions(CYTHON_UNUSED PyObj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_9PyGetInitOptions(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_12PythonGedLib_8PyGetInitOptions[] = "\n        Searchs the differents initialization parameters for the environment computation for graphs and returns the result.\n \n        :return: The list of options to initialize the computation environment\n        :rtype: list[string]\n \n        .. warning:: This function is useless for an external use. Please use directly listOfInitOptions.\n        .. note:: Prefer the listOfInitOptions attribute of this module.\n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_9PyGetInitOptions = {"PyGetInitOptions", (PyCFunction)__pyx_pw_12PythonGedLib_9PyGetInitOptions, METH_NOARGS, __pyx_doc_12PythonGedLib_8PyGetInitOptions};
-static PyObject *__pyx_pw_12PythonGedLib_9PyGetInitOptions(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_12PythonGedLib_7PyGetInitOptions(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_12PythonGedLib_6PyGetInitOptions[] = "\n        Searchs the differents initialization parameters for the environment computation for graphs and returns the result.\n \n        :return: The list of options to initialize the computation environment\n        :rtype: list[string]\n \n        .. warning:: This function is useless for an external use. Please use directly listOfInitOptions.\n        .. note:: Prefer the listOfInitOptions attribute of this module.\n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_7PyGetInitOptions = {"PyGetInitOptions", (PyCFunction)__pyx_pw_12PythonGedLib_7PyGetInitOptions, METH_NOARGS, __pyx_doc_12PythonGedLib_6PyGetInitOptions};
+static PyObject *__pyx_pw_12PythonGedLib_7PyGetInitOptions(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyGetInitOptions (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_8PyGetInitOptions(__pyx_self);
+  __pyx_r = __pyx_pf_12PythonGedLib_6PyGetInitOptions(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_8PyGetInitOptions(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_12PythonGedLib_6PyGetInitOptions(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyGetInitOptions", 0);
 
-  /* "PythonGedLib.pyx":145
+  /* "PythonGedLib.pyx":138
  *         .. note:: Prefer the listOfInitOptions attribute of this module.
  *     """
  *     return getInitStringOptions()             # <<<<<<<<<<<<<<
@@ -2371,13 +2313,13 @@ static PyObject *__pyx_pf_12PythonGedLib_8PyGetInitOptions(CYTHON_UNUSED PyObjec
  * def PyRestartEnv() :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_convert_vector_to_py_std_3a__3a_string(getInitStringOptions()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 145, __pyx_L1_error)
+  __pyx_t_1 = __pyx_convert_vector_to_py_std_3a__3a_string(getInitStringOptions()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 138, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":135
+  /* "PythonGedLib.pyx":128
  *     return getMethodStringOptions()
  * 
  * def PyGetInitOptions() :             # <<<<<<<<<<<<<<
@@ -2396,7 +2338,7 @@ static PyObject *__pyx_pf_12PythonGedLib_8PyGetInitOptions(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":147
+/* "PythonGedLib.pyx":140
  *     return getInitStringOptions()
  * 
  * def PyRestartEnv() :             # <<<<<<<<<<<<<<
@@ -2405,26 +2347,26 @@ static PyObject *__pyx_pf_12PythonGedLib_8PyGetInitOptions(CYTHON_UNUSED PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_11PyRestartEnv(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_12PythonGedLib_10PyRestartEnv[] = "\n        Restarts the environment variable. All data related to it will be delete. \n \n        .. warning:: This function deletes all graphs, computations and more so make sure you don't need anymore your environment. \n        .. note:: You can now delete and add somes graphs after initialization so you can avoid this function. \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_11PyRestartEnv = {"PyRestartEnv", (PyCFunction)__pyx_pw_12PythonGedLib_11PyRestartEnv, METH_NOARGS, __pyx_doc_12PythonGedLib_10PyRestartEnv};
-static PyObject *__pyx_pw_12PythonGedLib_11PyRestartEnv(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_12PythonGedLib_9PyRestartEnv(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_12PythonGedLib_8PyRestartEnv[] = "\n        Restarts the environment variable. All data related to it will be delete. \n \n        .. warning:: This function deletes all graphs, computations and more so make sure you don't need anymore your environment. \n        .. note:: You can now delete and add somes graphs after initialization so you can avoid this function. \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_9PyRestartEnv = {"PyRestartEnv", (PyCFunction)__pyx_pw_12PythonGedLib_9PyRestartEnv, METH_NOARGS, __pyx_doc_12PythonGedLib_8PyRestartEnv};
+static PyObject *__pyx_pw_12PythonGedLib_9PyRestartEnv(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyRestartEnv (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_10PyRestartEnv(__pyx_self);
+  __pyx_r = __pyx_pf_12PythonGedLib_8PyRestartEnv(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_10PyRestartEnv(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_12PythonGedLib_8PyRestartEnv(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyRestartEnv", 0);
 
-  /* "PythonGedLib.pyx":154
+  /* "PythonGedLib.pyx":147
  *         .. note:: You can now delete and add somes graphs after initialization so you can avoid this function.
  *     """
  *     restartEnv()             # <<<<<<<<<<<<<<
@@ -2433,7 +2375,7 @@ static PyObject *__pyx_pf_12PythonGedLib_10PyRestartEnv(CYTHON_UNUSED PyObject *
  */
   restartEnv();
 
-  /* "PythonGedLib.pyx":147
+  /* "PythonGedLib.pyx":140
  *     return getInitStringOptions()
  * 
  * def PyRestartEnv() :             # <<<<<<<<<<<<<<
@@ -2448,7 +2390,7 @@ static PyObject *__pyx_pf_12PythonGedLib_10PyRestartEnv(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":156
+/* "PythonGedLib.pyx":149
  *     restartEnv()
  * 
  * def PyLoadGXLGraph(pathFolder, pathXML) :             # <<<<<<<<<<<<<<
@@ -2457,10 +2399,10 @@ static PyObject *__pyx_pf_12PythonGedLib_10PyRestartEnv(CYTHON_UNUSED PyObject *
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_13PyLoadGXLGraph(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_12PyLoadGXLGraph[] = "\n        Loads some GXL graphes on the environment which is in a same folder, and present in the XMLfile. \n        \n        :param pathFolder: The folder's path which contains GXL graphs\n        :param pathXML: The XML's path which indicates which graphes you want to load\n        :type pathFolder: string\n        :type pathXML: string\n \n        .. note:: You can call this function multiple times if you want, but not after an init call. \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_13PyLoadGXLGraph = {"PyLoadGXLGraph", (PyCFunction)__pyx_pw_12PythonGedLib_13PyLoadGXLGraph, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_12PyLoadGXLGraph};
-static PyObject *__pyx_pw_12PythonGedLib_13PyLoadGXLGraph(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_11PyLoadGXLGraph(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_10PyLoadGXLGraph[] = "\n        Loads some GXL graphes on the environment which is in a same folder, and present in the XMLfile. \n        \n        :param pathFolder: The folder's path which contains GXL graphs\n        :param pathXML: The XML's path which indicates which graphes you want to load\n        :type pathFolder: string\n        :type pathXML: string\n \n        .. note:: You can call this function multiple times if you want, but not after an init call. \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_11PyLoadGXLGraph = {"PyLoadGXLGraph", (PyCFunction)__pyx_pw_12PythonGedLib_11PyLoadGXLGraph, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_10PyLoadGXLGraph};
+static PyObject *__pyx_pw_12PythonGedLib_11PyLoadGXLGraph(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_pathFolder = 0;
   PyObject *__pyx_v_pathXML = 0;
   PyObject *__pyx_r = 0;
@@ -2486,11 +2428,11 @@ static PyObject *__pyx_pw_12PythonGedLib_13PyLoadGXLGraph(PyObject *__pyx_self, 
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_pathXML)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyLoadGXLGraph", 1, 2, 2, 1); __PYX_ERR(0, 156, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyLoadGXLGraph", 1, 2, 2, 1); __PYX_ERR(0, 149, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyLoadGXLGraph") < 0)) __PYX_ERR(0, 156, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyLoadGXLGraph") < 0)) __PYX_ERR(0, 149, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -2503,20 +2445,20 @@ static PyObject *__pyx_pw_12PythonGedLib_13PyLoadGXLGraph(PyObject *__pyx_self, 
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("PyLoadGXLGraph", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 156, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("PyLoadGXLGraph", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 149, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.PyLoadGXLGraph", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_12PyLoadGXLGraph(__pyx_self, __pyx_v_pathFolder, __pyx_v_pathXML);
+  __pyx_r = __pyx_pf_12PythonGedLib_10PyLoadGXLGraph(__pyx_self, __pyx_v_pathFolder, __pyx_v_pathXML);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_12PyLoadGXLGraph(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_pathFolder, PyObject *__pyx_v_pathXML) {
+static PyObject *__pyx_pf_12PythonGedLib_10PyLoadGXLGraph(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_pathFolder, PyObject *__pyx_v_pathXML) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2525,30 +2467,30 @@ static PyObject *__pyx_pf_12PythonGedLib_12PyLoadGXLGraph(CYTHON_UNUSED PyObject
   std::string __pyx_t_4;
   __Pyx_RefNannySetupContext("PyLoadGXLGraph", 0);
 
-  /* "PythonGedLib.pyx":167
+  /* "PythonGedLib.pyx":160
  *         .. note:: You can call this function multiple times if you want, but not after an init call.
  *     """
  *     loadGXLGraph(pathFolder.encode('utf-8'), pathXML.encode('utf-8'))             # <<<<<<<<<<<<<<
  * 
  * def PyGetGraphIds() :
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_pathFolder, __pyx_n_s_encode); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_pathFolder, __pyx_n_s_encode); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 160, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 167, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_3 = __pyx_convert_string_from_py_std__in_string(__pyx_t_2); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 167, __pyx_L1_error)
+  __pyx_t_3 = __pyx_convert_string_from_py_std__in_string(__pyx_t_2); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 160, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_pathXML, __pyx_n_s_encode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 167, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_pathXML, __pyx_n_s_encode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 160, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_4 = __pyx_convert_string_from_py_std__in_string(__pyx_t_1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 167, __pyx_L1_error)
+  __pyx_t_4 = __pyx_convert_string_from_py_std__in_string(__pyx_t_1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 160, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   loadGXLGraph(__pyx_t_3, __pyx_t_4);
 
-  /* "PythonGedLib.pyx":156
+  /* "PythonGedLib.pyx":149
  *     restartEnv()
  * 
  * def PyLoadGXLGraph(pathFolder, pathXML) :             # <<<<<<<<<<<<<<
@@ -2570,7 +2512,7 @@ static PyObject *__pyx_pf_12PythonGedLib_12PyLoadGXLGraph(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":169
+/* "PythonGedLib.pyx":162
  *     loadGXLGraph(pathFolder.encode('utf-8'), pathXML.encode('utf-8'))
  * 
  * def PyGetGraphIds() :             # <<<<<<<<<<<<<<
@@ -2579,27 +2521,27 @@ static PyObject *__pyx_pf_12PythonGedLib_12PyLoadGXLGraph(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_15PyGetGraphIds(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_12PythonGedLib_14PyGetGraphIds[] = "\n        Searchs the first and last IDs of the loaded graphs in the environment. \n \n        :return: The pair of the first and the last graphs Ids\n        :rtype: tuple(size_t, size_t)\n        \n        .. note:: Prefer this function if you have huges structures with lots of graphs.  \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_15PyGetGraphIds = {"PyGetGraphIds", (PyCFunction)__pyx_pw_12PythonGedLib_15PyGetGraphIds, METH_NOARGS, __pyx_doc_12PythonGedLib_14PyGetGraphIds};
-static PyObject *__pyx_pw_12PythonGedLib_15PyGetGraphIds(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_12PythonGedLib_13PyGetGraphIds(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_12PythonGedLib_12PyGetGraphIds[] = "\n        Searchs the first and last IDs of the loaded graphs in the environment. \n \n        :return: The pair of the first and the last graphs Ids\n        :rtype: tuple(size_t, size_t)\n        \n        .. note:: Prefer this function if you have huges structures with lots of graphs.  \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_13PyGetGraphIds = {"PyGetGraphIds", (PyCFunction)__pyx_pw_12PythonGedLib_13PyGetGraphIds, METH_NOARGS, __pyx_doc_12PythonGedLib_12PyGetGraphIds};
+static PyObject *__pyx_pw_12PythonGedLib_13PyGetGraphIds(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyGetGraphIds (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_14PyGetGraphIds(__pyx_self);
+  __pyx_r = __pyx_pf_12PythonGedLib_12PyGetGraphIds(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_14PyGetGraphIds(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_12PythonGedLib_12PyGetGraphIds(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyGetGraphIds", 0);
 
-  /* "PythonGedLib.pyx":178
+  /* "PythonGedLib.pyx":171
  *         .. note:: Prefer this function if you have huges structures with lots of graphs.
  *     """
  *     return getGraphIds()             # <<<<<<<<<<<<<<
@@ -2607,13 +2549,13 @@ static PyObject *__pyx_pf_12PythonGedLib_14PyGetGraphIds(CYTHON_UNUSED PyObject 
  * def PyGetAllGraphIds() :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_convert_pair_to_py_size_t____size_t(getGraphIds()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_1 = __pyx_convert_pair_to_py_size_t____size_t(getGraphIds()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 171, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":169
+  /* "PythonGedLib.pyx":162
  *     loadGXLGraph(pathFolder.encode('utf-8'), pathXML.encode('utf-8'))
  * 
  * def PyGetGraphIds() :             # <<<<<<<<<<<<<<
@@ -2632,7 +2574,7 @@ static PyObject *__pyx_pf_12PythonGedLib_14PyGetGraphIds(CYTHON_UNUSED PyObject 
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":180
+/* "PythonGedLib.pyx":173
  *     return getGraphIds()
  * 
  * def PyGetAllGraphIds() :             # <<<<<<<<<<<<<<
@@ -2641,27 +2583,27 @@ static PyObject *__pyx_pf_12PythonGedLib_14PyGetGraphIds(CYTHON_UNUSED PyObject 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_17PyGetAllGraphIds(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_12PythonGedLib_16PyGetAllGraphIds[] = "\n        Searchs all the IDs of the loaded graphs in the environment. \n \n        :return: The list of all graphs's Ids \n        :rtype: list[size_t]\n        \n        .. note:: The last ID is equal to (number of graphs - 1). The order correspond to the loading order. \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_17PyGetAllGraphIds = {"PyGetAllGraphIds", (PyCFunction)__pyx_pw_12PythonGedLib_17PyGetAllGraphIds, METH_NOARGS, __pyx_doc_12PythonGedLib_16PyGetAllGraphIds};
-static PyObject *__pyx_pw_12PythonGedLib_17PyGetAllGraphIds(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_12PythonGedLib_15PyGetAllGraphIds(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_12PythonGedLib_14PyGetAllGraphIds[] = "\n        Searchs all the IDs of the loaded graphs in the environment. \n \n        :return: The list of all graphs's Ids \n        :rtype: list[size_t]\n        \n        .. note:: The last ID is equal to (number of graphs - 1). The order correspond to the loading order. \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_15PyGetAllGraphIds = {"PyGetAllGraphIds", (PyCFunction)__pyx_pw_12PythonGedLib_15PyGetAllGraphIds, METH_NOARGS, __pyx_doc_12PythonGedLib_14PyGetAllGraphIds};
+static PyObject *__pyx_pw_12PythonGedLib_15PyGetAllGraphIds(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyGetAllGraphIds (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_16PyGetAllGraphIds(__pyx_self);
+  __pyx_r = __pyx_pf_12PythonGedLib_14PyGetAllGraphIds(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_16PyGetAllGraphIds(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_12PythonGedLib_14PyGetAllGraphIds(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyGetAllGraphIds", 0);
 
-  /* "PythonGedLib.pyx":189
+  /* "PythonGedLib.pyx":182
  *         .. note:: The last ID is equal to (number of graphs - 1). The order correspond to the loading order.
  *     """
  *     return getAllGraphIds()             # <<<<<<<<<<<<<<
@@ -2669,13 +2611,13 @@ static PyObject *__pyx_pf_12PythonGedLib_16PyGetAllGraphIds(CYTHON_UNUSED PyObje
  * def PyGetGraphClass(id) :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_convert_vector_to_py_size_t(getAllGraphIds()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 189, __pyx_L1_error)
+  __pyx_t_1 = __pyx_convert_vector_to_py_size_t(getAllGraphIds()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 182, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":180
+  /* "PythonGedLib.pyx":173
  *     return getGraphIds()
  * 
  * def PyGetAllGraphIds() :             # <<<<<<<<<<<<<<
@@ -2694,7 +2636,7 @@ static PyObject *__pyx_pf_12PythonGedLib_16PyGetAllGraphIds(CYTHON_UNUSED PyObje
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":191
+/* "PythonGedLib.pyx":184
  *     return getAllGraphIds()
  * 
  * def PyGetGraphClass(id) :             # <<<<<<<<<<<<<<
@@ -2703,28 +2645,28 @@ static PyObject *__pyx_pf_12PythonGedLib_16PyGetAllGraphIds(CYTHON_UNUSED PyObje
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_19PyGetGraphClass(PyObject *__pyx_self, PyObject *__pyx_v_id); /*proto*/
-static char __pyx_doc_12PythonGedLib_18PyGetGraphClass[] = "\n        Returns the class of a graph with its ID.\n\n        :param id: The ID of the wanted graph\n        :type id: size_t\n        :return: The class of the graph which correpond to the ID\n        :rtype: string\n        \n        .. seealso:: PyGetGraphClass()\n        .. note:: An empty string can be a class. \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_19PyGetGraphClass = {"PyGetGraphClass", (PyCFunction)__pyx_pw_12PythonGedLib_19PyGetGraphClass, METH_O, __pyx_doc_12PythonGedLib_18PyGetGraphClass};
-static PyObject *__pyx_pw_12PythonGedLib_19PyGetGraphClass(PyObject *__pyx_self, PyObject *__pyx_v_id) {
+static PyObject *__pyx_pw_12PythonGedLib_17PyGetGraphClass(PyObject *__pyx_self, PyObject *__pyx_v_id); /*proto*/
+static char __pyx_doc_12PythonGedLib_16PyGetGraphClass[] = "\n        Returns the class of a graph with its ID.\n\n        :param id: The ID of the wanted graph\n        :type id: size_t\n        :return: The class of the graph which correpond to the ID\n        :rtype: string\n        \n        .. seealso:: PyGetGraphClass()\n        .. note:: An empty string can be a class. \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_17PyGetGraphClass = {"PyGetGraphClass", (PyCFunction)__pyx_pw_12PythonGedLib_17PyGetGraphClass, METH_O, __pyx_doc_12PythonGedLib_16PyGetGraphClass};
+static PyObject *__pyx_pw_12PythonGedLib_17PyGetGraphClass(PyObject *__pyx_self, PyObject *__pyx_v_id) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyGetGraphClass (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_18PyGetGraphClass(__pyx_self, ((PyObject *)__pyx_v_id));
+  __pyx_r = __pyx_pf_12PythonGedLib_16PyGetGraphClass(__pyx_self, ((PyObject *)__pyx_v_id));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_18PyGetGraphClass(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_id) {
+static PyObject *__pyx_pf_12PythonGedLib_16PyGetGraphClass(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_id) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("PyGetGraphClass", 0);
 
-  /* "PythonGedLib.pyx":203
+  /* "PythonGedLib.pyx":196
  *         .. note:: An empty string can be a class.
  *     """
  *     return getGraphClass(id)             # <<<<<<<<<<<<<<
@@ -2732,14 +2674,14 @@ static PyObject *__pyx_pf_12PythonGedLib_18PyGetGraphClass(CYTHON_UNUSED PyObjec
  * def PyGetGraphName(id) :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_id); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 203, __pyx_L1_error)
-  __pyx_t_2 = __pyx_convert_PyBytes_string_to_py_std__in_string(getGraphClass(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_id); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 196, __pyx_L1_error)
+  __pyx_t_2 = __pyx_convert_PyBytes_string_to_py_std__in_string(getGraphClass(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 196, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":191
+  /* "PythonGedLib.pyx":184
  *     return getAllGraphIds()
  * 
  * def PyGetGraphClass(id) :             # <<<<<<<<<<<<<<
@@ -2758,7 +2700,7 @@ static PyObject *__pyx_pf_12PythonGedLib_18PyGetGraphClass(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":205
+/* "PythonGedLib.pyx":198
  *     return getGraphClass(id)
  * 
  * def PyGetGraphName(id) :             # <<<<<<<<<<<<<<
@@ -2767,28 +2709,28 @@ static PyObject *__pyx_pf_12PythonGedLib_18PyGetGraphClass(CYTHON_UNUSED PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_21PyGetGraphName(PyObject *__pyx_self, PyObject *__pyx_v_id); /*proto*/
-static char __pyx_doc_12PythonGedLib_20PyGetGraphName[] = "\n        Returns the name of a graph with its ID. \n\n        :param id: The ID of the wanted graph\n        :type id: size_t\n        :return: The name of the graph which correpond to the ID\n        :rtype: string\n        \n        .. seealso:: PyGetGraphClass()\n        .. note:: An empty string can be a name. \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_21PyGetGraphName = {"PyGetGraphName", (PyCFunction)__pyx_pw_12PythonGedLib_21PyGetGraphName, METH_O, __pyx_doc_12PythonGedLib_20PyGetGraphName};
-static PyObject *__pyx_pw_12PythonGedLib_21PyGetGraphName(PyObject *__pyx_self, PyObject *__pyx_v_id) {
+static PyObject *__pyx_pw_12PythonGedLib_19PyGetGraphName(PyObject *__pyx_self, PyObject *__pyx_v_id); /*proto*/
+static char __pyx_doc_12PythonGedLib_18PyGetGraphName[] = "\n        Returns the name of a graph with its ID. \n\n        :param id: The ID of the wanted graph\n        :type id: size_t\n        :return: The name of the graph which correpond to the ID\n        :rtype: string\n        \n        .. seealso:: PyGetGraphClass()\n        .. note:: An empty string can be a name. \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_19PyGetGraphName = {"PyGetGraphName", (PyCFunction)__pyx_pw_12PythonGedLib_19PyGetGraphName, METH_O, __pyx_doc_12PythonGedLib_18PyGetGraphName};
+static PyObject *__pyx_pw_12PythonGedLib_19PyGetGraphName(PyObject *__pyx_self, PyObject *__pyx_v_id) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyGetGraphName (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_20PyGetGraphName(__pyx_self, ((PyObject *)__pyx_v_id));
+  __pyx_r = __pyx_pf_12PythonGedLib_18PyGetGraphName(__pyx_self, ((PyObject *)__pyx_v_id));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_20PyGetGraphName(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_id) {
+static PyObject *__pyx_pf_12PythonGedLib_18PyGetGraphName(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_id) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("PyGetGraphName", 0);
 
-  /* "PythonGedLib.pyx":217
+  /* "PythonGedLib.pyx":210
  *         .. note:: An empty string can be a name.
  *     """
  *     return getGraphName(id)             # <<<<<<<<<<<<<<
@@ -2796,14 +2738,14 @@ static PyObject *__pyx_pf_12PythonGedLib_20PyGetGraphName(CYTHON_UNUSED PyObject
  * def PyAddGraph(name="", classe="") :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_id); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 217, __pyx_L1_error)
-  __pyx_t_2 = __pyx_convert_PyBytes_string_to_py_std__in_string(getGraphName(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 217, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_id); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 210, __pyx_L1_error)
+  __pyx_t_2 = __pyx_convert_PyBytes_string_to_py_std__in_string(getGraphName(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 210, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":205
+  /* "PythonGedLib.pyx":198
  *     return getGraphClass(id)
  * 
  * def PyGetGraphName(id) :             # <<<<<<<<<<<<<<
@@ -2822,7 +2764,7 @@ static PyObject *__pyx_pf_12PythonGedLib_20PyGetGraphName(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":219
+/* "PythonGedLib.pyx":212
  *     return getGraphName(id)
  * 
  * def PyAddGraph(name="", classe="") :             # <<<<<<<<<<<<<<
@@ -2831,10 +2773,10 @@ static PyObject *__pyx_pf_12PythonGedLib_20PyGetGraphName(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_23PyAddGraph(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_22PyAddGraph[] = "\n        Adds a empty graph on the environment, with its name and its class. Nodes and edges will be add in a second time. \n\n        :param name: The name of the new graph, an empty string by default\n        :param classe: The class of the new graph, an empty string by default\n        :type name: string\n        :type classe: string\n        :return: The ID of the newly graphe\n        :rtype: size_t\n        \n        .. seealso::PyAddNode(), PyAddEdge() , PyAddSymmetricalEdge()\n        .. note:: You can call this function without parameters. You can also use this function after initialization, call PyInitEnv() after you're finished your modifications. \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_23PyAddGraph = {"PyAddGraph", (PyCFunction)__pyx_pw_12PythonGedLib_23PyAddGraph, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_22PyAddGraph};
-static PyObject *__pyx_pw_12PythonGedLib_23PyAddGraph(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_21PyAddGraph(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_20PyAddGraph[] = "\n        Adds a empty graph on the environment, with its name and its class. Nodes and edges will be add in a second time. \n\n        :param name: The name of the new graph, an empty string by default\n        :param classe: The class of the new graph, an empty string by default\n        :type name: string\n        :type classe: string\n        :return: The ID of the newly graphe\n        :rtype: size_t\n        \n        .. seealso::PyAddNode(), PyAddEdge() , PyAddSymmetricalEdge()\n        .. note:: You can call this function without parameters. You can also use this function after initialization, call PyInitEnv() after you're finished your modifications. \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_21PyAddGraph = {"PyAddGraph", (PyCFunction)__pyx_pw_12PythonGedLib_21PyAddGraph, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_20PyAddGraph};
+static PyObject *__pyx_pw_12PythonGedLib_21PyAddGraph(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_name = 0;
   PyObject *__pyx_v_classe = 0;
   PyObject *__pyx_r = 0;
@@ -2868,7 +2810,7 @@ static PyObject *__pyx_pw_12PythonGedLib_23PyAddGraph(PyObject *__pyx_self, PyOb
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyAddGraph") < 0)) __PYX_ERR(0, 219, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyAddGraph") < 0)) __PYX_ERR(0, 212, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -2883,20 +2825,20 @@ static PyObject *__pyx_pw_12PythonGedLib_23PyAddGraph(PyObject *__pyx_self, PyOb
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("PyAddGraph", 0, 0, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 219, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("PyAddGraph", 0, 0, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 212, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.PyAddGraph", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_22PyAddGraph(__pyx_self, __pyx_v_name, __pyx_v_classe);
+  __pyx_r = __pyx_pf_12PythonGedLib_20PyAddGraph(__pyx_self, __pyx_v_name, __pyx_v_classe);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_22PyAddGraph(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_name, PyObject *__pyx_v_classe) {
+static PyObject *__pyx_pf_12PythonGedLib_20PyAddGraph(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_name, PyObject *__pyx_v_classe) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2905,7 +2847,7 @@ static PyObject *__pyx_pf_12PythonGedLib_22PyAddGraph(CYTHON_UNUSED PyObject *__
   std::string __pyx_t_4;
   __Pyx_RefNannySetupContext("PyAddGraph", 0);
 
-  /* "PythonGedLib.pyx":233
+  /* "PythonGedLib.pyx":226
  *         .. note:: You can call this function without parameters. You can also use this function after initialization, call PyInitEnv() after you're finished your modifications.
  *     """
  *     return addGraph(name.encode('utf-8'),classe.encode('utf-8'))             # <<<<<<<<<<<<<<
@@ -2913,27 +2855,27 @@ static PyObject *__pyx_pf_12PythonGedLib_22PyAddGraph(CYTHON_UNUSED PyObject *__
  * def PyAddNode(graphID, nodeID, nodeLabel):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_name, __pyx_n_s_encode); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 233, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_name, __pyx_n_s_encode); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 233, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_3 = __pyx_convert_string_from_py_std__in_string(__pyx_t_2); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 233, __pyx_L1_error)
+  __pyx_t_3 = __pyx_convert_string_from_py_std__in_string(__pyx_t_2); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_classe, __pyx_n_s_encode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 233, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_classe, __pyx_n_s_encode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 233, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_4 = __pyx_convert_string_from_py_std__in_string(__pyx_t_1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 233, __pyx_L1_error)
+  __pyx_t_4 = __pyx_convert_string_from_py_std__in_string(__pyx_t_1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_FromSize_t(addGraph(__pyx_t_3, __pyx_t_4)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 233, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_FromSize_t(addGraph(__pyx_t_3, __pyx_t_4)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":219
+  /* "PythonGedLib.pyx":212
  *     return getGraphName(id)
  * 
  * def PyAddGraph(name="", classe="") :             # <<<<<<<<<<<<<<
@@ -2953,7 +2895,7 @@ static PyObject *__pyx_pf_12PythonGedLib_22PyAddGraph(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":235
+/* "PythonGedLib.pyx":228
  *     return addGraph(name.encode('utf-8'),classe.encode('utf-8'))
  * 
  * def PyAddNode(graphID, nodeID, nodeLabel):             # <<<<<<<<<<<<<<
@@ -2962,10 +2904,10 @@ static PyObject *__pyx_pf_12PythonGedLib_22PyAddGraph(CYTHON_UNUSED PyObject *__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_25PyAddNode(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_24PyAddNode[] = "\n        Adds a node on a graph selected by its ID. A ID and a label for the node is required. \n\n        :param graphID: The ID of the wanted graph\n        :param nodeID: The ID of the new node\n        :param nodeLabel: The label of the new node\n        :type graphID: size_t\n        :type nodeID: string\n        :type nodeLabel: dict{string : string}\n        \n        .. seealso::PyAddGraph(), PyAddEdge(), PyAddSymmetricalEdge()\n        .. note:: You can also use this function after initialization, but only on a newly added graph. Call PyInitEnv() after you're finished your modifications. \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_25PyAddNode = {"PyAddNode", (PyCFunction)__pyx_pw_12PythonGedLib_25PyAddNode, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_24PyAddNode};
-static PyObject *__pyx_pw_12PythonGedLib_25PyAddNode(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_23PyAddNode(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_22PyAddNode[] = "\n        Adds a node on a graph selected by its ID. A ID and a label for the node is required. \n\n        :param graphID: The ID of the wanted graph\n        :param nodeID: The ID of the new node\n        :param nodeLabel: The label of the new node\n        :type graphID: size_t\n        :type nodeID: string\n        :type nodeLabel: dict{string : string}\n        \n        .. seealso::PyAddGraph(), PyAddEdge(), PyAddSymmetricalEdge()\n        .. note:: You can also use this function after initialization, but only on a newly added graph. Call PyInitEnv() after you're finished your modifications. \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_23PyAddNode = {"PyAddNode", (PyCFunction)__pyx_pw_12PythonGedLib_23PyAddNode, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_22PyAddNode};
+static PyObject *__pyx_pw_12PythonGedLib_23PyAddNode(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_graphID = 0;
   PyObject *__pyx_v_nodeID = 0;
   PyObject *__pyx_v_nodeLabel = 0;
@@ -2993,16 +2935,16 @@ static PyObject *__pyx_pw_12PythonGedLib_25PyAddNode(PyObject *__pyx_self, PyObj
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_nodeID)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyAddNode", 1, 3, 3, 1); __PYX_ERR(0, 235, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyAddNode", 1, 3, 3, 1); __PYX_ERR(0, 228, __pyx_L3_error)
         }
         case  2:
         if (likely((values[2] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_nodeLabel)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyAddNode", 1, 3, 3, 2); __PYX_ERR(0, 235, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyAddNode", 1, 3, 3, 2); __PYX_ERR(0, 228, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyAddNode") < 0)) __PYX_ERR(0, 235, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyAddNode") < 0)) __PYX_ERR(0, 228, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -3017,20 +2959,20 @@ static PyObject *__pyx_pw_12PythonGedLib_25PyAddNode(PyObject *__pyx_self, PyObj
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("PyAddNode", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 235, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("PyAddNode", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 228, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.PyAddNode", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_24PyAddNode(__pyx_self, __pyx_v_graphID, __pyx_v_nodeID, __pyx_v_nodeLabel);
+  __pyx_r = __pyx_pf_12PythonGedLib_22PyAddNode(__pyx_self, __pyx_v_graphID, __pyx_v_nodeID, __pyx_v_nodeLabel);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_24PyAddNode(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID, PyObject *__pyx_v_nodeID, PyObject *__pyx_v_nodeLabel) {
+static PyObject *__pyx_pf_12PythonGedLib_22PyAddNode(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID, PyObject *__pyx_v_nodeID, PyObject *__pyx_v_nodeLabel) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
@@ -3042,22 +2984,22 @@ static PyObject *__pyx_pf_12PythonGedLib_24PyAddNode(CYTHON_UNUSED PyObject *__p
   std::map<std::string,std::string>  __pyx_t_7;
   __Pyx_RefNannySetupContext("PyAddNode", 0);
 
-  /* "PythonGedLib.pyx":249
+  /* "PythonGedLib.pyx":242
  *         .. note:: You can also use this function after initialization, but only on a newly added graph. Call PyInitEnv() after you're finished your modifications.
  *     """
  *     addNode(graphID, nodeID.encode('utf-8'), encodeYourMap(nodeLabel))             # <<<<<<<<<<<<<<
  * 
  * def PyAddEdge(graphID, tail, head, edgeLabel, ignoreDuplicates = True) :
  */
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 249, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_nodeID, __pyx_n_s_encode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 249, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 242, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_nodeID, __pyx_n_s_encode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 242, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__6, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 249, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__6, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 242, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_4 = __pyx_convert_string_from_py_std__in_string(__pyx_t_3); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 249, __pyx_L1_error)
+  __pyx_t_4 = __pyx_convert_string_from_py_std__in_string(__pyx_t_3); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 242, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_encodeYourMap); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 249, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_encodeYourMap); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 242, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_5 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -3070,25 +3012,25 @@ static PyObject *__pyx_pf_12PythonGedLib_24PyAddNode(CYTHON_UNUSED PyObject *__p
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_nodeLabel); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 249, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_nodeLabel); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 242, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
   } else {
-    __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 249, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 242, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_5); __pyx_t_5 = NULL;
     __Pyx_INCREF(__pyx_v_nodeLabel);
     __Pyx_GIVEREF(__pyx_v_nodeLabel);
     PyTuple_SET_ITEM(__pyx_t_6, 0+1, __pyx_v_nodeLabel);
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 249, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 242, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_7 = __pyx_convert_map_from_py_std_3a__3a_string__and_std_3a__3a_string(__pyx_t_3); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 249, __pyx_L1_error)
+  __pyx_t_7 = __pyx_convert_map_from_py_std_3a__3a_string__and_std_3a__3a_string(__pyx_t_3); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 242, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   addNode(__pyx_t_1, __pyx_t_4, __pyx_t_7);
 
-  /* "PythonGedLib.pyx":235
+  /* "PythonGedLib.pyx":228
  *     return addGraph(name.encode('utf-8'),classe.encode('utf-8'))
  * 
  * def PyAddNode(graphID, nodeID, nodeLabel):             # <<<<<<<<<<<<<<
@@ -3112,7 +3054,7 @@ static PyObject *__pyx_pf_12PythonGedLib_24PyAddNode(CYTHON_UNUSED PyObject *__p
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":251
+/* "PythonGedLib.pyx":244
  *     addNode(graphID, nodeID.encode('utf-8'), encodeYourMap(nodeLabel))
  * 
  * def PyAddEdge(graphID, tail, head, edgeLabel, ignoreDuplicates = True) :             # <<<<<<<<<<<<<<
@@ -3121,10 +3063,10 @@ static PyObject *__pyx_pf_12PythonGedLib_24PyAddNode(CYTHON_UNUSED PyObject *__p
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_27PyAddEdge(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_26PyAddEdge[] = "\n        Adds an edge on a graph selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :param tail: The ID of the tail node for the new edge\n        :param head: The ID of the head node for the new edge\n        :param edgeLabel: The label of the new edge\n        :param ignoreDuplicates: If True, duplicate edges are ignored, otherwise it's raise an error if an existing edge is added. True by default\n        :type graphID: size_t\n        :type tail: string\n        :type head: string\n        :type edgeLabel: dict{string : string}\n        :type ignoreDuplicates: bool\n        \n        .. seealso::PyAddGraph(), PyAddNode(), PyAddSymmetricalEdge()\n        .. note:: You can also use this function after initialization, but only on a newly added graph. Call PyInitEnv() after you're finished your modifications. \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_27PyAddEdge = {"PyAddEdge", (PyCFunction)__pyx_pw_12PythonGedLib_27PyAddEdge, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_26PyAddEdge};
-static PyObject *__pyx_pw_12PythonGedLib_27PyAddEdge(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_25PyAddEdge(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_24PyAddEdge[] = "\n        Adds an edge on a graph selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :param tail: The ID of the tail node for the new edge\n        :param head: The ID of the head node for the new edge\n        :param edgeLabel: The label of the new edge\n        :param ignoreDuplicates: If True, duplicate edges are ignored, otherwise it's raise an error if an existing edge is added. True by default\n        :type graphID: size_t\n        :type tail: string\n        :type head: string\n        :type edgeLabel: dict{string : string}\n        :type ignoreDuplicates: bool\n        \n        .. seealso::PyAddGraph(), PyAddNode(), PyAddSymmetricalEdge()\n        .. note:: You can also use this function after initialization, but only on a newly added graph. Call PyInitEnv() after you're finished your modifications. \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_25PyAddEdge = {"PyAddEdge", (PyCFunction)__pyx_pw_12PythonGedLib_25PyAddEdge, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_24PyAddEdge};
+static PyObject *__pyx_pw_12PythonGedLib_25PyAddEdge(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_graphID = 0;
   PyObject *__pyx_v_tail = 0;
   PyObject *__pyx_v_head = 0;
@@ -3157,17 +3099,17 @@ static PyObject *__pyx_pw_12PythonGedLib_27PyAddEdge(PyObject *__pyx_self, PyObj
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_tail)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyAddEdge", 0, 4, 5, 1); __PYX_ERR(0, 251, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyAddEdge", 0, 4, 5, 1); __PYX_ERR(0, 244, __pyx_L3_error)
         }
         case  2:
         if (likely((values[2] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_head)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyAddEdge", 0, 4, 5, 2); __PYX_ERR(0, 251, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyAddEdge", 0, 4, 5, 2); __PYX_ERR(0, 244, __pyx_L3_error)
         }
         case  3:
         if (likely((values[3] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_edgeLabel)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyAddEdge", 0, 4, 5, 3); __PYX_ERR(0, 251, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyAddEdge", 0, 4, 5, 3); __PYX_ERR(0, 244, __pyx_L3_error)
         }
         case  4:
         if (kw_args > 0) {
@@ -3176,7 +3118,7 @@ static PyObject *__pyx_pw_12PythonGedLib_27PyAddEdge(PyObject *__pyx_self, PyObj
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyAddEdge") < 0)) __PYX_ERR(0, 251, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyAddEdge") < 0)) __PYX_ERR(0, 244, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -3197,20 +3139,20 @@ static PyObject *__pyx_pw_12PythonGedLib_27PyAddEdge(PyObject *__pyx_self, PyObj
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("PyAddEdge", 0, 4, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 251, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("PyAddEdge", 0, 4, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 244, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.PyAddEdge", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_26PyAddEdge(__pyx_self, __pyx_v_graphID, __pyx_v_tail, __pyx_v_head, __pyx_v_edgeLabel, __pyx_v_ignoreDuplicates);
+  __pyx_r = __pyx_pf_12PythonGedLib_24PyAddEdge(__pyx_self, __pyx_v_graphID, __pyx_v_tail, __pyx_v_head, __pyx_v_edgeLabel, __pyx_v_ignoreDuplicates);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_26PyAddEdge(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID, PyObject *__pyx_v_tail, PyObject *__pyx_v_head, PyObject *__pyx_v_edgeLabel, PyObject *__pyx_v_ignoreDuplicates) {
+static PyObject *__pyx_pf_12PythonGedLib_24PyAddEdge(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID, PyObject *__pyx_v_tail, PyObject *__pyx_v_head, PyObject *__pyx_v_edgeLabel, PyObject *__pyx_v_ignoreDuplicates) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
@@ -3224,29 +3166,29 @@ static PyObject *__pyx_pf_12PythonGedLib_26PyAddEdge(CYTHON_UNUSED PyObject *__p
   bool __pyx_t_9;
   __Pyx_RefNannySetupContext("PyAddEdge", 0);
 
-  /* "PythonGedLib.pyx":269
+  /* "PythonGedLib.pyx":262
  *         .. note:: You can also use this function after initialization, but only on a newly added graph. Call PyInitEnv() after you're finished your modifications.
  *     """
  *     addEdge(graphID, tail.encode('utf-8'), head.encode('utf-8'), encodeYourMap(edgeLabel), ignoreDuplicates)             # <<<<<<<<<<<<<<
  * 
  * def PyAddSymmetricalEdge(graphID, tail, head, edgeLabel) :
  */
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 269, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_tail, __pyx_n_s_encode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 262, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_tail, __pyx_n_s_encode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_4 = __pyx_convert_string_from_py_std__in_string(__pyx_t_3); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_t_4 = __pyx_convert_string_from_py_std__in_string(__pyx_t_3); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_head, __pyx_n_s_encode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_head, __pyx_n_s_encode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_tuple__8, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_tuple__8, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_5 = __pyx_convert_string_from_py_std__in_string(__pyx_t_2); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_t_5 = __pyx_convert_string_from_py_std__in_string(__pyx_t_2); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_encodeYourMap); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_encodeYourMap); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_6 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -3259,26 +3201,26 @@ static PyObject *__pyx_pf_12PythonGedLib_26PyAddEdge(CYTHON_UNUSED PyObject *__p
     }
   }
   if (!__pyx_t_6) {
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_edgeLabel); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 269, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_edgeLabel); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 262, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
   } else {
-    __pyx_t_7 = PyTuple_New(1+1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 269, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(1+1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 262, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_6); __pyx_t_6 = NULL;
     __Pyx_INCREF(__pyx_v_edgeLabel);
     __Pyx_GIVEREF(__pyx_v_edgeLabel);
     PyTuple_SET_ITEM(__pyx_t_7, 0+1, __pyx_v_edgeLabel);
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 269, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 262, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_8 = __pyx_convert_map_from_py_std_3a__3a_string__and_std_3a__3a_string(__pyx_t_2); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_t_8 = __pyx_convert_map_from_py_std_3a__3a_string__and_std_3a__3a_string(__pyx_t_2); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_v_ignoreDuplicates); if (unlikely((__pyx_t_9 == (bool)-1) && PyErr_Occurred())) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_v_ignoreDuplicates); if (unlikely((__pyx_t_9 == (bool)-1) && PyErr_Occurred())) __PYX_ERR(0, 262, __pyx_L1_error)
   addEdge(__pyx_t_1, __pyx_t_4, __pyx_t_5, __pyx_t_8, __pyx_t_9);
 
-  /* "PythonGedLib.pyx":251
+  /* "PythonGedLib.pyx":244
  *     addNode(graphID, nodeID.encode('utf-8'), encodeYourMap(nodeLabel))
  * 
  * def PyAddEdge(graphID, tail, head, edgeLabel, ignoreDuplicates = True) :             # <<<<<<<<<<<<<<
@@ -3302,7 +3244,7 @@ static PyObject *__pyx_pf_12PythonGedLib_26PyAddEdge(CYTHON_UNUSED PyObject *__p
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":271
+/* "PythonGedLib.pyx":264
  *     addEdge(graphID, tail.encode('utf-8'), head.encode('utf-8'), encodeYourMap(edgeLabel), ignoreDuplicates)
  * 
  * def PyAddSymmetricalEdge(graphID, tail, head, edgeLabel) :             # <<<<<<<<<<<<<<
@@ -3311,10 +3253,10 @@ static PyObject *__pyx_pf_12PythonGedLib_26PyAddEdge(CYTHON_UNUSED PyObject *__p
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_29PyAddSymmetricalEdge(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_28PyAddSymmetricalEdge[] = "\n        Adds a symmetrical edge on a graph selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :param tail: The ID of the tail node for the new edge\n        :param head: The ID of the head node for the new edge\n        :param edgeLabel: The label of the new edge\n        :type graphID: size_t\n        :type tail: string\n        :type head: string\n        :type edgeLabel: dict{string : string}\n        \n        .. seealso::PyAddGraph(), PyAddNode(), PyAddEdge()\n        .. note:: You can also use this function after initialization, but only on a newly added graph. Call PyInitEnv() after you're finished your modifications. \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_29PyAddSymmetricalEdge = {"PyAddSymmetricalEdge", (PyCFunction)__pyx_pw_12PythonGedLib_29PyAddSymmetricalEdge, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_28PyAddSymmetricalEdge};
-static PyObject *__pyx_pw_12PythonGedLib_29PyAddSymmetricalEdge(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_27PyAddSymmetricalEdge(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_26PyAddSymmetricalEdge[] = "\n        Adds a symmetrical edge on a graph selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :param tail: The ID of the tail node for the new edge\n        :param head: The ID of the head node for the new edge\n        :param edgeLabel: The label of the new edge\n        :type graphID: size_t\n        :type tail: string\n        :type head: string\n        :type edgeLabel: dict{string : string}\n        \n        .. seealso::PyAddGraph(), PyAddNode(), PyAddEdge()\n        .. note:: You can also use this function after initialization, but only on a newly added graph. Call PyInitEnv() after you're finished your modifications. \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_27PyAddSymmetricalEdge = {"PyAddSymmetricalEdge", (PyCFunction)__pyx_pw_12PythonGedLib_27PyAddSymmetricalEdge, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_26PyAddSymmetricalEdge};
+static PyObject *__pyx_pw_12PythonGedLib_27PyAddSymmetricalEdge(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_graphID = 0;
   PyObject *__pyx_v_tail = 0;
   PyObject *__pyx_v_head = 0;
@@ -3344,21 +3286,21 @@ static PyObject *__pyx_pw_12PythonGedLib_29PyAddSymmetricalEdge(PyObject *__pyx_
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_tail)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyAddSymmetricalEdge", 1, 4, 4, 1); __PYX_ERR(0, 271, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyAddSymmetricalEdge", 1, 4, 4, 1); __PYX_ERR(0, 264, __pyx_L3_error)
         }
         case  2:
         if (likely((values[2] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_head)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyAddSymmetricalEdge", 1, 4, 4, 2); __PYX_ERR(0, 271, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyAddSymmetricalEdge", 1, 4, 4, 2); __PYX_ERR(0, 264, __pyx_L3_error)
         }
         case  3:
         if (likely((values[3] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_edgeLabel)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyAddSymmetricalEdge", 1, 4, 4, 3); __PYX_ERR(0, 271, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyAddSymmetricalEdge", 1, 4, 4, 3); __PYX_ERR(0, 264, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyAddSymmetricalEdge") < 0)) __PYX_ERR(0, 271, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyAddSymmetricalEdge") < 0)) __PYX_ERR(0, 264, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 4) {
       goto __pyx_L5_argtuple_error;
@@ -3375,20 +3317,20 @@ static PyObject *__pyx_pw_12PythonGedLib_29PyAddSymmetricalEdge(PyObject *__pyx_
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("PyAddSymmetricalEdge", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 271, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("PyAddSymmetricalEdge", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 264, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.PyAddSymmetricalEdge", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_28PyAddSymmetricalEdge(__pyx_self, __pyx_v_graphID, __pyx_v_tail, __pyx_v_head, __pyx_v_edgeLabel);
+  __pyx_r = __pyx_pf_12PythonGedLib_26PyAddSymmetricalEdge(__pyx_self, __pyx_v_graphID, __pyx_v_tail, __pyx_v_head, __pyx_v_edgeLabel);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_28PyAddSymmetricalEdge(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID, PyObject *__pyx_v_tail, PyObject *__pyx_v_head, PyObject *__pyx_v_edgeLabel) {
+static PyObject *__pyx_pf_12PythonGedLib_26PyAddSymmetricalEdge(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID, PyObject *__pyx_v_tail, PyObject *__pyx_v_head, PyObject *__pyx_v_edgeLabel) {
   PyObject *__pyx_v_tailB = NULL;
   PyObject *__pyx_v_headB = NULL;
   PyObject *__pyx_v_edgeLabelB = NULL;
@@ -3404,44 +3346,44 @@ static PyObject *__pyx_pf_12PythonGedLib_28PyAddSymmetricalEdge(CYTHON_UNUSED Py
   std::map<std::string,std::string>  __pyx_t_8;
   __Pyx_RefNannySetupContext("PyAddSymmetricalEdge", 0);
 
-  /* "PythonGedLib.pyx":287
+  /* "PythonGedLib.pyx":280
  *         .. note:: You can also use this function after initialization, but only on a newly added graph. Call PyInitEnv() after you're finished your modifications.
  *     """
  *     tailB = tail.encode('utf-8')             # <<<<<<<<<<<<<<
  *     headB = head.encode('utf-8')
  *     edgeLabelB = encodeYourMap(edgeLabel)
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_tail, __pyx_n_s_encode); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 287, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_tail, __pyx_n_s_encode); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 280, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 287, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 280, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_tailB = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":288
+  /* "PythonGedLib.pyx":281
  *     """
  *     tailB = tail.encode('utf-8')
  *     headB = head.encode('utf-8')             # <<<<<<<<<<<<<<
  *     edgeLabelB = encodeYourMap(edgeLabel)
  *     addEdge(graphID, tailB, headB, edgeLabelB, True)
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_head, __pyx_n_s_encode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 288, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_head, __pyx_n_s_encode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 281, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__10, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 288, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__10, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_headB = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":289
+  /* "PythonGedLib.pyx":282
  *     tailB = tail.encode('utf-8')
  *     headB = head.encode('utf-8')
  *     edgeLabelB = encodeYourMap(edgeLabel)             # <<<<<<<<<<<<<<
  *     addEdge(graphID, tailB, headB, edgeLabelB, True)
  *     addEdge(graphID, headB, tailB, edgeLabelB, True)
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_encodeYourMap); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_encodeYourMap); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 282, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -3454,16 +3396,16 @@ static PyObject *__pyx_pf_12PythonGedLib_28PyAddSymmetricalEdge(CYTHON_UNUSED Py
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_edgeLabel); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_edgeLabel); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 282, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 282, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3); __pyx_t_3 = NULL;
     __Pyx_INCREF(__pyx_v_edgeLabel);
     __Pyx_GIVEREF(__pyx_v_edgeLabel);
     PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_v_edgeLabel);
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 282, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
@@ -3471,33 +3413,33 @@ static PyObject *__pyx_pf_12PythonGedLib_28PyAddSymmetricalEdge(CYTHON_UNUSED Py
   __pyx_v_edgeLabelB = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":290
+  /* "PythonGedLib.pyx":283
  *     headB = head.encode('utf-8')
  *     edgeLabelB = encodeYourMap(edgeLabel)
  *     addEdge(graphID, tailB, headB, edgeLabelB, True)             # <<<<<<<<<<<<<<
  *     addEdge(graphID, headB, tailB, edgeLabelB, True)
  * 
  */
-  __pyx_t_5 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_5 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 290, __pyx_L1_error)
-  __pyx_t_6 = __pyx_convert_string_from_py_std__in_string(__pyx_v_tailB); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 290, __pyx_L1_error)
-  __pyx_t_7 = __pyx_convert_string_from_py_std__in_string(__pyx_v_headB); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 290, __pyx_L1_error)
-  __pyx_t_8 = __pyx_convert_map_from_py_std_3a__3a_string__and_std_3a__3a_string(__pyx_v_edgeLabelB); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 290, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_5 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 283, __pyx_L1_error)
+  __pyx_t_6 = __pyx_convert_string_from_py_std__in_string(__pyx_v_tailB); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 283, __pyx_L1_error)
+  __pyx_t_7 = __pyx_convert_string_from_py_std__in_string(__pyx_v_headB); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 283, __pyx_L1_error)
+  __pyx_t_8 = __pyx_convert_map_from_py_std_3a__3a_string__and_std_3a__3a_string(__pyx_v_edgeLabelB); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 283, __pyx_L1_error)
   addEdge(__pyx_t_5, __pyx_t_6, __pyx_t_7, __pyx_t_8, 1);
 
-  /* "PythonGedLib.pyx":291
+  /* "PythonGedLib.pyx":284
  *     edgeLabelB = encodeYourMap(edgeLabel)
  *     addEdge(graphID, tailB, headB, edgeLabelB, True)
  *     addEdge(graphID, headB, tailB, edgeLabelB, True)             # <<<<<<<<<<<<<<
  * 
  * def PyClearGraph(graphID) :
  */
-  __pyx_t_5 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_5 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 291, __pyx_L1_error)
-  __pyx_t_7 = __pyx_convert_string_from_py_std__in_string(__pyx_v_headB); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 291, __pyx_L1_error)
-  __pyx_t_6 = __pyx_convert_string_from_py_std__in_string(__pyx_v_tailB); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 291, __pyx_L1_error)
-  __pyx_t_8 = __pyx_convert_map_from_py_std_3a__3a_string__and_std_3a__3a_string(__pyx_v_edgeLabelB); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 291, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_5 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 284, __pyx_L1_error)
+  __pyx_t_7 = __pyx_convert_string_from_py_std__in_string(__pyx_v_headB); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 284, __pyx_L1_error)
+  __pyx_t_6 = __pyx_convert_string_from_py_std__in_string(__pyx_v_tailB); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 284, __pyx_L1_error)
+  __pyx_t_8 = __pyx_convert_map_from_py_std_3a__3a_string__and_std_3a__3a_string(__pyx_v_edgeLabelB); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 284, __pyx_L1_error)
   addEdge(__pyx_t_5, __pyx_t_7, __pyx_t_6, __pyx_t_8, 1);
 
-  /* "PythonGedLib.pyx":271
+  /* "PythonGedLib.pyx":264
  *     addEdge(graphID, tail.encode('utf-8'), head.encode('utf-8'), encodeYourMap(edgeLabel), ignoreDuplicates)
  * 
  * def PyAddSymmetricalEdge(graphID, tail, head, edgeLabel) :             # <<<<<<<<<<<<<<
@@ -3524,7 +3466,7 @@ static PyObject *__pyx_pf_12PythonGedLib_28PyAddSymmetricalEdge(CYTHON_UNUSED Py
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":293
+/* "PythonGedLib.pyx":286
  *     addEdge(graphID, headB, tailB, edgeLabelB, True)
  * 
  * def PyClearGraph(graphID) :             # <<<<<<<<<<<<<<
@@ -3533,37 +3475,37 @@ static PyObject *__pyx_pf_12PythonGedLib_28PyAddSymmetricalEdge(CYTHON_UNUSED Py
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_31PyClearGraph(PyObject *__pyx_self, PyObject *__pyx_v_graphID); /*proto*/
-static char __pyx_doc_12PythonGedLib_30PyClearGraph[] = "\n        Deletes a graph, selected by its ID, to the environment.\n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        \n        .. note:: Call PyInit() after you're finished your modifications. \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_31PyClearGraph = {"PyClearGraph", (PyCFunction)__pyx_pw_12PythonGedLib_31PyClearGraph, METH_O, __pyx_doc_12PythonGedLib_30PyClearGraph};
-static PyObject *__pyx_pw_12PythonGedLib_31PyClearGraph(PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
+static PyObject *__pyx_pw_12PythonGedLib_29PyClearGraph(PyObject *__pyx_self, PyObject *__pyx_v_graphID); /*proto*/
+static char __pyx_doc_12PythonGedLib_28PyClearGraph[] = "\n        Deletes a graph, selected by its ID, to the environment.\n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        \n        .. note:: Call PyInit() after you're finished your modifications. \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_29PyClearGraph = {"PyClearGraph", (PyCFunction)__pyx_pw_12PythonGedLib_29PyClearGraph, METH_O, __pyx_doc_12PythonGedLib_28PyClearGraph};
+static PyObject *__pyx_pw_12PythonGedLib_29PyClearGraph(PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyClearGraph (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_30PyClearGraph(__pyx_self, ((PyObject *)__pyx_v_graphID));
+  __pyx_r = __pyx_pf_12PythonGedLib_28PyClearGraph(__pyx_self, ((PyObject *)__pyx_v_graphID));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_30PyClearGraph(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
+static PyObject *__pyx_pf_12PythonGedLib_28PyClearGraph(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
   __Pyx_RefNannySetupContext("PyClearGraph", 0);
 
-  /* "PythonGedLib.pyx":302
+  /* "PythonGedLib.pyx":295
  *         .. note:: Call PyInit() after you're finished your modifications.
  *     """
  *     clearGraph(graphID)             # <<<<<<<<<<<<<<
  * 
  * def PyGetGraphInternalId(graphID) :
  */
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 302, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 295, __pyx_L1_error)
   clearGraph(__pyx_t_1);
 
-  /* "PythonGedLib.pyx":293
+  /* "PythonGedLib.pyx":286
  *     addEdge(graphID, headB, tailB, edgeLabelB, True)
  * 
  * def PyClearGraph(graphID) :             # <<<<<<<<<<<<<<
@@ -3583,7 +3525,7 @@ static PyObject *__pyx_pf_12PythonGedLib_30PyClearGraph(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":304
+/* "PythonGedLib.pyx":297
  *     clearGraph(graphID)
  * 
  * def PyGetGraphInternalId(graphID) :             # <<<<<<<<<<<<<<
@@ -3592,28 +3534,28 @@ static PyObject *__pyx_pf_12PythonGedLib_30PyClearGraph(CYTHON_UNUSED PyObject *
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_33PyGetGraphInternalId(PyObject *__pyx_self, PyObject *__pyx_v_graphID); /*proto*/
-static char __pyx_doc_12PythonGedLib_32PyGetGraphInternalId[] = "\n        Searchs and returns the internal Id of a graph, selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        :return: The internal ID of the selected graph\n        :rtype: size_t\n        \n        .. seealso::PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphEdges(), PyGetGraphAdjacenceList()\n        .. note:: These functions allow to collect all the graph's informations.\n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_33PyGetGraphInternalId = {"PyGetGraphInternalId", (PyCFunction)__pyx_pw_12PythonGedLib_33PyGetGraphInternalId, METH_O, __pyx_doc_12PythonGedLib_32PyGetGraphInternalId};
-static PyObject *__pyx_pw_12PythonGedLib_33PyGetGraphInternalId(PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
+static PyObject *__pyx_pw_12PythonGedLib_31PyGetGraphInternalId(PyObject *__pyx_self, PyObject *__pyx_v_graphID); /*proto*/
+static char __pyx_doc_12PythonGedLib_30PyGetGraphInternalId[] = "\n        Searchs and returns the internal Id of a graph, selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        :return: The internal ID of the selected graph\n        :rtype: size_t\n        \n        .. seealso::PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphEdges(), PyGetGraphAdjacenceList()\n        .. note:: These functions allow to collect all the graph's informations.\n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_31PyGetGraphInternalId = {"PyGetGraphInternalId", (PyCFunction)__pyx_pw_12PythonGedLib_31PyGetGraphInternalId, METH_O, __pyx_doc_12PythonGedLib_30PyGetGraphInternalId};
+static PyObject *__pyx_pw_12PythonGedLib_31PyGetGraphInternalId(PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyGetGraphInternalId (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_32PyGetGraphInternalId(__pyx_self, ((PyObject *)__pyx_v_graphID));
+  __pyx_r = __pyx_pf_12PythonGedLib_30PyGetGraphInternalId(__pyx_self, ((PyObject *)__pyx_v_graphID));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_32PyGetGraphInternalId(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
+static PyObject *__pyx_pf_12PythonGedLib_30PyGetGraphInternalId(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("PyGetGraphInternalId", 0);
 
-  /* "PythonGedLib.pyx":316
+  /* "PythonGedLib.pyx":309
  *         .. note:: These functions allow to collect all the graph's informations.
  *     """
  *     return getGraphInternalId(graphID)             # <<<<<<<<<<<<<<
@@ -3621,14 +3563,14 @@ static PyObject *__pyx_pf_12PythonGedLib_32PyGetGraphInternalId(CYTHON_UNUSED Py
  * def PyGetGraphNumNodes(graphID) :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 316, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_FromSize_t(getGraphInternalId(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 316, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 309, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_FromSize_t(getGraphInternalId(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 309, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":304
+  /* "PythonGedLib.pyx":297
  *     clearGraph(graphID)
  * 
  * def PyGetGraphInternalId(graphID) :             # <<<<<<<<<<<<<<
@@ -3647,7 +3589,7 @@ static PyObject *__pyx_pf_12PythonGedLib_32PyGetGraphInternalId(CYTHON_UNUSED Py
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":318
+/* "PythonGedLib.pyx":311
  *     return getGraphInternalId(graphID)
  * 
  * def PyGetGraphNumNodes(graphID) :             # <<<<<<<<<<<<<<
@@ -3656,28 +3598,28 @@ static PyObject *__pyx_pf_12PythonGedLib_32PyGetGraphInternalId(CYTHON_UNUSED Py
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_35PyGetGraphNumNodes(PyObject *__pyx_self, PyObject *__pyx_v_graphID); /*proto*/
-static char __pyx_doc_12PythonGedLib_34PyGetGraphNumNodes[] = "\n        Searchs and returns the number of nodes on a graph, selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        :return: The number of nodes on the selected graph\n        :rtype: size_t\n        \n        .. seealso::PyGetGraphInternalId(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphEdges(), PyGetGraphAdjacenceList()\n        .. note:: These functions allow to collect all the graph's informations.\n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_35PyGetGraphNumNodes = {"PyGetGraphNumNodes", (PyCFunction)__pyx_pw_12PythonGedLib_35PyGetGraphNumNodes, METH_O, __pyx_doc_12PythonGedLib_34PyGetGraphNumNodes};
-static PyObject *__pyx_pw_12PythonGedLib_35PyGetGraphNumNodes(PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
+static PyObject *__pyx_pw_12PythonGedLib_33PyGetGraphNumNodes(PyObject *__pyx_self, PyObject *__pyx_v_graphID); /*proto*/
+static char __pyx_doc_12PythonGedLib_32PyGetGraphNumNodes[] = "\n        Searchs and returns the number of nodes on a graph, selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        :return: The number of nodes on the selected graph\n        :rtype: size_t\n        \n        .. seealso::PyGetGraphInternalId(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphEdges(), PyGetGraphAdjacenceList()\n        .. note:: These functions allow to collect all the graph's informations.\n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_33PyGetGraphNumNodes = {"PyGetGraphNumNodes", (PyCFunction)__pyx_pw_12PythonGedLib_33PyGetGraphNumNodes, METH_O, __pyx_doc_12PythonGedLib_32PyGetGraphNumNodes};
+static PyObject *__pyx_pw_12PythonGedLib_33PyGetGraphNumNodes(PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyGetGraphNumNodes (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_34PyGetGraphNumNodes(__pyx_self, ((PyObject *)__pyx_v_graphID));
+  __pyx_r = __pyx_pf_12PythonGedLib_32PyGetGraphNumNodes(__pyx_self, ((PyObject *)__pyx_v_graphID));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_34PyGetGraphNumNodes(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
+static PyObject *__pyx_pf_12PythonGedLib_32PyGetGraphNumNodes(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("PyGetGraphNumNodes", 0);
 
-  /* "PythonGedLib.pyx":330
+  /* "PythonGedLib.pyx":323
  *         .. note:: These functions allow to collect all the graph's informations.
  *     """
  *     return getGraphNumNodes(graphID)             # <<<<<<<<<<<<<<
@@ -3685,14 +3627,14 @@ static PyObject *__pyx_pf_12PythonGedLib_34PyGetGraphNumNodes(CYTHON_UNUSED PyOb
  * def PyGetGraphNumEdges(graphID) :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 330, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_FromSize_t(getGraphNumNodes(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 330, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 323, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_FromSize_t(getGraphNumNodes(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 323, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":318
+  /* "PythonGedLib.pyx":311
  *     return getGraphInternalId(graphID)
  * 
  * def PyGetGraphNumNodes(graphID) :             # <<<<<<<<<<<<<<
@@ -3711,7 +3653,7 @@ static PyObject *__pyx_pf_12PythonGedLib_34PyGetGraphNumNodes(CYTHON_UNUSED PyOb
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":332
+/* "PythonGedLib.pyx":325
  *     return getGraphNumNodes(graphID)
  * 
  * def PyGetGraphNumEdges(graphID) :             # <<<<<<<<<<<<<<
@@ -3720,28 +3662,28 @@ static PyObject *__pyx_pf_12PythonGedLib_34PyGetGraphNumNodes(CYTHON_UNUSED PyOb
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_37PyGetGraphNumEdges(PyObject *__pyx_self, PyObject *__pyx_v_graphID); /*proto*/
-static char __pyx_doc_12PythonGedLib_36PyGetGraphNumEdges[] = "\n        Searchs and returns the number of edges on a graph, selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        :return: The number of edges on the selected graph\n        :rtype: size_t\n        \n        .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphEdges(), PyGetGraphAdjacenceList()\n        .. note:: These functions allow to collect all the graph's informations.\n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_37PyGetGraphNumEdges = {"PyGetGraphNumEdges", (PyCFunction)__pyx_pw_12PythonGedLib_37PyGetGraphNumEdges, METH_O, __pyx_doc_12PythonGedLib_36PyGetGraphNumEdges};
-static PyObject *__pyx_pw_12PythonGedLib_37PyGetGraphNumEdges(PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
+static PyObject *__pyx_pw_12PythonGedLib_35PyGetGraphNumEdges(PyObject *__pyx_self, PyObject *__pyx_v_graphID); /*proto*/
+static char __pyx_doc_12PythonGedLib_34PyGetGraphNumEdges[] = "\n        Searchs and returns the number of edges on a graph, selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        :return: The number of edges on the selected graph\n        :rtype: size_t\n        \n        .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphEdges(), PyGetGraphAdjacenceList()\n        .. note:: These functions allow to collect all the graph's informations.\n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_35PyGetGraphNumEdges = {"PyGetGraphNumEdges", (PyCFunction)__pyx_pw_12PythonGedLib_35PyGetGraphNumEdges, METH_O, __pyx_doc_12PythonGedLib_34PyGetGraphNumEdges};
+static PyObject *__pyx_pw_12PythonGedLib_35PyGetGraphNumEdges(PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyGetGraphNumEdges (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_36PyGetGraphNumEdges(__pyx_self, ((PyObject *)__pyx_v_graphID));
+  __pyx_r = __pyx_pf_12PythonGedLib_34PyGetGraphNumEdges(__pyx_self, ((PyObject *)__pyx_v_graphID));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_36PyGetGraphNumEdges(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
+static PyObject *__pyx_pf_12PythonGedLib_34PyGetGraphNumEdges(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("PyGetGraphNumEdges", 0);
 
-  /* "PythonGedLib.pyx":344
+  /* "PythonGedLib.pyx":337
  *         .. note:: These functions allow to collect all the graph's informations.
  *     """
  *     return getGraphNumEdges(graphID)             # <<<<<<<<<<<<<<
@@ -3749,14 +3691,14 @@ static PyObject *__pyx_pf_12PythonGedLib_36PyGetGraphNumEdges(CYTHON_UNUSED PyOb
  * def PyGetOriginalNodeIds(graphID) :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 344, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_FromSize_t(getGraphNumEdges(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 344, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 337, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_FromSize_t(getGraphNumEdges(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 337, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":332
+  /* "PythonGedLib.pyx":325
  *     return getGraphNumNodes(graphID)
  * 
  * def PyGetGraphNumEdges(graphID) :             # <<<<<<<<<<<<<<
@@ -3775,7 +3717,7 @@ static PyObject *__pyx_pf_12PythonGedLib_36PyGetGraphNumEdges(CYTHON_UNUSED PyOb
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":346
+/* "PythonGedLib.pyx":339
  *     return getGraphNumEdges(graphID)
  * 
  * def PyGetOriginalNodeIds(graphID) :             # <<<<<<<<<<<<<<
@@ -3784,28 +3726,28 @@ static PyObject *__pyx_pf_12PythonGedLib_36PyGetGraphNumEdges(CYTHON_UNUSED PyOb
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_39PyGetOriginalNodeIds(PyObject *__pyx_self, PyObject *__pyx_v_graphID); /*proto*/
-static char __pyx_doc_12PythonGedLib_38PyGetOriginalNodeIds[] = "\n        Searchs and returns all th Ids of nodes on a graph, selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        :return: The list of IDs's nodes on the selected graph\n        :rtype: list[string]\n        \n        .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetGraphNodeLabels(), PyGetGraphEdges(), PyGetGraphAdjacenceList()\n        .. note:: These functions allow to collect all the graph's informations.\n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_39PyGetOriginalNodeIds = {"PyGetOriginalNodeIds", (PyCFunction)__pyx_pw_12PythonGedLib_39PyGetOriginalNodeIds, METH_O, __pyx_doc_12PythonGedLib_38PyGetOriginalNodeIds};
-static PyObject *__pyx_pw_12PythonGedLib_39PyGetOriginalNodeIds(PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
+static PyObject *__pyx_pw_12PythonGedLib_37PyGetOriginalNodeIds(PyObject *__pyx_self, PyObject *__pyx_v_graphID); /*proto*/
+static char __pyx_doc_12PythonGedLib_36PyGetOriginalNodeIds[] = "\n        Searchs and returns all th Ids of nodes on a graph, selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        :return: The list of IDs's nodes on the selected graph\n        :rtype: list[string]\n        \n        .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetGraphNodeLabels(), PyGetGraphEdges(), PyGetGraphAdjacenceList()\n        .. note:: These functions allow to collect all the graph's informations.\n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_37PyGetOriginalNodeIds = {"PyGetOriginalNodeIds", (PyCFunction)__pyx_pw_12PythonGedLib_37PyGetOriginalNodeIds, METH_O, __pyx_doc_12PythonGedLib_36PyGetOriginalNodeIds};
+static PyObject *__pyx_pw_12PythonGedLib_37PyGetOriginalNodeIds(PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyGetOriginalNodeIds (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_38PyGetOriginalNodeIds(__pyx_self, ((PyObject *)__pyx_v_graphID));
+  __pyx_r = __pyx_pf_12PythonGedLib_36PyGetOriginalNodeIds(__pyx_self, ((PyObject *)__pyx_v_graphID));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_38PyGetOriginalNodeIds(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
+static PyObject *__pyx_pf_12PythonGedLib_36PyGetOriginalNodeIds(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("PyGetOriginalNodeIds", 0);
 
-  /* "PythonGedLib.pyx":358
+  /* "PythonGedLib.pyx":351
  *         .. note:: These functions allow to collect all the graph's informations.
  *     """
  *     return getGraphOriginalNodeIds(graphID)             # <<<<<<<<<<<<<<
@@ -3813,14 +3755,14 @@ static PyObject *__pyx_pf_12PythonGedLib_38PyGetOriginalNodeIds(CYTHON_UNUSED Py
  * def PyGetGraphNodeLabels(graphID) :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 358, __pyx_L1_error)
-  __pyx_t_2 = __pyx_convert_vector_to_py_std_3a__3a_string(getGraphOriginalNodeIds(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 358, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 351, __pyx_L1_error)
+  __pyx_t_2 = __pyx_convert_vector_to_py_std_3a__3a_string(getGraphOriginalNodeIds(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 351, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":346
+  /* "PythonGedLib.pyx":339
  *     return getGraphNumEdges(graphID)
  * 
  * def PyGetOriginalNodeIds(graphID) :             # <<<<<<<<<<<<<<
@@ -3839,7 +3781,7 @@ static PyObject *__pyx_pf_12PythonGedLib_38PyGetOriginalNodeIds(CYTHON_UNUSED Py
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":360
+/* "PythonGedLib.pyx":353
  *     return getGraphOriginalNodeIds(graphID)
  * 
  * def PyGetGraphNodeLabels(graphID) :             # <<<<<<<<<<<<<<
@@ -3848,28 +3790,28 @@ static PyObject *__pyx_pf_12PythonGedLib_38PyGetOriginalNodeIds(CYTHON_UNUSED Py
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_41PyGetGraphNodeLabels(PyObject *__pyx_self, PyObject *__pyx_v_graphID); /*proto*/
-static char __pyx_doc_12PythonGedLib_40PyGetGraphNodeLabels[] = "\n        Searchs and returns all the labels of nodes on a graph, selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        :return: The list of labels's nodes on the selected graph\n        :rtype: list[dict{string : string}]\n        \n        .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphEdges(), PyGetGraphAdjacenceList()\n        .. note:: These functions allow to collect all the graph's informations.\n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_41PyGetGraphNodeLabels = {"PyGetGraphNodeLabels", (PyCFunction)__pyx_pw_12PythonGedLib_41PyGetGraphNodeLabels, METH_O, __pyx_doc_12PythonGedLib_40PyGetGraphNodeLabels};
-static PyObject *__pyx_pw_12PythonGedLib_41PyGetGraphNodeLabels(PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
+static PyObject *__pyx_pw_12PythonGedLib_39PyGetGraphNodeLabels(PyObject *__pyx_self, PyObject *__pyx_v_graphID); /*proto*/
+static char __pyx_doc_12PythonGedLib_38PyGetGraphNodeLabels[] = "\n        Searchs and returns all the labels of nodes on a graph, selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        :return: The list of labels's nodes on the selected graph\n        :rtype: list[dict{string : string}]\n        \n        .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphEdges(), PyGetGraphAdjacenceList()\n        .. note:: These functions allow to collect all the graph's informations.\n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_39PyGetGraphNodeLabels = {"PyGetGraphNodeLabels", (PyCFunction)__pyx_pw_12PythonGedLib_39PyGetGraphNodeLabels, METH_O, __pyx_doc_12PythonGedLib_38PyGetGraphNodeLabels};
+static PyObject *__pyx_pw_12PythonGedLib_39PyGetGraphNodeLabels(PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyGetGraphNodeLabels (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_40PyGetGraphNodeLabels(__pyx_self, ((PyObject *)__pyx_v_graphID));
+  __pyx_r = __pyx_pf_12PythonGedLib_38PyGetGraphNodeLabels(__pyx_self, ((PyObject *)__pyx_v_graphID));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_40PyGetGraphNodeLabels(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
+static PyObject *__pyx_pf_12PythonGedLib_38PyGetGraphNodeLabels(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("PyGetGraphNodeLabels", 0);
 
-  /* "PythonGedLib.pyx":372
+  /* "PythonGedLib.pyx":365
  *         .. note:: These functions allow to collect all the graph's informations.
  *     """
  *     return getGraphNodeLabels(graphID)             # <<<<<<<<<<<<<<
@@ -3877,14 +3819,14 @@ static PyObject *__pyx_pf_12PythonGedLib_40PyGetGraphNodeLabels(CYTHON_UNUSED Py
  * def PyGetGraphEdges(graphID) :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 372, __pyx_L1_error)
-  __pyx_t_2 = __pyx_convert_vector_to_py_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___(getGraphNodeLabels(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 372, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 365, __pyx_L1_error)
+  __pyx_t_2 = __pyx_convert_vector_to_py_std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___(getGraphNodeLabels(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 365, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":360
+  /* "PythonGedLib.pyx":353
  *     return getGraphOriginalNodeIds(graphID)
  * 
  * def PyGetGraphNodeLabels(graphID) :             # <<<<<<<<<<<<<<
@@ -3903,7 +3845,7 @@ static PyObject *__pyx_pf_12PythonGedLib_40PyGetGraphNodeLabels(CYTHON_UNUSED Py
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":374
+/* "PythonGedLib.pyx":367
  *     return getGraphNodeLabels(graphID)
  * 
  * def PyGetGraphEdges(graphID) :             # <<<<<<<<<<<<<<
@@ -3912,28 +3854,28 @@ static PyObject *__pyx_pf_12PythonGedLib_40PyGetGraphNodeLabels(CYTHON_UNUSED Py
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_43PyGetGraphEdges(PyObject *__pyx_self, PyObject *__pyx_v_graphID); /*proto*/
-static char __pyx_doc_12PythonGedLib_42PyGetGraphEdges[] = "\n        Searchs and returns all the edges on a graph, selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        :return: The list of edges on the selected graph\n        :rtype: dict{tuple(size_t,size_t) : dict{string : string}}\n        \n        .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphAdjacenceList()\n        .. note:: These functions allow to collect all the graph's informations.\n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_43PyGetGraphEdges = {"PyGetGraphEdges", (PyCFunction)__pyx_pw_12PythonGedLib_43PyGetGraphEdges, METH_O, __pyx_doc_12PythonGedLib_42PyGetGraphEdges};
-static PyObject *__pyx_pw_12PythonGedLib_43PyGetGraphEdges(PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
+static PyObject *__pyx_pw_12PythonGedLib_41PyGetGraphEdges(PyObject *__pyx_self, PyObject *__pyx_v_graphID); /*proto*/
+static char __pyx_doc_12PythonGedLib_40PyGetGraphEdges[] = "\n        Searchs and returns all the edges on a graph, selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        :return: The list of edges on the selected graph\n        :rtype: dict{tuple(size_t,size_t) : dict{string : string}}\n        \n        .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphAdjacenceList()\n        .. note:: These functions allow to collect all the graph's informations.\n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_41PyGetGraphEdges = {"PyGetGraphEdges", (PyCFunction)__pyx_pw_12PythonGedLib_41PyGetGraphEdges, METH_O, __pyx_doc_12PythonGedLib_40PyGetGraphEdges};
+static PyObject *__pyx_pw_12PythonGedLib_41PyGetGraphEdges(PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyGetGraphEdges (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_42PyGetGraphEdges(__pyx_self, ((PyObject *)__pyx_v_graphID));
+  __pyx_r = __pyx_pf_12PythonGedLib_40PyGetGraphEdges(__pyx_self, ((PyObject *)__pyx_v_graphID));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_42PyGetGraphEdges(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
+static PyObject *__pyx_pf_12PythonGedLib_40PyGetGraphEdges(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("PyGetGraphEdges", 0);
 
-  /* "PythonGedLib.pyx":386
+  /* "PythonGedLib.pyx":379
  *         .. note:: These functions allow to collect all the graph's informations.
  *     """
  *     return getGraphEdges(graphID)             # <<<<<<<<<<<<<<
@@ -3941,14 +3883,14 @@ static PyObject *__pyx_pf_12PythonGedLib_42PyGetGraphEdges(CYTHON_UNUSED PyObjec
  * def PyGetGraphAdjacenceMatrix(graphID) :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 386, __pyx_L1_error)
-  __pyx_t_2 = __pyx_convert_map_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___(getGraphEdges(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 386, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 379, __pyx_L1_error)
+  __pyx_t_2 = __pyx_convert_map_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e_______std_3a__3a_map_3c_std_3a__3a_string_2c_std_3a__3a_string_3e___(getGraphEdges(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 379, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":374
+  /* "PythonGedLib.pyx":367
  *     return getGraphNodeLabels(graphID)
  * 
  * def PyGetGraphEdges(graphID) :             # <<<<<<<<<<<<<<
@@ -3967,7 +3909,7 @@ static PyObject *__pyx_pf_12PythonGedLib_42PyGetGraphEdges(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":388
+/* "PythonGedLib.pyx":381
  *     return getGraphEdges(graphID)
  * 
  * def PyGetGraphAdjacenceMatrix(graphID) :             # <<<<<<<<<<<<<<
@@ -3976,28 +3918,28 @@ static PyObject *__pyx_pf_12PythonGedLib_42PyGetGraphEdges(CYTHON_UNUSED PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_45PyGetGraphAdjacenceMatrix(PyObject *__pyx_self, PyObject *__pyx_v_graphID); /*proto*/
-static char __pyx_doc_12PythonGedLib_44PyGetGraphAdjacenceMatrix[] = "\n        Searchs and returns the adjacence list of a graph, selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        :return: The adjacence list of the selected graph\n        :rtype: list[list[size_t]]\n        \n        .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphEdges()\n        .. note:: These functions allow to collect all the graph's informations.\n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_45PyGetGraphAdjacenceMatrix = {"PyGetGraphAdjacenceMatrix", (PyCFunction)__pyx_pw_12PythonGedLib_45PyGetGraphAdjacenceMatrix, METH_O, __pyx_doc_12PythonGedLib_44PyGetGraphAdjacenceMatrix};
-static PyObject *__pyx_pw_12PythonGedLib_45PyGetGraphAdjacenceMatrix(PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
+static PyObject *__pyx_pw_12PythonGedLib_43PyGetGraphAdjacenceMatrix(PyObject *__pyx_self, PyObject *__pyx_v_graphID); /*proto*/
+static char __pyx_doc_12PythonGedLib_42PyGetGraphAdjacenceMatrix[] = "\n        Searchs and returns the adjacence list of a graph, selected by its ID. \n\n        :param graphID: The ID of the wanted graph\n        :type graphID: size_t\n        :return: The adjacence list of the selected graph\n        :rtype: list[list[size_t]]\n        \n        .. seealso::PyGetGraphInternalId(), PyGetGraphNumNodes(), PyGetGraphNumEdges(), PyGetOriginalNodeIds(), PyGetGraphNodeLabels(), PyGetGraphEdges()\n        .. note:: These functions allow to collect all the graph's informations.\n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_43PyGetGraphAdjacenceMatrix = {"PyGetGraphAdjacenceMatrix", (PyCFunction)__pyx_pw_12PythonGedLib_43PyGetGraphAdjacenceMatrix, METH_O, __pyx_doc_12PythonGedLib_42PyGetGraphAdjacenceMatrix};
+static PyObject *__pyx_pw_12PythonGedLib_43PyGetGraphAdjacenceMatrix(PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyGetGraphAdjacenceMatrix (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_44PyGetGraphAdjacenceMatrix(__pyx_self, ((PyObject *)__pyx_v_graphID));
+  __pyx_r = __pyx_pf_12PythonGedLib_42PyGetGraphAdjacenceMatrix(__pyx_self, ((PyObject *)__pyx_v_graphID));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_44PyGetGraphAdjacenceMatrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
+static PyObject *__pyx_pf_12PythonGedLib_42PyGetGraphAdjacenceMatrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphID) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("PyGetGraphAdjacenceMatrix", 0);
 
-  /* "PythonGedLib.pyx":400
+  /* "PythonGedLib.pyx":393
  *         .. note:: These functions allow to collect all the graph's informations.
  *     """
  *     return getGraphAdjacenceMatrix(graphID)             # <<<<<<<<<<<<<<
@@ -4005,14 +3947,14 @@ static PyObject *__pyx_pf_12PythonGedLib_44PyGetGraphAdjacenceMatrix(CYTHON_UNUS
  * def PySetEditCost(editCost, editCostConstant = []) :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 400, __pyx_L1_error)
-  __pyx_t_2 = __pyx_convert_vector_to_py_std_3a__3a_vector_3c_size_t_3e___(getGraphAdjacenceMatrix(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 400, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_graphID); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 393, __pyx_L1_error)
+  __pyx_t_2 = __pyx_convert_vector_to_py_std_3a__3a_vector_3c_size_t_3e___(getGraphAdjacenceMatrix(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 393, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":388
+  /* "PythonGedLib.pyx":381
  *     return getGraphEdges(graphID)
  * 
  * def PyGetGraphAdjacenceMatrix(graphID) :             # <<<<<<<<<<<<<<
@@ -4031,7 +3973,7 @@ static PyObject *__pyx_pf_12PythonGedLib_44PyGetGraphAdjacenceMatrix(CYTHON_UNUS
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":402
+/* "PythonGedLib.pyx":395
  *     return getGraphAdjacenceMatrix(graphID)
  * 
  * def PySetEditCost(editCost, editCostConstant = []) :             # <<<<<<<<<<<<<<
@@ -4040,10 +3982,10 @@ static PyObject *__pyx_pf_12PythonGedLib_44PyGetGraphAdjacenceMatrix(CYTHON_UNUS
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_47PySetEditCost(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_46PySetEditCost[] = "\n        Sets an edit cost function to the environment, if its exists. \n\n        :param editCost: The name of the edit cost function\n        :type editCost: string\n        :param editCostConstant: The parameters you will add to the editCost, empty by default\n        :type editCostConstant: list\n        \n        .. seealso::listOfEditCostOptions\n        .. note:: Try to make sure the edit cost function exists with listOfEditCostOptions, raise an error otherwise. \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_47PySetEditCost = {"PySetEditCost", (PyCFunction)__pyx_pw_12PythonGedLib_47PySetEditCost, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_46PySetEditCost};
-static PyObject *__pyx_pw_12PythonGedLib_47PySetEditCost(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_45PySetEditCost(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_44PySetEditCost[] = "\n        Sets an edit cost function to the environment, if its exists. \n\n        :param editCost: The name of the edit cost function\n        :type editCost: string\n        :param editCostConstant: The parameters you will add to the editCost, empty by default\n        :type editCostConstant: list\n        \n        .. seealso::listOfEditCostOptions\n        .. note:: Try to make sure the edit cost function exists with listOfEditCostOptions, raise an error otherwise. \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_45PySetEditCost = {"PySetEditCost", (PyCFunction)__pyx_pw_12PythonGedLib_45PySetEditCost, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_44PySetEditCost};
+static PyObject *__pyx_pw_12PythonGedLib_45PySetEditCost(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_editCost = 0;
   PyObject *__pyx_v_editCostConstant = 0;
   PyObject *__pyx_r = 0;
@@ -4074,7 +4016,7 @@ static PyObject *__pyx_pw_12PythonGedLib_47PySetEditCost(PyObject *__pyx_self, P
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PySetEditCost") < 0)) __PYX_ERR(0, 402, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PySetEditCost") < 0)) __PYX_ERR(0, 395, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -4089,20 +4031,20 @@ static PyObject *__pyx_pw_12PythonGedLib_47PySetEditCost(PyObject *__pyx_self, P
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("PySetEditCost", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 402, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("PySetEditCost", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 395, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.PySetEditCost", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_46PySetEditCost(__pyx_self, __pyx_v_editCost, __pyx_v_editCostConstant);
+  __pyx_r = __pyx_pf_12PythonGedLib_44PySetEditCost(__pyx_self, __pyx_v_editCost, __pyx_v_editCostConstant);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_46PySetEditCost(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_editCost, PyObject *__pyx_v_editCostConstant) {
+static PyObject *__pyx_pf_12PythonGedLib_44PySetEditCost(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_editCost, PyObject *__pyx_v_editCostConstant) {
   PyObject *__pyx_v_editCostB = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -4114,47 +4056,47 @@ static PyObject *__pyx_pf_12PythonGedLib_46PySetEditCost(CYTHON_UNUSED PyObject 
   std::vector<double>  __pyx_t_6;
   __Pyx_RefNannySetupContext("PySetEditCost", 0);
 
-  /* "PythonGedLib.pyx":414
+  /* "PythonGedLib.pyx":407
  *         .. note:: Try to make sure the edit cost function exists with listOfEditCostOptions, raise an error otherwise.
  *     """
  *     editCostB = editCost.encode('utf-8')             # <<<<<<<<<<<<<<
  *     if editCostB in listOfEditCostOptions :
  *         setEditCost(editCostB, editCostConstant)
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_editCost, __pyx_n_s_encode); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 414, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_editCost, __pyx_n_s_encode); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 407, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__12, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 414, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__12, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 407, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_editCostB = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":415
+  /* "PythonGedLib.pyx":408
  *     """
  *     editCostB = editCost.encode('utf-8')
  *     if editCostB in listOfEditCostOptions :             # <<<<<<<<<<<<<<
  *         setEditCost(editCostB, editCostConstant)
  *     else :
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_listOfEditCostOptions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 415, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_listOfEditCostOptions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 408, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = (__Pyx_PySequence_ContainsTF(__pyx_v_editCostB, __pyx_t_2, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 415, __pyx_L1_error)
+  __pyx_t_3 = (__Pyx_PySequence_ContainsTF(__pyx_v_editCostB, __pyx_t_2, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 408, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_4 = (__pyx_t_3 != 0);
   if (__pyx_t_4) {
 
-    /* "PythonGedLib.pyx":416
+    /* "PythonGedLib.pyx":409
  *     editCostB = editCost.encode('utf-8')
  *     if editCostB in listOfEditCostOptions :
  *         setEditCost(editCostB, editCostConstant)             # <<<<<<<<<<<<<<
  *     else :
  *         raise EditCostError("This edit cost function doesn't exist, please see listOfEditCostOptions for selecting a edit cost function")
  */
-    __pyx_t_5 = __pyx_convert_string_from_py_std__in_string(__pyx_v_editCostB); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 416, __pyx_L1_error)
-    __pyx_t_6 = __pyx_convert_vector_from_py_double(__pyx_v_editCostConstant); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 416, __pyx_L1_error)
+    __pyx_t_5 = __pyx_convert_string_from_py_std__in_string(__pyx_v_editCostB); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 409, __pyx_L1_error)
+    __pyx_t_6 = __pyx_convert_vector_from_py_double(__pyx_v_editCostConstant); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 409, __pyx_L1_error)
     setEditCost(__pyx_t_5, __pyx_t_6);
 
-    /* "PythonGedLib.pyx":415
+    /* "PythonGedLib.pyx":408
  *     """
  *     editCostB = editCost.encode('utf-8')
  *     if editCostB in listOfEditCostOptions :             # <<<<<<<<<<<<<<
@@ -4164,7 +4106,7 @@ static PyObject *__pyx_pf_12PythonGedLib_46PySetEditCost(CYTHON_UNUSED PyObject 
     goto __pyx_L3;
   }
 
-  /* "PythonGedLib.pyx":418
+  /* "PythonGedLib.pyx":411
  *         setEditCost(editCostB, editCostConstant)
  *     else :
  *         raise EditCostError("This edit cost function doesn't exist, please see listOfEditCostOptions for selecting a edit cost function")             # <<<<<<<<<<<<<<
@@ -4172,18 +4114,18 @@ static PyObject *__pyx_pf_12PythonGedLib_46PySetEditCost(CYTHON_UNUSED PyObject 
  * def PySetPersonalEditCost(editCostConstant = []) :
  */
   /*else*/ {
-    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_EditCostError); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 418, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_EditCostError); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 411, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__13, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 418, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__13, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 411, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 418, __pyx_L1_error)
+    __PYX_ERR(0, 411, __pyx_L1_error)
   }
   __pyx_L3:;
 
-  /* "PythonGedLib.pyx":402
+  /* "PythonGedLib.pyx":395
  *     return getGraphAdjacenceMatrix(graphID)
  * 
  * def PySetEditCost(editCost, editCostConstant = []) :             # <<<<<<<<<<<<<<
@@ -4206,7 +4148,7 @@ static PyObject *__pyx_pf_12PythonGedLib_46PySetEditCost(CYTHON_UNUSED PyObject 
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":420
+/* "PythonGedLib.pyx":413
  *         raise EditCostError("This edit cost function doesn't exist, please see listOfEditCostOptions for selecting a edit cost function")
  * 
  * def PySetPersonalEditCost(editCostConstant = []) :             # <<<<<<<<<<<<<<
@@ -4215,10 +4157,10 @@ static PyObject *__pyx_pf_12PythonGedLib_46PySetEditCost(CYTHON_UNUSED PyObject 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_49PySetPersonalEditCost(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_48PySetPersonalEditCost[] = "\n        Sets an personal edit cost function to the environment.\n\n        :param editCostConstant: The parameters you will add to the editCost, empty by default\n        :type editCostConstant: list\n        \n        .. note::You have to modify the C++ function to use it. Please see the documentation to add your Edit Cost function. \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_49PySetPersonalEditCost = {"PySetPersonalEditCost", (PyCFunction)__pyx_pw_12PythonGedLib_49PySetPersonalEditCost, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_48PySetPersonalEditCost};
-static PyObject *__pyx_pw_12PythonGedLib_49PySetPersonalEditCost(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_47PySetPersonalEditCost(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_46PySetPersonalEditCost[] = "\n        Sets an personal edit cost function to the environment.\n\n        :param editCostConstant: The parameters you will add to the editCost, empty by default\n        :type editCostConstant: list\n        \n        .. note::You have to modify the C++ function to use it. Please see the documentation to add your Edit Cost function. \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_47PySetPersonalEditCost = {"PySetPersonalEditCost", (PyCFunction)__pyx_pw_12PythonGedLib_47PySetPersonalEditCost, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_46PySetPersonalEditCost};
+static PyObject *__pyx_pw_12PythonGedLib_47PySetPersonalEditCost(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_editCostConstant = 0;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
@@ -4244,7 +4186,7 @@ static PyObject *__pyx_pw_12PythonGedLib_49PySetPersonalEditCost(PyObject *__pyx
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PySetPersonalEditCost") < 0)) __PYX_ERR(0, 420, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PySetPersonalEditCost") < 0)) __PYX_ERR(0, 413, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -4257,36 +4199,36 @@ static PyObject *__pyx_pw_12PythonGedLib_49PySetPersonalEditCost(PyObject *__pyx
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("PySetPersonalEditCost", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 420, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("PySetPersonalEditCost", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 413, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.PySetPersonalEditCost", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_48PySetPersonalEditCost(__pyx_self, __pyx_v_editCostConstant);
+  __pyx_r = __pyx_pf_12PythonGedLib_46PySetPersonalEditCost(__pyx_self, __pyx_v_editCostConstant);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_48PySetPersonalEditCost(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_editCostConstant) {
+static PyObject *__pyx_pf_12PythonGedLib_46PySetPersonalEditCost(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_editCostConstant) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   std::vector<double>  __pyx_t_1;
   __Pyx_RefNannySetupContext("PySetPersonalEditCost", 0);
 
-  /* "PythonGedLib.pyx":429
+  /* "PythonGedLib.pyx":422
  *         .. note::You have to modify the C++ function to use it. Please see the documentation to add your Edit Cost function.
  *     """
  *     setPersonalEditCost(editCostConstant)             # <<<<<<<<<<<<<<
  * 
  * def PyInitEnv(initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :
  */
-  __pyx_t_1 = __pyx_convert_vector_from_py_double(__pyx_v_editCostConstant); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 429, __pyx_L1_error)
+  __pyx_t_1 = __pyx_convert_vector_from_py_double(__pyx_v_editCostConstant); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 422, __pyx_L1_error)
   setPersonalEditCost(__pyx_t_1);
 
-  /* "PythonGedLib.pyx":420
+  /* "PythonGedLib.pyx":413
  *         raise EditCostError("This edit cost function doesn't exist, please see listOfEditCostOptions for selecting a edit cost function")
  * 
  * def PySetPersonalEditCost(editCostConstant = []) :             # <<<<<<<<<<<<<<
@@ -4306,7 +4248,7 @@ static PyObject *__pyx_pf_12PythonGedLib_48PySetPersonalEditCost(CYTHON_UNUSED P
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":431
+/* "PythonGedLib.pyx":424
  *     setPersonalEditCost(editCostConstant)
  * 
  * def PyInitEnv(initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :             # <<<<<<<<<<<<<<
@@ -4315,10 +4257,10 @@ static PyObject *__pyx_pf_12PythonGedLib_48PySetPersonalEditCost(CYTHON_UNUSED P
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_51PyInitEnv(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_50PyInitEnv[] = "\n        Initializes the environment with the chosen edit cost function and graphs.\n\n        :param initOption: The name of the init option, \"EAGER_WITHOUT_SHUFFLED_COPIES\" by default\n        :type initOption: string\n        \n        .. seealso:: listOfInitOptions\n        .. warning:: No modification were allowed after initialization. Try to make sure your choices is correct. You can though clear or add a graph, but recall PyInitEnv() after that. \n        .. note:: Try to make sure the option exists with listOfInitOptions or choose no options, raise an error otherwise.\n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_51PyInitEnv = {"PyInitEnv", (PyCFunction)__pyx_pw_12PythonGedLib_51PyInitEnv, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_50PyInitEnv};
-static PyObject *__pyx_pw_12PythonGedLib_51PyInitEnv(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_49PyInitEnv(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_48PyInitEnv[] = "\n        Initializes the environment with the chosen edit cost function and graphs.\n\n        :param initOption: The name of the init option, \"EAGER_WITHOUT_SHUFFLED_COPIES\" by default\n        :type initOption: string\n        \n        .. seealso:: listOfInitOptions\n        .. warning:: No modification were allowed after initialization. Try to make sure your choices is correct. You can though clear or add a graph, but recall PyInitEnv() after that. \n        .. note:: Try to make sure the option exists with listOfInitOptions or choose no options, raise an error otherwise.\n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_49PyInitEnv = {"PyInitEnv", (PyCFunction)__pyx_pw_12PythonGedLib_49PyInitEnv, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_48PyInitEnv};
+static PyObject *__pyx_pw_12PythonGedLib_49PyInitEnv(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_initOption = 0;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
@@ -4344,7 +4286,7 @@ static PyObject *__pyx_pw_12PythonGedLib_51PyInitEnv(PyObject *__pyx_self, PyObj
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyInitEnv") < 0)) __PYX_ERR(0, 431, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyInitEnv") < 0)) __PYX_ERR(0, 424, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -4357,20 +4299,20 @@ static PyObject *__pyx_pw_12PythonGedLib_51PyInitEnv(PyObject *__pyx_self, PyObj
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("PyInitEnv", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 431, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("PyInitEnv", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 424, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.PyInitEnv", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_50PyInitEnv(__pyx_self, __pyx_v_initOption);
+  __pyx_r = __pyx_pf_12PythonGedLib_48PyInitEnv(__pyx_self, __pyx_v_initOption);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_50PyInitEnv(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_initOption) {
+static PyObject *__pyx_pf_12PythonGedLib_48PyInitEnv(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_initOption) {
   PyObject *__pyx_v_initB = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -4381,46 +4323,46 @@ static PyObject *__pyx_pf_12PythonGedLib_50PyInitEnv(CYTHON_UNUSED PyObject *__p
   std::string __pyx_t_5;
   __Pyx_RefNannySetupContext("PyInitEnv", 0);
 
-  /* "PythonGedLib.pyx":442
+  /* "PythonGedLib.pyx":435
  *         .. note:: Try to make sure the option exists with listOfInitOptions or choose no options, raise an error otherwise.
  *     """
  *     initB = initOption.encode('utf-8')             # <<<<<<<<<<<<<<
  *     if initB in listOfInitOptions :
  *         initEnv(initB)
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_initOption, __pyx_n_s_encode); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 442, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_initOption, __pyx_n_s_encode); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 435, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__15, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 442, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__15, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 435, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_initB = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":443
+  /* "PythonGedLib.pyx":436
  *     """
  *     initB = initOption.encode('utf-8')
  *     if initB in listOfInitOptions :             # <<<<<<<<<<<<<<
  *         initEnv(initB)
  *     else :
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_listOfInitOptions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 443, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_listOfInitOptions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 436, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = (__Pyx_PySequence_ContainsTF(__pyx_v_initB, __pyx_t_2, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 443, __pyx_L1_error)
+  __pyx_t_3 = (__Pyx_PySequence_ContainsTF(__pyx_v_initB, __pyx_t_2, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 436, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_4 = (__pyx_t_3 != 0);
   if (__pyx_t_4) {
 
-    /* "PythonGedLib.pyx":444
+    /* "PythonGedLib.pyx":437
  *     initB = initOption.encode('utf-8')
  *     if initB in listOfInitOptions :
  *         initEnv(initB)             # <<<<<<<<<<<<<<
  *     else :
  *         raise InitError("This init option doesn't exist, please see listOfInitOptions for selecting an option. You can choose any options.")
  */
-    __pyx_t_5 = __pyx_convert_string_from_py_std__in_string(__pyx_v_initB); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 444, __pyx_L1_error)
+    __pyx_t_5 = __pyx_convert_string_from_py_std__in_string(__pyx_v_initB); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 437, __pyx_L1_error)
     initEnv(__pyx_t_5);
 
-    /* "PythonGedLib.pyx":443
+    /* "PythonGedLib.pyx":436
  *     """
  *     initB = initOption.encode('utf-8')
  *     if initB in listOfInitOptions :             # <<<<<<<<<<<<<<
@@ -4430,7 +4372,7 @@ static PyObject *__pyx_pf_12PythonGedLib_50PyInitEnv(CYTHON_UNUSED PyObject *__p
     goto __pyx_L3;
   }
 
-  /* "PythonGedLib.pyx":446
+  /* "PythonGedLib.pyx":439
  *         initEnv(initB)
  *     else :
  *         raise InitError("This init option doesn't exist, please see listOfInitOptions for selecting an option. You can choose any options.")             # <<<<<<<<<<<<<<
@@ -4438,18 +4380,18 @@ static PyObject *__pyx_pf_12PythonGedLib_50PyInitEnv(CYTHON_UNUSED PyObject *__p
  * def PySetMethod(method, options="") :
  */
   /*else*/ {
-    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_InitError); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 446, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_InitError); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 439, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__16, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 446, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__16, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 439, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 446, __pyx_L1_error)
+    __PYX_ERR(0, 439, __pyx_L1_error)
   }
   __pyx_L3:;
 
-  /* "PythonGedLib.pyx":431
+  /* "PythonGedLib.pyx":424
  *     setPersonalEditCost(editCostConstant)
  * 
  * def PyInitEnv(initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :             # <<<<<<<<<<<<<<
@@ -4472,7 +4414,7 @@ static PyObject *__pyx_pf_12PythonGedLib_50PyInitEnv(CYTHON_UNUSED PyObject *__p
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":448
+/* "PythonGedLib.pyx":441
  *         raise InitError("This init option doesn't exist, please see listOfInitOptions for selecting an option. You can choose any options.")
  * 
  * def PySetMethod(method, options="") :             # <<<<<<<<<<<<<<
@@ -4481,10 +4423,10 @@ static PyObject *__pyx_pf_12PythonGedLib_50PyInitEnv(CYTHON_UNUSED PyObject *__p
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_53PySetMethod(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_52PySetMethod[] = "\n        Sets a computation method to the environment, if its exists. \n\n        :param method: The name of the computation method\n        :param options: The options of the method (like bash options), an empty string by default\n        :type method: string\n        :type options: string\n        \n        .. seealso:: PyInitMethod(), listOfMethodOptions\n        .. note:: Try to make sure the edit cost function exists with listOfMethodOptions, raise an error otherwise. Call PyInitMethod() after your set. \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_53PySetMethod = {"PySetMethod", (PyCFunction)__pyx_pw_12PythonGedLib_53PySetMethod, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_52PySetMethod};
-static PyObject *__pyx_pw_12PythonGedLib_53PySetMethod(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_51PySetMethod(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_50PySetMethod[] = "\n        Sets a computation method to the environment, if its exists. \n\n        :param method: The name of the computation method\n        :param options: The options of the method (like bash options), an empty string by default\n        :type method: string\n        :type options: string\n        \n        .. seealso:: PyInitMethod(), listOfMethodOptions\n        .. note:: Try to make sure the edit cost function exists with listOfMethodOptions, raise an error otherwise. Call PyInitMethod() after your set. \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_51PySetMethod = {"PySetMethod", (PyCFunction)__pyx_pw_12PythonGedLib_51PySetMethod, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_50PySetMethod};
+static PyObject *__pyx_pw_12PythonGedLib_51PySetMethod(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_method = 0;
   PyObject *__pyx_v_options = 0;
   PyObject *__pyx_r = 0;
@@ -4515,7 +4457,7 @@ static PyObject *__pyx_pw_12PythonGedLib_53PySetMethod(PyObject *__pyx_self, PyO
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PySetMethod") < 0)) __PYX_ERR(0, 448, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PySetMethod") < 0)) __PYX_ERR(0, 441, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -4530,20 +4472,20 @@ static PyObject *__pyx_pw_12PythonGedLib_53PySetMethod(PyObject *__pyx_self, PyO
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("PySetMethod", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 448, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("PySetMethod", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 441, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.PySetMethod", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_52PySetMethod(__pyx_self, __pyx_v_method, __pyx_v_options);
+  __pyx_r = __pyx_pf_12PythonGedLib_50PySetMethod(__pyx_self, __pyx_v_method, __pyx_v_options);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_52PySetMethod(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_method, PyObject *__pyx_v_options) {
+static PyObject *__pyx_pf_12PythonGedLib_50PySetMethod(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_method, PyObject *__pyx_v_options) {
   PyObject *__pyx_v_methodB = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -4555,53 +4497,53 @@ static PyObject *__pyx_pf_12PythonGedLib_52PySetMethod(CYTHON_UNUSED PyObject *_
   std::string __pyx_t_6;
   __Pyx_RefNannySetupContext("PySetMethod", 0);
 
-  /* "PythonGedLib.pyx":460
+  /* "PythonGedLib.pyx":453
  *         .. note:: Try to make sure the edit cost function exists with listOfMethodOptions, raise an error otherwise. Call PyInitMethod() after your set.
  *     """
  *     methodB = method.encode('utf-8')             # <<<<<<<<<<<<<<
  *     if methodB in listOfMethodOptions :
  *         setMethod(methodB, options.encode('utf-8'))
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_method, __pyx_n_s_encode); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 460, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_method, __pyx_n_s_encode); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 453, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__17, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 460, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__17, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 453, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_methodB = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":461
+  /* "PythonGedLib.pyx":454
  *     """
  *     methodB = method.encode('utf-8')
  *     if methodB in listOfMethodOptions :             # <<<<<<<<<<<<<<
  *         setMethod(methodB, options.encode('utf-8'))
  *     else :
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_listOfMethodOptions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 461, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_listOfMethodOptions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 454, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = (__Pyx_PySequence_ContainsTF(__pyx_v_methodB, __pyx_t_2, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 461, __pyx_L1_error)
+  __pyx_t_3 = (__Pyx_PySequence_ContainsTF(__pyx_v_methodB, __pyx_t_2, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 454, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_4 = (__pyx_t_3 != 0);
   if (__pyx_t_4) {
 
-    /* "PythonGedLib.pyx":462
+    /* "PythonGedLib.pyx":455
  *     methodB = method.encode('utf-8')
  *     if methodB in listOfMethodOptions :
  *         setMethod(methodB, options.encode('utf-8'))             # <<<<<<<<<<<<<<
  *     else :
  *         raise MethodError("This method doesn't exist, please see listOfMethodOptions for selecting a method")
  */
-    __pyx_t_5 = __pyx_convert_string_from_py_std__in_string(__pyx_v_methodB); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 462, __pyx_L1_error)
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_options, __pyx_n_s_encode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 462, __pyx_L1_error)
+    __pyx_t_5 = __pyx_convert_string_from_py_std__in_string(__pyx_v_methodB); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 455, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_options, __pyx_n_s_encode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 455, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__18, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 462, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__18, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 455, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_6 = __pyx_convert_string_from_py_std__in_string(__pyx_t_1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 462, __pyx_L1_error)
+    __pyx_t_6 = __pyx_convert_string_from_py_std__in_string(__pyx_t_1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 455, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     setMethod(__pyx_t_5, __pyx_t_6);
 
-    /* "PythonGedLib.pyx":461
+    /* "PythonGedLib.pyx":454
  *     """
  *     methodB = method.encode('utf-8')
  *     if methodB in listOfMethodOptions :             # <<<<<<<<<<<<<<
@@ -4611,7 +4553,7 @@ static PyObject *__pyx_pf_12PythonGedLib_52PySetMethod(CYTHON_UNUSED PyObject *_
     goto __pyx_L3;
   }
 
-  /* "PythonGedLib.pyx":464
+  /* "PythonGedLib.pyx":457
  *         setMethod(methodB, options.encode('utf-8'))
  *     else :
  *         raise MethodError("This method doesn't exist, please see listOfMethodOptions for selecting a method")             # <<<<<<<<<<<<<<
@@ -4619,18 +4561,18 @@ static PyObject *__pyx_pf_12PythonGedLib_52PySetMethod(CYTHON_UNUSED PyObject *_
  * def PyInitMethod() :
  */
   /*else*/ {
-    __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_MethodError); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 464, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_MethodError); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 457, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__19, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 464, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__19, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 457, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_Raise(__pyx_t_2, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __PYX_ERR(0, 464, __pyx_L1_error)
+    __PYX_ERR(0, 457, __pyx_L1_error)
   }
   __pyx_L3:;
 
-  /* "PythonGedLib.pyx":448
+  /* "PythonGedLib.pyx":441
  *         raise InitError("This init option doesn't exist, please see listOfInitOptions for selecting an option. You can choose any options.")
  * 
  * def PySetMethod(method, options="") :             # <<<<<<<<<<<<<<
@@ -4653,7 +4595,7 @@ static PyObject *__pyx_pf_12PythonGedLib_52PySetMethod(CYTHON_UNUSED PyObject *_
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":466
+/* "PythonGedLib.pyx":459
  *         raise MethodError("This method doesn't exist, please see listOfMethodOptions for selecting a method")
  * 
  * def PyInitMethod() :             # <<<<<<<<<<<<<<
@@ -4662,26 +4604,26 @@ static PyObject *__pyx_pf_12PythonGedLib_52PySetMethod(CYTHON_UNUSED PyObject *_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_55PyInitMethod(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_12PythonGedLib_54PyInitMethod[] = "\n        Inits the environment with the set method.\n\n        .. seealso:: PySetMethod(), listOfMethodOptions\n        .. note:: Call this function after set the method. You can't launch computation or change the method after that. \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_55PyInitMethod = {"PyInitMethod", (PyCFunction)__pyx_pw_12PythonGedLib_55PyInitMethod, METH_NOARGS, __pyx_doc_12PythonGedLib_54PyInitMethod};
-static PyObject *__pyx_pw_12PythonGedLib_55PyInitMethod(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_12PythonGedLib_53PyInitMethod(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_12PythonGedLib_52PyInitMethod[] = "\n        Inits the environment with the set method.\n\n        .. seealso:: PySetMethod(), listOfMethodOptions\n        .. note:: Call this function after set the method. You can't launch computation or change the method after that. \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_53PyInitMethod = {"PyInitMethod", (PyCFunction)__pyx_pw_12PythonGedLib_53PyInitMethod, METH_NOARGS, __pyx_doc_12PythonGedLib_52PyInitMethod};
+static PyObject *__pyx_pw_12PythonGedLib_53PyInitMethod(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyInitMethod (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_54PyInitMethod(__pyx_self);
+  __pyx_r = __pyx_pf_12PythonGedLib_52PyInitMethod(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_54PyInitMethod(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_12PythonGedLib_52PyInitMethod(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyInitMethod", 0);
 
-  /* "PythonGedLib.pyx":473
+  /* "PythonGedLib.pyx":466
  *         .. note:: Call this function after set the method. You can't launch computation or change the method after that.
  *     """
  *     initMethod()             # <<<<<<<<<<<<<<
@@ -4690,7 +4632,7 @@ static PyObject *__pyx_pf_12PythonGedLib_54PyInitMethod(CYTHON_UNUSED PyObject *
  */
   initMethod();
 
-  /* "PythonGedLib.pyx":466
+  /* "PythonGedLib.pyx":459
  *         raise MethodError("This method doesn't exist, please see listOfMethodOptions for selecting a method")
  * 
  * def PyInitMethod() :             # <<<<<<<<<<<<<<
@@ -4705,7 +4647,7 @@ static PyObject *__pyx_pf_12PythonGedLib_54PyInitMethod(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":475
+/* "PythonGedLib.pyx":468
  *     initMethod()
  * 
  * def PyGetInitime() :             # <<<<<<<<<<<<<<
@@ -4714,27 +4656,27 @@ static PyObject *__pyx_pf_12PythonGedLib_54PyInitMethod(CYTHON_UNUSED PyObject *
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_57PyGetInitime(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_12PythonGedLib_56PyGetInitime[] = "\n        Returns the initialization time.\n\n        :return: The initialization time\n        :rtype: double\n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_57PyGetInitime = {"PyGetInitime", (PyCFunction)__pyx_pw_12PythonGedLib_57PyGetInitime, METH_NOARGS, __pyx_doc_12PythonGedLib_56PyGetInitime};
-static PyObject *__pyx_pw_12PythonGedLib_57PyGetInitime(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_12PythonGedLib_55PyGetInitime(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_12PythonGedLib_54PyGetInitime[] = "\n        Returns the initialization time.\n\n        :return: The initialization time\n        :rtype: double\n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_55PyGetInitime = {"PyGetInitime", (PyCFunction)__pyx_pw_12PythonGedLib_55PyGetInitime, METH_NOARGS, __pyx_doc_12PythonGedLib_54PyGetInitime};
+static PyObject *__pyx_pw_12PythonGedLib_55PyGetInitime(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyGetInitime (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_56PyGetInitime(__pyx_self);
+  __pyx_r = __pyx_pf_12PythonGedLib_54PyGetInitime(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_56PyGetInitime(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_12PythonGedLib_54PyGetInitime(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyGetInitime", 0);
 
-  /* "PythonGedLib.pyx":482
+  /* "PythonGedLib.pyx":475
  *         :rtype: double
  *     """
  *     return getInitime()             # <<<<<<<<<<<<<<
@@ -4742,13 +4684,13 @@ static PyObject *__pyx_pf_12PythonGedLib_56PyGetInitime(CYTHON_UNUSED PyObject *
  * def PyRunMethod(g, h) :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(getInitime()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 482, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(getInitime()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 475, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":475
+  /* "PythonGedLib.pyx":468
  *     initMethod()
  * 
  * def PyGetInitime() :             # <<<<<<<<<<<<<<
@@ -4767,7 +4709,7 @@ static PyObject *__pyx_pf_12PythonGedLib_56PyGetInitime(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":484
+/* "PythonGedLib.pyx":477
  *     return getInitime()
  * 
  * def PyRunMethod(g, h) :             # <<<<<<<<<<<<<<
@@ -4776,10 +4718,10 @@ static PyObject *__pyx_pf_12PythonGedLib_56PyGetInitime(CYTHON_UNUSED PyObject *
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_59PyRunMethod(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_58PyRunMethod[] = "\n        Computes the edit distance between two graphs g and h, with the edit cost function and method computation selected.  \n\n        :param g: The Id of the first graph to compare\n        :param h: The Id of the second graph to compare\n        :type g: size_t\n        :type h: size_t\n        \n        .. seealso:: PyGetUpperBound(), PyGetLowerBound(),  PyGetForwardMap(), PyGetBackwardMap(), PyGetRuntime(), PyQuasimetricCost()\n        .. note:: This function only compute the distance between two graphs, without returning a result. Use the differents function to see the result between the two graphs.  \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_59PyRunMethod = {"PyRunMethod", (PyCFunction)__pyx_pw_12PythonGedLib_59PyRunMethod, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_58PyRunMethod};
-static PyObject *__pyx_pw_12PythonGedLib_59PyRunMethod(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_57PyRunMethod(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_56PyRunMethod[] = "\n        Computes the edit distance between two graphs g and h, with the edit cost function and method computation selected.  \n\n        :param g: The Id of the first graph to compare\n        :param h: The Id of the second graph to compare\n        :type g: size_t\n        :type h: size_t\n        \n        .. seealso:: PyGetUpperBound(), PyGetLowerBound(),  PyGetForwardMap(), PyGetBackwardMap(), PyGetRuntime(), PyQuasimetricCost()\n        .. note:: This function only compute the distance between two graphs, without returning a result. Use the differents function to see the result between the two graphs.  \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_57PyRunMethod = {"PyRunMethod", (PyCFunction)__pyx_pw_12PythonGedLib_57PyRunMethod, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_56PyRunMethod};
+static PyObject *__pyx_pw_12PythonGedLib_57PyRunMethod(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_g = 0;
   PyObject *__pyx_v_h = 0;
   PyObject *__pyx_r = 0;
@@ -4805,11 +4747,11 @@ static PyObject *__pyx_pw_12PythonGedLib_59PyRunMethod(PyObject *__pyx_self, PyO
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_h)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyRunMethod", 1, 2, 2, 1); __PYX_ERR(0, 484, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyRunMethod", 1, 2, 2, 1); __PYX_ERR(0, 477, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyRunMethod") < 0)) __PYX_ERR(0, 484, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyRunMethod") < 0)) __PYX_ERR(0, 477, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -4822,38 +4764,38 @@ static PyObject *__pyx_pw_12PythonGedLib_59PyRunMethod(PyObject *__pyx_self, PyO
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("PyRunMethod", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 484, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("PyRunMethod", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 477, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.PyRunMethod", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_58PyRunMethod(__pyx_self, __pyx_v_g, __pyx_v_h);
+  __pyx_r = __pyx_pf_12PythonGedLib_56PyRunMethod(__pyx_self, __pyx_v_g, __pyx_v_h);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_58PyRunMethod(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h) {
+static PyObject *__pyx_pf_12PythonGedLib_56PyRunMethod(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
   size_t __pyx_t_2;
   __Pyx_RefNannySetupContext("PyRunMethod", 0);
 
-  /* "PythonGedLib.pyx":496
+  /* "PythonGedLib.pyx":489
  *         .. note:: This function only compute the distance between two graphs, without returning a result. Use the differents function to see the result between the two graphs.
  *     """
  *     runMethod(g,h)             # <<<<<<<<<<<<<<
  * 
  * def PyGetUpperBound(g,h) :
  */
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 496, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 496, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 489, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 489, __pyx_L1_error)
   runMethod(__pyx_t_1, __pyx_t_2);
 
-  /* "PythonGedLib.pyx":484
+  /* "PythonGedLib.pyx":477
  *     return getInitime()
  * 
  * def PyRunMethod(g, h) :             # <<<<<<<<<<<<<<
@@ -4873,7 +4815,7 @@ static PyObject *__pyx_pf_12PythonGedLib_58PyRunMethod(CYTHON_UNUSED PyObject *_
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":498
+/* "PythonGedLib.pyx":491
  *     runMethod(g,h)
  * 
  * def PyGetUpperBound(g,h) :             # <<<<<<<<<<<<<<
@@ -4882,10 +4824,10 @@ static PyObject *__pyx_pf_12PythonGedLib_58PyRunMethod(CYTHON_UNUSED PyObject *_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_61PyGetUpperBound(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_60PyGetUpperBound[] = "\n        Returns the upper bound of the edit distance cost between two graphs g and h. \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :type g: size_t\n        :type h: size_t\n        :return: The upper bound of the edit distance cost\n        :rtype: double\n        \n        .. seealso:: PyRunMethod(), PyGetLowerBound(), PyGetForwardMap(), PyGetBackwardMap(), PyGetRuntime(), PyQuasimetricCost()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n        .. note:: The upper bound is equivalent to the result of the pessimist edit distance cost. Methods are heuristics so the library can't compute the real perfect result because it's NP-Hard problem.\n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_61PyGetUpperBound = {"PyGetUpperBound", (PyCFunction)__pyx_pw_12PythonGedLib_61PyGetUpperBound, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_60PyGetUpperBound};
-static PyObject *__pyx_pw_12PythonGedLib_61PyGetUpperBound(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_59PyGetUpperBound(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_58PyGetUpperBound[] = "\n        Returns the upper bound of the edit distance cost between two graphs g and h. \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :type g: size_t\n        :type h: size_t\n        :return: The upper bound of the edit distance cost\n        :rtype: double\n        \n        .. seealso:: PyRunMethod(), PyGetLowerBound(), PyGetForwardMap(), PyGetBackwardMap(), PyGetRuntime(), PyQuasimetricCost()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n        .. note:: The upper bound is equivalent to the result of the pessimist edit distance cost. Methods are heuristics so the library can't compute the real perfect result because it's NP-Hard problem.\n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_59PyGetUpperBound = {"PyGetUpperBound", (PyCFunction)__pyx_pw_12PythonGedLib_59PyGetUpperBound, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_58PyGetUpperBound};
+static PyObject *__pyx_pw_12PythonGedLib_59PyGetUpperBound(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_g = 0;
   PyObject *__pyx_v_h = 0;
   PyObject *__pyx_r = 0;
@@ -4911,11 +4853,11 @@ static PyObject *__pyx_pw_12PythonGedLib_61PyGetUpperBound(PyObject *__pyx_self,
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_h)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyGetUpperBound", 1, 2, 2, 1); __PYX_ERR(0, 498, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyGetUpperBound", 1, 2, 2, 1); __PYX_ERR(0, 491, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyGetUpperBound") < 0)) __PYX_ERR(0, 498, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyGetUpperBound") < 0)) __PYX_ERR(0, 491, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -4928,20 +4870,20 @@ static PyObject *__pyx_pw_12PythonGedLib_61PyGetUpperBound(PyObject *__pyx_self,
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("PyGetUpperBound", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 498, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("PyGetUpperBound", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 491, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.PyGetUpperBound", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_60PyGetUpperBound(__pyx_self, __pyx_v_g, __pyx_v_h);
+  __pyx_r = __pyx_pf_12PythonGedLib_58PyGetUpperBound(__pyx_self, __pyx_v_g, __pyx_v_h);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_60PyGetUpperBound(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h) {
+static PyObject *__pyx_pf_12PythonGedLib_58PyGetUpperBound(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
@@ -4949,7 +4891,7 @@ static PyObject *__pyx_pf_12PythonGedLib_60PyGetUpperBound(CYTHON_UNUSED PyObjec
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("PyGetUpperBound", 0);
 
-  /* "PythonGedLib.pyx":513
+  /* "PythonGedLib.pyx":506
  *         .. note:: The upper bound is equivalent to the result of the pessimist edit distance cost. Methods are heuristics so the library can't compute the real perfect result because it's NP-Hard problem.
  *     """
  *     return getUpperBound(g,h)             # <<<<<<<<<<<<<<
@@ -4957,15 +4899,15 @@ static PyObject *__pyx_pf_12PythonGedLib_60PyGetUpperBound(CYTHON_UNUSED PyObjec
  * def PyGetLowerBound(g,h) :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 513, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 513, __pyx_L1_error)
-  __pyx_t_3 = PyFloat_FromDouble(getUpperBound(__pyx_t_1, __pyx_t_2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 513, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 506, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 506, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(getUpperBound(__pyx_t_1, __pyx_t_2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 506, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":498
+  /* "PythonGedLib.pyx":491
  *     runMethod(g,h)
  * 
  * def PyGetUpperBound(g,h) :             # <<<<<<<<<<<<<<
@@ -4984,7 +4926,7 @@ static PyObject *__pyx_pf_12PythonGedLib_60PyGetUpperBound(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":515
+/* "PythonGedLib.pyx":508
  *     return getUpperBound(g,h)
  * 
  * def PyGetLowerBound(g,h) :             # <<<<<<<<<<<<<<
@@ -4993,10 +4935,10 @@ static PyObject *__pyx_pf_12PythonGedLib_60PyGetUpperBound(CYTHON_UNUSED PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_63PyGetLowerBound(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_62PyGetLowerBound[] = "\n         Returns the lower bound of the edit distance cost between two graphs g and h. \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :type g: size_t\n        :type h: size_t\n        :return: The lower bound of the edit distance cost\n        :rtype: double\n        \n        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetForwardMap(), PyGetBackwardMap(), PyGetRuntime(), PyQuasimetricCost()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n        .. note:: This function can be ignored, because lower bound doesn't have a crucial utility.    \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_63PyGetLowerBound = {"PyGetLowerBound", (PyCFunction)__pyx_pw_12PythonGedLib_63PyGetLowerBound, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_62PyGetLowerBound};
-static PyObject *__pyx_pw_12PythonGedLib_63PyGetLowerBound(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_61PyGetLowerBound(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_60PyGetLowerBound[] = "\n         Returns the lower bound of the edit distance cost between two graphs g and h. \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :type g: size_t\n        :type h: size_t\n        :return: The lower bound of the edit distance cost\n        :rtype: double\n        \n        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetForwardMap(), PyGetBackwardMap(), PyGetRuntime(), PyQuasimetricCost()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n        .. note:: This function can be ignored, because lower bound doesn't have a crucial utility.    \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_61PyGetLowerBound = {"PyGetLowerBound", (PyCFunction)__pyx_pw_12PythonGedLib_61PyGetLowerBound, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_60PyGetLowerBound};
+static PyObject *__pyx_pw_12PythonGedLib_61PyGetLowerBound(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_g = 0;
   PyObject *__pyx_v_h = 0;
   PyObject *__pyx_r = 0;
@@ -5022,11 +4964,11 @@ static PyObject *__pyx_pw_12PythonGedLib_63PyGetLowerBound(PyObject *__pyx_self,
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_h)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyGetLowerBound", 1, 2, 2, 1); __PYX_ERR(0, 515, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyGetLowerBound", 1, 2, 2, 1); __PYX_ERR(0, 508, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyGetLowerBound") < 0)) __PYX_ERR(0, 515, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyGetLowerBound") < 0)) __PYX_ERR(0, 508, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -5039,20 +4981,20 @@ static PyObject *__pyx_pw_12PythonGedLib_63PyGetLowerBound(PyObject *__pyx_self,
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("PyGetLowerBound", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 515, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("PyGetLowerBound", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 508, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.PyGetLowerBound", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_62PyGetLowerBound(__pyx_self, __pyx_v_g, __pyx_v_h);
+  __pyx_r = __pyx_pf_12PythonGedLib_60PyGetLowerBound(__pyx_self, __pyx_v_g, __pyx_v_h);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_62PyGetLowerBound(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h) {
+static PyObject *__pyx_pf_12PythonGedLib_60PyGetLowerBound(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
@@ -5060,7 +5002,7 @@ static PyObject *__pyx_pf_12PythonGedLib_62PyGetLowerBound(CYTHON_UNUSED PyObjec
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("PyGetLowerBound", 0);
 
-  /* "PythonGedLib.pyx":530
+  /* "PythonGedLib.pyx":523
  *         .. note:: This function can be ignored, because lower bound doesn't have a crucial utility.
  *     """
  *     return getLowerBound(g,h)             # <<<<<<<<<<<<<<
@@ -5068,15 +5010,15 @@ static PyObject *__pyx_pf_12PythonGedLib_62PyGetLowerBound(CYTHON_UNUSED PyObjec
  * def PyGetForwardMap(g,h) :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 530, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 530, __pyx_L1_error)
-  __pyx_t_3 = PyFloat_FromDouble(getLowerBound(__pyx_t_1, __pyx_t_2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 530, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 523, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 523, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(getLowerBound(__pyx_t_1, __pyx_t_2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 523, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":515
+  /* "PythonGedLib.pyx":508
  *     return getUpperBound(g,h)
  * 
  * def PyGetLowerBound(g,h) :             # <<<<<<<<<<<<<<
@@ -5095,7 +5037,7 @@ static PyObject *__pyx_pf_12PythonGedLib_62PyGetLowerBound(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":532
+/* "PythonGedLib.pyx":525
  *     return getLowerBound(g,h)
  * 
  * def PyGetForwardMap(g,h) :             # <<<<<<<<<<<<<<
@@ -5104,10 +5046,10 @@ static PyObject *__pyx_pf_12PythonGedLib_62PyGetLowerBound(CYTHON_UNUSED PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_65PyGetForwardMap(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_64PyGetForwardMap[] = "\n        Returns the forward map (or the half of the adjacence matrix) between nodes of the two indicated graphs. \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :type g: size_t\n        :type h: size_t\n        :return: The forward map to the adjacence matrix between nodes of the two graphs\n        :rtype: list[npy_uint32]\n        \n        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(), PyGetBackwardMap(), PyGetRuntime(), PyQuasimetricCost(), PyGetNodeMap(), PyGetAssignmentMatrix()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n        .. note:: I don't know how to connect the two map to reconstruct the adjacence matrix. Please come back when I know how it's work ! \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_65PyGetForwardMap = {"PyGetForwardMap", (PyCFunction)__pyx_pw_12PythonGedLib_65PyGetForwardMap, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_64PyGetForwardMap};
-static PyObject *__pyx_pw_12PythonGedLib_65PyGetForwardMap(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_63PyGetForwardMap(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_62PyGetForwardMap[] = "\n        Returns the forward map (or the half of the adjacence matrix) between nodes of the two indicated graphs. \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :type g: size_t\n        :type h: size_t\n        :return: The forward map to the adjacence matrix between nodes of the two graphs\n        :rtype: list[npy_uint32]\n        \n        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(), PyGetBackwardMap(), PyGetRuntime(), PyQuasimetricCost(), PyGetNodeMap(), PyGetAssignmentMatrix()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n        .. note:: I don't know how to connect the two map to reconstruct the adjacence matrix. Please come back when I know how it's work ! \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_63PyGetForwardMap = {"PyGetForwardMap", (PyCFunction)__pyx_pw_12PythonGedLib_63PyGetForwardMap, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_62PyGetForwardMap};
+static PyObject *__pyx_pw_12PythonGedLib_63PyGetForwardMap(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_g = 0;
   PyObject *__pyx_v_h = 0;
   PyObject *__pyx_r = 0;
@@ -5133,11 +5075,11 @@ static PyObject *__pyx_pw_12PythonGedLib_65PyGetForwardMap(PyObject *__pyx_self,
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_h)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyGetForwardMap", 1, 2, 2, 1); __PYX_ERR(0, 532, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyGetForwardMap", 1, 2, 2, 1); __PYX_ERR(0, 525, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyGetForwardMap") < 0)) __PYX_ERR(0, 532, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyGetForwardMap") < 0)) __PYX_ERR(0, 525, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -5150,20 +5092,20 @@ static PyObject *__pyx_pw_12PythonGedLib_65PyGetForwardMap(PyObject *__pyx_self,
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("PyGetForwardMap", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 532, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("PyGetForwardMap", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 525, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.PyGetForwardMap", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_64PyGetForwardMap(__pyx_self, __pyx_v_g, __pyx_v_h);
+  __pyx_r = __pyx_pf_12PythonGedLib_62PyGetForwardMap(__pyx_self, __pyx_v_g, __pyx_v_h);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_64PyGetForwardMap(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h) {
+static PyObject *__pyx_pf_12PythonGedLib_62PyGetForwardMap(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
@@ -5171,7 +5113,7 @@ static PyObject *__pyx_pf_12PythonGedLib_64PyGetForwardMap(CYTHON_UNUSED PyObjec
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("PyGetForwardMap", 0);
 
-  /* "PythonGedLib.pyx":547
+  /* "PythonGedLib.pyx":540
  *         .. note:: I don't know how to connect the two map to reconstruct the adjacence matrix. Please come back when I know how it's work !
  *     """
  *     return getForwardMap(g,h)             # <<<<<<<<<<<<<<
@@ -5179,15 +5121,15 @@ static PyObject *__pyx_pf_12PythonGedLib_64PyGetForwardMap(CYTHON_UNUSED PyObjec
  * def PyGetBackwardMap(g,h) :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 547, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 547, __pyx_L1_error)
-  __pyx_t_3 = __pyx_convert_vector_to_py_npy_uint64(getForwardMap(__pyx_t_1, __pyx_t_2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 547, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 540, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 540, __pyx_L1_error)
+  __pyx_t_3 = __pyx_convert_vector_to_py_npy_uint64(getForwardMap(__pyx_t_1, __pyx_t_2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":532
+  /* "PythonGedLib.pyx":525
  *     return getLowerBound(g,h)
  * 
  * def PyGetForwardMap(g,h) :             # <<<<<<<<<<<<<<
@@ -5206,7 +5148,7 @@ static PyObject *__pyx_pf_12PythonGedLib_64PyGetForwardMap(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":549
+/* "PythonGedLib.pyx":542
  *     return getForwardMap(g,h)
  * 
  * def PyGetBackwardMap(g,h) :             # <<<<<<<<<<<<<<
@@ -5215,10 +5157,10 @@ static PyObject *__pyx_pf_12PythonGedLib_64PyGetForwardMap(CYTHON_UNUSED PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_67PyGetBackwardMap(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_66PyGetBackwardMap[] = "\n        Returns the backward map (or the half of the adjacence matrix) between nodes of the two indicated graphs. \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :type g: size_t\n        :type h: size_t\n        :return: The backward map to the adjacence matrix between nodes of the two graphs\n        :rtype: list[npy_uint32]\n        \n        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(), PyGetForwardMap(), PyGetRuntime(), PyQuasimetricCost(), PyGetNodeMap(), PyGetAssignmentMatrix()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n        .. note:: I don't know how to connect the two map to reconstruct the adjacence matrix. Please come back when I know how it's work ! \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_67PyGetBackwardMap = {"PyGetBackwardMap", (PyCFunction)__pyx_pw_12PythonGedLib_67PyGetBackwardMap, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_66PyGetBackwardMap};
-static PyObject *__pyx_pw_12PythonGedLib_67PyGetBackwardMap(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_65PyGetBackwardMap(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_64PyGetBackwardMap[] = "\n        Returns the backward map (or the half of the adjacence matrix) between nodes of the two indicated graphs. \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :type g: size_t\n        :type h: size_t\n        :return: The backward map to the adjacence matrix between nodes of the two graphs\n        :rtype: list[npy_uint32]\n        \n        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(), PyGetForwardMap(), PyGetRuntime(), PyQuasimetricCost(), PyGetNodeMap(), PyGetAssignmentMatrix()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n        .. note:: I don't know how to connect the two map to reconstruct the adjacence matrix. Please come back when I know how it's work ! \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_65PyGetBackwardMap = {"PyGetBackwardMap", (PyCFunction)__pyx_pw_12PythonGedLib_65PyGetBackwardMap, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_64PyGetBackwardMap};
+static PyObject *__pyx_pw_12PythonGedLib_65PyGetBackwardMap(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_g = 0;
   PyObject *__pyx_v_h = 0;
   PyObject *__pyx_r = 0;
@@ -5244,11 +5186,11 @@ static PyObject *__pyx_pw_12PythonGedLib_67PyGetBackwardMap(PyObject *__pyx_self
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_h)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyGetBackwardMap", 1, 2, 2, 1); __PYX_ERR(0, 549, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyGetBackwardMap", 1, 2, 2, 1); __PYX_ERR(0, 542, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyGetBackwardMap") < 0)) __PYX_ERR(0, 549, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyGetBackwardMap") < 0)) __PYX_ERR(0, 542, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -5261,20 +5203,20 @@ static PyObject *__pyx_pw_12PythonGedLib_67PyGetBackwardMap(PyObject *__pyx_self
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("PyGetBackwardMap", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 549, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("PyGetBackwardMap", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 542, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.PyGetBackwardMap", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_66PyGetBackwardMap(__pyx_self, __pyx_v_g, __pyx_v_h);
+  __pyx_r = __pyx_pf_12PythonGedLib_64PyGetBackwardMap(__pyx_self, __pyx_v_g, __pyx_v_h);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_66PyGetBackwardMap(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h) {
+static PyObject *__pyx_pf_12PythonGedLib_64PyGetBackwardMap(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
@@ -5282,7 +5224,7 @@ static PyObject *__pyx_pf_12PythonGedLib_66PyGetBackwardMap(CYTHON_UNUSED PyObje
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("PyGetBackwardMap", 0);
 
-  /* "PythonGedLib.pyx":564
+  /* "PythonGedLib.pyx":557
  *         .. note:: I don't know how to connect the two map to reconstruct the adjacence matrix. Please come back when I know how it's work !
  *     """
  *     return getBackwardMap(g,h)             # <<<<<<<<<<<<<<
@@ -5290,15 +5232,15 @@ static PyObject *__pyx_pf_12PythonGedLib_66PyGetBackwardMap(CYTHON_UNUSED PyObje
  * def PyGetNodeImage(g,h,nodeID) :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 564, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 564, __pyx_L1_error)
-  __pyx_t_3 = __pyx_convert_vector_to_py_npy_uint64(getBackwardMap(__pyx_t_1, __pyx_t_2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 564, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 557, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 557, __pyx_L1_error)
+  __pyx_t_3 = __pyx_convert_vector_to_py_npy_uint64(getBackwardMap(__pyx_t_1, __pyx_t_2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 557, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":549
+  /* "PythonGedLib.pyx":542
  *     return getForwardMap(g,h)
  * 
  * def PyGetBackwardMap(g,h) :             # <<<<<<<<<<<<<<
@@ -5317,7 +5259,7 @@ static PyObject *__pyx_pf_12PythonGedLib_66PyGetBackwardMap(CYTHON_UNUSED PyObje
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":566
+/* "PythonGedLib.pyx":559
  *     return getBackwardMap(g,h)
  * 
  * def PyGetNodeImage(g,h,nodeID) :             # <<<<<<<<<<<<<<
@@ -5326,10 +5268,10 @@ static PyObject *__pyx_pf_12PythonGedLib_66PyGetBackwardMap(CYTHON_UNUSED PyObje
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_69PyGetNodeImage(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_68PyGetNodeImage[] = "\n        Returns the node's image in the adjacence matrix, if it exists.   \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :param nodeID: The ID of the node which you want to see the image\n        :type g: size_t\n        :type h: size_t\n        :type nodeID size_t\n        :return: The ID of the image node\n        :rtype: size_t\n        \n        .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodePreImage(), PyGetNodeMap(), PyGetAssignmentMatrix()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n        .. note:: Use BackwardMap's Node to find its images ! You can also use PyGetForwardMap() and PyGetBackwardMap().     \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_69PyGetNodeImage = {"PyGetNodeImage", (PyCFunction)__pyx_pw_12PythonGedLib_69PyGetNodeImage, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_68PyGetNodeImage};
-static PyObject *__pyx_pw_12PythonGedLib_69PyGetNodeImage(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_67PyGetNodeImage(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_66PyGetNodeImage[] = "\n        Returns the node's image in the adjacence matrix, if it exists.   \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :param nodeID: The ID of the node which you want to see the image\n        :type g: size_t\n        :type h: size_t\n        :type nodeID size_t\n        :return: The ID of the image node\n        :rtype: size_t\n        \n        .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodePreImage(), PyGetNodeMap(), PyGetAssignmentMatrix()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n        .. note:: Use BackwardMap's Node to find its images ! You can also use PyGetForwardMap() and PyGetBackwardMap().     \n\n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_67PyGetNodeImage = {"PyGetNodeImage", (PyCFunction)__pyx_pw_12PythonGedLib_67PyGetNodeImage, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_66PyGetNodeImage};
+static PyObject *__pyx_pw_12PythonGedLib_67PyGetNodeImage(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_g = 0;
   PyObject *__pyx_v_h = 0;
   PyObject *__pyx_v_nodeID = 0;
@@ -5357,16 +5299,16 @@ static PyObject *__pyx_pw_12PythonGedLib_69PyGetNodeImage(PyObject *__pyx_self, 
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_h)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyGetNodeImage", 1, 3, 3, 1); __PYX_ERR(0, 566, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyGetNodeImage", 1, 3, 3, 1); __PYX_ERR(0, 559, __pyx_L3_error)
         }
         case  2:
         if (likely((values[2] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_nodeID)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyGetNodeImage", 1, 3, 3, 2); __PYX_ERR(0, 566, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyGetNodeImage", 1, 3, 3, 2); __PYX_ERR(0, 559, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyGetNodeImage") < 0)) __PYX_ERR(0, 566, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyGetNodeImage") < 0)) __PYX_ERR(0, 559, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -5381,20 +5323,20 @@ static PyObject *__pyx_pw_12PythonGedLib_69PyGetNodeImage(PyObject *__pyx_self, 
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("PyGetNodeImage", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 566, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("PyGetNodeImage", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 559, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.PyGetNodeImage", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_68PyGetNodeImage(__pyx_self, __pyx_v_g, __pyx_v_h, __pyx_v_nodeID);
+  __pyx_r = __pyx_pf_12PythonGedLib_66PyGetNodeImage(__pyx_self, __pyx_v_g, __pyx_v_h, __pyx_v_nodeID);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_68PyGetNodeImage(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h, PyObject *__pyx_v_nodeID) {
+static PyObject *__pyx_pf_12PythonGedLib_66PyGetNodeImage(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h, PyObject *__pyx_v_nodeID) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
@@ -5403,24 +5345,24 @@ static PyObject *__pyx_pf_12PythonGedLib_68PyGetNodeImage(CYTHON_UNUSED PyObject
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("PyGetNodeImage", 0);
 
-  /* "PythonGedLib.pyx":583
- *         .. note:: Use BackwardMap's Node to find its images ! You can also use PyGetForwardMap() and PyGetBackwardMap().
+  /* "PythonGedLib.pyx":577
+ * 
  *     """
  *     return getNodeImage(g, h, nodeID)             # <<<<<<<<<<<<<<
  * 
  * def PyGetNodePreImage(g,h,nodeID) :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 583, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 583, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_PyInt_As_size_t(__pyx_v_nodeID); if (unlikely((__pyx_t_3 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 583, __pyx_L1_error)
-  __pyx_t_4 = __Pyx_PyInt_FromSize_t(getNodeImage(__pyx_t_1, __pyx_t_2, __pyx_t_3)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 583, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 577, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 577, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_As_size_t(__pyx_v_nodeID); if (unlikely((__pyx_t_3 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 577, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_FromSize_t(getNodeImage(__pyx_t_1, __pyx_t_2, __pyx_t_3)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 577, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_r = __pyx_t_4;
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":566
+  /* "PythonGedLib.pyx":559
  *     return getBackwardMap(g,h)
  * 
  * def PyGetNodeImage(g,h,nodeID) :             # <<<<<<<<<<<<<<
@@ -5439,7 +5381,7 @@ static PyObject *__pyx_pf_12PythonGedLib_68PyGetNodeImage(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":585
+/* "PythonGedLib.pyx":579
  *     return getNodeImage(g, h, nodeID)
  * 
  * def PyGetNodePreImage(g,h,nodeID) :             # <<<<<<<<<<<<<<
@@ -5448,10 +5390,10 @@ static PyObject *__pyx_pf_12PythonGedLib_68PyGetNodeImage(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_71PyGetNodePreImage(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_70PyGetNodePreImage[] = "\n        Returns the node's preimage in the adjacence matrix, if it exists.   \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :param nodeID: The ID of the node which you want to see the preimage\n        :type g: size_t\n        :type h: size_t\n        :type nodeID size_t\n        :return: The ID of the preimage node\n        :rtype: size_t\n        \n        .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodeImage(), PyGetNodeMap(), PyGetAssignmentMatrix()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n        .. note:: Use ForwardMap's Node to find its images ! You can also use PyGetForwardMap() and PyGetBackwardMap().     \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_71PyGetNodePreImage = {"PyGetNodePreImage", (PyCFunction)__pyx_pw_12PythonGedLib_71PyGetNodePreImage, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_70PyGetNodePreImage};
-static PyObject *__pyx_pw_12PythonGedLib_71PyGetNodePreImage(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_69PyGetNodePreImage(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_68PyGetNodePreImage[] = "\n        Returns the node's preimage in the adjacence matrix, if it exists.   \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :param nodeID: The ID of the node which you want to see the preimage\n        :type g: size_t\n        :type h: size_t\n        :type nodeID size_t\n        :return: The ID of the preimage node\n        :rtype: size_t\n        \n        .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodeImage(), PyGetNodeMap(), PyGetAssignmentMatrix()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n        .. note:: Use ForwardMap's Node to find its images ! You can also use PyGetForwardMap() and PyGetBackwardMap().     \n\n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_69PyGetNodePreImage = {"PyGetNodePreImage", (PyCFunction)__pyx_pw_12PythonGedLib_69PyGetNodePreImage, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_68PyGetNodePreImage};
+static PyObject *__pyx_pw_12PythonGedLib_69PyGetNodePreImage(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_g = 0;
   PyObject *__pyx_v_h = 0;
   PyObject *__pyx_v_nodeID = 0;
@@ -5479,16 +5421,16 @@ static PyObject *__pyx_pw_12PythonGedLib_71PyGetNodePreImage(PyObject *__pyx_sel
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_h)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyGetNodePreImage", 1, 3, 3, 1); __PYX_ERR(0, 585, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyGetNodePreImage", 1, 3, 3, 1); __PYX_ERR(0, 579, __pyx_L3_error)
         }
         case  2:
         if (likely((values[2] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_nodeID)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyGetNodePreImage", 1, 3, 3, 2); __PYX_ERR(0, 585, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyGetNodePreImage", 1, 3, 3, 2); __PYX_ERR(0, 579, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyGetNodePreImage") < 0)) __PYX_ERR(0, 585, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyGetNodePreImage") < 0)) __PYX_ERR(0, 579, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -5503,20 +5445,20 @@ static PyObject *__pyx_pw_12PythonGedLib_71PyGetNodePreImage(PyObject *__pyx_sel
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("PyGetNodePreImage", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 585, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("PyGetNodePreImage", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 579, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.PyGetNodePreImage", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_70PyGetNodePreImage(__pyx_self, __pyx_v_g, __pyx_v_h, __pyx_v_nodeID);
+  __pyx_r = __pyx_pf_12PythonGedLib_68PyGetNodePreImage(__pyx_self, __pyx_v_g, __pyx_v_h, __pyx_v_nodeID);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_70PyGetNodePreImage(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h, PyObject *__pyx_v_nodeID) {
+static PyObject *__pyx_pf_12PythonGedLib_68PyGetNodePreImage(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h, PyObject *__pyx_v_nodeID) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
@@ -5525,24 +5467,24 @@ static PyObject *__pyx_pf_12PythonGedLib_70PyGetNodePreImage(CYTHON_UNUSED PyObj
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("PyGetNodePreImage", 0);
 
-  /* "PythonGedLib.pyx":602
- *         .. note:: Use ForwardMap's Node to find its images ! You can also use PyGetForwardMap() and PyGetBackwardMap().
+  /* "PythonGedLib.pyx":597
+ * 
  *     """
  *     return getNodePreImage(g, h, nodeID)             # <<<<<<<<<<<<<<
  * 
  * def PyGetDummyNode() :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 602, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 602, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_PyInt_As_size_t(__pyx_v_nodeID); if (unlikely((__pyx_t_3 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 602, __pyx_L1_error)
-  __pyx_t_4 = __Pyx_PyInt_FromSize_t(getNodePreImage(__pyx_t_1, __pyx_t_2, __pyx_t_3)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 602, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 597, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 597, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_As_size_t(__pyx_v_nodeID); if (unlikely((__pyx_t_3 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 597, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_FromSize_t(getNodePreImage(__pyx_t_1, __pyx_t_2, __pyx_t_3)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 597, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_r = __pyx_t_4;
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":585
+  /* "PythonGedLib.pyx":579
  *     return getNodeImage(g, h, nodeID)
  * 
  * def PyGetNodePreImage(g,h,nodeID) :             # <<<<<<<<<<<<<<
@@ -5561,7 +5503,7 @@ static PyObject *__pyx_pf_12PythonGedLib_70PyGetNodePreImage(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":604
+/* "PythonGedLib.pyx":599
  *     return getNodePreImage(g, h, nodeID)
  * 
  * def PyGetDummyNode() :             # <<<<<<<<<<<<<<
@@ -5570,27 +5512,27 @@ static PyObject *__pyx_pf_12PythonGedLib_70PyGetNodePreImage(CYTHON_UNUSED PyObj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_73PyGetDummyNode(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_12PythonGedLib_72PyGetDummyNode[] = "\n        Returns the ID of a dummy node.\n\n        :return: The ID of the dummy node (18446744073709551614 for my computer, the hugest number possible)\n        :rtype: size_t\n        \n        .. note:: A dummy node is used when a node isn't associated to an other node.      \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_73PyGetDummyNode = {"PyGetDummyNode", (PyCFunction)__pyx_pw_12PythonGedLib_73PyGetDummyNode, METH_NOARGS, __pyx_doc_12PythonGedLib_72PyGetDummyNode};
-static PyObject *__pyx_pw_12PythonGedLib_73PyGetDummyNode(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_12PythonGedLib_71PyGetDummyNode(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_12PythonGedLib_70PyGetDummyNode[] = "\n        Returns the ID of a dummy node.\n\n        :return: The ID of the dummy node (18446744073709551614 for my computer, the hugest number possible)\n        :rtype: size_t\n        \n        .. note:: A dummy node is used when a node isn't associated to an other node.      \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_71PyGetDummyNode = {"PyGetDummyNode", (PyCFunction)__pyx_pw_12PythonGedLib_71PyGetDummyNode, METH_NOARGS, __pyx_doc_12PythonGedLib_70PyGetDummyNode};
+static PyObject *__pyx_pw_12PythonGedLib_71PyGetDummyNode(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyGetDummyNode (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_72PyGetDummyNode(__pyx_self);
+  __pyx_r = __pyx_pf_12PythonGedLib_70PyGetDummyNode(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_72PyGetDummyNode(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_12PythonGedLib_70PyGetDummyNode(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyGetDummyNode", 0);
 
-  /* "PythonGedLib.pyx":613
+  /* "PythonGedLib.pyx":608
  *         .. note:: A dummy node is used when a node isn't associated to an other node.
  *     """
  *     return getDummyNode()             # <<<<<<<<<<<<<<
@@ -5598,13 +5540,13 @@ static PyObject *__pyx_pf_12PythonGedLib_72PyGetDummyNode(CYTHON_UNUSED PyObject
  * def PyGetNodeMap(g,h) :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_FromSize_t(getDummyNode()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 613, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_FromSize_t(getDummyNode()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 608, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":604
+  /* "PythonGedLib.pyx":599
  *     return getNodePreImage(g, h, nodeID)
  * 
  * def PyGetDummyNode() :             # <<<<<<<<<<<<<<
@@ -5623,7 +5565,7 @@ static PyObject *__pyx_pf_12PythonGedLib_72PyGetDummyNode(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":615
+/* "PythonGedLib.pyx":610
  *     return getDummyNode()
  * 
  * def PyGetNodeMap(g,h) :             # <<<<<<<<<<<<<<
@@ -5632,10 +5574,10 @@ static PyObject *__pyx_pf_12PythonGedLib_72PyGetDummyNode(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_75PyGetNodeMap(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_74PyGetNodeMap[] = "\n        Returns the Node Map, like C++ NodeMap.   \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :type g: size_t\n        :type h: size_t\n        :return: The Node Map between the two selected graph. \n        :rtype: list[tuple(size_t, size_t)]\n        \n        .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodeImage(), PyGetNodePreImage(), PyGetAssignmentMatrix()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n        .. note:: This function creates datas so use it if necessary, however you can understand how assignement works with this example.     \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_75PyGetNodeMap = {"PyGetNodeMap", (PyCFunction)__pyx_pw_12PythonGedLib_75PyGetNodeMap, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_74PyGetNodeMap};
-static PyObject *__pyx_pw_12PythonGedLib_75PyGetNodeMap(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_73PyGetNodeMap(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_72PyGetNodeMap[] = "\n        Returns the Node Map, like C++ NodeMap.   \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :type g: size_t\n        :type h: size_t\n        :return: The Node Map between the two selected graph. \n        :rtype: list[tuple(size_t, size_t)]\n        \n        .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodeImage(), PyGetNodePreImage(), PyGetAssignmentMatrix()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n        .. note:: This function creates datas so use it if necessary, however you can understand how assignement works with this example.     \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_73PyGetNodeMap = {"PyGetNodeMap", (PyCFunction)__pyx_pw_12PythonGedLib_73PyGetNodeMap, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_72PyGetNodeMap};
+static PyObject *__pyx_pw_12PythonGedLib_73PyGetNodeMap(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_g = 0;
   PyObject *__pyx_v_h = 0;
   PyObject *__pyx_r = 0;
@@ -5661,11 +5603,11 @@ static PyObject *__pyx_pw_12PythonGedLib_75PyGetNodeMap(PyObject *__pyx_self, Py
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_h)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyGetNodeMap", 1, 2, 2, 1); __PYX_ERR(0, 615, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyGetNodeMap", 1, 2, 2, 1); __PYX_ERR(0, 610, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyGetNodeMap") < 0)) __PYX_ERR(0, 615, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyGetNodeMap") < 0)) __PYX_ERR(0, 610, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -5678,20 +5620,20 @@ static PyObject *__pyx_pw_12PythonGedLib_75PyGetNodeMap(PyObject *__pyx_self, Py
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("PyGetNodeMap", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 615, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("PyGetNodeMap", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 610, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.PyGetNodeMap", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_74PyGetNodeMap(__pyx_self, __pyx_v_g, __pyx_v_h);
+  __pyx_r = __pyx_pf_12PythonGedLib_72PyGetNodeMap(__pyx_self, __pyx_v_g, __pyx_v_h);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_74PyGetNodeMap(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h) {
+static PyObject *__pyx_pf_12PythonGedLib_72PyGetNodeMap(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
@@ -5699,7 +5641,7 @@ static PyObject *__pyx_pf_12PythonGedLib_74PyGetNodeMap(CYTHON_UNUSED PyObject *
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("PyGetNodeMap", 0);
 
-  /* "PythonGedLib.pyx":630
+  /* "PythonGedLib.pyx":625
  *         .. note:: This function creates datas so use it if necessary, however you can understand how assignement works with this example.
  *     """
  *     return getNodeMap(g, h)             # <<<<<<<<<<<<<<
@@ -5707,15 +5649,15 @@ static PyObject *__pyx_pf_12PythonGedLib_74PyGetNodeMap(CYTHON_UNUSED PyObject *
  * def PyGetAssignmentMatrix(g,h) :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 630, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 630, __pyx_L1_error)
-  __pyx_t_3 = __pyx_convert_vector_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e___(getNodeMap(__pyx_t_1, __pyx_t_2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 630, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 625, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 625, __pyx_L1_error)
+  __pyx_t_3 = __pyx_convert_vector_to_py_std_3a__3a_pair_3c_size_t_2c_size_t_3e___(getNodeMap(__pyx_t_1, __pyx_t_2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 625, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":615
+  /* "PythonGedLib.pyx":610
  *     return getDummyNode()
  * 
  * def PyGetNodeMap(g,h) :             # <<<<<<<<<<<<<<
@@ -5734,7 +5676,7 @@ static PyObject *__pyx_pf_12PythonGedLib_74PyGetNodeMap(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":632
+/* "PythonGedLib.pyx":627
  *     return getNodeMap(g, h)
  * 
  * def PyGetAssignmentMatrix(g,h) :             # <<<<<<<<<<<<<<
@@ -5743,10 +5685,10 @@ static PyObject *__pyx_pf_12PythonGedLib_74PyGetNodeMap(CYTHON_UNUSED PyObject *
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_77PyGetAssignmentMatrix(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_76PyGetAssignmentMatrix[] = "\n        Returns the Assignment Matrix between two selected graphs g and h.   \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :type g: size_t\n        :type h: size_t\n        :return: The Assignment Matrix between the two selected graph. \n        :rtype: list[list[int]]\n        \n        .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodeImage(), PyGetNodePreImage(), PyGetNodeMap()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n        .. note:: This function creates datas so use it if necessary.     \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_77PyGetAssignmentMatrix = {"PyGetAssignmentMatrix", (PyCFunction)__pyx_pw_12PythonGedLib_77PyGetAssignmentMatrix, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_76PyGetAssignmentMatrix};
-static PyObject *__pyx_pw_12PythonGedLib_77PyGetAssignmentMatrix(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_75PyGetAssignmentMatrix(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_74PyGetAssignmentMatrix[] = "\n        Returns the Assignment Matrix between two selected graphs g and h.   \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :type g: size_t\n        :type h: size_t\n        :return: The Assignment Matrix between the two selected graph. \n        :rtype: list[list[int]]\n        \n        .. seealso:: PyRunMethod(), PyGetForwardMap(), PyGetBackwardMap(), PyGetNodeImage(), PyGetNodePreImage(), PyGetNodeMap()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n        .. note:: This function creates datas so use it if necessary.     \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_75PyGetAssignmentMatrix = {"PyGetAssignmentMatrix", (PyCFunction)__pyx_pw_12PythonGedLib_75PyGetAssignmentMatrix, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_74PyGetAssignmentMatrix};
+static PyObject *__pyx_pw_12PythonGedLib_75PyGetAssignmentMatrix(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_g = 0;
   PyObject *__pyx_v_h = 0;
   PyObject *__pyx_r = 0;
@@ -5772,11 +5714,11 @@ static PyObject *__pyx_pw_12PythonGedLib_77PyGetAssignmentMatrix(PyObject *__pyx
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_h)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyGetAssignmentMatrix", 1, 2, 2, 1); __PYX_ERR(0, 632, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyGetAssignmentMatrix", 1, 2, 2, 1); __PYX_ERR(0, 627, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyGetAssignmentMatrix") < 0)) __PYX_ERR(0, 632, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyGetAssignmentMatrix") < 0)) __PYX_ERR(0, 627, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -5789,20 +5731,20 @@ static PyObject *__pyx_pw_12PythonGedLib_77PyGetAssignmentMatrix(PyObject *__pyx
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("PyGetAssignmentMatrix", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 632, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("PyGetAssignmentMatrix", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 627, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.PyGetAssignmentMatrix", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_76PyGetAssignmentMatrix(__pyx_self, __pyx_v_g, __pyx_v_h);
+  __pyx_r = __pyx_pf_12PythonGedLib_74PyGetAssignmentMatrix(__pyx_self, __pyx_v_g, __pyx_v_h);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_76PyGetAssignmentMatrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h) {
+static PyObject *__pyx_pf_12PythonGedLib_74PyGetAssignmentMatrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
@@ -5810,7 +5752,7 @@ static PyObject *__pyx_pf_12PythonGedLib_76PyGetAssignmentMatrix(CYTHON_UNUSED P
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("PyGetAssignmentMatrix", 0);
 
-  /* "PythonGedLib.pyx":647
+  /* "PythonGedLib.pyx":642
  *         .. note:: This function creates datas so use it if necessary.
  *     """
  *     return getAssignmentMatrix(g, h)             # <<<<<<<<<<<<<<
@@ -5818,15 +5760,15 @@ static PyObject *__pyx_pf_12PythonGedLib_76PyGetAssignmentMatrix(CYTHON_UNUSED P
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 647, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 647, __pyx_L1_error)
-  __pyx_t_3 = __pyx_convert_vector_to_py_std_3a__3a_vector_3c_int_3e___(getAssignmentMatrix(__pyx_t_1, __pyx_t_2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 647, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 642, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 642, __pyx_L1_error)
+  __pyx_t_3 = __pyx_convert_vector_to_py_std_3a__3a_vector_3c_int_3e___(getAssignmentMatrix(__pyx_t_1, __pyx_t_2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 642, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":632
+  /* "PythonGedLib.pyx":627
  *     return getNodeMap(g, h)
  * 
  * def PyGetAssignmentMatrix(g,h) :             # <<<<<<<<<<<<<<
@@ -5845,7 +5787,7 @@ static PyObject *__pyx_pf_12PythonGedLib_76PyGetAssignmentMatrix(CYTHON_UNUSED P
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":650
+/* "PythonGedLib.pyx":645
  * 
  * 
  * def PyGetAllMap(g,h) :             # <<<<<<<<<<<<<<
@@ -5854,10 +5796,10 @@ static PyObject *__pyx_pf_12PythonGedLib_76PyGetAssignmentMatrix(CYTHON_UNUSED P
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_79PyGetAllMap(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_78PyGetAllMap[] = "\n         Returns a vector which contains the forward and the backward maps between nodes of the two indicated graphs. \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :type g: size_t\n        :type h: size_t\n        :return: The forward and backward maps to the adjacence matrix between nodes of the two graphs\n        :rtype: list[list[npy_uint32]]\n        \n        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(),  PyGetForwardMap(), PyGetBackwardMap(), PyGetRuntime(), PyQuasimetricCost()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n        .. note:: This function duplicates data so please don't use it. I also don't know how to connect the two map to reconstruct the adjacence matrix. Please come back when I know how it's work !  \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_79PyGetAllMap = {"PyGetAllMap", (PyCFunction)__pyx_pw_12PythonGedLib_79PyGetAllMap, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_78PyGetAllMap};
-static PyObject *__pyx_pw_12PythonGedLib_79PyGetAllMap(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_77PyGetAllMap(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_76PyGetAllMap[] = "\n         Returns a vector which contains the forward and the backward maps between nodes of the two indicated graphs. \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :type g: size_t\n        :type h: size_t\n        :return: The forward and backward maps to the adjacence matrix between nodes of the two graphs\n        :rtype: list[list[npy_uint32]]\n        \n        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(),  PyGetForwardMap(), PyGetBackwardMap(), PyGetRuntime(), PyQuasimetricCost()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n        .. note:: This function duplicates data so please don't use it. I also don't know how to connect the two map to reconstruct the adjacence matrix. Please come back when I know how it's work !  \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_77PyGetAllMap = {"PyGetAllMap", (PyCFunction)__pyx_pw_12PythonGedLib_77PyGetAllMap, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_76PyGetAllMap};
+static PyObject *__pyx_pw_12PythonGedLib_77PyGetAllMap(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_g = 0;
   PyObject *__pyx_v_h = 0;
   PyObject *__pyx_r = 0;
@@ -5883,11 +5825,11 @@ static PyObject *__pyx_pw_12PythonGedLib_79PyGetAllMap(PyObject *__pyx_self, PyO
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_h)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyGetAllMap", 1, 2, 2, 1); __PYX_ERR(0, 650, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyGetAllMap", 1, 2, 2, 1); __PYX_ERR(0, 645, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyGetAllMap") < 0)) __PYX_ERR(0, 650, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyGetAllMap") < 0)) __PYX_ERR(0, 645, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -5900,20 +5842,20 @@ static PyObject *__pyx_pw_12PythonGedLib_79PyGetAllMap(PyObject *__pyx_self, PyO
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("PyGetAllMap", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 650, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("PyGetAllMap", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 645, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.PyGetAllMap", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_78PyGetAllMap(__pyx_self, __pyx_v_g, __pyx_v_h);
+  __pyx_r = __pyx_pf_12PythonGedLib_76PyGetAllMap(__pyx_self, __pyx_v_g, __pyx_v_h);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_78PyGetAllMap(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h) {
+static PyObject *__pyx_pf_12PythonGedLib_76PyGetAllMap(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
@@ -5921,7 +5863,7 @@ static PyObject *__pyx_pf_12PythonGedLib_78PyGetAllMap(CYTHON_UNUSED PyObject *_
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("PyGetAllMap", 0);
 
-  /* "PythonGedLib.pyx":665
+  /* "PythonGedLib.pyx":660
  *         .. note:: This function duplicates data so please don't use it. I also don't know how to connect the two map to reconstruct the adjacence matrix. Please come back when I know how it's work !
  *     """
  *     return getAllMap(g,h)             # <<<<<<<<<<<<<<
@@ -5929,15 +5871,15 @@ static PyObject *__pyx_pf_12PythonGedLib_78PyGetAllMap(CYTHON_UNUSED PyObject *_
  * def PyGetRuntime(g,h) :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 665, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 665, __pyx_L1_error)
-  __pyx_t_3 = __pyx_convert_vector_to_py_std_3a__3a_vector_3c_npy_uint64_3e___(getAllMap(__pyx_t_1, __pyx_t_2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 665, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 660, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 660, __pyx_L1_error)
+  __pyx_t_3 = __pyx_convert_vector_to_py_std_3a__3a_vector_3c_npy_uint64_3e___(getAllMap(__pyx_t_1, __pyx_t_2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 660, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":650
+  /* "PythonGedLib.pyx":645
  * 
  * 
  * def PyGetAllMap(g,h) :             # <<<<<<<<<<<<<<
@@ -5956,7 +5898,7 @@ static PyObject *__pyx_pf_12PythonGedLib_78PyGetAllMap(CYTHON_UNUSED PyObject *_
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":667
+/* "PythonGedLib.pyx":662
  *     return getAllMap(g,h)
  * 
  * def PyGetRuntime(g,h) :             # <<<<<<<<<<<<<<
@@ -5965,10 +5907,10 @@ static PyObject *__pyx_pf_12PythonGedLib_78PyGetAllMap(CYTHON_UNUSED PyObject *_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_81PyGetRuntime(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_80PyGetRuntime[] = "\n        Returns the runtime to compute the edit distance cost between two graphs g and h  \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :type g: size_t\n        :type h: size_t\n        :return: The runtime of the computation of edit distance cost between the two selected graphs\n        :rtype: double\n        \n        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(),  PyGetForwardMap(), PyGetBackwardMap(), PyQuasimetricCost()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n        .. note:: Python is a bit longer than C++ due to the functions's encapsulate.    \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_81PyGetRuntime = {"PyGetRuntime", (PyCFunction)__pyx_pw_12PythonGedLib_81PyGetRuntime, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_80PyGetRuntime};
-static PyObject *__pyx_pw_12PythonGedLib_81PyGetRuntime(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_79PyGetRuntime(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_78PyGetRuntime[] = "\n        Returns the runtime to compute the edit distance cost between two graphs g and h  \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :type g: size_t\n        :type h: size_t\n        :return: The runtime of the computation of edit distance cost between the two selected graphs\n        :rtype: double\n        \n        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(),  PyGetForwardMap(), PyGetBackwardMap(), PyQuasimetricCost()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n        .. note:: Python is a bit longer than C++ due to the functions's encapsulate.    \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_79PyGetRuntime = {"PyGetRuntime", (PyCFunction)__pyx_pw_12PythonGedLib_79PyGetRuntime, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_78PyGetRuntime};
+static PyObject *__pyx_pw_12PythonGedLib_79PyGetRuntime(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_g = 0;
   PyObject *__pyx_v_h = 0;
   PyObject *__pyx_r = 0;
@@ -5994,11 +5936,11 @@ static PyObject *__pyx_pw_12PythonGedLib_81PyGetRuntime(PyObject *__pyx_self, Py
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_h)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("PyGetRuntime", 1, 2, 2, 1); __PYX_ERR(0, 667, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("PyGetRuntime", 1, 2, 2, 1); __PYX_ERR(0, 662, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyGetRuntime") < 0)) __PYX_ERR(0, 667, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "PyGetRuntime") < 0)) __PYX_ERR(0, 662, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -6011,20 +5953,20 @@ static PyObject *__pyx_pw_12PythonGedLib_81PyGetRuntime(PyObject *__pyx_self, Py
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("PyGetRuntime", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 667, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("PyGetRuntime", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 662, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.PyGetRuntime", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_80PyGetRuntime(__pyx_self, __pyx_v_g, __pyx_v_h);
+  __pyx_r = __pyx_pf_12PythonGedLib_78PyGetRuntime(__pyx_self, __pyx_v_g, __pyx_v_h);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_80PyGetRuntime(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h) {
+static PyObject *__pyx_pf_12PythonGedLib_78PyGetRuntime(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_h) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   size_t __pyx_t_1;
@@ -6032,7 +5974,7 @@ static PyObject *__pyx_pf_12PythonGedLib_80PyGetRuntime(CYTHON_UNUSED PyObject *
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("PyGetRuntime", 0);
 
-  /* "PythonGedLib.pyx":682
+  /* "PythonGedLib.pyx":677
  *         .. note:: Python is a bit longer than C++ due to the functions's encapsulate.
  *     """
  *     return getRuntime(g,h)             # <<<<<<<<<<<<<<
@@ -6040,15 +5982,15 @@ static PyObject *__pyx_pf_12PythonGedLib_80PyGetRuntime(CYTHON_UNUSED PyObject *
  * def PyQuasimetricCost() :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 682, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 682, __pyx_L1_error)
-  __pyx_t_3 = PyFloat_FromDouble(getRuntime(__pyx_t_1, __pyx_t_2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 682, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_g); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 677, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_As_size_t(__pyx_v_h); if (unlikely((__pyx_t_2 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 677, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(getRuntime(__pyx_t_1, __pyx_t_2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 677, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":667
+  /* "PythonGedLib.pyx":662
  *     return getAllMap(g,h)
  * 
  * def PyGetRuntime(g,h) :             # <<<<<<<<<<<<<<
@@ -6067,7 +6009,7 @@ static PyObject *__pyx_pf_12PythonGedLib_80PyGetRuntime(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":684
+/* "PythonGedLib.pyx":679
  *     return getRuntime(g,h)
  * 
  * def PyQuasimetricCost() :             # <<<<<<<<<<<<<<
@@ -6076,27 +6018,27 @@ static PyObject *__pyx_pf_12PythonGedLib_80PyGetRuntime(CYTHON_UNUSED PyObject *
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_83PyQuasimetricCost(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_12PythonGedLib_82PyQuasimetricCost[] = "\n        Checks and returns if the edit costs are quasimetric. \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :type g: size_t\n        :type h: size_t\n        :return: True if it's verified, False otherwise\n        :rtype: bool\n        \n        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(),  PyGetForwardMap(), PyGetBackwardMap(), PyGetRuntime()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_83PyQuasimetricCost = {"PyQuasimetricCost", (PyCFunction)__pyx_pw_12PythonGedLib_83PyQuasimetricCost, METH_NOARGS, __pyx_doc_12PythonGedLib_82PyQuasimetricCost};
-static PyObject *__pyx_pw_12PythonGedLib_83PyQuasimetricCost(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_12PythonGedLib_81PyQuasimetricCost(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_12PythonGedLib_80PyQuasimetricCost[] = "\n        Checks and returns if the edit costs are quasimetric. \n\n        :param g: The Id of the first compared graph \n        :param h: The Id of the second compared graph\n        :type g: size_t\n        :type h: size_t\n        :return: True if it's verified, False otherwise\n        :rtype: bool\n        \n        .. seealso:: PyRunMethod(), PyGetUpperBound(), PyGetLowerBound(),  PyGetForwardMap(), PyGetBackwardMap(), PyGetRuntime()\n        .. warning:: PyRunMethod() between the same two graph must be called before this function. \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_81PyQuasimetricCost = {"PyQuasimetricCost", (PyCFunction)__pyx_pw_12PythonGedLib_81PyQuasimetricCost, METH_NOARGS, __pyx_doc_12PythonGedLib_80PyQuasimetricCost};
+static PyObject *__pyx_pw_12PythonGedLib_81PyQuasimetricCost(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyQuasimetricCost (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_82PyQuasimetricCost(__pyx_self);
+  __pyx_r = __pyx_pf_12PythonGedLib_80PyQuasimetricCost(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_82PyQuasimetricCost(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_12PythonGedLib_80PyQuasimetricCost(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyQuasimetricCost", 0);
 
-  /* "PythonGedLib.pyx":698
+  /* "PythonGedLib.pyx":693
  *         .. warning:: PyRunMethod() between the same two graph must be called before this function.
  *     """
  *     return quasimetricCosts()             # <<<<<<<<<<<<<<
@@ -6104,13 +6046,13 @@ static PyObject *__pyx_pf_12PythonGedLib_82PyQuasimetricCost(CYTHON_UNUSED PyObj
  * def PyHungarianLSAP(matrixCost) :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(quasimetricCosts()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 698, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(quasimetricCosts()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 693, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":684
+  /* "PythonGedLib.pyx":679
  *     return getRuntime(g,h)
  * 
  * def PyQuasimetricCost() :             # <<<<<<<<<<<<<<
@@ -6129,7 +6071,7 @@ static PyObject *__pyx_pf_12PythonGedLib_82PyQuasimetricCost(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":700
+/* "PythonGedLib.pyx":695
  *     return quasimetricCosts()
  * 
  * def PyHungarianLSAP(matrixCost) :             # <<<<<<<<<<<<<<
@@ -6138,28 +6080,28 @@ static PyObject *__pyx_pf_12PythonGedLib_82PyQuasimetricCost(CYTHON_UNUSED PyObj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_85PyHungarianLSAP(PyObject *__pyx_self, PyObject *__pyx_v_matrixCost); /*proto*/
-static char __pyx_doc_12PythonGedLib_84PyHungarianLSAP[] = "\n        Applies the hungarian algorithm (LSAP) on a matrix Cost. \n\n        :param matrixCost: The matrix Cost  \n        :type matrixCost: vector[vector[size_t]]\n        :return: The values of rho, varrho, u and v, in this order\n        :rtype: vector[vector[size_t]]\n        \n        .. seealso::PyHungarianLSAPE(matrixCost) \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_85PyHungarianLSAP = {"PyHungarianLSAP", (PyCFunction)__pyx_pw_12PythonGedLib_85PyHungarianLSAP, METH_O, __pyx_doc_12PythonGedLib_84PyHungarianLSAP};
-static PyObject *__pyx_pw_12PythonGedLib_85PyHungarianLSAP(PyObject *__pyx_self, PyObject *__pyx_v_matrixCost) {
+static PyObject *__pyx_pw_12PythonGedLib_83PyHungarianLSAP(PyObject *__pyx_self, PyObject *__pyx_v_matrixCost); /*proto*/
+static char __pyx_doc_12PythonGedLib_82PyHungarianLSAP[] = "\n        Applies the hungarian algorithm (LSAP) on a matrix Cost. \n\n        :param matrixCost: The matrix Cost  \n        :type matrixCost: vector[vector[size_t]]\n        :return: The values of rho, varrho, u and v, in this order\n        :rtype: vector[vector[size_t]]\n        \n        .. seealso::PyHungarianLSAPE(matrixCost) \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_83PyHungarianLSAP = {"PyHungarianLSAP", (PyCFunction)__pyx_pw_12PythonGedLib_83PyHungarianLSAP, METH_O, __pyx_doc_12PythonGedLib_82PyHungarianLSAP};
+static PyObject *__pyx_pw_12PythonGedLib_83PyHungarianLSAP(PyObject *__pyx_self, PyObject *__pyx_v_matrixCost) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyHungarianLSAP (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_84PyHungarianLSAP(__pyx_self, ((PyObject *)__pyx_v_matrixCost));
+  __pyx_r = __pyx_pf_12PythonGedLib_82PyHungarianLSAP(__pyx_self, ((PyObject *)__pyx_v_matrixCost));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_84PyHungarianLSAP(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_matrixCost) {
+static PyObject *__pyx_pf_12PythonGedLib_82PyHungarianLSAP(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_matrixCost) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   std::vector<std::vector<size_t> >  __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("PyHungarianLSAP", 0);
 
-  /* "PythonGedLib.pyx":711
+  /* "PythonGedLib.pyx":706
  *         .. seealso::PyHungarianLSAPE(matrixCost)
  *     """
  *     return hungarianLSAP(matrixCost)             # <<<<<<<<<<<<<<
@@ -6167,14 +6109,14 @@ static PyObject *__pyx_pf_12PythonGedLib_84PyHungarianLSAP(CYTHON_UNUSED PyObjec
  * def PyHungarianLSAPE(matrixCost) :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_convert_vector_from_py_std_3a__3a_vector_3c_size_t_3e___(__pyx_v_matrixCost); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 711, __pyx_L1_error)
-  __pyx_t_2 = __pyx_convert_vector_to_py_std_3a__3a_vector_3c_size_t_3e___(hungarianLSAP(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 711, __pyx_L1_error)
+  __pyx_t_1 = __pyx_convert_vector_from_py_std_3a__3a_vector_3c_size_t_3e___(__pyx_v_matrixCost); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 706, __pyx_L1_error)
+  __pyx_t_2 = __pyx_convert_vector_to_py_std_3a__3a_vector_3c_size_t_3e___(hungarianLSAP(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 706, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":700
+  /* "PythonGedLib.pyx":695
  *     return quasimetricCosts()
  * 
  * def PyHungarianLSAP(matrixCost) :             # <<<<<<<<<<<<<<
@@ -6193,7 +6135,7 @@ static PyObject *__pyx_pf_12PythonGedLib_84PyHungarianLSAP(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":713
+/* "PythonGedLib.pyx":708
  *     return hungarianLSAP(matrixCost)
  * 
  * def PyHungarianLSAPE(matrixCost) :             # <<<<<<<<<<<<<<
@@ -6202,28 +6144,28 @@ static PyObject *__pyx_pf_12PythonGedLib_84PyHungarianLSAP(CYTHON_UNUSED PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_87PyHungarianLSAPE(PyObject *__pyx_self, PyObject *__pyx_v_matrixCost); /*proto*/
-static char __pyx_doc_12PythonGedLib_86PyHungarianLSAPE[] = "\n        Applies the hungarian algorithm (LSAPE) on a matrix Cost. \n\n        :param matrixCost: The matrix Cost \n        :type matrixCost: vector[vector[double]]\n        :return: The values of rho, varrho, u and v, in this order\n        :rtype: vector[vector[double]]\n        \n        .. seealso::PyHungarianLSAP(matrixCost) \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_87PyHungarianLSAPE = {"PyHungarianLSAPE", (PyCFunction)__pyx_pw_12PythonGedLib_87PyHungarianLSAPE, METH_O, __pyx_doc_12PythonGedLib_86PyHungarianLSAPE};
-static PyObject *__pyx_pw_12PythonGedLib_87PyHungarianLSAPE(PyObject *__pyx_self, PyObject *__pyx_v_matrixCost) {
+static PyObject *__pyx_pw_12PythonGedLib_85PyHungarianLSAPE(PyObject *__pyx_self, PyObject *__pyx_v_matrixCost); /*proto*/
+static char __pyx_doc_12PythonGedLib_84PyHungarianLSAPE[] = "\n        Applies the hungarian algorithm (LSAPE) on a matrix Cost. \n\n        :param matrixCost: The matrix Cost \n        :type matrixCost: vector[vector[double]]\n        :return: The values of rho, varrho, u and v, in this order\n        :rtype: vector[vector[double]]\n        \n        .. seealso::PyHungarianLSAP(matrixCost) \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_85PyHungarianLSAPE = {"PyHungarianLSAPE", (PyCFunction)__pyx_pw_12PythonGedLib_85PyHungarianLSAPE, METH_O, __pyx_doc_12PythonGedLib_84PyHungarianLSAPE};
+static PyObject *__pyx_pw_12PythonGedLib_85PyHungarianLSAPE(PyObject *__pyx_self, PyObject *__pyx_v_matrixCost) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("PyHungarianLSAPE (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_86PyHungarianLSAPE(__pyx_self, ((PyObject *)__pyx_v_matrixCost));
+  __pyx_r = __pyx_pf_12PythonGedLib_84PyHungarianLSAPE(__pyx_self, ((PyObject *)__pyx_v_matrixCost));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_86PyHungarianLSAPE(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_matrixCost) {
+static PyObject *__pyx_pf_12PythonGedLib_84PyHungarianLSAPE(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_matrixCost) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   std::vector<std::vector<double> >  __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("PyHungarianLSAPE", 0);
 
-  /* "PythonGedLib.pyx":724
+  /* "PythonGedLib.pyx":719
  *         .. seealso::PyHungarianLSAP(matrixCost)
  *     """
  *     return hungarianLSAPE(matrixCost)             # <<<<<<<<<<<<<<
@@ -6231,14 +6173,14 @@ static PyObject *__pyx_pf_12PythonGedLib_86PyHungarianLSAPE(CYTHON_UNUSED PyObje
  * #####################################################################
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_convert_vector_from_py_std_3a__3a_vector_3c_double_3e___(__pyx_v_matrixCost); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 724, __pyx_L1_error)
-  __pyx_t_2 = __pyx_convert_vector_to_py_std_3a__3a_vector_3c_double_3e___(hungarianLSAPE(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 724, __pyx_L1_error)
+  __pyx_t_1 = __pyx_convert_vector_from_py_std_3a__3a_vector_3c_double_3e___(__pyx_v_matrixCost); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 719, __pyx_L1_error)
+  __pyx_t_2 = __pyx_convert_vector_to_py_std_3a__3a_vector_3c_double_3e___(hungarianLSAPE(__pyx_t_1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 719, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":713
+  /* "PythonGedLib.pyx":708
  *     return hungarianLSAP(matrixCost)
  * 
  * def PyHungarianLSAPE(matrixCost) :             # <<<<<<<<<<<<<<
@@ -6257,7 +6199,7 @@ static PyObject *__pyx_pf_12PythonGedLib_86PyHungarianLSAPE(CYTHON_UNUSED PyObje
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":752
+/* "PythonGedLib.pyx":747
  *         :type message: string
  *     """
  *     def __init__(self, message):             # <<<<<<<<<<<<<<
@@ -6295,11 +6237,11 @@ static PyObject *__pyx_pw_12PythonGedLib_13EditCostError_1__init__(PyObject *__p
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_message)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, 1); __PYX_ERR(0, 752, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, 1); __PYX_ERR(0, 747, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 752, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 747, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -6312,7 +6254,7 @@ static PyObject *__pyx_pw_12PythonGedLib_13EditCostError_1__init__(PyObject *__p
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 752, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 747, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.EditCostError.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -6330,16 +6272,16 @@ static PyObject *__pyx_pf_12PythonGedLib_13EditCostError___init__(CYTHON_UNUSED 
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "PythonGedLib.pyx":759
+  /* "PythonGedLib.pyx":754
  *             :type message: string
  *         """
  *         self.message = message             # <<<<<<<<<<<<<<
  * 
  * class MethodError(Error) :
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_message, __pyx_v_message) < 0) __PYX_ERR(0, 759, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_message, __pyx_v_message) < 0) __PYX_ERR(0, 754, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":752
+  /* "PythonGedLib.pyx":747
  *         :type message: string
  *     """
  *     def __init__(self, message):             # <<<<<<<<<<<<<<
@@ -6359,7 +6301,7 @@ static PyObject *__pyx_pf_12PythonGedLib_13EditCostError___init__(CYTHON_UNUSED 
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":768
+/* "PythonGedLib.pyx":763
  *         :type message: string
  *     """
  *     def __init__(self, message):             # <<<<<<<<<<<<<<
@@ -6397,11 +6339,11 @@ static PyObject *__pyx_pw_12PythonGedLib_11MethodError_1__init__(PyObject *__pyx
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_message)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, 1); __PYX_ERR(0, 768, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, 1); __PYX_ERR(0, 763, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 768, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 763, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -6414,7 +6356,7 @@ static PyObject *__pyx_pw_12PythonGedLib_11MethodError_1__init__(PyObject *__pyx
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 768, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 763, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.MethodError.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -6432,16 +6374,16 @@ static PyObject *__pyx_pf_12PythonGedLib_11MethodError___init__(CYTHON_UNUSED Py
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "PythonGedLib.pyx":775
+  /* "PythonGedLib.pyx":770
  *             :type message: string
  *         """
  *         self.message = message             # <<<<<<<<<<<<<<
  * 
  * class InitError(Error) :
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_message, __pyx_v_message) < 0) __PYX_ERR(0, 775, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_message, __pyx_v_message) < 0) __PYX_ERR(0, 770, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":768
+  /* "PythonGedLib.pyx":763
  *         :type message: string
  *     """
  *     def __init__(self, message):             # <<<<<<<<<<<<<<
@@ -6461,7 +6403,7 @@ static PyObject *__pyx_pf_12PythonGedLib_11MethodError___init__(CYTHON_UNUSED Py
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":784
+/* "PythonGedLib.pyx":779
  *         :type message: string
  *     """
  *     def __init__(self, message):             # <<<<<<<<<<<<<<
@@ -6499,11 +6441,11 @@ static PyObject *__pyx_pw_12PythonGedLib_9InitError_1__init__(PyObject *__pyx_se
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_message)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, 1); __PYX_ERR(0, 784, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, 1); __PYX_ERR(0, 779, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 784, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 779, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -6516,7 +6458,7 @@ static PyObject *__pyx_pw_12PythonGedLib_9InitError_1__init__(PyObject *__pyx_se
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 784, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 779, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.InitError.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -6534,16 +6476,16 @@ static PyObject *__pyx_pf_12PythonGedLib_9InitError___init__(CYTHON_UNUSED PyObj
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "PythonGedLib.pyx":791
+  /* "PythonGedLib.pyx":786
  *             :type message: string
  *         """
  *         self.message = message             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_message, __pyx_v_message) < 0) __PYX_ERR(0, 791, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_message, __pyx_v_message) < 0) __PYX_ERR(0, 786, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":784
+  /* "PythonGedLib.pyx":779
  *         :type message: string
  *     """
  *     def __init__(self, message):             # <<<<<<<<<<<<<<
@@ -6563,7 +6505,7 @@ static PyObject *__pyx_pf_12PythonGedLib_9InitError___init__(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":798
+/* "PythonGedLib.pyx":793
  * #########################################
  * 
  * def encodeYourMap(map) :             # <<<<<<<<<<<<<<
@@ -6572,21 +6514,21 @@ static PyObject *__pyx_pf_12PythonGedLib_9InitError___init__(CYTHON_UNUSED PyObj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_89encodeYourMap(PyObject *__pyx_self, PyObject *__pyx_v_map); /*proto*/
-static char __pyx_doc_12PythonGedLib_88encodeYourMap[] = "\n        Encodes a string dictionnary to utf-8 for C++ functions\n\n        :param map: The map to encode\n        :type map: dict{string : string}\n        :return: The encoded map\n        :rtype: dict{'b'string : 'b'string}\n\n        .. note:: This function is used for type connection.  \n        \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_89encodeYourMap = {"encodeYourMap", (PyCFunction)__pyx_pw_12PythonGedLib_89encodeYourMap, METH_O, __pyx_doc_12PythonGedLib_88encodeYourMap};
-static PyObject *__pyx_pw_12PythonGedLib_89encodeYourMap(PyObject *__pyx_self, PyObject *__pyx_v_map) {
+static PyObject *__pyx_pw_12PythonGedLib_87encodeYourMap(PyObject *__pyx_self, PyObject *__pyx_v_map); /*proto*/
+static char __pyx_doc_12PythonGedLib_86encodeYourMap[] = "\n        Encodes a string dictionnary to utf-8 for C++ functions\n\n        :param map: The map to encode\n        :type map: dict{string : string}\n        :return: The encoded map\n        :rtype: dict{'b'string : 'b'string}\n\n        .. note:: This function is used for type connection.  \n        \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_87encodeYourMap = {"encodeYourMap", (PyCFunction)__pyx_pw_12PythonGedLib_87encodeYourMap, METH_O, __pyx_doc_12PythonGedLib_86encodeYourMap};
+static PyObject *__pyx_pw_12PythonGedLib_87encodeYourMap(PyObject *__pyx_self, PyObject *__pyx_v_map) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("encodeYourMap (wrapper)", 0);
-  __pyx_r = __pyx_pf_12PythonGedLib_88encodeYourMap(__pyx_self, ((PyObject *)__pyx_v_map));
+  __pyx_r = __pyx_pf_12PythonGedLib_86encodeYourMap(__pyx_self, ((PyObject *)__pyx_v_map));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_88encodeYourMap(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_map) {
+static PyObject *__pyx_pf_12PythonGedLib_86encodeYourMap(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_map) {
   PyObject *__pyx_v_res = NULL;
   PyObject *__pyx_v_key = NULL;
   PyObject *__pyx_v_value = NULL;
@@ -6602,26 +6544,26 @@ static PyObject *__pyx_pf_12PythonGedLib_88encodeYourMap(CYTHON_UNUSED PyObject 
   PyObject *(*__pyx_t_8)(PyObject *);
   __Pyx_RefNannySetupContext("encodeYourMap", 0);
 
-  /* "PythonGedLib.pyx":810
+  /* "PythonGedLib.pyx":805
  * 
  *     """
  *     res = {}             # <<<<<<<<<<<<<<
  *     for key, value in map.items():
  *         res[key.encode('utf-8')] = value.encode('utf-8')
  */
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 810, __pyx_L1_error)
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 805, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_res = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":811
+  /* "PythonGedLib.pyx":806
  *     """
  *     res = {}
  *     for key, value in map.items():             # <<<<<<<<<<<<<<
  *         res[key.encode('utf-8')] = value.encode('utf-8')
  *     return res
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_map, __pyx_n_s_items); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 811, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_map, __pyx_n_s_items); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 806, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
@@ -6634,10 +6576,10 @@ static PyObject *__pyx_pf_12PythonGedLib_88encodeYourMap(CYTHON_UNUSED PyObject 
     }
   }
   if (__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 811, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 806, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else {
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 811, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 806, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -6645,9 +6587,9 @@ static PyObject *__pyx_pf_12PythonGedLib_88encodeYourMap(CYTHON_UNUSED PyObject 
     __pyx_t_2 = __pyx_t_1; __Pyx_INCREF(__pyx_t_2); __pyx_t_4 = 0;
     __pyx_t_5 = NULL;
   } else {
-    __pyx_t_4 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 811, __pyx_L1_error)
+    __pyx_t_4 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 806, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_5 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 811, __pyx_L1_error)
+    __pyx_t_5 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 806, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   for (;;) {
@@ -6655,17 +6597,17 @@ static PyObject *__pyx_pf_12PythonGedLib_88encodeYourMap(CYTHON_UNUSED PyObject 
       if (likely(PyList_CheckExact(__pyx_t_2))) {
         if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 811, __pyx_L1_error)
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 806, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 811, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 806, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       } else {
         if (__pyx_t_4 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 811, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 806, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 811, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 806, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       }
@@ -6675,7 +6617,7 @@ static PyObject *__pyx_pf_12PythonGedLib_88encodeYourMap(CYTHON_UNUSED PyObject 
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 811, __pyx_L1_error)
+          else __PYX_ERR(0, 806, __pyx_L1_error)
         }
         break;
       }
@@ -6691,7 +6633,7 @@ static PyObject *__pyx_pf_12PythonGedLib_88encodeYourMap(CYTHON_UNUSED PyObject 
       if (unlikely(size != 2)) {
         if (size > 2) __Pyx_RaiseTooManyValuesError(2);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 811, __pyx_L1_error)
+        __PYX_ERR(0, 806, __pyx_L1_error)
       }
       #if CYTHON_COMPILING_IN_CPYTHON
       if (likely(PyTuple_CheckExact(sequence))) {
@@ -6704,15 +6646,15 @@ static PyObject *__pyx_pf_12PythonGedLib_88encodeYourMap(CYTHON_UNUSED PyObject 
       __Pyx_INCREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_6);
       #else
-      __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 811, __pyx_L1_error)
+      __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 806, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_6 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 811, __pyx_L1_error)
+      __pyx_t_6 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 806, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       #endif
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     } else {
       Py_ssize_t index = -1;
-      __pyx_t_7 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 811, __pyx_L1_error)
+      __pyx_t_7 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 806, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_t_8 = Py_TYPE(__pyx_t_7)->tp_iternext;
@@ -6720,7 +6662,7 @@ static PyObject *__pyx_pf_12PythonGedLib_88encodeYourMap(CYTHON_UNUSED PyObject 
       __Pyx_GOTREF(__pyx_t_3);
       index = 1; __pyx_t_6 = __pyx_t_8(__pyx_t_7); if (unlikely(!__pyx_t_6)) goto __pyx_L5_unpacking_failed;
       __Pyx_GOTREF(__pyx_t_6);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_8(__pyx_t_7), 2) < 0) __PYX_ERR(0, 811, __pyx_L1_error)
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_8(__pyx_t_7), 2) < 0) __PYX_ERR(0, 806, __pyx_L1_error)
       __pyx_t_8 = NULL;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       goto __pyx_L6_unpacking_done;
@@ -6728,7 +6670,7 @@ static PyObject *__pyx_pf_12PythonGedLib_88encodeYourMap(CYTHON_UNUSED PyObject 
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __pyx_t_8 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      __PYX_ERR(0, 811, __pyx_L1_error)
+      __PYX_ERR(0, 806, __pyx_L1_error)
       __pyx_L6_unpacking_done:;
     }
     __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_3);
@@ -6736,28 +6678,28 @@ static PyObject *__pyx_pf_12PythonGedLib_88encodeYourMap(CYTHON_UNUSED PyObject 
     __Pyx_XDECREF_SET(__pyx_v_value, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "PythonGedLib.pyx":812
+    /* "PythonGedLib.pyx":807
  *     res = {}
  *     for key, value in map.items():
  *         res[key.encode('utf-8')] = value.encode('utf-8')             # <<<<<<<<<<<<<<
  *     return res
  * 
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_value, __pyx_n_s_encode); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 812, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_value, __pyx_n_s_encode); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 807, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__20, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 812, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__20, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 807, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_key, __pyx_n_s_encode); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 812, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_key, __pyx_n_s_encode); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 807, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__21, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 812, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__21, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 807, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(PyDict_SetItem(__pyx_v_res, __pyx_t_3, __pyx_t_6) < 0)) __PYX_ERR(0, 812, __pyx_L1_error)
+    if (unlikely(PyDict_SetItem(__pyx_v_res, __pyx_t_3, __pyx_t_6) < 0)) __PYX_ERR(0, 807, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "PythonGedLib.pyx":811
+    /* "PythonGedLib.pyx":806
  *     """
  *     res = {}
  *     for key, value in map.items():             # <<<<<<<<<<<<<<
@@ -6767,7 +6709,7 @@ static PyObject *__pyx_pf_12PythonGedLib_88encodeYourMap(CYTHON_UNUSED PyObject 
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":813
+  /* "PythonGedLib.pyx":808
  *     for key, value in map.items():
  *         res[key.encode('utf-8')] = value.encode('utf-8')
  *     return res             # <<<<<<<<<<<<<<
@@ -6779,7 +6721,7 @@ static PyObject *__pyx_pf_12PythonGedLib_88encodeYourMap(CYTHON_UNUSED PyObject 
   __pyx_r = __pyx_v_res;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":798
+  /* "PythonGedLib.pyx":793
  * #########################################
  * 
  * def encodeYourMap(map) :             # <<<<<<<<<<<<<<
@@ -6805,7 +6747,7 @@ static PyObject *__pyx_pf_12PythonGedLib_88encodeYourMap(CYTHON_UNUSED PyObject 
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":815
+/* "PythonGedLib.pyx":810
  *     return res
  * 
  * def addRandomGraph(name, classe, listOfNodes, listOfEdges, ignoreDuplicates=True) :             # <<<<<<<<<<<<<<
@@ -6814,10 +6756,10 @@ static PyObject *__pyx_pf_12PythonGedLib_88encodeYourMap(CYTHON_UNUSED PyObject 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_91addRandomGraph(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_90addRandomGraph[] = "\n        Add a Graph (not GXL) on the environment. Be careful to respect the same format as GXL graphs for labelling nodes and edges. \n\n        :param name: The name of the graph to add, can be an empty string\n        :param classe: The classe of the graph to add, can be an empty string\n        :param listOfNodes: The list of nodes to add\n        :param listOfEdges: The list of edges to add\n        :param ignoreDuplicates: If True, duplicate edges are ignored, otherwise it's raise an error if an existing edge is added. True by default\n        :type name: string\n        :type classe: string\n        :type listOfNodes: list[tuple(size_t, dict{string : string})]\n        :type listOfEdges: list[tuple(tuple(size_t,size_t), dict{string : string})]\n        :type ignoreDuplicates: bool\n        :return: The ID of the newly added graphe\n        :rtype: size_t\n\n        .. note:: The graph must respect the GXL structure. Please see how a GXL graph is construct.  \n        \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_91addRandomGraph = {"addRandomGraph", (PyCFunction)__pyx_pw_12PythonGedLib_91addRandomGraph, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_90addRandomGraph};
-static PyObject *__pyx_pw_12PythonGedLib_91addRandomGraph(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_89addRandomGraph(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_88addRandomGraph[] = "\n        Add a Graph (not GXL) on the environment. Be careful to respect the same format as GXL graphs for labelling nodes and edges. \n\n        :param name: The name of the graph to add, can be an empty string\n        :param classe: The classe of the graph to add, can be an empty string\n        :param listOfNodes: The list of nodes to add\n        :param listOfEdges: The list of edges to add\n        :param ignoreDuplicates: If True, duplicate edges are ignored, otherwise it's raise an error if an existing edge is added. True by default\n        :type name: string\n        :type classe: string\n        :type listOfNodes: list[tuple(size_t, dict{string : string})]\n        :type listOfEdges: list[tuple(tuple(size_t,size_t), dict{string : string})]\n        :type ignoreDuplicates: bool\n        :return: The ID of the newly added graphe\n        :rtype: size_t\n\n        .. note:: The graph must respect the GXL structure. Please see how a GXL graph is construct.  \n        \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_89addRandomGraph = {"addRandomGraph", (PyCFunction)__pyx_pw_12PythonGedLib_89addRandomGraph, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_88addRandomGraph};
+static PyObject *__pyx_pw_12PythonGedLib_89addRandomGraph(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_name = 0;
   PyObject *__pyx_v_classe = 0;
   PyObject *__pyx_v_listOfNodes = 0;
@@ -6850,17 +6792,17 @@ static PyObject *__pyx_pw_12PythonGedLib_91addRandomGraph(PyObject *__pyx_self, 
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_classe)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("addRandomGraph", 0, 4, 5, 1); __PYX_ERR(0, 815, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("addRandomGraph", 0, 4, 5, 1); __PYX_ERR(0, 810, __pyx_L3_error)
         }
         case  2:
         if (likely((values[2] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_listOfNodes)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("addRandomGraph", 0, 4, 5, 2); __PYX_ERR(0, 815, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("addRandomGraph", 0, 4, 5, 2); __PYX_ERR(0, 810, __pyx_L3_error)
         }
         case  3:
         if (likely((values[3] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_listOfEdges)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("addRandomGraph", 0, 4, 5, 3); __PYX_ERR(0, 815, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("addRandomGraph", 0, 4, 5, 3); __PYX_ERR(0, 810, __pyx_L3_error)
         }
         case  4:
         if (kw_args > 0) {
@@ -6869,7 +6811,7 @@ static PyObject *__pyx_pw_12PythonGedLib_91addRandomGraph(PyObject *__pyx_self, 
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "addRandomGraph") < 0)) __PYX_ERR(0, 815, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "addRandomGraph") < 0)) __PYX_ERR(0, 810, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -6890,20 +6832,20 @@ static PyObject *__pyx_pw_12PythonGedLib_91addRandomGraph(PyObject *__pyx_self, 
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("addRandomGraph", 0, 4, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 815, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("addRandomGraph", 0, 4, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 810, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.addRandomGraph", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_90addRandomGraph(__pyx_self, __pyx_v_name, __pyx_v_classe, __pyx_v_listOfNodes, __pyx_v_listOfEdges, __pyx_v_ignoreDuplicates);
+  __pyx_r = __pyx_pf_12PythonGedLib_88addRandomGraph(__pyx_self, __pyx_v_name, __pyx_v_classe, __pyx_v_listOfNodes, __pyx_v_listOfEdges, __pyx_v_ignoreDuplicates);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_90addRandomGraph(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_name, PyObject *__pyx_v_classe, PyObject *__pyx_v_listOfNodes, PyObject *__pyx_v_listOfEdges, PyObject *__pyx_v_ignoreDuplicates) {
+static PyObject *__pyx_pf_12PythonGedLib_88addRandomGraph(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_name, PyObject *__pyx_v_classe, PyObject *__pyx_v_listOfNodes, PyObject *__pyx_v_listOfEdges, PyObject *__pyx_v_ignoreDuplicates) {
   PyObject *__pyx_v_id = NULL;
   PyObject *__pyx_v_node = NULL;
   PyObject *__pyx_v_edge = NULL;
@@ -6922,14 +6864,14 @@ static PyObject *__pyx_pf_12PythonGedLib_90addRandomGraph(CYTHON_UNUSED PyObject
   PyObject *__pyx_t_11 = NULL;
   __Pyx_RefNannySetupContext("addRandomGraph", 0);
 
-  /* "PythonGedLib.pyx":835
+  /* "PythonGedLib.pyx":830
  * 
  *     """
  *     id = PyAddGraph(name, classe)             # <<<<<<<<<<<<<<
  *     for node in listOfNodes :
  *         PyAddNode(id, node[0], node[1])
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyAddGraph); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 835, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyAddGraph); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 830, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_4 = 0;
@@ -6943,7 +6885,7 @@ static PyObject *__pyx_pf_12PythonGedLib_90addRandomGraph(CYTHON_UNUSED PyObject
       __pyx_t_4 = 1;
     }
   }
-  __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 835, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 830, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (__pyx_t_3) {
     __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3); __pyx_t_3 = NULL;
@@ -6954,14 +6896,14 @@ static PyObject *__pyx_pf_12PythonGedLib_90addRandomGraph(CYTHON_UNUSED PyObject
   __Pyx_INCREF(__pyx_v_classe);
   __Pyx_GIVEREF(__pyx_v_classe);
   PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_4, __pyx_v_classe);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 835, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 830, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_id = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":836
+  /* "PythonGedLib.pyx":831
  *     """
  *     id = PyAddGraph(name, classe)
  *     for node in listOfNodes :             # <<<<<<<<<<<<<<
@@ -6972,26 +6914,26 @@ static PyObject *__pyx_pf_12PythonGedLib_90addRandomGraph(CYTHON_UNUSED PyObject
     __pyx_t_1 = __pyx_v_listOfNodes; __Pyx_INCREF(__pyx_t_1); __pyx_t_4 = 0;
     __pyx_t_6 = NULL;
   } else {
-    __pyx_t_4 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_listOfNodes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 836, __pyx_L1_error)
+    __pyx_t_4 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_listOfNodes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 831, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 836, __pyx_L1_error)
+    __pyx_t_6 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 831, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_6)) {
       if (likely(PyList_CheckExact(__pyx_t_1))) {
         if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_2); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 836, __pyx_L1_error)
+        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_2); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 831, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 836, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 831, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       } else {
         if (__pyx_t_4 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_2); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 836, __pyx_L1_error)
+        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_2); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 831, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 836, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 831, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       }
@@ -7001,7 +6943,7 @@ static PyObject *__pyx_pf_12PythonGedLib_90addRandomGraph(CYTHON_UNUSED PyObject
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 836, __pyx_L1_error)
+          else __PYX_ERR(0, 831, __pyx_L1_error)
         }
         break;
       }
@@ -7010,18 +6952,18 @@ static PyObject *__pyx_pf_12PythonGedLib_90addRandomGraph(CYTHON_UNUSED PyObject
     __Pyx_XDECREF_SET(__pyx_v_node, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "PythonGedLib.pyx":837
+    /* "PythonGedLib.pyx":832
  *     id = PyAddGraph(name, classe)
  *     for node in listOfNodes :
  *         PyAddNode(id, node[0], node[1])             # <<<<<<<<<<<<<<
  *     for edge in listOfEdges :
  *         PyAddEdge(id, edge[0], edge[1], edge[2], ignoreDuplicates)
  */
-    __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyAddNode); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 837, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyAddNode); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 832, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_node, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 837, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_node, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 832, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_7 = __Pyx_GetItemInt(__pyx_v_node, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 837, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_GetItemInt(__pyx_v_node, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 832, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __pyx_t_8 = NULL;
     __pyx_t_9 = 0;
@@ -7035,7 +6977,7 @@ static PyObject *__pyx_pf_12PythonGedLib_90addRandomGraph(CYTHON_UNUSED PyObject
         __pyx_t_9 = 1;
       }
     }
-    __pyx_t_10 = PyTuple_New(3+__pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 837, __pyx_L1_error)
+    __pyx_t_10 = PyTuple_New(3+__pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 832, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
     if (__pyx_t_8) {
       __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_8); __pyx_t_8 = NULL;
@@ -7049,13 +6991,13 @@ static PyObject *__pyx_pf_12PythonGedLib_90addRandomGraph(CYTHON_UNUSED PyObject
     PyTuple_SET_ITEM(__pyx_t_10, 2+__pyx_t_9, __pyx_t_7);
     __pyx_t_3 = 0;
     __pyx_t_7 = 0;
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_10, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 837, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_10, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 832, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "PythonGedLib.pyx":836
+    /* "PythonGedLib.pyx":831
  *     """
  *     id = PyAddGraph(name, classe)
  *     for node in listOfNodes :             # <<<<<<<<<<<<<<
@@ -7065,7 +7007,7 @@ static PyObject *__pyx_pf_12PythonGedLib_90addRandomGraph(CYTHON_UNUSED PyObject
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":838
+  /* "PythonGedLib.pyx":833
  *     for node in listOfNodes :
  *         PyAddNode(id, node[0], node[1])
  *     for edge in listOfEdges :             # <<<<<<<<<<<<<<
@@ -7076,26 +7018,26 @@ static PyObject *__pyx_pf_12PythonGedLib_90addRandomGraph(CYTHON_UNUSED PyObject
     __pyx_t_1 = __pyx_v_listOfEdges; __Pyx_INCREF(__pyx_t_1); __pyx_t_4 = 0;
     __pyx_t_6 = NULL;
   } else {
-    __pyx_t_4 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_listOfEdges); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 838, __pyx_L1_error)
+    __pyx_t_4 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_listOfEdges); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 833, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 838, __pyx_L1_error)
+    __pyx_t_6 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 833, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_6)) {
       if (likely(PyList_CheckExact(__pyx_t_1))) {
         if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_2); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 838, __pyx_L1_error)
+        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_2); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 833, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 838, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 833, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       } else {
         if (__pyx_t_4 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_2); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 838, __pyx_L1_error)
+        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_2); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 833, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 838, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 833, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       }
@@ -7105,7 +7047,7 @@ static PyObject *__pyx_pf_12PythonGedLib_90addRandomGraph(CYTHON_UNUSED PyObject
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 838, __pyx_L1_error)
+          else __PYX_ERR(0, 833, __pyx_L1_error)
         }
         break;
       }
@@ -7114,20 +7056,20 @@ static PyObject *__pyx_pf_12PythonGedLib_90addRandomGraph(CYTHON_UNUSED PyObject
     __Pyx_XDECREF_SET(__pyx_v_edge, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "PythonGedLib.pyx":839
+    /* "PythonGedLib.pyx":834
  *         PyAddNode(id, node[0], node[1])
  *     for edge in listOfEdges :
  *         PyAddEdge(id, edge[0], edge[1], edge[2], ignoreDuplicates)             # <<<<<<<<<<<<<<
  *     return id
  * 
  */
-    __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyAddEdge); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 839, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyAddEdge); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 834, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_10 = __Pyx_GetItemInt(__pyx_v_edge, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 839, __pyx_L1_error)
+    __pyx_t_10 = __Pyx_GetItemInt(__pyx_v_edge, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 834, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
-    __pyx_t_7 = __Pyx_GetItemInt(__pyx_v_edge, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 839, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_GetItemInt(__pyx_v_edge, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 834, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_edge, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 839, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_edge, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 834, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_8 = NULL;
     __pyx_t_9 = 0;
@@ -7141,7 +7083,7 @@ static PyObject *__pyx_pf_12PythonGedLib_90addRandomGraph(CYTHON_UNUSED PyObject
         __pyx_t_9 = 1;
       }
     }
-    __pyx_t_11 = PyTuple_New(5+__pyx_t_9); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 839, __pyx_L1_error)
+    __pyx_t_11 = PyTuple_New(5+__pyx_t_9); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 834, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
     if (__pyx_t_8) {
       __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_8); __pyx_t_8 = NULL;
@@ -7161,13 +7103,13 @@ static PyObject *__pyx_pf_12PythonGedLib_90addRandomGraph(CYTHON_UNUSED PyObject
     __pyx_t_10 = 0;
     __pyx_t_7 = 0;
     __pyx_t_3 = 0;
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_11, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 839, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_11, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 834, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "PythonGedLib.pyx":838
+    /* "PythonGedLib.pyx":833
  *     for node in listOfNodes :
  *         PyAddNode(id, node[0], node[1])
  *     for edge in listOfEdges :             # <<<<<<<<<<<<<<
@@ -7177,7 +7119,7 @@ static PyObject *__pyx_pf_12PythonGedLib_90addRandomGraph(CYTHON_UNUSED PyObject
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":840
+  /* "PythonGedLib.pyx":835
  *     for edge in listOfEdges :
  *         PyAddEdge(id, edge[0], edge[1], edge[2], ignoreDuplicates)
  *     return id             # <<<<<<<<<<<<<<
@@ -7189,7 +7131,7 @@ static PyObject *__pyx_pf_12PythonGedLib_90addRandomGraph(CYTHON_UNUSED PyObject
   __pyx_r = __pyx_v_id;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":815
+  /* "PythonGedLib.pyx":810
  *     return res
  * 
  * def addRandomGraph(name, classe, listOfNodes, listOfEdges, ignoreDuplicates=True) :             # <<<<<<<<<<<<<<
@@ -7218,7 +7160,7 @@ static PyObject *__pyx_pf_12PythonGedLib_90addRandomGraph(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":842
+/* "PythonGedLib.pyx":837
  *     return id
  * 
  * def addNxGraph(g, classe, ignoreDuplicates=True) :             # <<<<<<<<<<<<<<
@@ -7227,10 +7169,10 @@ static PyObject *__pyx_pf_12PythonGedLib_90addRandomGraph(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_93addNxGraph(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_92addNxGraph[] = "\n        Add a Graph (made by networkx) on the environment. Be careful to respect the same format as GXL graphs for labelling nodes and edges. \n\n        :param g: The graph to add (networkx graph)\n        :param ignoreDuplicates: If True, duplicate edges are ignored, otherwise it's raise an error if an existing edge is added. True by default\n        :type g: networkx.graph\n        :type ignoreDuplicates: bool\n        :return: The ID of the newly added graphe\n        :rtype: size_t\n\n        .. note:: The NX graph must respect the GXL structure. Please see how a GXL graph is construct.  \n        \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_93addNxGraph = {"addNxGraph", (PyCFunction)__pyx_pw_12PythonGedLib_93addNxGraph, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_92addNxGraph};
-static PyObject *__pyx_pw_12PythonGedLib_93addNxGraph(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_91addNxGraph(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_90addNxGraph[] = "\n        Add a Graph (made by networkx) on the environment. Be careful to respect the same format as GXL graphs for labelling nodes and edges. \n\n        :param g: The graph to add (networkx graph)\n        :param ignoreDuplicates: If True, duplicate edges are ignored, otherwise it's raise an error if an existing edge is added. True by default\n        :type g: networkx.graph\n        :type ignoreDuplicates: bool\n        :return: The ID of the newly added graphe\n        :rtype: size_t\n\n        .. note:: The NX graph must respect the GXL structure. Please see how a GXL graph is construct.  \n        \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_91addNxGraph = {"addNxGraph", (PyCFunction)__pyx_pw_12PythonGedLib_91addNxGraph, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_90addNxGraph};
+static PyObject *__pyx_pw_12PythonGedLib_91addNxGraph(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_g = 0;
   PyObject *__pyx_v_classe = 0;
   PyObject *__pyx_v_ignoreDuplicates = 0;
@@ -7259,7 +7201,7 @@ static PyObject *__pyx_pw_12PythonGedLib_93addNxGraph(PyObject *__pyx_self, PyOb
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_classe)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("addNxGraph", 0, 2, 3, 1); __PYX_ERR(0, 842, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("addNxGraph", 0, 2, 3, 1); __PYX_ERR(0, 837, __pyx_L3_error)
         }
         case  2:
         if (kw_args > 0) {
@@ -7268,7 +7210,7 @@ static PyObject *__pyx_pw_12PythonGedLib_93addNxGraph(PyObject *__pyx_self, PyOb
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "addNxGraph") < 0)) __PYX_ERR(0, 842, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "addNxGraph") < 0)) __PYX_ERR(0, 837, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -7285,20 +7227,20 @@ static PyObject *__pyx_pw_12PythonGedLib_93addNxGraph(PyObject *__pyx_self, PyOb
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("addNxGraph", 0, 2, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 842, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("addNxGraph", 0, 2, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 837, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.addNxGraph", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_92addNxGraph(__pyx_self, __pyx_v_g, __pyx_v_classe, __pyx_v_ignoreDuplicates);
+  __pyx_r = __pyx_pf_12PythonGedLib_90addNxGraph(__pyx_self, __pyx_v_g, __pyx_v_classe, __pyx_v_ignoreDuplicates);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_92addNxGraph(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_classe, PyObject *__pyx_v_ignoreDuplicates) {
+static PyObject *__pyx_pf_12PythonGedLib_90addNxGraph(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g, PyObject *__pyx_v_classe, PyObject *__pyx_v_ignoreDuplicates) {
   PyObject *__pyx_v_id = NULL;
   PyObject *__pyx_v_node = NULL;
   PyObject *__pyx_v_edge = NULL;
@@ -7317,16 +7259,16 @@ static PyObject *__pyx_pf_12PythonGedLib_92addNxGraph(CYTHON_UNUSED PyObject *__
   PyObject *__pyx_t_11 = NULL;
   __Pyx_RefNannySetupContext("addNxGraph", 0);
 
-  /* "PythonGedLib.pyx":856
+  /* "PythonGedLib.pyx":851
  * 
  *     """
  *     id = PyAddGraph(g.name, classe)             # <<<<<<<<<<<<<<
  *     for node in g.nodes :
  *         PyAddNode(id, node[0], node[1])
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyAddGraph); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 856, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyAddGraph); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 851, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_g, __pyx_n_s_name); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 856, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_g, __pyx_n_s_name); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 851, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -7340,7 +7282,7 @@ static PyObject *__pyx_pf_12PythonGedLib_92addNxGraph(CYTHON_UNUSED PyObject *__
       __pyx_t_5 = 1;
     }
   }
-  __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 856, __pyx_L1_error)
+  __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 851, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   if (__pyx_t_4) {
     __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -7351,29 +7293,29 @@ static PyObject *__pyx_pf_12PythonGedLib_92addNxGraph(CYTHON_UNUSED PyObject *__
   __Pyx_GIVEREF(__pyx_v_classe);
   PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_classe);
   __pyx_t_3 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 856, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 851, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_id = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":857
+  /* "PythonGedLib.pyx":852
  *     """
  *     id = PyAddGraph(g.name, classe)
  *     for node in g.nodes :             # <<<<<<<<<<<<<<
  *         PyAddNode(id, node[0], node[1])
  *     for edge in g.edges :
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_g, __pyx_n_s_nodes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 857, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_g, __pyx_n_s_nodes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 852, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
     __pyx_t_2 = __pyx_t_1; __Pyx_INCREF(__pyx_t_2); __pyx_t_5 = 0;
     __pyx_t_7 = NULL;
   } else {
-    __pyx_t_5 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 857, __pyx_L1_error)
+    __pyx_t_5 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 852, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_7 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 857, __pyx_L1_error)
+    __pyx_t_7 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 852, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   for (;;) {
@@ -7381,17 +7323,17 @@ static PyObject *__pyx_pf_12PythonGedLib_92addNxGraph(CYTHON_UNUSED PyObject *__
       if (likely(PyList_CheckExact(__pyx_t_2))) {
         if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 857, __pyx_L1_error)
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 852, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 857, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 852, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       } else {
         if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 857, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 852, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 857, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 852, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       }
@@ -7401,7 +7343,7 @@ static PyObject *__pyx_pf_12PythonGedLib_92addNxGraph(CYTHON_UNUSED PyObject *__
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 857, __pyx_L1_error)
+          else __PYX_ERR(0, 852, __pyx_L1_error)
         }
         break;
       }
@@ -7410,18 +7352,18 @@ static PyObject *__pyx_pf_12PythonGedLib_92addNxGraph(CYTHON_UNUSED PyObject *__
     __Pyx_XDECREF_SET(__pyx_v_node, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "PythonGedLib.pyx":858
+    /* "PythonGedLib.pyx":853
  *     id = PyAddGraph(g.name, classe)
  *     for node in g.nodes :
  *         PyAddNode(id, node[0], node[1])             # <<<<<<<<<<<<<<
  *     for edge in g.edges :
  *         PyAddEdge(id, edge[0], edge[1], edge[2], ignoreDuplicates)
  */
-    __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyAddNode); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 858, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyAddNode); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 853, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_node, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 858, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_node, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 853, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_node, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 858, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_node, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 853, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_8 = NULL;
     __pyx_t_9 = 0;
@@ -7435,7 +7377,7 @@ static PyObject *__pyx_pf_12PythonGedLib_92addNxGraph(CYTHON_UNUSED PyObject *__
         __pyx_t_9 = 1;
       }
     }
-    __pyx_t_10 = PyTuple_New(3+__pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 858, __pyx_L1_error)
+    __pyx_t_10 = PyTuple_New(3+__pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 853, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
     if (__pyx_t_8) {
       __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_8); __pyx_t_8 = NULL;
@@ -7449,13 +7391,13 @@ static PyObject *__pyx_pf_12PythonGedLib_92addNxGraph(CYTHON_UNUSED PyObject *__
     PyTuple_SET_ITEM(__pyx_t_10, 2+__pyx_t_9, __pyx_t_4);
     __pyx_t_3 = 0;
     __pyx_t_4 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_10, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 858, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_10, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 853, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "PythonGedLib.pyx":857
+    /* "PythonGedLib.pyx":852
  *     """
  *     id = PyAddGraph(g.name, classe)
  *     for node in g.nodes :             # <<<<<<<<<<<<<<
@@ -7465,22 +7407,22 @@ static PyObject *__pyx_pf_12PythonGedLib_92addNxGraph(CYTHON_UNUSED PyObject *__
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":859
+  /* "PythonGedLib.pyx":854
  *     for node in g.nodes :
  *         PyAddNode(id, node[0], node[1])
  *     for edge in g.edges :             # <<<<<<<<<<<<<<
  *         PyAddEdge(id, edge[0], edge[1], edge[2], ignoreDuplicates)
  *     return id
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_g, __pyx_n_s_edges); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 859, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_g, __pyx_n_s_edges); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 854, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (likely(PyList_CheckExact(__pyx_t_2)) || PyTuple_CheckExact(__pyx_t_2)) {
     __pyx_t_1 = __pyx_t_2; __Pyx_INCREF(__pyx_t_1); __pyx_t_5 = 0;
     __pyx_t_7 = NULL;
   } else {
-    __pyx_t_5 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 859, __pyx_L1_error)
+    __pyx_t_5 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 854, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_7 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 859, __pyx_L1_error)
+    __pyx_t_7 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 854, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   for (;;) {
@@ -7488,17 +7430,17 @@ static PyObject *__pyx_pf_12PythonGedLib_92addNxGraph(CYTHON_UNUSED PyObject *__
       if (likely(PyList_CheckExact(__pyx_t_1))) {
         if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_2); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 859, __pyx_L1_error)
+        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_2); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 854, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 859, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 854, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       } else {
         if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_2); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 859, __pyx_L1_error)
+        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_2); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 854, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 859, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 854, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       }
@@ -7508,7 +7450,7 @@ static PyObject *__pyx_pf_12PythonGedLib_92addNxGraph(CYTHON_UNUSED PyObject *__
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 859, __pyx_L1_error)
+          else __PYX_ERR(0, 854, __pyx_L1_error)
         }
         break;
       }
@@ -7517,20 +7459,20 @@ static PyObject *__pyx_pf_12PythonGedLib_92addNxGraph(CYTHON_UNUSED PyObject *__
     __Pyx_XDECREF_SET(__pyx_v_edge, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "PythonGedLib.pyx":860
+    /* "PythonGedLib.pyx":855
  *         PyAddNode(id, node[0], node[1])
  *     for edge in g.edges :
  *         PyAddEdge(id, edge[0], edge[1], edge[2], ignoreDuplicates)             # <<<<<<<<<<<<<<
  *     return id
  * 
  */
-    __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyAddEdge); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 860, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyAddEdge); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 855, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_10 = __Pyx_GetItemInt(__pyx_v_edge, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 860, __pyx_L1_error)
+    __pyx_t_10 = __Pyx_GetItemInt(__pyx_v_edge, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 855, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
-    __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_edge, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 860, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_edge, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 855, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_edge, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 860, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_edge, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 855, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_8 = NULL;
     __pyx_t_9 = 0;
@@ -7544,7 +7486,7 @@ static PyObject *__pyx_pf_12PythonGedLib_92addNxGraph(CYTHON_UNUSED PyObject *__
         __pyx_t_9 = 1;
       }
     }
-    __pyx_t_11 = PyTuple_New(5+__pyx_t_9); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 860, __pyx_L1_error)
+    __pyx_t_11 = PyTuple_New(5+__pyx_t_9); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 855, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
     if (__pyx_t_8) {
       __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_8); __pyx_t_8 = NULL;
@@ -7564,13 +7506,13 @@ static PyObject *__pyx_pf_12PythonGedLib_92addNxGraph(CYTHON_UNUSED PyObject *__
     __pyx_t_10 = 0;
     __pyx_t_4 = 0;
     __pyx_t_3 = 0;
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_11, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 860, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_11, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 855, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "PythonGedLib.pyx":859
+    /* "PythonGedLib.pyx":854
  *     for node in g.nodes :
  *         PyAddNode(id, node[0], node[1])
  *     for edge in g.edges :             # <<<<<<<<<<<<<<
@@ -7580,7 +7522,7 @@ static PyObject *__pyx_pf_12PythonGedLib_92addNxGraph(CYTHON_UNUSED PyObject *__
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":861
+  /* "PythonGedLib.pyx":856
  *     for edge in g.edges :
  *         PyAddEdge(id, edge[0], edge[1], edge[2], ignoreDuplicates)
  *     return id             # <<<<<<<<<<<<<<
@@ -7592,7 +7534,7 @@ static PyObject *__pyx_pf_12PythonGedLib_92addNxGraph(CYTHON_UNUSED PyObject *__
   __pyx_r = __pyx_v_id;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":842
+  /* "PythonGedLib.pyx":837
  *     return id
  * 
  * def addNxGraph(g, classe, ignoreDuplicates=True) :             # <<<<<<<<<<<<<<
@@ -7621,7 +7563,7 @@ static PyObject *__pyx_pf_12PythonGedLib_92addNxGraph(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":864
+/* "PythonGedLib.pyx":859
  * 
  * 
  * def computeGedOnTwoGraphs(g1,g2, editCost, method, options, initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :             # <<<<<<<<<<<<<<
@@ -7630,10 +7572,10 @@ static PyObject *__pyx_pf_12PythonGedLib_92addNxGraph(CYTHON_UNUSED PyObject *__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_95computeGedOnTwoGraphs(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_94computeGedOnTwoGraphs[] = "\n        Computes the edit distance between two NX graphs. \n        \n        :param g1: The first graph to add and compute\n        :param g2: The second graph to add and compute\n        :param editCost: The name of the edit cost function\n        :param method: The name of the computation method\n        :param options: The options of the method (like bash options), an empty string by default\n        :param initOption:  The name of the init option, \"EAGER_WITHOUT_SHUFFLED_COPIES\" by default\n        :type g1: networksx.graph\n        :type g2: networksx.graph\n        :type editCost: string\n        :type method: string\n        :type options: string\n        :type initOption: string\n        :return: The edit distance between the two graphs and the nodeMap between them. \n        :rtype: double, list[tuple(size_t, size_t)]\n\n        .. seealso:: listOfEditCostOptions, listOfMethodOptions, listOfInitOptions \n        .. note:: Make sure each parameter exists with your architecture and these lists : listOfEditCostOptions, listOfMethodOptions, listOfInitOptions. The structure of graphs must be similar as GXL. \n        \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_95computeGedOnTwoGraphs = {"computeGedOnTwoGraphs", (PyCFunction)__pyx_pw_12PythonGedLib_95computeGedOnTwoGraphs, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_94computeGedOnTwoGraphs};
-static PyObject *__pyx_pw_12PythonGedLib_95computeGedOnTwoGraphs(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_93computeGedOnTwoGraphs(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_92computeGedOnTwoGraphs[] = "\n        Computes the edit distance between two NX graphs. \n        \n        :param g1: The first graph to add and compute\n        :param g2: The second graph to add and compute\n        :param editCost: The name of the edit cost function\n        :param method: The name of the computation method\n        :param options: The options of the method (like bash options), an empty string by default\n        :param initOption:  The name of the init option, \"EAGER_WITHOUT_SHUFFLED_COPIES\" by default\n        :type g1: networksx.graph\n        :type g2: networksx.graph\n        :type editCost: string\n        :type method: string\n        :type options: string\n        :type initOption: string\n        :return: The edit distance between the two graphs and the nodeMap between them. \n        :rtype: double, list[tuple(size_t, size_t)]\n\n        .. seealso:: listOfEditCostOptions, listOfMethodOptions, listOfInitOptions \n        .. note:: Make sure each parameter exists with your architecture and these lists : listOfEditCostOptions, listOfMethodOptions, listOfInitOptions. The structure of graphs must be similar as GXL. \n        \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_93computeGedOnTwoGraphs = {"computeGedOnTwoGraphs", (PyCFunction)__pyx_pw_12PythonGedLib_93computeGedOnTwoGraphs, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_92computeGedOnTwoGraphs};
+static PyObject *__pyx_pw_12PythonGedLib_93computeGedOnTwoGraphs(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_g1 = 0;
   PyObject *__pyx_v_g2 = 0;
   PyObject *__pyx_v_editCost = 0;
@@ -7668,22 +7610,22 @@ static PyObject *__pyx_pw_12PythonGedLib_95computeGedOnTwoGraphs(PyObject *__pyx
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_g2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("computeGedOnTwoGraphs", 0, 5, 6, 1); __PYX_ERR(0, 864, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("computeGedOnTwoGraphs", 0, 5, 6, 1); __PYX_ERR(0, 859, __pyx_L3_error)
         }
         case  2:
         if (likely((values[2] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_editCost)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("computeGedOnTwoGraphs", 0, 5, 6, 2); __PYX_ERR(0, 864, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("computeGedOnTwoGraphs", 0, 5, 6, 2); __PYX_ERR(0, 859, __pyx_L3_error)
         }
         case  3:
         if (likely((values[3] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_method)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("computeGedOnTwoGraphs", 0, 5, 6, 3); __PYX_ERR(0, 864, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("computeGedOnTwoGraphs", 0, 5, 6, 3); __PYX_ERR(0, 859, __pyx_L3_error)
         }
         case  4:
         if (likely((values[4] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_options)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("computeGedOnTwoGraphs", 0, 5, 6, 4); __PYX_ERR(0, 864, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("computeGedOnTwoGraphs", 0, 5, 6, 4); __PYX_ERR(0, 859, __pyx_L3_error)
         }
         case  5:
         if (kw_args > 0) {
@@ -7692,7 +7634,7 @@ static PyObject *__pyx_pw_12PythonGedLib_95computeGedOnTwoGraphs(PyObject *__pyx
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "computeGedOnTwoGraphs") < 0)) __PYX_ERR(0, 864, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "computeGedOnTwoGraphs") < 0)) __PYX_ERR(0, 859, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -7715,20 +7657,20 @@ static PyObject *__pyx_pw_12PythonGedLib_95computeGedOnTwoGraphs(PyObject *__pyx
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("computeGedOnTwoGraphs", 0, 5, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 864, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("computeGedOnTwoGraphs", 0, 5, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 859, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.computeGedOnTwoGraphs", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(__pyx_self, __pyx_v_g1, __pyx_v_g2, __pyx_v_editCost, __pyx_v_method, __pyx_v_options, __pyx_v_initOption);
+  __pyx_r = __pyx_pf_12PythonGedLib_92computeGedOnTwoGraphs(__pyx_self, __pyx_v_g1, __pyx_v_g2, __pyx_v_editCost, __pyx_v_method, __pyx_v_options, __pyx_v_initOption);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g1, PyObject *__pyx_v_g2, PyObject *__pyx_v_editCost, PyObject *__pyx_v_method, PyObject *__pyx_v_options, PyObject *__pyx_v_initOption) {
+static PyObject *__pyx_pf_12PythonGedLib_92computeGedOnTwoGraphs(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_g1, PyObject *__pyx_v_g2, PyObject *__pyx_v_editCost, PyObject *__pyx_v_method, PyObject *__pyx_v_options, PyObject *__pyx_v_initOption) {
   PyObject *__pyx_v_g = NULL;
   PyObject *__pyx_v_h = NULL;
   PyObject *__pyx_v_resDistance = NULL;
@@ -7743,14 +7685,14 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
   PyObject *__pyx_t_6 = NULL;
   __Pyx_RefNannySetupContext("computeGedOnTwoGraphs", 0);
 
-  /* "PythonGedLib.pyx":887
+  /* "PythonGedLib.pyx":882
  * 
  *     """
  *     if PyIsInitialized() :             # <<<<<<<<<<<<<<
  *         PyRestartEnv()
  * 
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyIsInitialized); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 887, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyIsInitialized); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 882, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -7763,25 +7705,25 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
     }
   }
   if (__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 887, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 882, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else {
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 887, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 882, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 887, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 882, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_4) {
 
-    /* "PythonGedLib.pyx":888
+    /* "PythonGedLib.pyx":883
  *     """
  *     if PyIsInitialized() :
  *         PyRestartEnv()             # <<<<<<<<<<<<<<
  * 
  *     g = addNxGraph(g1, "")
  */
-    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyRestartEnv); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 888, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyRestartEnv); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 883, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_3 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -7794,16 +7736,16 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
       }
     }
     if (__pyx_t_3) {
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 888, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 883, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     } else {
-      __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 888, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 883, __pyx_L1_error)
     }
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "PythonGedLib.pyx":887
+    /* "PythonGedLib.pyx":882
  * 
  *     """
  *     if PyIsInitialized() :             # <<<<<<<<<<<<<<
@@ -7812,14 +7754,14 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
  */
   }
 
-  /* "PythonGedLib.pyx":890
+  /* "PythonGedLib.pyx":885
  *         PyRestartEnv()
  * 
  *     g = addNxGraph(g1, "")             # <<<<<<<<<<<<<<
  *     h = addNxGraph(g2, "")
  * 
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_addNxGraph); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 890, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_addNxGraph); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 885, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_5 = 0;
@@ -7833,7 +7775,7 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
       __pyx_t_5 = 1;
     }
   }
-  __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 890, __pyx_L1_error)
+  __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 885, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   if (__pyx_t_3) {
     __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3); __pyx_t_3 = NULL;
@@ -7844,21 +7786,21 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
   __Pyx_INCREF(__pyx_kp_s__3);
   __Pyx_GIVEREF(__pyx_kp_s__3);
   PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_kp_s__3);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 890, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 885, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_g = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":891
+  /* "PythonGedLib.pyx":886
  * 
  *     g = addNxGraph(g1, "")
  *     h = addNxGraph(g2, "")             # <<<<<<<<<<<<<<
  * 
  *     PySetEditCost(editCost)
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_addNxGraph); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 891, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_addNxGraph); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 886, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_6 = NULL;
   __pyx_t_5 = 0;
@@ -7872,7 +7814,7 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
       __pyx_t_5 = 1;
     }
   }
-  __pyx_t_3 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 891, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 886, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__pyx_t_6) {
     __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_6); __pyx_t_6 = NULL;
@@ -7883,21 +7825,21 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
   __Pyx_INCREF(__pyx_kp_s__3);
   __Pyx_GIVEREF(__pyx_kp_s__3);
   PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_5, __pyx_kp_s__3);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 891, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 886, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_h = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":893
+  /* "PythonGedLib.pyx":888
  *     h = addNxGraph(g2, "")
  * 
  *     PySetEditCost(editCost)             # <<<<<<<<<<<<<<
  *     PyInitEnv(initOption)
  * 
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PySetEditCost); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 893, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PySetEditCost); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 888, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -7910,30 +7852,30 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_editCost); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 893, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_editCost); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 888, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 893, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 888, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3); __pyx_t_3 = NULL;
     __Pyx_INCREF(__pyx_v_editCost);
     __Pyx_GIVEREF(__pyx_v_editCost);
     PyTuple_SET_ITEM(__pyx_t_6, 0+1, __pyx_v_editCost);
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 893, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 888, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":894
+  /* "PythonGedLib.pyx":889
  * 
  *     PySetEditCost(editCost)
  *     PyInitEnv(initOption)             # <<<<<<<<<<<<<<
  * 
  *     PySetMethod(method, options)
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyInitEnv); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 894, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyInitEnv); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 889, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_6 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -7946,30 +7888,30 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
     }
   }
   if (!__pyx_t_6) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_initOption); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 894, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_initOption); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 889, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 894, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 889, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_6); __pyx_t_6 = NULL;
     __Pyx_INCREF(__pyx_v_initOption);
     __Pyx_GIVEREF(__pyx_v_initOption);
     PyTuple_SET_ITEM(__pyx_t_3, 0+1, __pyx_v_initOption);
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 894, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 889, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":896
+  /* "PythonGedLib.pyx":891
  *     PyInitEnv(initOption)
  * 
  *     PySetMethod(method, options)             # <<<<<<<<<<<<<<
  *     PyInitMethod()
  * 
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PySetMethod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 896, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PySetMethod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 891, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_5 = 0;
@@ -7983,7 +7925,7 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
       __pyx_t_5 = 1;
     }
   }
-  __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 896, __pyx_L1_error)
+  __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 891, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   if (__pyx_t_3) {
     __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3); __pyx_t_3 = NULL;
@@ -7994,20 +7936,20 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
   __Pyx_INCREF(__pyx_v_options);
   __Pyx_GIVEREF(__pyx_v_options);
   PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_options);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 896, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 891, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":897
+  /* "PythonGedLib.pyx":892
  * 
  *     PySetMethod(method, options)
  *     PyInitMethod()             # <<<<<<<<<<<<<<
  * 
  *     resDistance = 0
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyInitMethod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 897, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyInitMethod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 892, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_6 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -8020,16 +7962,16 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
     }
   }
   if (__pyx_t_6) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 897, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 892, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   } else {
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 897, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 892, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":899
+  /* "PythonGedLib.pyx":894
  *     PyInitMethod()
  * 
  *     resDistance = 0             # <<<<<<<<<<<<<<
@@ -8039,26 +7981,26 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
   __Pyx_INCREF(__pyx_int_0);
   __pyx_v_resDistance = __pyx_int_0;
 
-  /* "PythonGedLib.pyx":900
+  /* "PythonGedLib.pyx":895
  * 
  *     resDistance = 0
  *     resMapping = []             # <<<<<<<<<<<<<<
  *     PyRunMethod(g,h)
  *     resDistance = PyGetUpperBound(g,h)
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 900, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 895, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_resMapping = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":901
+  /* "PythonGedLib.pyx":896
  *     resDistance = 0
  *     resMapping = []
  *     PyRunMethod(g,h)             # <<<<<<<<<<<<<<
  *     resDistance = PyGetUpperBound(g,h)
  *     resMapping = PyGetNodeMap(g,h)
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyRunMethod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 901, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyRunMethod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 896, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_6 = NULL;
   __pyx_t_5 = 0;
@@ -8072,7 +8014,7 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
       __pyx_t_5 = 1;
     }
   }
-  __pyx_t_3 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 901, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 896, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__pyx_t_6) {
     __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_6); __pyx_t_6 = NULL;
@@ -8083,20 +8025,20 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
   __Pyx_INCREF(__pyx_v_h);
   __Pyx_GIVEREF(__pyx_v_h);
   PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_5, __pyx_v_h);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 901, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 896, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":902
+  /* "PythonGedLib.pyx":897
  *     resMapping = []
  *     PyRunMethod(g,h)
  *     resDistance = PyGetUpperBound(g,h)             # <<<<<<<<<<<<<<
  *     resMapping = PyGetNodeMap(g,h)
  * 
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyGetUpperBound); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 902, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyGetUpperBound); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 897, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_5 = 0;
@@ -8110,7 +8052,7 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
       __pyx_t_5 = 1;
     }
   }
-  __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 902, __pyx_L1_error)
+  __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 897, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   if (__pyx_t_3) {
     __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3); __pyx_t_3 = NULL;
@@ -8121,21 +8063,21 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
   __Pyx_INCREF(__pyx_v_h);
   __Pyx_GIVEREF(__pyx_v_h);
   PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_h);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 902, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 897, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF_SET(__pyx_v_resDistance, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":903
+  /* "PythonGedLib.pyx":898
  *     PyRunMethod(g,h)
  *     resDistance = PyGetUpperBound(g,h)
  *     resMapping = PyGetNodeMap(g,h)             # <<<<<<<<<<<<<<
  * 
  *     return resDistance, resMapping
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyGetNodeMap); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 903, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyGetNodeMap); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 898, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_6 = NULL;
   __pyx_t_5 = 0;
@@ -8149,7 +8091,7 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
       __pyx_t_5 = 1;
     }
   }
-  __pyx_t_3 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 903, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 898, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__pyx_t_6) {
     __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_6); __pyx_t_6 = NULL;
@@ -8160,14 +8102,14 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
   __Pyx_INCREF(__pyx_v_h);
   __Pyx_GIVEREF(__pyx_v_h);
   PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_5, __pyx_v_h);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 903, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 898, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF_SET(__pyx_v_resMapping, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":905
+  /* "PythonGedLib.pyx":900
  *     resMapping = PyGetNodeMap(g,h)
  * 
  *     return resDistance, resMapping             # <<<<<<<<<<<<<<
@@ -8175,7 +8117,7 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
  * def computeEditDistanceOnNxGraphs(dataset, classes, editCost, method, options, initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 905, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 900, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_resDistance);
   __Pyx_GIVEREF(__pyx_v_resDistance);
@@ -8187,7 +8129,7 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":864
+  /* "PythonGedLib.pyx":859
  * 
  * 
  * def computeGedOnTwoGraphs(g1,g2, editCost, method, options, initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :             # <<<<<<<<<<<<<<
@@ -8213,7 +8155,7 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":907
+/* "PythonGedLib.pyx":902
  *     return resDistance, resMapping
  * 
  * def computeEditDistanceOnNxGraphs(dataset, classes, editCost, method, options, initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :             # <<<<<<<<<<<<<<
@@ -8222,10 +8164,10 @@ static PyObject *__pyx_pf_12PythonGedLib_94computeGedOnTwoGraphs(CYTHON_UNUSED P
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_97computeEditDistanceOnNxGraphs(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_96computeEditDistanceOnNxGraphs[] = "\n\n        Computes all the edit distance between each NX graphs on the dataset. \n        \n        :param dataset: The list of graphs to add and compute\n        :param classes: The classe of all the graph, can be an empty string\n        :param editCost: The name of the edit cost function\n        :param method: The name of the computation method\n        :param options: The options of the method (like bash options), an empty string by default\n        :param initOption:  The name of the init option, \"EAGER_WITHOUT_SHUFFLED_COPIES\" by default\n        :type dataset: list[networksx.graph]\n        :type classes: string\n        :type editCost: string\n        :type method: string\n        :type options: string\n        :type initOption: string\n        :return: Two matrix, the first with edit distances between graphs and the second the nodeMap between graphs. The result between g and h is one the [g][h] coordinates.\n        :rtype: list[list[double]], list[list[list[tuple(size_t, size_t)]]]\n\n        .. seealso:: listOfEditCostOptions, listOfMethodOptions, listOfInitOptions \n        .. note:: Make sure each parameter exists with your architecture and these lists : listOfEditCostOptions, listOfMethodOptions, listOfInitOptions. The structure of graphs must be similar as GXL. \n        \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_97computeEditDistanceOnNxGraphs = {"computeEditDistanceOnNxGraphs", (PyCFunction)__pyx_pw_12PythonGedLib_97computeEditDistanceOnNxGraphs, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_96computeEditDistanceOnNxGraphs};
-static PyObject *__pyx_pw_12PythonGedLib_97computeEditDistanceOnNxGraphs(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_95computeEditDistanceOnNxGraphs(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_94computeEditDistanceOnNxGraphs[] = "\n\n        Computes all the edit distance between each NX graphs on the dataset. \n        \n        :param dataset: The list of graphs to add and compute\n        :param classes: The classe of all the graph, can be an empty string\n        :param editCost: The name of the edit cost function\n        :param method: The name of the computation method\n        :param options: The options of the method (like bash options), an empty string by default\n        :param initOption:  The name of the init option, \"EAGER_WITHOUT_SHUFFLED_COPIES\" by default\n        :type dataset: list[networksx.graph]\n        :type classes: string\n        :type editCost: string\n        :type method: string\n        :type options: string\n        :type initOption: string\n        :return: Two matrix, the first with edit distances between graphs and the second the nodeMap between graphs. The result between g and h is one the [g][h] coordinates.\n        :rtype: list[list[double]], list[list[list[tuple(size_t, size_t)]]]\n\n        .. seealso:: listOfEditCostOptions, listOfMethodOptions, listOfInitOptions \n        .. note:: Make sure each parameter exists with your architecture and these lists : listOfEditCostOptions, listOfMethodOptions, listOfInitOptions. The structure of graphs must be similar as GXL. \n        \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_95computeEditDistanceOnNxGraphs = {"computeEditDistanceOnNxGraphs", (PyCFunction)__pyx_pw_12PythonGedLib_95computeEditDistanceOnNxGraphs, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_94computeEditDistanceOnNxGraphs};
+static PyObject *__pyx_pw_12PythonGedLib_95computeEditDistanceOnNxGraphs(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_dataset = 0;
   PyObject *__pyx_v_classes = 0;
   PyObject *__pyx_v_editCost = 0;
@@ -8260,22 +8202,22 @@ static PyObject *__pyx_pw_12PythonGedLib_97computeEditDistanceOnNxGraphs(PyObjec
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_classes)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("computeEditDistanceOnNxGraphs", 0, 5, 6, 1); __PYX_ERR(0, 907, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("computeEditDistanceOnNxGraphs", 0, 5, 6, 1); __PYX_ERR(0, 902, __pyx_L3_error)
         }
         case  2:
         if (likely((values[2] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_editCost)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("computeEditDistanceOnNxGraphs", 0, 5, 6, 2); __PYX_ERR(0, 907, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("computeEditDistanceOnNxGraphs", 0, 5, 6, 2); __PYX_ERR(0, 902, __pyx_L3_error)
         }
         case  3:
         if (likely((values[3] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_method)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("computeEditDistanceOnNxGraphs", 0, 5, 6, 3); __PYX_ERR(0, 907, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("computeEditDistanceOnNxGraphs", 0, 5, 6, 3); __PYX_ERR(0, 902, __pyx_L3_error)
         }
         case  4:
         if (likely((values[4] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_options)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("computeEditDistanceOnNxGraphs", 0, 5, 6, 4); __PYX_ERR(0, 907, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("computeEditDistanceOnNxGraphs", 0, 5, 6, 4); __PYX_ERR(0, 902, __pyx_L3_error)
         }
         case  5:
         if (kw_args > 0) {
@@ -8284,7 +8226,7 @@ static PyObject *__pyx_pw_12PythonGedLib_97computeEditDistanceOnNxGraphs(PyObjec
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "computeEditDistanceOnNxGraphs") < 0)) __PYX_ERR(0, 907, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "computeEditDistanceOnNxGraphs") < 0)) __PYX_ERR(0, 902, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -8307,22 +8249,21 @@ static PyObject *__pyx_pw_12PythonGedLib_97computeEditDistanceOnNxGraphs(PyObjec
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("computeEditDistanceOnNxGraphs", 0, 5, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 907, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("computeEditDistanceOnNxGraphs", 0, 5, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 902, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.computeEditDistanceOnNxGraphs", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(__pyx_self, __pyx_v_dataset, __pyx_v_classes, __pyx_v_editCost, __pyx_v_method, __pyx_v_options, __pyx_v_initOption);
+  __pyx_r = __pyx_pf_12PythonGedLib_94computeEditDistanceOnNxGraphs(__pyx_self, __pyx_v_dataset, __pyx_v_classes, __pyx_v_editCost, __pyx_v_method, __pyx_v_options, __pyx_v_initOption);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_dataset, PyObject *__pyx_v_classes, PyObject *__pyx_v_editCost, PyObject *__pyx_v_method, PyObject *__pyx_v_options, PyObject *__pyx_v_initOption) {
+static PyObject *__pyx_pf_12PythonGedLib_94computeEditDistanceOnNxGraphs(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_dataset, PyObject *__pyx_v_classes, PyObject *__pyx_v_editCost, PyObject *__pyx_v_method, PyObject *__pyx_v_options, PyObject *__pyx_v_initOption) {
   PyObject *__pyx_v_graph = NULL;
-  CYTHON_UNUSED long __pyx_v_truc;
   PyObject *__pyx_v_listID = NULL;
   PyObject *__pyx_v_resDistance = NULL;
   PyObject *__pyx_v_resMapping = NULL;
@@ -8344,14 +8285,14 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
   PyObject *__pyx_t_12 = NULL;
   __Pyx_RefNannySetupContext("computeEditDistanceOnNxGraphs", 0);
 
-  /* "PythonGedLib.pyx":931
+  /* "PythonGedLib.pyx":926
  * 
  *     """
  *     if PyIsInitialized() :             # <<<<<<<<<<<<<<
  *         PyRestartEnv()
  * 
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyIsInitialized); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 931, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyIsInitialized); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 926, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -8364,25 +8305,25 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
     }
   }
   if (__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 931, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 926, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else {
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 931, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 926, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 931, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 926, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_4) {
 
-    /* "PythonGedLib.pyx":932
+    /* "PythonGedLib.pyx":927
  *     """
  *     if PyIsInitialized() :
  *         PyRestartEnv()             # <<<<<<<<<<<<<<
  * 
  *     print("Loading graphs in progress...")
  */
-    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyRestartEnv); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 932, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyRestartEnv); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 927, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_3 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -8395,16 +8336,16 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
       }
     }
     if (__pyx_t_3) {
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 932, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 927, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     } else {
-      __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 932, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 927, __pyx_L1_error)
     }
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "PythonGedLib.pyx":931
+    /* "PythonGedLib.pyx":926
  * 
  *     """
  *     if PyIsInitialized() :             # <<<<<<<<<<<<<<
@@ -8413,46 +8354,46 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
  */
   }
 
-  /* "PythonGedLib.pyx":934
+  /* "PythonGedLib.pyx":929
  *         PyRestartEnv()
  * 
  *     print("Loading graphs in progress...")             # <<<<<<<<<<<<<<
  *     for graph in dataset :
  *         addNxGraph(graph, classes)
  */
-  if (__Pyx_PrintOne(0, __pyx_kp_s_Loading_graphs_in_progress) < 0) __PYX_ERR(0, 934, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_kp_s_Loading_graphs_in_progress) < 0) __PYX_ERR(0, 929, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":935
+  /* "PythonGedLib.pyx":930
  * 
  *     print("Loading graphs in progress...")
  *     for graph in dataset :             # <<<<<<<<<<<<<<
  *         addNxGraph(graph, classes)
- *         truc = 0
+ *     listID = PyGetGraphIds()
  */
   if (likely(PyList_CheckExact(__pyx_v_dataset)) || PyTuple_CheckExact(__pyx_v_dataset)) {
     __pyx_t_1 = __pyx_v_dataset; __Pyx_INCREF(__pyx_t_1); __pyx_t_5 = 0;
     __pyx_t_6 = NULL;
   } else {
-    __pyx_t_5 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_dataset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 935, __pyx_L1_error)
+    __pyx_t_5 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_dataset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 930, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 935, __pyx_L1_error)
+    __pyx_t_6 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 930, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_6)) {
       if (likely(PyList_CheckExact(__pyx_t_1))) {
         if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_2); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 935, __pyx_L1_error)
+        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_2); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 930, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 935, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 930, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       } else {
         if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_2); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 935, __pyx_L1_error)
+        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_2); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 930, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 935, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 930, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       }
@@ -8462,7 +8403,7 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 935, __pyx_L1_error)
+          else __PYX_ERR(0, 930, __pyx_L1_error)
         }
         break;
       }
@@ -8471,14 +8412,14 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
     __Pyx_XDECREF_SET(__pyx_v_graph, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "PythonGedLib.pyx":936
+    /* "PythonGedLib.pyx":931
  *     print("Loading graphs in progress...")
  *     for graph in dataset :
  *         addNxGraph(graph, classes)             # <<<<<<<<<<<<<<
- *         truc = 0
  *     listID = PyGetGraphIds()
+ *     print("Graphs loaded ! ")
  */
-    __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_addNxGraph); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 936, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_addNxGraph); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 931, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_7 = NULL;
     __pyx_t_8 = 0;
@@ -8492,7 +8433,7 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
         __pyx_t_8 = 1;
       }
     }
-    __pyx_t_9 = PyTuple_New(2+__pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 936, __pyx_L1_error)
+    __pyx_t_9 = PyTuple_New(2+__pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 931, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     if (__pyx_t_7) {
       __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_7); __pyx_t_7 = NULL;
@@ -8503,39 +8444,30 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
     __Pyx_INCREF(__pyx_v_classes);
     __Pyx_GIVEREF(__pyx_v_classes);
     PyTuple_SET_ITEM(__pyx_t_9, 1+__pyx_t_8, __pyx_v_classes);
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_9, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 936, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_9, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 931, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "PythonGedLib.pyx":937
- *     for graph in dataset :
- *         addNxGraph(graph, classes)
- *         truc = 0             # <<<<<<<<<<<<<<
- *     listID = PyGetGraphIds()
- *     print("Graphs loaded ! ")
- */
-    __pyx_v_truc = 0;
-
-    /* "PythonGedLib.pyx":935
+    /* "PythonGedLib.pyx":930
  * 
  *     print("Loading graphs in progress...")
  *     for graph in dataset :             # <<<<<<<<<<<<<<
  *         addNxGraph(graph, classes)
- *         truc = 0
+ *     listID = PyGetGraphIds()
  */
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":938
+  /* "PythonGedLib.pyx":932
+ *     for graph in dataset :
  *         addNxGraph(graph, classes)
- *         truc = 0
  *     listID = PyGetGraphIds()             # <<<<<<<<<<<<<<
  *     print("Graphs loaded ! ")
  *     print("Number of graphs = " + str(listID[1]))
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyGetGraphIds); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 938, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyGetGraphIds); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 932, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -8548,56 +8480,56 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
     }
   }
   if (__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 938, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 932, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else {
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 938, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 932, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_listID = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":939
- *         truc = 0
+  /* "PythonGedLib.pyx":933
+ *         addNxGraph(graph, classes)
  *     listID = PyGetGraphIds()
  *     print("Graphs loaded ! ")             # <<<<<<<<<<<<<<
  *     print("Number of graphs = " + str(listID[1]))
  * 
  */
-  if (__Pyx_PrintOne(0, __pyx_kp_s_Graphs_loaded) < 0) __PYX_ERR(0, 939, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_kp_s_Graphs_loaded) < 0) __PYX_ERR(0, 933, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":940
+  /* "PythonGedLib.pyx":934
  *     listID = PyGetGraphIds()
  *     print("Graphs loaded ! ")
  *     print("Number of graphs = " + str(listID[1]))             # <<<<<<<<<<<<<<
  * 
  *     PySetEditCost(editCost)
  */
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_listID, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 940, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_listID, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 934, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 940, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 934, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 940, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 934, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyNumber_Add(__pyx_kp_s_Number_of_graphs, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 940, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Add(__pyx_kp_s_Number_of_graphs, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 934, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 940, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 934, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":942
+  /* "PythonGedLib.pyx":936
  *     print("Number of graphs = " + str(listID[1]))
  * 
  *     PySetEditCost(editCost)             # <<<<<<<<<<<<<<
  *     print("Initialization in progress...")
  *     PyInitEnv(initOption)
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PySetEditCost); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 942, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PySetEditCost); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 936, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_1))) {
@@ -8610,39 +8542,39 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_editCost); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 942, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_editCost); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 936, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
   } else {
-    __pyx_t_9 = PyTuple_New(1+1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 942, __pyx_L1_error)
+    __pyx_t_9 = PyTuple_New(1+1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 936, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_3); __pyx_t_3 = NULL;
     __Pyx_INCREF(__pyx_v_editCost);
     __Pyx_GIVEREF(__pyx_v_editCost);
     PyTuple_SET_ITEM(__pyx_t_9, 0+1, __pyx_v_editCost);
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_9, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 942, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_9, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 936, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":943
+  /* "PythonGedLib.pyx":937
  * 
  *     PySetEditCost(editCost)
  *     print("Initialization in progress...")             # <<<<<<<<<<<<<<
  *     PyInitEnv(initOption)
  *     print("Initialization terminated !")
  */
-  if (__Pyx_PrintOne(0, __pyx_kp_s_Initialization_in_progress) < 0) __PYX_ERR(0, 943, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_kp_s_Initialization_in_progress) < 0) __PYX_ERR(0, 937, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":944
+  /* "PythonGedLib.pyx":938
  *     PySetEditCost(editCost)
  *     print("Initialization in progress...")
  *     PyInitEnv(initOption)             # <<<<<<<<<<<<<<
  *     print("Initialization terminated !")
  * 
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyInitEnv); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 944, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyInitEnv); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 938, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_9 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_1))) {
@@ -8655,39 +8587,39 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
     }
   }
   if (!__pyx_t_9) {
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_initOption); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 944, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_initOption); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 938, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
   } else {
-    __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 944, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 938, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_9); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_9); __pyx_t_9 = NULL;
     __Pyx_INCREF(__pyx_v_initOption);
     __Pyx_GIVEREF(__pyx_v_initOption);
     PyTuple_SET_ITEM(__pyx_t_3, 0+1, __pyx_v_initOption);
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 944, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 938, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":945
+  /* "PythonGedLib.pyx":939
  *     print("Initialization in progress...")
  *     PyInitEnv(initOption)
  *     print("Initialization terminated !")             # <<<<<<<<<<<<<<
  * 
  *     PySetMethod(method, options)
  */
-  if (__Pyx_PrintOne(0, __pyx_kp_s_Initialization_terminated) < 0) __PYX_ERR(0, 945, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_kp_s_Initialization_terminated) < 0) __PYX_ERR(0, 939, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":947
+  /* "PythonGedLib.pyx":941
  *     print("Initialization terminated !")
  * 
  *     PySetMethod(method, options)             # <<<<<<<<<<<<<<
  *     PyInitMethod()
  * 
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PySetMethod); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 947, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PySetMethod); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 941, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_3 = NULL;
   __pyx_t_5 = 0;
@@ -8701,7 +8633,7 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
       __pyx_t_5 = 1;
     }
   }
-  __pyx_t_9 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 947, __pyx_L1_error)
+  __pyx_t_9 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 941, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   if (__pyx_t_3) {
     __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_3); __pyx_t_3 = NULL;
@@ -8712,20 +8644,20 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
   __Pyx_INCREF(__pyx_v_options);
   __Pyx_GIVEREF(__pyx_v_options);
   PyTuple_SET_ITEM(__pyx_t_9, 1+__pyx_t_5, __pyx_v_options);
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_9, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 947, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_9, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 941, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":948
+  /* "PythonGedLib.pyx":942
  * 
  *     PySetMethod(method, options)
  *     PyInitMethod()             # <<<<<<<<<<<<<<
  * 
  *     resDistance = [[]]
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyInitMethod); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 948, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyInitMethod); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 942, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_9 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_1))) {
@@ -8738,25 +8670,25 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
     }
   }
   if (__pyx_t_9) {
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 948, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 942, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   } else {
-    __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 948, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 942, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":950
+  /* "PythonGedLib.pyx":944
  *     PyInitMethod()
  * 
  *     resDistance = [[]]             # <<<<<<<<<<<<<<
  *     resMapping = [[]]
  *     for g in range(listID[0], listID[1]) :
  */
-  __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 950, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 944, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 950, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 944, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_2);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_t_2);
@@ -8764,16 +8696,16 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
   __pyx_v_resDistance = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":951
+  /* "PythonGedLib.pyx":945
  * 
  *     resDistance = [[]]
  *     resMapping = [[]]             # <<<<<<<<<<<<<<
  *     for g in range(listID[0], listID[1]) :
  *         print("Computation between graph " + str(g) + " with all the others including himself.")
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 951, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 951, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 945, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
   PyList_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
@@ -8781,18 +8713,18 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
   __pyx_v_resMapping = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":952
+  /* "PythonGedLib.pyx":946
  *     resDistance = [[]]
  *     resMapping = [[]]
  *     for g in range(listID[0], listID[1]) :             # <<<<<<<<<<<<<<
  *         print("Computation between graph " + str(g) + " with all the others including himself.")
  *         for h in range(listID[0], listID[1]) :
  */
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_listID, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 952, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_listID, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 946, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_listID, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 952, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_listID, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 946, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_9 = PyTuple_New(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 952, __pyx_L1_error)
+  __pyx_t_9 = PyTuple_New(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 946, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_2);
@@ -8800,16 +8732,16 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
   PyTuple_SET_ITEM(__pyx_t_9, 1, __pyx_t_1);
   __pyx_t_2 = 0;
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_t_9, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 952, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_t_9, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 946, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
     __pyx_t_9 = __pyx_t_1; __Pyx_INCREF(__pyx_t_9); __pyx_t_5 = 0;
     __pyx_t_6 = NULL;
   } else {
-    __pyx_t_5 = -1; __pyx_t_9 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 952, __pyx_L1_error)
+    __pyx_t_5 = -1; __pyx_t_9 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 946, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_6 = Py_TYPE(__pyx_t_9)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 952, __pyx_L1_error)
+    __pyx_t_6 = Py_TYPE(__pyx_t_9)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 946, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   for (;;) {
@@ -8817,17 +8749,17 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
       if (likely(PyList_CheckExact(__pyx_t_9))) {
         if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_9)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_9, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 952, __pyx_L1_error)
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_9, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 946, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_9, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 952, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_9, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 946, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       } else {
         if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_9)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_9, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 952, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_9, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 946, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_9, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 952, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_9, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 946, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       }
@@ -8837,7 +8769,7 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 952, __pyx_L1_error)
+          else __PYX_ERR(0, 946, __pyx_L1_error)
         }
         break;
       }
@@ -8846,42 +8778,42 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
     __Pyx_XDECREF_SET(__pyx_v_g, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "PythonGedLib.pyx":953
+    /* "PythonGedLib.pyx":947
  *     resMapping = [[]]
  *     for g in range(listID[0], listID[1]) :
  *         print("Computation between graph " + str(g) + " with all the others including himself.")             # <<<<<<<<<<<<<<
  *         for h in range(listID[0], listID[1]) :
  *             #print("Computation between graph " + str(g) + " and graph " + str(h))
  */
-    __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 953, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 947, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_v_g);
     __Pyx_GIVEREF(__pyx_v_g);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_g);
-    __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 953, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 947, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = PyNumber_Add(__pyx_kp_s_Computation_between_graph, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 953, __pyx_L1_error)
+    __pyx_t_1 = PyNumber_Add(__pyx_kp_s_Computation_between_graph, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 947, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_with_all_the_others_including_h); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 953, __pyx_L1_error)
+    __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_with_all_the_others_including_h); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 947, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 953, __pyx_L1_error)
+    if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 947, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "PythonGedLib.pyx":954
+    /* "PythonGedLib.pyx":948
  *     for g in range(listID[0], listID[1]) :
  *         print("Computation between graph " + str(g) + " with all the others including himself.")
  *         for h in range(listID[0], listID[1]) :             # <<<<<<<<<<<<<<
  *             #print("Computation between graph " + str(g) + " and graph " + str(h))
  *             PyRunMethod(g,h)
  */
-    __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_listID, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 954, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_listID, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 948, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_listID, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 954, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_listID, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 948, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 954, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 948, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_2);
     PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_2);
@@ -8889,16 +8821,16 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
     PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_1);
     __pyx_t_2 = 0;
     __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 954, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 948, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
       __pyx_t_3 = __pyx_t_1; __Pyx_INCREF(__pyx_t_3); __pyx_t_8 = 0;
       __pyx_t_10 = NULL;
     } else {
-      __pyx_t_8 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 954, __pyx_L1_error)
+      __pyx_t_8 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 948, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_10 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 954, __pyx_L1_error)
+      __pyx_t_10 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 948, __pyx_L1_error)
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     for (;;) {
@@ -8906,17 +8838,17 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
         if (likely(PyList_CheckExact(__pyx_t_3))) {
           if (__pyx_t_8 >= PyList_GET_SIZE(__pyx_t_3)) break;
           #if CYTHON_COMPILING_IN_CPYTHON
-          __pyx_t_1 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_8); __Pyx_INCREF(__pyx_t_1); __pyx_t_8++; if (unlikely(0 < 0)) __PYX_ERR(0, 954, __pyx_L1_error)
+          __pyx_t_1 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_8); __Pyx_INCREF(__pyx_t_1); __pyx_t_8++; if (unlikely(0 < 0)) __PYX_ERR(0, 948, __pyx_L1_error)
           #else
-          __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 954, __pyx_L1_error)
+          __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 948, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
           #endif
         } else {
           if (__pyx_t_8 >= PyTuple_GET_SIZE(__pyx_t_3)) break;
           #if CYTHON_COMPILING_IN_CPYTHON
-          __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_8); __Pyx_INCREF(__pyx_t_1); __pyx_t_8++; if (unlikely(0 < 0)) __PYX_ERR(0, 954, __pyx_L1_error)
+          __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_8); __Pyx_INCREF(__pyx_t_1); __pyx_t_8++; if (unlikely(0 < 0)) __PYX_ERR(0, 948, __pyx_L1_error)
           #else
-          __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 954, __pyx_L1_error)
+          __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 948, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
           #endif
         }
@@ -8926,7 +8858,7 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 954, __pyx_L1_error)
+            else __PYX_ERR(0, 948, __pyx_L1_error)
           }
           break;
         }
@@ -8935,14 +8867,14 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
       __Pyx_XDECREF_SET(__pyx_v_h, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "PythonGedLib.pyx":956
+      /* "PythonGedLib.pyx":950
  *         for h in range(listID[0], listID[1]) :
  *             #print("Computation between graph " + str(g) + " and graph " + str(h))
  *             PyRunMethod(g,h)             # <<<<<<<<<<<<<<
  *             resDistance[g][h] = PyGetUpperBound(g,h)
  *             resMapping[g][h] = PyGetNodeMap(g,h)
  */
-      __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyRunMethod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 956, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyRunMethod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 950, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_t_7 = NULL;
       __pyx_t_11 = 0;
@@ -8956,7 +8888,7 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
           __pyx_t_11 = 1;
         }
       }
-      __pyx_t_12 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 956, __pyx_L1_error)
+      __pyx_t_12 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 950, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_12);
       if (__pyx_t_7) {
         __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_7); __pyx_t_7 = NULL;
@@ -8967,20 +8899,20 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
       __Pyx_INCREF(__pyx_v_h);
       __Pyx_GIVEREF(__pyx_v_h);
       PyTuple_SET_ITEM(__pyx_t_12, 1+__pyx_t_11, __pyx_v_h);
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_12, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 956, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_12, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 950, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "PythonGedLib.pyx":957
+      /* "PythonGedLib.pyx":951
  *             #print("Computation between graph " + str(g) + " and graph " + str(h))
  *             PyRunMethod(g,h)
  *             resDistance[g][h] = PyGetUpperBound(g,h)             # <<<<<<<<<<<<<<
  *             resMapping[g][h] = PyGetNodeMap(g,h)
  * 
  */
-      __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyGetUpperBound); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 957, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyGetUpperBound); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 951, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_t_12 = NULL;
       __pyx_t_11 = 0;
@@ -8994,7 +8926,7 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
           __pyx_t_11 = 1;
         }
       }
-      __pyx_t_7 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 957, __pyx_L1_error)
+      __pyx_t_7 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 951, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       if (__pyx_t_12) {
         __Pyx_GIVEREF(__pyx_t_12); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_12); __pyx_t_12 = NULL;
@@ -9005,24 +8937,24 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
       __Pyx_INCREF(__pyx_v_h);
       __Pyx_GIVEREF(__pyx_v_h);
       PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_11, __pyx_v_h);
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_7, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 957, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_7, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 951, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyObject_GetItem(__pyx_v_resDistance, __pyx_v_g); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 957, __pyx_L1_error)
+      __pyx_t_2 = PyObject_GetItem(__pyx_v_resDistance, __pyx_v_g); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 951, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      if (unlikely(PyObject_SetItem(__pyx_t_2, __pyx_v_h, __pyx_t_1) < 0)) __PYX_ERR(0, 957, __pyx_L1_error)
+      if (unlikely(PyObject_SetItem(__pyx_t_2, __pyx_v_h, __pyx_t_1) < 0)) __PYX_ERR(0, 951, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "PythonGedLib.pyx":958
+      /* "PythonGedLib.pyx":952
  *             PyRunMethod(g,h)
  *             resDistance[g][h] = PyGetUpperBound(g,h)
  *             resMapping[g][h] = PyGetNodeMap(g,h)             # <<<<<<<<<<<<<<
  * 
  *     print("Finish ! The return contains edit distances and NodeMap but you can check the result with graphs'ID until you restart the environment")
  */
-      __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyGetNodeMap); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 958, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyGetNodeMap); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 952, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_t_7 = NULL;
       __pyx_t_11 = 0;
@@ -9036,7 +8968,7 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
           __pyx_t_11 = 1;
         }
       }
-      __pyx_t_12 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 958, __pyx_L1_error)
+      __pyx_t_12 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 952, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_12);
       if (__pyx_t_7) {
         __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_7); __pyx_t_7 = NULL;
@@ -9047,17 +8979,17 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
       __Pyx_INCREF(__pyx_v_h);
       __Pyx_GIVEREF(__pyx_v_h);
       PyTuple_SET_ITEM(__pyx_t_12, 1+__pyx_t_11, __pyx_v_h);
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_12, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 958, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_12, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 952, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyObject_GetItem(__pyx_v_resMapping, __pyx_v_g); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 958, __pyx_L1_error)
+      __pyx_t_2 = PyObject_GetItem(__pyx_v_resMapping, __pyx_v_g); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 952, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      if (unlikely(PyObject_SetItem(__pyx_t_2, __pyx_v_h, __pyx_t_1) < 0)) __PYX_ERR(0, 958, __pyx_L1_error)
+      if (unlikely(PyObject_SetItem(__pyx_t_2, __pyx_v_h, __pyx_t_1) < 0)) __PYX_ERR(0, 952, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "PythonGedLib.pyx":954
+      /* "PythonGedLib.pyx":948
  *     for g in range(listID[0], listID[1]) :
  *         print("Computation between graph " + str(g) + " with all the others including himself.")
  *         for h in range(listID[0], listID[1]) :             # <<<<<<<<<<<<<<
@@ -9067,7 +8999,7 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "PythonGedLib.pyx":952
+    /* "PythonGedLib.pyx":946
  *     resDistance = [[]]
  *     resMapping = [[]]
  *     for g in range(listID[0], listID[1]) :             # <<<<<<<<<<<<<<
@@ -9077,16 +9009,16 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
   }
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-  /* "PythonGedLib.pyx":960
+  /* "PythonGedLib.pyx":954
  *             resMapping[g][h] = PyGetNodeMap(g,h)
  * 
  *     print("Finish ! The return contains edit distances and NodeMap but you can check the result with graphs'ID until you restart the environment")             # <<<<<<<<<<<<<<
  *     return resDistance, resMapping
  * 
  */
-  if (__Pyx_PrintOne(0, __pyx_kp_s_Finish_The_return_contains_edit) < 0) __PYX_ERR(0, 960, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_kp_s_Finish_The_return_contains_edit) < 0) __PYX_ERR(0, 954, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":961
+  /* "PythonGedLib.pyx":955
  * 
  *     print("Finish ! The return contains edit distances and NodeMap but you can check the result with graphs'ID until you restart the environment")
  *     return resDistance, resMapping             # <<<<<<<<<<<<<<
@@ -9094,7 +9026,7 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_9 = PyTuple_New(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 961, __pyx_L1_error)
+  __pyx_t_9 = PyTuple_New(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 955, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_INCREF(__pyx_v_resDistance);
   __Pyx_GIVEREF(__pyx_v_resDistance);
@@ -9106,7 +9038,7 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
   __pyx_t_9 = 0;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":907
+  /* "PythonGedLib.pyx":902
  *     return resDistance, resMapping
  * 
  * def computeEditDistanceOnNxGraphs(dataset, classes, editCost, method, options, initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :             # <<<<<<<<<<<<<<
@@ -9136,7 +9068,7 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
   return __pyx_r;
 }
 
-/* "PythonGedLib.pyx":965
+/* "PythonGedLib.pyx":959
  * 
  * 
  * def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, options="", initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :             # <<<<<<<<<<<<<<
@@ -9145,10 +9077,10 @@ static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnNxGraphs(CYTHON_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12PythonGedLib_99computeEditDistanceOnGXlGraphs(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12PythonGedLib_98computeEditDistanceOnGXlGraphs[] = "\n        Computes all the edit distance between each GXL graphs on the folder and the XMl file. \n        \n        :param pathFolder: The folder's path which contains GXL graphs\n        :param pathXML: The XML's path which indicates which graphes you want to load\n        :param editCost: The name of the edit cost function\n        :param method: The name of the computation method\n        :param options: The options of the method (like bash options), an empty string by default\n        :param initOption:  The name of the init option, \"EAGER_WITHOUT_SHUFFLED_COPIES\" by default\n        :type pathFolder: string\n        :type pathXML: string\n        :type editCost: string\n        :type method: string\n        :type options: string\n        :type initOption: string\n        :return: The list of the first and last-1 ID of graphs\n        :rtype: tuple(size_t, size_t)\n\n        .. seealso:: listOfEditCostOptions, listOfMethodOptions, listOfInitOptions \n        .. note:: Make sure each parameter exists with your architecture and these lists : listOfEditCostOptions, listOfMethodOptions, listOfInitOptions. \n        \n    ";
-static PyMethodDef __pyx_mdef_12PythonGedLib_99computeEditDistanceOnGXlGraphs = {"computeEditDistanceOnGXlGraphs", (PyCFunction)__pyx_pw_12PythonGedLib_99computeEditDistanceOnGXlGraphs, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_98computeEditDistanceOnGXlGraphs};
-static PyObject *__pyx_pw_12PythonGedLib_99computeEditDistanceOnGXlGraphs(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_12PythonGedLib_97computeEditDistanceOnGXlGraphs(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_12PythonGedLib_96computeEditDistanceOnGXlGraphs[] = "\n        Computes all the edit distance between each GXL graphs on the folder and the XMl file. \n        \n        :param pathFolder: The folder's path which contains GXL graphs\n        :param pathXML: The XML's path which indicates which graphes you want to load\n        :param editCost: The name of the edit cost function\n        :param method: The name of the computation method\n        :param options: The options of the method (like bash options), an empty string by default\n        :param initOption:  The name of the init option, \"EAGER_WITHOUT_SHUFFLED_COPIES\" by default\n        :type pathFolder: string\n        :type pathXML: string\n        :type editCost: string\n        :type method: string\n        :type options: string\n        :type initOption: string\n        :return: The list of the first and last-1 ID of graphs\n        :rtype: tuple(size_t, size_t)\n\n        .. seealso:: listOfEditCostOptions, listOfMethodOptions, listOfInitOptions \n        .. note:: Make sure each parameter exists with your architecture and these lists : listOfEditCostOptions, listOfMethodOptions, listOfInitOptions. \n        \n    ";
+static PyMethodDef __pyx_mdef_12PythonGedLib_97computeEditDistanceOnGXlGraphs = {"computeEditDistanceOnGXlGraphs", (PyCFunction)__pyx_pw_12PythonGedLib_97computeEditDistanceOnGXlGraphs, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12PythonGedLib_96computeEditDistanceOnGXlGraphs};
+static PyObject *__pyx_pw_12PythonGedLib_97computeEditDistanceOnGXlGraphs(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_pathFolder = 0;
   PyObject *__pyx_v_pathXML = 0;
   PyObject *__pyx_v_editCost = 0;
@@ -9184,17 +9116,17 @@ static PyObject *__pyx_pw_12PythonGedLib_99computeEditDistanceOnGXlGraphs(PyObje
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_pathXML)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("computeEditDistanceOnGXlGraphs", 0, 4, 6, 1); __PYX_ERR(0, 965, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("computeEditDistanceOnGXlGraphs", 0, 4, 6, 1); __PYX_ERR(0, 959, __pyx_L3_error)
         }
         case  2:
         if (likely((values[2] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_editCost)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("computeEditDistanceOnGXlGraphs", 0, 4, 6, 2); __PYX_ERR(0, 965, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("computeEditDistanceOnGXlGraphs", 0, 4, 6, 2); __PYX_ERR(0, 959, __pyx_L3_error)
         }
         case  3:
         if (likely((values[3] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_method)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("computeEditDistanceOnGXlGraphs", 0, 4, 6, 3); __PYX_ERR(0, 965, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("computeEditDistanceOnGXlGraphs", 0, 4, 6, 3); __PYX_ERR(0, 959, __pyx_L3_error)
         }
         case  4:
         if (kw_args > 0) {
@@ -9208,7 +9140,7 @@ static PyObject *__pyx_pw_12PythonGedLib_99computeEditDistanceOnGXlGraphs(PyObje
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "computeEditDistanceOnGXlGraphs") < 0)) __PYX_ERR(0, 965, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "computeEditDistanceOnGXlGraphs") < 0)) __PYX_ERR(0, 959, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -9231,20 +9163,20 @@ static PyObject *__pyx_pw_12PythonGedLib_99computeEditDistanceOnGXlGraphs(PyObje
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("computeEditDistanceOnGXlGraphs", 0, 4, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 965, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("computeEditDistanceOnGXlGraphs", 0, 4, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 959, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("PythonGedLib.computeEditDistanceOnGXlGraphs", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(__pyx_self, __pyx_v_pathFolder, __pyx_v_pathXML, __pyx_v_editCost, __pyx_v_method, __pyx_v_options, __pyx_v_initOption);
+  __pyx_r = __pyx_pf_12PythonGedLib_96computeEditDistanceOnGXlGraphs(__pyx_self, __pyx_v_pathFolder, __pyx_v_pathXML, __pyx_v_editCost, __pyx_v_method, __pyx_v_options, __pyx_v_initOption);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_pathFolder, PyObject *__pyx_v_pathXML, PyObject *__pyx_v_editCost, PyObject *__pyx_v_method, PyObject *__pyx_v_options, PyObject *__pyx_v_initOption) {
+static PyObject *__pyx_pf_12PythonGedLib_96computeEditDistanceOnGXlGraphs(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_pathFolder, PyObject *__pyx_v_pathXML, PyObject *__pyx_v_editCost, PyObject *__pyx_v_method, PyObject *__pyx_v_options, PyObject *__pyx_v_initOption) {
   PyObject *__pyx_v_listID = NULL;
   PyObject *__pyx_v_g = NULL;
   PyObject *__pyx_v_h = NULL;
@@ -9264,14 +9196,14 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
   PyObject *__pyx_t_12 = NULL;
   __Pyx_RefNannySetupContext("computeEditDistanceOnGXlGraphs", 0);
 
-  /* "PythonGedLib.pyx":989
+  /* "PythonGedLib.pyx":983
  *     """
  * 
  *     if PyIsInitialized() :             # <<<<<<<<<<<<<<
  *         PyRestartEnv()
  * 
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyIsInitialized); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 989, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyIsInitialized); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 983, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -9284,25 +9216,25 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
     }
   }
   if (__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 989, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 983, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else {
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 989, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 983, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 989, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 983, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_4) {
 
-    /* "PythonGedLib.pyx":990
+    /* "PythonGedLib.pyx":984
  * 
  *     if PyIsInitialized() :
  *         PyRestartEnv()             # <<<<<<<<<<<<<<
  * 
  *     print("Loading graphs in progress...")
  */
-    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyRestartEnv); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 990, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyRestartEnv); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 984, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_3 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -9315,16 +9247,16 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
       }
     }
     if (__pyx_t_3) {
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 990, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 984, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     } else {
-      __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 990, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 984, __pyx_L1_error)
     }
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "PythonGedLib.pyx":989
+    /* "PythonGedLib.pyx":983
  *     """
  * 
  *     if PyIsInitialized() :             # <<<<<<<<<<<<<<
@@ -9333,23 +9265,23 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
  */
   }
 
-  /* "PythonGedLib.pyx":992
+  /* "PythonGedLib.pyx":986
  *         PyRestartEnv()
  * 
  *     print("Loading graphs in progress...")             # <<<<<<<<<<<<<<
  *     PyLoadGXLGraph(pathFolder, pathXML)
  *     listID = PyGetGraphIds()
  */
-  if (__Pyx_PrintOne(0, __pyx_kp_s_Loading_graphs_in_progress) < 0) __PYX_ERR(0, 992, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_kp_s_Loading_graphs_in_progress) < 0) __PYX_ERR(0, 986, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":993
+  /* "PythonGedLib.pyx":987
  * 
  *     print("Loading graphs in progress...")
  *     PyLoadGXLGraph(pathFolder, pathXML)             # <<<<<<<<<<<<<<
  *     listID = PyGetGraphIds()
  *     print("Graphs loaded ! ")
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyLoadGXLGraph); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 993, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyLoadGXLGraph); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 987, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_5 = 0;
@@ -9363,7 +9295,7 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
       __pyx_t_5 = 1;
     }
   }
-  __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 993, __pyx_L1_error)
+  __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 987, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   if (__pyx_t_3) {
     __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3); __pyx_t_3 = NULL;
@@ -9374,20 +9306,20 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
   __Pyx_INCREF(__pyx_v_pathXML);
   __Pyx_GIVEREF(__pyx_v_pathXML);
   PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_pathXML);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 993, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 987, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":994
+  /* "PythonGedLib.pyx":988
  *     print("Loading graphs in progress...")
  *     PyLoadGXLGraph(pathFolder, pathXML)
  *     listID = PyGetGraphIds()             # <<<<<<<<<<<<<<
  *     print("Graphs loaded ! ")
  *     print("Number of graphs = " + str(listID[1]))
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyGetGraphIds); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 994, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyGetGraphIds); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 988, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_6 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -9400,56 +9332,56 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
     }
   }
   if (__pyx_t_6) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 994, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 988, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   } else {
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 994, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 988, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_listID = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":995
+  /* "PythonGedLib.pyx":989
  *     PyLoadGXLGraph(pathFolder, pathXML)
  *     listID = PyGetGraphIds()
  *     print("Graphs loaded ! ")             # <<<<<<<<<<<<<<
  *     print("Number of graphs = " + str(listID[1]))
  * 
  */
-  if (__Pyx_PrintOne(0, __pyx_kp_s_Graphs_loaded) < 0) __PYX_ERR(0, 995, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_kp_s_Graphs_loaded) < 0) __PYX_ERR(0, 989, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":996
+  /* "PythonGedLib.pyx":990
  *     listID = PyGetGraphIds()
  *     print("Graphs loaded ! ")
  *     print("Number of graphs = " + str(listID[1]))             # <<<<<<<<<<<<<<
  * 
  *     PySetEditCost(editCost)
  */
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_listID, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 996, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_listID, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 990, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 996, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 990, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 996, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 990, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyNumber_Add(__pyx_kp_s_Number_of_graphs, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 996, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Add(__pyx_kp_s_Number_of_graphs, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 990, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 996, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 990, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":998
+  /* "PythonGedLib.pyx":992
  *     print("Number of graphs = " + str(listID[1]))
  * 
  *     PySetEditCost(editCost)             # <<<<<<<<<<<<<<
  *     print("Initialization in progress...")
  *     PyInitEnv(initOption)
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PySetEditCost); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 998, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PySetEditCost); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 992, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_6 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_1))) {
@@ -9462,39 +9394,39 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
     }
   }
   if (!__pyx_t_6) {
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_editCost); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 998, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_editCost); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 992, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
   } else {
-    __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 998, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 992, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_6); __pyx_t_6 = NULL;
     __Pyx_INCREF(__pyx_v_editCost);
     __Pyx_GIVEREF(__pyx_v_editCost);
     PyTuple_SET_ITEM(__pyx_t_3, 0+1, __pyx_v_editCost);
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 998, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 992, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":999
+  /* "PythonGedLib.pyx":993
  * 
  *     PySetEditCost(editCost)
  *     print("Initialization in progress...")             # <<<<<<<<<<<<<<
  *     PyInitEnv(initOption)
  *     print("Initialization terminated !")
  */
-  if (__Pyx_PrintOne(0, __pyx_kp_s_Initialization_in_progress) < 0) __PYX_ERR(0, 999, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_kp_s_Initialization_in_progress) < 0) __PYX_ERR(0, 993, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":1000
+  /* "PythonGedLib.pyx":994
  *     PySetEditCost(editCost)
  *     print("Initialization in progress...")
  *     PyInitEnv(initOption)             # <<<<<<<<<<<<<<
  *     print("Initialization terminated !")
  * 
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyInitEnv); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1000, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyInitEnv); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 994, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_1))) {
@@ -9507,39 +9439,39 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_initOption); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1000, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_initOption); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 994, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
   } else {
-    __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1000, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 994, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3); __pyx_t_3 = NULL;
     __Pyx_INCREF(__pyx_v_initOption);
     __Pyx_GIVEREF(__pyx_v_initOption);
     PyTuple_SET_ITEM(__pyx_t_6, 0+1, __pyx_v_initOption);
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1000, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 994, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":1001
+  /* "PythonGedLib.pyx":995
  *     print("Initialization in progress...")
  *     PyInitEnv(initOption)
  *     print("Initialization terminated !")             # <<<<<<<<<<<<<<
  * 
  *     PySetMethod(method, options)
  */
-  if (__Pyx_PrintOne(0, __pyx_kp_s_Initialization_terminated) < 0) __PYX_ERR(0, 1001, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_kp_s_Initialization_terminated) < 0) __PYX_ERR(0, 995, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":1003
+  /* "PythonGedLib.pyx":997
  *     print("Initialization terminated !")
  * 
  *     PySetMethod(method, options)             # <<<<<<<<<<<<<<
  *     PyInitMethod()
  * 
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PySetMethod); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1003, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PySetMethod); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 997, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_6 = NULL;
   __pyx_t_5 = 0;
@@ -9553,7 +9485,7 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
       __pyx_t_5 = 1;
     }
   }
-  __pyx_t_3 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1003, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 997, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__pyx_t_6) {
     __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_6); __pyx_t_6 = NULL;
@@ -9564,20 +9496,20 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
   __Pyx_INCREF(__pyx_v_options);
   __Pyx_GIVEREF(__pyx_v_options);
   PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_5, __pyx_v_options);
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1003, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 997, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":1004
+  /* "PythonGedLib.pyx":998
  * 
  *     PySetMethod(method, options)
  *     PyInitMethod()             # <<<<<<<<<<<<<<
  * 
  *     #res = []
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyInitMethod); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1004, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyInitMethod); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 998, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_1))) {
@@ -9590,27 +9522,27 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
     }
   }
   if (__pyx_t_3) {
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1004, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 998, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else {
-    __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1004, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 998, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":1007
+  /* "PythonGedLib.pyx":1001
  * 
  *     #res = []
  *     for g in range(listID[0], listID[1]) :             # <<<<<<<<<<<<<<
  *         print("Computation between graph " + str(g) + " with all the others including himself.")
  *         for h in range(listID[0], listID[1]) :
  */
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_listID, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1007, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_listID, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1001, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_listID, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1007, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_listID, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1001, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1007, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1001, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_2);
@@ -9618,16 +9550,16 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
   PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_1);
   __pyx_t_2 = 0;
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1007, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1001, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
     __pyx_t_3 = __pyx_t_1; __Pyx_INCREF(__pyx_t_3); __pyx_t_5 = 0;
     __pyx_t_7 = NULL;
   } else {
-    __pyx_t_5 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1007, __pyx_L1_error)
+    __pyx_t_5 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1001, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_7 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1007, __pyx_L1_error)
+    __pyx_t_7 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1001, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   for (;;) {
@@ -9635,17 +9567,17 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
       if (likely(PyList_CheckExact(__pyx_t_3))) {
         if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_3)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 1007, __pyx_L1_error)
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 1001, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1007, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1001, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       } else {
         if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_3)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 1007, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 1001, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1007, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1001, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       }
@@ -9655,7 +9587,7 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 1007, __pyx_L1_error)
+          else __PYX_ERR(0, 1001, __pyx_L1_error)
         }
         break;
       }
@@ -9664,42 +9596,42 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
     __Pyx_XDECREF_SET(__pyx_v_g, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "PythonGedLib.pyx":1008
+    /* "PythonGedLib.pyx":1002
  *     #res = []
  *     for g in range(listID[0], listID[1]) :
  *         print("Computation between graph " + str(g) + " with all the others including himself.")             # <<<<<<<<<<<<<<
  *         for h in range(listID[0], listID[1]) :
  *             #print("Computation between graph " + str(g) + " and graph " + str(h))
  */
-    __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1008, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1002, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_v_g);
     __Pyx_GIVEREF(__pyx_v_g);
     PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_g);
-    __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1008, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1002, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = PyNumber_Add(__pyx_kp_s_Computation_between_graph, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1008, __pyx_L1_error)
+    __pyx_t_1 = PyNumber_Add(__pyx_kp_s_Computation_between_graph, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1002, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_with_all_the_others_including_h); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1008, __pyx_L1_error)
+    __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_with_all_the_others_including_h); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1002, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 1008, __pyx_L1_error)
+    if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 1002, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "PythonGedLib.pyx":1009
+    /* "PythonGedLib.pyx":1003
  *     for g in range(listID[0], listID[1]) :
  *         print("Computation between graph " + str(g) + " with all the others including himself.")
  *         for h in range(listID[0], listID[1]) :             # <<<<<<<<<<<<<<
  *             #print("Computation between graph " + str(g) + " and graph " + str(h))
  *             PyRunMethod(g,h)
  */
-    __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_listID, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1009, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_listID, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1003, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_listID, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1009, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_listID, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1003, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1009, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1003, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_2);
     PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_2);
@@ -9707,16 +9639,16 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
     PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_1);
     __pyx_t_2 = 0;
     __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1009, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1003, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
       __pyx_t_6 = __pyx_t_1; __Pyx_INCREF(__pyx_t_6); __pyx_t_8 = 0;
       __pyx_t_9 = NULL;
     } else {
-      __pyx_t_8 = -1; __pyx_t_6 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1009, __pyx_L1_error)
+      __pyx_t_8 = -1; __pyx_t_6 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1003, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_9 = Py_TYPE(__pyx_t_6)->tp_iternext; if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1009, __pyx_L1_error)
+      __pyx_t_9 = Py_TYPE(__pyx_t_6)->tp_iternext; if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1003, __pyx_L1_error)
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     for (;;) {
@@ -9724,17 +9656,17 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
         if (likely(PyList_CheckExact(__pyx_t_6))) {
           if (__pyx_t_8 >= PyList_GET_SIZE(__pyx_t_6)) break;
           #if CYTHON_COMPILING_IN_CPYTHON
-          __pyx_t_1 = PyList_GET_ITEM(__pyx_t_6, __pyx_t_8); __Pyx_INCREF(__pyx_t_1); __pyx_t_8++; if (unlikely(0 < 0)) __PYX_ERR(0, 1009, __pyx_L1_error)
+          __pyx_t_1 = PyList_GET_ITEM(__pyx_t_6, __pyx_t_8); __Pyx_INCREF(__pyx_t_1); __pyx_t_8++; if (unlikely(0 < 0)) __PYX_ERR(0, 1003, __pyx_L1_error)
           #else
-          __pyx_t_1 = PySequence_ITEM(__pyx_t_6, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1009, __pyx_L1_error)
+          __pyx_t_1 = PySequence_ITEM(__pyx_t_6, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1003, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
           #endif
         } else {
           if (__pyx_t_8 >= PyTuple_GET_SIZE(__pyx_t_6)) break;
           #if CYTHON_COMPILING_IN_CPYTHON
-          __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_6, __pyx_t_8); __Pyx_INCREF(__pyx_t_1); __pyx_t_8++; if (unlikely(0 < 0)) __PYX_ERR(0, 1009, __pyx_L1_error)
+          __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_6, __pyx_t_8); __Pyx_INCREF(__pyx_t_1); __pyx_t_8++; if (unlikely(0 < 0)) __PYX_ERR(0, 1003, __pyx_L1_error)
           #else
-          __pyx_t_1 = PySequence_ITEM(__pyx_t_6, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1009, __pyx_L1_error)
+          __pyx_t_1 = PySequence_ITEM(__pyx_t_6, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1003, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
           #endif
         }
@@ -9744,7 +9676,7 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 1009, __pyx_L1_error)
+            else __PYX_ERR(0, 1003, __pyx_L1_error)
           }
           break;
         }
@@ -9753,14 +9685,14 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
       __Pyx_XDECREF_SET(__pyx_v_h, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "PythonGedLib.pyx":1011
+      /* "PythonGedLib.pyx":1005
  *         for h in range(listID[0], listID[1]) :
  *             #print("Computation between graph " + str(g) + " and graph " + str(h))
  *             PyRunMethod(g,h)             # <<<<<<<<<<<<<<
  *             #res.append((PyGetUpperBound(g,h), PyGetNodeMap(g,h), PyGetRuntime(g,h)))
  * 
  */
-      __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyRunMethod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1011, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyRunMethod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1005, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_t_10 = NULL;
       __pyx_t_11 = 0;
@@ -9774,7 +9706,7 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
           __pyx_t_11 = 1;
         }
       }
-      __pyx_t_12 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 1011, __pyx_L1_error)
+      __pyx_t_12 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 1005, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_12);
       if (__pyx_t_10) {
         __Pyx_GIVEREF(__pyx_t_10); PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_10); __pyx_t_10 = NULL;
@@ -9785,13 +9717,13 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
       __Pyx_INCREF(__pyx_v_h);
       __Pyx_GIVEREF(__pyx_v_h);
       PyTuple_SET_ITEM(__pyx_t_12, 1+__pyx_t_11, __pyx_v_h);
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_12, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1011, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_12, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1005, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "PythonGedLib.pyx":1009
+      /* "PythonGedLib.pyx":1003
  *     for g in range(listID[0], listID[1]) :
  *         print("Computation between graph " + str(g) + " with all the others including himself.")
  *         for h in range(listID[0], listID[1]) :             # <<<<<<<<<<<<<<
@@ -9801,7 +9733,7 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
     }
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "PythonGedLib.pyx":1007
+    /* "PythonGedLib.pyx":1001
  * 
  *     #res = []
  *     for g in range(listID[0], listID[1]) :             # <<<<<<<<<<<<<<
@@ -9811,25 +9743,25 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "PythonGedLib.pyx":1016
+  /* "PythonGedLib.pyx":1010
  *     #return res
  * 
  *     print ("Finish ! You can check the result with each ID of graphs ! There are in the return")             # <<<<<<<<<<<<<<
  *     print ("Please don't restart the environment or recall this function, you will lose your results !")
  *     return listID
  */
-  if (__Pyx_PrintOne(0, __pyx_kp_s_Finish_You_can_check_the_result) < 0) __PYX_ERR(0, 1016, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_kp_s_Finish_You_can_check_the_result) < 0) __PYX_ERR(0, 1010, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":1017
+  /* "PythonGedLib.pyx":1011
  * 
  *     print ("Finish ! You can check the result with each ID of graphs ! There are in the return")
  *     print ("Please don't restart the environment or recall this function, you will lose your results !")             # <<<<<<<<<<<<<<
  *     return listID
  * 
  */
-  if (__Pyx_PrintOne(0, __pyx_kp_s_Please_don_t_restart_the_environ) < 0) __PYX_ERR(0, 1017, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_kp_s_Please_don_t_restart_the_environ) < 0) __PYX_ERR(0, 1011, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":1018
+  /* "PythonGedLib.pyx":1012
  *     print ("Finish ! You can check the result with each ID of graphs ! There are in the return")
  *     print ("Please don't restart the environment or recall this function, you will lose your results !")
  *     return listID             # <<<<<<<<<<<<<<
@@ -9841,7 +9773,7 @@ static PyObject *__pyx_pf_12PythonGedLib_98computeEditDistanceOnGXlGraphs(CYTHON
   __pyx_r = __pyx_v_listID;
   goto __pyx_L0;
 
-  /* "PythonGedLib.pyx":965
+  /* "PythonGedLib.pyx":959
  * 
  * 
  * def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, options="", initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :             # <<<<<<<<<<<<<<
@@ -14504,7 +14436,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s__3, __pyx_k__3, sizeof(__pyx_k__3), 0, 0, 1, 0},
   {&__pyx_n_s_addNxGraph, __pyx_k_addNxGraph, sizeof(__pyx_k_addNxGraph), 0, 0, 1, 1},
   {&__pyx_n_s_addRandomGraph, __pyx_k_addRandomGraph, sizeof(__pyx_k_addRandomGraph), 0, 0, 1, 1},
-  {&__pyx_n_s_appel, __pyx_k_appel, sizeof(__pyx_k_appel), 0, 0, 1, 1},
   {&__pyx_n_s_classe, __pyx_k_classe, sizeof(__pyx_k_classe), 0, 0, 1, 1},
   {&__pyx_n_s_classes, __pyx_k_classes, sizeof(__pyx_k_classes), 0, 0, 1, 1},
   {&__pyx_n_s_computeEditDistanceOnGXlGraphs, __pyx_k_computeEditDistanceOnGXlGraphs, sizeof(__pyx_k_computeEditDistanceOnGXlGraphs), 0, 0, 1, 1},
@@ -14575,7 +14506,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_tail, __pyx_k_tail, sizeof(__pyx_k_tail), 0, 0, 1, 1},
   {&__pyx_n_s_tailB, __pyx_k_tailB, sizeof(__pyx_k_tailB), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
-  {&__pyx_n_s_truc, __pyx_k_truc, sizeof(__pyx_k_truc), 0, 0, 1, 1},
   {&__pyx_kp_u_unknown_dtype_code_in_numpy_pxd, __pyx_k_unknown_dtype_code_in_numpy_pxd, sizeof(__pyx_k_unknown_dtype_code_in_numpy_pxd), 0, 1, 0, 0},
   {&__pyx_kp_s_utf_8, __pyx_k_utf_8, sizeof(__pyx_k_utf_8), 0, 0, 1, 0},
   {&__pyx_n_s_value, __pyx_k_value, sizeof(__pyx_k_value), 0, 0, 1, 1},
@@ -14583,8 +14513,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_Exception = __Pyx_GetBuiltinName(__pyx_n_s_Exception); if (!__pyx_builtin_Exception) __PYX_ERR(0, 739, __pyx_L1_error)
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 952, __pyx_L1_error)
+  __pyx_builtin_Exception = __Pyx_GetBuiltinName(__pyx_n_s_Exception); if (!__pyx_builtin_Exception) __PYX_ERR(0, 734, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 946, __pyx_L1_error)
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(1, 218, __pyx_L1_error)
   __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) __PYX_ERR(1, 799, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(2, 107, __pyx_L1_error)
@@ -14597,169 +14527,169 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "PythonGedLib.pyx":167
+  /* "PythonGedLib.pyx":160
  *         .. note:: You can call this function multiple times if you want, but not after an init call.
  *     """
  *     loadGXLGraph(pathFolder.encode('utf-8'), pathXML.encode('utf-8'))             # <<<<<<<<<<<<<<
  * 
  * def PyGetGraphIds() :
  */
-  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 167, __pyx_L1_error)
+  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 160, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
-  __pyx_tuple__2 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 167, __pyx_L1_error)
+  __pyx_tuple__2 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 160, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "PythonGedLib.pyx":233
+  /* "PythonGedLib.pyx":226
  *         .. note:: You can call this function without parameters. You can also use this function after initialization, call PyInitEnv() after you're finished your modifications.
  *     """
  *     return addGraph(name.encode('utf-8'),classe.encode('utf-8'))             # <<<<<<<<<<<<<<
  * 
  * def PyAddNode(graphID, nodeID, nodeLabel):
  */
-  __pyx_tuple__4 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 233, __pyx_L1_error)
+  __pyx_tuple__4 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
-  __pyx_tuple__5 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 233, __pyx_L1_error)
+  __pyx_tuple__5 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "PythonGedLib.pyx":249
+  /* "PythonGedLib.pyx":242
  *         .. note:: You can also use this function after initialization, but only on a newly added graph. Call PyInitEnv() after you're finished your modifications.
  *     """
  *     addNode(graphID, nodeID.encode('utf-8'), encodeYourMap(nodeLabel))             # <<<<<<<<<<<<<<
  * 
  * def PyAddEdge(graphID, tail, head, edgeLabel, ignoreDuplicates = True) :
  */
-  __pyx_tuple__6 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 249, __pyx_L1_error)
+  __pyx_tuple__6 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 242, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
 
-  /* "PythonGedLib.pyx":269
+  /* "PythonGedLib.pyx":262
  *         .. note:: You can also use this function after initialization, but only on a newly added graph. Call PyInitEnv() after you're finished your modifications.
  *     """
  *     addEdge(graphID, tail.encode('utf-8'), head.encode('utf-8'), encodeYourMap(edgeLabel), ignoreDuplicates)             # <<<<<<<<<<<<<<
  * 
  * def PyAddSymmetricalEdge(graphID, tail, head, edgeLabel) :
  */
-  __pyx_tuple__7 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_tuple__7 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
-  __pyx_tuple__8 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_tuple__8 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "PythonGedLib.pyx":287
+  /* "PythonGedLib.pyx":280
  *         .. note:: You can also use this function after initialization, but only on a newly added graph. Call PyInitEnv() after you're finished your modifications.
  *     """
  *     tailB = tail.encode('utf-8')             # <<<<<<<<<<<<<<
  *     headB = head.encode('utf-8')
  *     edgeLabelB = encodeYourMap(edgeLabel)
  */
-  __pyx_tuple__9 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 287, __pyx_L1_error)
+  __pyx_tuple__9 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 280, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
 
-  /* "PythonGedLib.pyx":288
+  /* "PythonGedLib.pyx":281
  *     """
  *     tailB = tail.encode('utf-8')
  *     headB = head.encode('utf-8')             # <<<<<<<<<<<<<<
  *     edgeLabelB = encodeYourMap(edgeLabel)
  *     addEdge(graphID, tailB, headB, edgeLabelB, True)
  */
-  __pyx_tuple__10 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 288, __pyx_L1_error)
+  __pyx_tuple__10 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 281, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
 
-  /* "PythonGedLib.pyx":414
+  /* "PythonGedLib.pyx":407
  *         .. note:: Try to make sure the edit cost function exists with listOfEditCostOptions, raise an error otherwise.
  *     """
  *     editCostB = editCost.encode('utf-8')             # <<<<<<<<<<<<<<
  *     if editCostB in listOfEditCostOptions :
  *         setEditCost(editCostB, editCostConstant)
  */
-  __pyx_tuple__12 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 414, __pyx_L1_error)
+  __pyx_tuple__12 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 407, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
 
-  /* "PythonGedLib.pyx":418
+  /* "PythonGedLib.pyx":411
  *         setEditCost(editCostB, editCostConstant)
  *     else :
  *         raise EditCostError("This edit cost function doesn't exist, please see listOfEditCostOptions for selecting a edit cost function")             # <<<<<<<<<<<<<<
  * 
  * def PySetPersonalEditCost(editCostConstant = []) :
  */
-  __pyx_tuple__13 = PyTuple_Pack(1, __pyx_kp_s_This_edit_cost_function_doesn_t); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 418, __pyx_L1_error)
+  __pyx_tuple__13 = PyTuple_Pack(1, __pyx_kp_s_This_edit_cost_function_doesn_t); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 411, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
 
-  /* "PythonGedLib.pyx":442
+  /* "PythonGedLib.pyx":435
  *         .. note:: Try to make sure the option exists with listOfInitOptions or choose no options, raise an error otherwise.
  *     """
  *     initB = initOption.encode('utf-8')             # <<<<<<<<<<<<<<
  *     if initB in listOfInitOptions :
  *         initEnv(initB)
  */
-  __pyx_tuple__15 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 442, __pyx_L1_error)
+  __pyx_tuple__15 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 435, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
 
-  /* "PythonGedLib.pyx":446
+  /* "PythonGedLib.pyx":439
  *         initEnv(initB)
  *     else :
  *         raise InitError("This init option doesn't exist, please see listOfInitOptions for selecting an option. You can choose any options.")             # <<<<<<<<<<<<<<
  * 
  * def PySetMethod(method, options="") :
  */
-  __pyx_tuple__16 = PyTuple_Pack(1, __pyx_kp_s_This_init_option_doesn_t_exist_p); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 446, __pyx_L1_error)
+  __pyx_tuple__16 = PyTuple_Pack(1, __pyx_kp_s_This_init_option_doesn_t_exist_p); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 439, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__16);
   __Pyx_GIVEREF(__pyx_tuple__16);
 
-  /* "PythonGedLib.pyx":460
+  /* "PythonGedLib.pyx":453
  *         .. note:: Try to make sure the edit cost function exists with listOfMethodOptions, raise an error otherwise. Call PyInitMethod() after your set.
  *     """
  *     methodB = method.encode('utf-8')             # <<<<<<<<<<<<<<
  *     if methodB in listOfMethodOptions :
  *         setMethod(methodB, options.encode('utf-8'))
  */
-  __pyx_tuple__17 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 460, __pyx_L1_error)
+  __pyx_tuple__17 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 453, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
 
-  /* "PythonGedLib.pyx":462
+  /* "PythonGedLib.pyx":455
  *     methodB = method.encode('utf-8')
  *     if methodB in listOfMethodOptions :
  *         setMethod(methodB, options.encode('utf-8'))             # <<<<<<<<<<<<<<
  *     else :
  *         raise MethodError("This method doesn't exist, please see listOfMethodOptions for selecting a method")
  */
-  __pyx_tuple__18 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__18)) __PYX_ERR(0, 462, __pyx_L1_error)
+  __pyx_tuple__18 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__18)) __PYX_ERR(0, 455, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__18);
   __Pyx_GIVEREF(__pyx_tuple__18);
 
-  /* "PythonGedLib.pyx":464
+  /* "PythonGedLib.pyx":457
  *         setMethod(methodB, options.encode('utf-8'))
  *     else :
  *         raise MethodError("This method doesn't exist, please see listOfMethodOptions for selecting a method")             # <<<<<<<<<<<<<<
  * 
  * def PyInitMethod() :
  */
-  __pyx_tuple__19 = PyTuple_Pack(1, __pyx_kp_s_This_method_doesn_t_exist_please); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 464, __pyx_L1_error)
+  __pyx_tuple__19 = PyTuple_Pack(1, __pyx_kp_s_This_method_doesn_t_exist_please); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 457, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__19);
   __Pyx_GIVEREF(__pyx_tuple__19);
 
-  /* "PythonGedLib.pyx":812
+  /* "PythonGedLib.pyx":807
  *     res = {}
  *     for key, value in map.items():
  *         res[key.encode('utf-8')] = value.encode('utf-8')             # <<<<<<<<<<<<<<
  *     return res
  * 
  */
-  __pyx_tuple__20 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__20)) __PYX_ERR(0, 812, __pyx_L1_error)
+  __pyx_tuple__20 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__20)) __PYX_ERR(0, 807, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__20);
   __Pyx_GIVEREF(__pyx_tuple__20);
-  __pyx_tuple__21 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(0, 812, __pyx_L1_error)
+  __pyx_tuple__21 = PyTuple_Pack(1, __pyx_kp_s_utf_8); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(0, 807, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__21);
   __Pyx_GIVEREF(__pyx_tuple__21);
 
@@ -14829,605 +14759,596 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__27);
   __Pyx_GIVEREF(__pyx_tuple__27);
 
-  /* "PythonGedLib.pyx":93
+  /* "PythonGedLib.pyx":92
  * ###########################################
- * 
- * def appel() :             # <<<<<<<<<<<<<<
- *     """
- *         Calls an example only in C++. Nothing usefull, that's why you must ignore this function.
- */
-  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_appel, 93, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 93, __pyx_L1_error)
-
-  /* "PythonGedLib.pyx":99
- *     appelle()
  * 
  * def PyIsInitialized() :             # <<<<<<<<<<<<<<
  *     """
  *         Checks and returns if the computation environment is initialized or not.
  */
-  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyIsInitialized, 99, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 99, __pyx_L1_error)
+  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyIsInitialized, 92, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 92, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":110
+  /* "PythonGedLib.pyx":103
  *     return isInitialized()
  * 
  * def PyGetEditCostOptions() :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs the differents edit cost functions and returns the result.
  */
-  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetEditCostOptions, 110, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 110, __pyx_L1_error)
+  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetEditCostOptions, 103, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 103, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":123
+  /* "PythonGedLib.pyx":116
  *     return getEditCostStringOptions()
  * 
  * def PyGetMethodOptions() :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs the differents method for edit distance computation between graphs and returns the result.
  */
-  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetMethodOptions, 123, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 123, __pyx_L1_error)
+  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetMethodOptions, 116, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 116, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":135
+  /* "PythonGedLib.pyx":128
  *     return getMethodStringOptions()
  * 
  * def PyGetInitOptions() :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs the differents initialization parameters for the environment computation for graphs and returns the result.
  */
-  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetInitOptions, 135, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 135, __pyx_L1_error)
+  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetInitOptions, 128, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 128, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":147
+  /* "PythonGedLib.pyx":140
  *     return getInitStringOptions()
  * 
  * def PyRestartEnv() :             # <<<<<<<<<<<<<<
  *     """
  *         Restarts the environment variable. All data related to it will be delete.
  */
-  __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyRestartEnv, 147, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 147, __pyx_L1_error)
+  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyRestartEnv, 140, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 140, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":156
+  /* "PythonGedLib.pyx":149
  *     restartEnv()
  * 
  * def PyLoadGXLGraph(pathFolder, pathXML) :             # <<<<<<<<<<<<<<
  *     """
  *         Loads some GXL graphes on the environment which is in a same folder, and present in the XMLfile.
  */
-  __pyx_tuple__34 = PyTuple_Pack(2, __pyx_n_s_pathFolder, __pyx_n_s_pathXML); if (unlikely(!__pyx_tuple__34)) __PYX_ERR(0, 156, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__34);
-  __Pyx_GIVEREF(__pyx_tuple__34);
-  __pyx_codeobj__35 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyLoadGXLGraph, 156, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__35)) __PYX_ERR(0, 156, __pyx_L1_error)
+  __pyx_tuple__33 = PyTuple_Pack(2, __pyx_n_s_pathFolder, __pyx_n_s_pathXML); if (unlikely(!__pyx_tuple__33)) __PYX_ERR(0, 149, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__33);
+  __Pyx_GIVEREF(__pyx_tuple__33);
+  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyLoadGXLGraph, 149, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 149, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":169
+  /* "PythonGedLib.pyx":162
  *     loadGXLGraph(pathFolder.encode('utf-8'), pathXML.encode('utf-8'))
  * 
  * def PyGetGraphIds() :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs the first and last IDs of the loaded graphs in the environment.
  */
-  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetGraphIds, 169, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_codeobj__35 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetGraphIds, 162, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__35)) __PYX_ERR(0, 162, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":180
+  /* "PythonGedLib.pyx":173
  *     return getGraphIds()
  * 
  * def PyGetAllGraphIds() :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs all the IDs of the loaded graphs in the environment.
  */
-  __pyx_codeobj__37 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetAllGraphIds, 180, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__37)) __PYX_ERR(0, 180, __pyx_L1_error)
+  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetAllGraphIds, 173, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 173, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":191
+  /* "PythonGedLib.pyx":184
  *     return getAllGraphIds()
  * 
  * def PyGetGraphClass(id) :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the class of a graph with its ID.
  */
-  __pyx_tuple__38 = PyTuple_Pack(1, __pyx_n_s_id); if (unlikely(!__pyx_tuple__38)) __PYX_ERR(0, 191, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__38);
-  __Pyx_GIVEREF(__pyx_tuple__38);
-  __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__38, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetGraphClass, 191, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(0, 191, __pyx_L1_error)
+  __pyx_tuple__37 = PyTuple_Pack(1, __pyx_n_s_id); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 184, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__37);
+  __Pyx_GIVEREF(__pyx_tuple__37);
+  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetGraphClass, 184, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 184, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":205
+  /* "PythonGedLib.pyx":198
  *     return getGraphClass(id)
  * 
  * def PyGetGraphName(id) :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the name of a graph with its ID.
  */
-  __pyx_tuple__40 = PyTuple_Pack(1, __pyx_n_s_id); if (unlikely(!__pyx_tuple__40)) __PYX_ERR(0, 205, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__40);
-  __Pyx_GIVEREF(__pyx_tuple__40);
-  __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetGraphName, 205, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 205, __pyx_L1_error)
+  __pyx_tuple__39 = PyTuple_Pack(1, __pyx_n_s_id); if (unlikely(!__pyx_tuple__39)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__39);
+  __Pyx_GIVEREF(__pyx_tuple__39);
+  __pyx_codeobj__40 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__39, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetGraphName, 198, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__40)) __PYX_ERR(0, 198, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":219
+  /* "PythonGedLib.pyx":212
  *     return getGraphName(id)
  * 
  * def PyAddGraph(name="", classe="") :             # <<<<<<<<<<<<<<
  *     """
  *         Adds a empty graph on the environment, with its name and its class. Nodes and edges will be add in a second time.
  */
-  __pyx_tuple__42 = PyTuple_Pack(2, __pyx_n_s_name, __pyx_n_s_classe); if (unlikely(!__pyx_tuple__42)) __PYX_ERR(0, 219, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__42);
-  __Pyx_GIVEREF(__pyx_tuple__42);
-  __pyx_codeobj__43 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__42, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyAddGraph, 219, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__43)) __PYX_ERR(0, 219, __pyx_L1_error)
+  __pyx_tuple__41 = PyTuple_Pack(2, __pyx_n_s_name, __pyx_n_s_classe); if (unlikely(!__pyx_tuple__41)) __PYX_ERR(0, 212, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__41);
+  __Pyx_GIVEREF(__pyx_tuple__41);
+  __pyx_codeobj__42 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__41, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyAddGraph, 212, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__42)) __PYX_ERR(0, 212, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":235
+  /* "PythonGedLib.pyx":228
  *     return addGraph(name.encode('utf-8'),classe.encode('utf-8'))
  * 
  * def PyAddNode(graphID, nodeID, nodeLabel):             # <<<<<<<<<<<<<<
  *     """
  *         Adds a node on a graph selected by its ID. A ID and a label for the node is required.
  */
-  __pyx_tuple__44 = PyTuple_Pack(3, __pyx_n_s_graphID, __pyx_n_s_nodeID, __pyx_n_s_nodeLabel); if (unlikely(!__pyx_tuple__44)) __PYX_ERR(0, 235, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__44);
-  __Pyx_GIVEREF(__pyx_tuple__44);
-  __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__44, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyAddNode, 235, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_tuple__43 = PyTuple_Pack(3, __pyx_n_s_graphID, __pyx_n_s_nodeID, __pyx_n_s_nodeLabel); if (unlikely(!__pyx_tuple__43)) __PYX_ERR(0, 228, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__43);
+  __Pyx_GIVEREF(__pyx_tuple__43);
+  __pyx_codeobj__44 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__43, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyAddNode, 228, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__44)) __PYX_ERR(0, 228, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":251
+  /* "PythonGedLib.pyx":244
  *     addNode(graphID, nodeID.encode('utf-8'), encodeYourMap(nodeLabel))
  * 
  * def PyAddEdge(graphID, tail, head, edgeLabel, ignoreDuplicates = True) :             # <<<<<<<<<<<<<<
  *     """
  *         Adds an edge on a graph selected by its ID.
  */
-  __pyx_tuple__46 = PyTuple_Pack(5, __pyx_n_s_graphID, __pyx_n_s_tail, __pyx_n_s_head, __pyx_n_s_edgeLabel, __pyx_n_s_ignoreDuplicates); if (unlikely(!__pyx_tuple__46)) __PYX_ERR(0, 251, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__46);
-  __Pyx_GIVEREF(__pyx_tuple__46);
-  __pyx_codeobj__47 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__46, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyAddEdge, 251, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__47)) __PYX_ERR(0, 251, __pyx_L1_error)
+  __pyx_tuple__45 = PyTuple_Pack(5, __pyx_n_s_graphID, __pyx_n_s_tail, __pyx_n_s_head, __pyx_n_s_edgeLabel, __pyx_n_s_ignoreDuplicates); if (unlikely(!__pyx_tuple__45)) __PYX_ERR(0, 244, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__45);
+  __Pyx_GIVEREF(__pyx_tuple__45);
+  __pyx_codeobj__46 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__45, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyAddEdge, 244, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__46)) __PYX_ERR(0, 244, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":271
+  /* "PythonGedLib.pyx":264
  *     addEdge(graphID, tail.encode('utf-8'), head.encode('utf-8'), encodeYourMap(edgeLabel), ignoreDuplicates)
  * 
  * def PyAddSymmetricalEdge(graphID, tail, head, edgeLabel) :             # <<<<<<<<<<<<<<
  *     """
  *         Adds a symmetrical edge on a graph selected by its ID.
  */
-  __pyx_tuple__48 = PyTuple_Pack(7, __pyx_n_s_graphID, __pyx_n_s_tail, __pyx_n_s_head, __pyx_n_s_edgeLabel, __pyx_n_s_tailB, __pyx_n_s_headB, __pyx_n_s_edgeLabelB); if (unlikely(!__pyx_tuple__48)) __PYX_ERR(0, 271, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__48);
-  __Pyx_GIVEREF(__pyx_tuple__48);
-  __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(4, 0, 7, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__48, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyAddSymmetricalEdge, 271, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(0, 271, __pyx_L1_error)
+  __pyx_tuple__47 = PyTuple_Pack(7, __pyx_n_s_graphID, __pyx_n_s_tail, __pyx_n_s_head, __pyx_n_s_edgeLabel, __pyx_n_s_tailB, __pyx_n_s_headB, __pyx_n_s_edgeLabelB); if (unlikely(!__pyx_tuple__47)) __PYX_ERR(0, 264, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__47);
+  __Pyx_GIVEREF(__pyx_tuple__47);
+  __pyx_codeobj__48 = (PyObject*)__Pyx_PyCode_New(4, 0, 7, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__47, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyAddSymmetricalEdge, 264, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__48)) __PYX_ERR(0, 264, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":293
+  /* "PythonGedLib.pyx":286
  *     addEdge(graphID, headB, tailB, edgeLabelB, True)
  * 
  * def PyClearGraph(graphID) :             # <<<<<<<<<<<<<<
  *     """
  *         Deletes a graph, selected by its ID, to the environment.
  */
-  __pyx_tuple__50 = PyTuple_Pack(1, __pyx_n_s_graphID); if (unlikely(!__pyx_tuple__50)) __PYX_ERR(0, 293, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__50);
-  __Pyx_GIVEREF(__pyx_tuple__50);
-  __pyx_codeobj__51 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__50, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyClearGraph, 293, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__51)) __PYX_ERR(0, 293, __pyx_L1_error)
+  __pyx_tuple__49 = PyTuple_Pack(1, __pyx_n_s_graphID); if (unlikely(!__pyx_tuple__49)) __PYX_ERR(0, 286, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__49);
+  __Pyx_GIVEREF(__pyx_tuple__49);
+  __pyx_codeobj__50 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__49, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyClearGraph, 286, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__50)) __PYX_ERR(0, 286, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":304
+  /* "PythonGedLib.pyx":297
  *     clearGraph(graphID)
  * 
  * def PyGetGraphInternalId(graphID) :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs and returns the internal Id of a graph, selected by its ID.
  */
-  __pyx_tuple__52 = PyTuple_Pack(1, __pyx_n_s_graphID); if (unlikely(!__pyx_tuple__52)) __PYX_ERR(0, 304, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__52);
-  __Pyx_GIVEREF(__pyx_tuple__52);
-  __pyx_codeobj__53 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__52, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetGraphInternalId, 304, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__53)) __PYX_ERR(0, 304, __pyx_L1_error)
+  __pyx_tuple__51 = PyTuple_Pack(1, __pyx_n_s_graphID); if (unlikely(!__pyx_tuple__51)) __PYX_ERR(0, 297, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__51);
+  __Pyx_GIVEREF(__pyx_tuple__51);
+  __pyx_codeobj__52 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__51, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetGraphInternalId, 297, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__52)) __PYX_ERR(0, 297, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":318
+  /* "PythonGedLib.pyx":311
  *     return getGraphInternalId(graphID)
  * 
  * def PyGetGraphNumNodes(graphID) :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs and returns the number of nodes on a graph, selected by its ID.
  */
-  __pyx_tuple__54 = PyTuple_Pack(1, __pyx_n_s_graphID); if (unlikely(!__pyx_tuple__54)) __PYX_ERR(0, 318, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__54);
-  __Pyx_GIVEREF(__pyx_tuple__54);
-  __pyx_codeobj__55 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__54, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetGraphNumNodes, 318, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__55)) __PYX_ERR(0, 318, __pyx_L1_error)
+  __pyx_tuple__53 = PyTuple_Pack(1, __pyx_n_s_graphID); if (unlikely(!__pyx_tuple__53)) __PYX_ERR(0, 311, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__53);
+  __Pyx_GIVEREF(__pyx_tuple__53);
+  __pyx_codeobj__54 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__53, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetGraphNumNodes, 311, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__54)) __PYX_ERR(0, 311, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":332
+  /* "PythonGedLib.pyx":325
  *     return getGraphNumNodes(graphID)
  * 
  * def PyGetGraphNumEdges(graphID) :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs and returns the number of edges on a graph, selected by its ID.
  */
-  __pyx_tuple__56 = PyTuple_Pack(1, __pyx_n_s_graphID); if (unlikely(!__pyx_tuple__56)) __PYX_ERR(0, 332, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__56);
-  __Pyx_GIVEREF(__pyx_tuple__56);
-  __pyx_codeobj__57 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__56, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetGraphNumEdges, 332, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__57)) __PYX_ERR(0, 332, __pyx_L1_error)
+  __pyx_tuple__55 = PyTuple_Pack(1, __pyx_n_s_graphID); if (unlikely(!__pyx_tuple__55)) __PYX_ERR(0, 325, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__55);
+  __Pyx_GIVEREF(__pyx_tuple__55);
+  __pyx_codeobj__56 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__55, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetGraphNumEdges, 325, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__56)) __PYX_ERR(0, 325, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":346
+  /* "PythonGedLib.pyx":339
  *     return getGraphNumEdges(graphID)
  * 
  * def PyGetOriginalNodeIds(graphID) :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs and returns all th Ids of nodes on a graph, selected by its ID.
  */
-  __pyx_tuple__58 = PyTuple_Pack(1, __pyx_n_s_graphID); if (unlikely(!__pyx_tuple__58)) __PYX_ERR(0, 346, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__58);
-  __Pyx_GIVEREF(__pyx_tuple__58);
-  __pyx_codeobj__59 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__58, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetOriginalNodeIds, 346, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__59)) __PYX_ERR(0, 346, __pyx_L1_error)
+  __pyx_tuple__57 = PyTuple_Pack(1, __pyx_n_s_graphID); if (unlikely(!__pyx_tuple__57)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__57);
+  __Pyx_GIVEREF(__pyx_tuple__57);
+  __pyx_codeobj__58 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__57, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetOriginalNodeIds, 339, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__58)) __PYX_ERR(0, 339, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":360
+  /* "PythonGedLib.pyx":353
  *     return getGraphOriginalNodeIds(graphID)
  * 
  * def PyGetGraphNodeLabels(graphID) :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs and returns all the labels of nodes on a graph, selected by its ID.
  */
-  __pyx_tuple__60 = PyTuple_Pack(1, __pyx_n_s_graphID); if (unlikely(!__pyx_tuple__60)) __PYX_ERR(0, 360, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__60);
-  __Pyx_GIVEREF(__pyx_tuple__60);
-  __pyx_codeobj__61 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__60, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetGraphNodeLabels, 360, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__61)) __PYX_ERR(0, 360, __pyx_L1_error)
+  __pyx_tuple__59 = PyTuple_Pack(1, __pyx_n_s_graphID); if (unlikely(!__pyx_tuple__59)) __PYX_ERR(0, 353, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__59);
+  __Pyx_GIVEREF(__pyx_tuple__59);
+  __pyx_codeobj__60 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__59, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetGraphNodeLabels, 353, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__60)) __PYX_ERR(0, 353, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":374
+  /* "PythonGedLib.pyx":367
  *     return getGraphNodeLabels(graphID)
  * 
  * def PyGetGraphEdges(graphID) :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs and returns all the edges on a graph, selected by its ID.
  */
-  __pyx_tuple__62 = PyTuple_Pack(1, __pyx_n_s_graphID); if (unlikely(!__pyx_tuple__62)) __PYX_ERR(0, 374, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__62);
-  __Pyx_GIVEREF(__pyx_tuple__62);
-  __pyx_codeobj__63 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__62, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetGraphEdges, 374, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__63)) __PYX_ERR(0, 374, __pyx_L1_error)
+  __pyx_tuple__61 = PyTuple_Pack(1, __pyx_n_s_graphID); if (unlikely(!__pyx_tuple__61)) __PYX_ERR(0, 367, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__61);
+  __Pyx_GIVEREF(__pyx_tuple__61);
+  __pyx_codeobj__62 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__61, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetGraphEdges, 367, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__62)) __PYX_ERR(0, 367, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":388
+  /* "PythonGedLib.pyx":381
  *     return getGraphEdges(graphID)
  * 
  * def PyGetGraphAdjacenceMatrix(graphID) :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs and returns the adjacence list of a graph, selected by its ID.
  */
-  __pyx_tuple__64 = PyTuple_Pack(1, __pyx_n_s_graphID); if (unlikely(!__pyx_tuple__64)) __PYX_ERR(0, 388, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__64);
-  __Pyx_GIVEREF(__pyx_tuple__64);
-  __pyx_codeobj__65 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__64, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetGraphAdjacenceMatrix, 388, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__65)) __PYX_ERR(0, 388, __pyx_L1_error)
+  __pyx_tuple__63 = PyTuple_Pack(1, __pyx_n_s_graphID); if (unlikely(!__pyx_tuple__63)) __PYX_ERR(0, 381, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__63);
+  __Pyx_GIVEREF(__pyx_tuple__63);
+  __pyx_codeobj__64 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__63, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetGraphAdjacenceMatrix, 381, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__64)) __PYX_ERR(0, 381, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":402
+  /* "PythonGedLib.pyx":395
  *     return getGraphAdjacenceMatrix(graphID)
  * 
  * def PySetEditCost(editCost, editCostConstant = []) :             # <<<<<<<<<<<<<<
  *     """
  *         Sets an edit cost function to the environment, if its exists.
  */
-  __pyx_tuple__66 = PyTuple_Pack(3, __pyx_n_s_editCost, __pyx_n_s_editCostConstant, __pyx_n_s_editCostB); if (unlikely(!__pyx_tuple__66)) __PYX_ERR(0, 402, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__66);
-  __Pyx_GIVEREF(__pyx_tuple__66);
-  __pyx_codeobj__67 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__66, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PySetEditCost, 402, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__67)) __PYX_ERR(0, 402, __pyx_L1_error)
+  __pyx_tuple__65 = PyTuple_Pack(3, __pyx_n_s_editCost, __pyx_n_s_editCostConstant, __pyx_n_s_editCostB); if (unlikely(!__pyx_tuple__65)) __PYX_ERR(0, 395, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__65);
+  __Pyx_GIVEREF(__pyx_tuple__65);
+  __pyx_codeobj__66 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__65, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PySetEditCost, 395, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__66)) __PYX_ERR(0, 395, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":420
+  /* "PythonGedLib.pyx":413
  *         raise EditCostError("This edit cost function doesn't exist, please see listOfEditCostOptions for selecting a edit cost function")
  * 
  * def PySetPersonalEditCost(editCostConstant = []) :             # <<<<<<<<<<<<<<
  *     """
  *         Sets an personal edit cost function to the environment.
  */
-  __pyx_tuple__68 = PyTuple_Pack(1, __pyx_n_s_editCostConstant); if (unlikely(!__pyx_tuple__68)) __PYX_ERR(0, 420, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__68);
-  __Pyx_GIVEREF(__pyx_tuple__68);
-  __pyx_codeobj__69 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__68, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PySetPersonalEditCost, 420, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__69)) __PYX_ERR(0, 420, __pyx_L1_error)
+  __pyx_tuple__67 = PyTuple_Pack(1, __pyx_n_s_editCostConstant); if (unlikely(!__pyx_tuple__67)) __PYX_ERR(0, 413, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__67);
+  __Pyx_GIVEREF(__pyx_tuple__67);
+  __pyx_codeobj__68 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__67, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PySetPersonalEditCost, 413, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__68)) __PYX_ERR(0, 413, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":431
+  /* "PythonGedLib.pyx":424
  *     setPersonalEditCost(editCostConstant)
  * 
  * def PyInitEnv(initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :             # <<<<<<<<<<<<<<
  *     """
  *         Initializes the environment with the chosen edit cost function and graphs.
  */
-  __pyx_tuple__70 = PyTuple_Pack(2, __pyx_n_s_initOption, __pyx_n_s_initB); if (unlikely(!__pyx_tuple__70)) __PYX_ERR(0, 431, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__70);
-  __Pyx_GIVEREF(__pyx_tuple__70);
-  __pyx_codeobj__71 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__70, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyInitEnv, 431, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__71)) __PYX_ERR(0, 431, __pyx_L1_error)
+  __pyx_tuple__69 = PyTuple_Pack(2, __pyx_n_s_initOption, __pyx_n_s_initB); if (unlikely(!__pyx_tuple__69)) __PYX_ERR(0, 424, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__69);
+  __Pyx_GIVEREF(__pyx_tuple__69);
+  __pyx_codeobj__70 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__69, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyInitEnv, 424, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__70)) __PYX_ERR(0, 424, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":448
+  /* "PythonGedLib.pyx":441
  *         raise InitError("This init option doesn't exist, please see listOfInitOptions for selecting an option. You can choose any options.")
  * 
  * def PySetMethod(method, options="") :             # <<<<<<<<<<<<<<
  *     """
  *         Sets a computation method to the environment, if its exists.
  */
-  __pyx_tuple__72 = PyTuple_Pack(3, __pyx_n_s_method, __pyx_n_s_options, __pyx_n_s_methodB); if (unlikely(!__pyx_tuple__72)) __PYX_ERR(0, 448, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__72);
-  __Pyx_GIVEREF(__pyx_tuple__72);
-  __pyx_codeobj__73 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__72, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PySetMethod, 448, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__73)) __PYX_ERR(0, 448, __pyx_L1_error)
+  __pyx_tuple__71 = PyTuple_Pack(3, __pyx_n_s_method, __pyx_n_s_options, __pyx_n_s_methodB); if (unlikely(!__pyx_tuple__71)) __PYX_ERR(0, 441, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__71);
+  __Pyx_GIVEREF(__pyx_tuple__71);
+  __pyx_codeobj__72 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__71, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PySetMethod, 441, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__72)) __PYX_ERR(0, 441, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":466
+  /* "PythonGedLib.pyx":459
  *         raise MethodError("This method doesn't exist, please see listOfMethodOptions for selecting a method")
  * 
  * def PyInitMethod() :             # <<<<<<<<<<<<<<
  *     """
  *         Inits the environment with the set method.
  */
-  __pyx_codeobj__74 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyInitMethod, 466, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__74)) __PYX_ERR(0, 466, __pyx_L1_error)
+  __pyx_codeobj__73 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyInitMethod, 459, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__73)) __PYX_ERR(0, 459, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":475
+  /* "PythonGedLib.pyx":468
  *     initMethod()
  * 
  * def PyGetInitime() :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the initialization time.
  */
-  __pyx_codeobj__75 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetInitime, 475, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__75)) __PYX_ERR(0, 475, __pyx_L1_error)
+  __pyx_codeobj__74 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetInitime, 468, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__74)) __PYX_ERR(0, 468, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":484
+  /* "PythonGedLib.pyx":477
  *     return getInitime()
  * 
  * def PyRunMethod(g, h) :             # <<<<<<<<<<<<<<
  *     """
  *         Computes the edit distance between two graphs g and h, with the edit cost function and method computation selected.
  */
-  __pyx_tuple__76 = PyTuple_Pack(2, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__76)) __PYX_ERR(0, 484, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__76);
-  __Pyx_GIVEREF(__pyx_tuple__76);
-  __pyx_codeobj__77 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__76, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyRunMethod, 484, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__77)) __PYX_ERR(0, 484, __pyx_L1_error)
+  __pyx_tuple__75 = PyTuple_Pack(2, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__75)) __PYX_ERR(0, 477, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__75);
+  __Pyx_GIVEREF(__pyx_tuple__75);
+  __pyx_codeobj__76 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__75, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyRunMethod, 477, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__76)) __PYX_ERR(0, 477, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":498
+  /* "PythonGedLib.pyx":491
  *     runMethod(g,h)
  * 
  * def PyGetUpperBound(g,h) :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the upper bound of the edit distance cost between two graphs g and h.
  */
-  __pyx_tuple__78 = PyTuple_Pack(2, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__78)) __PYX_ERR(0, 498, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__78);
-  __Pyx_GIVEREF(__pyx_tuple__78);
-  __pyx_codeobj__79 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__78, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetUpperBound, 498, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__79)) __PYX_ERR(0, 498, __pyx_L1_error)
+  __pyx_tuple__77 = PyTuple_Pack(2, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__77)) __PYX_ERR(0, 491, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__77);
+  __Pyx_GIVEREF(__pyx_tuple__77);
+  __pyx_codeobj__78 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__77, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetUpperBound, 491, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__78)) __PYX_ERR(0, 491, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":515
+  /* "PythonGedLib.pyx":508
  *     return getUpperBound(g,h)
  * 
  * def PyGetLowerBound(g,h) :             # <<<<<<<<<<<<<<
  *     """
  *          Returns the lower bound of the edit distance cost between two graphs g and h.
  */
-  __pyx_tuple__80 = PyTuple_Pack(2, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__80)) __PYX_ERR(0, 515, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__80);
-  __Pyx_GIVEREF(__pyx_tuple__80);
-  __pyx_codeobj__81 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__80, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetLowerBound, 515, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__81)) __PYX_ERR(0, 515, __pyx_L1_error)
+  __pyx_tuple__79 = PyTuple_Pack(2, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__79)) __PYX_ERR(0, 508, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__79);
+  __Pyx_GIVEREF(__pyx_tuple__79);
+  __pyx_codeobj__80 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__79, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetLowerBound, 508, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__80)) __PYX_ERR(0, 508, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":532
+  /* "PythonGedLib.pyx":525
  *     return getLowerBound(g,h)
  * 
  * def PyGetForwardMap(g,h) :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the forward map (or the half of the adjacence matrix) between nodes of the two indicated graphs.
  */
-  __pyx_tuple__82 = PyTuple_Pack(2, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__82)) __PYX_ERR(0, 532, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__82);
-  __Pyx_GIVEREF(__pyx_tuple__82);
-  __pyx_codeobj__83 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__82, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetForwardMap, 532, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__83)) __PYX_ERR(0, 532, __pyx_L1_error)
+  __pyx_tuple__81 = PyTuple_Pack(2, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__81)) __PYX_ERR(0, 525, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__81);
+  __Pyx_GIVEREF(__pyx_tuple__81);
+  __pyx_codeobj__82 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__81, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetForwardMap, 525, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__82)) __PYX_ERR(0, 525, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":549
+  /* "PythonGedLib.pyx":542
  *     return getForwardMap(g,h)
  * 
  * def PyGetBackwardMap(g,h) :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the backward map (or the half of the adjacence matrix) between nodes of the two indicated graphs.
  */
-  __pyx_tuple__84 = PyTuple_Pack(2, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__84)) __PYX_ERR(0, 549, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__84);
-  __Pyx_GIVEREF(__pyx_tuple__84);
-  __pyx_codeobj__85 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__84, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetBackwardMap, 549, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__85)) __PYX_ERR(0, 549, __pyx_L1_error)
+  __pyx_tuple__83 = PyTuple_Pack(2, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__83)) __PYX_ERR(0, 542, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__83);
+  __Pyx_GIVEREF(__pyx_tuple__83);
+  __pyx_codeobj__84 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__83, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetBackwardMap, 542, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__84)) __PYX_ERR(0, 542, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":566
+  /* "PythonGedLib.pyx":559
  *     return getBackwardMap(g,h)
  * 
  * def PyGetNodeImage(g,h,nodeID) :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the node's image in the adjacence matrix, if it exists.
  */
-  __pyx_tuple__86 = PyTuple_Pack(3, __pyx_n_s_g, __pyx_n_s_h, __pyx_n_s_nodeID); if (unlikely(!__pyx_tuple__86)) __PYX_ERR(0, 566, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__86);
-  __Pyx_GIVEREF(__pyx_tuple__86);
-  __pyx_codeobj__87 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__86, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetNodeImage, 566, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__87)) __PYX_ERR(0, 566, __pyx_L1_error)
+  __pyx_tuple__85 = PyTuple_Pack(3, __pyx_n_s_g, __pyx_n_s_h, __pyx_n_s_nodeID); if (unlikely(!__pyx_tuple__85)) __PYX_ERR(0, 559, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__85);
+  __Pyx_GIVEREF(__pyx_tuple__85);
+  __pyx_codeobj__86 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__85, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetNodeImage, 559, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__86)) __PYX_ERR(0, 559, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":585
+  /* "PythonGedLib.pyx":579
  *     return getNodeImage(g, h, nodeID)
  * 
  * def PyGetNodePreImage(g,h,nodeID) :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the node's preimage in the adjacence matrix, if it exists.
  */
-  __pyx_tuple__88 = PyTuple_Pack(3, __pyx_n_s_g, __pyx_n_s_h, __pyx_n_s_nodeID); if (unlikely(!__pyx_tuple__88)) __PYX_ERR(0, 585, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__88);
-  __Pyx_GIVEREF(__pyx_tuple__88);
-  __pyx_codeobj__89 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__88, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetNodePreImage, 585, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__89)) __PYX_ERR(0, 585, __pyx_L1_error)
+  __pyx_tuple__87 = PyTuple_Pack(3, __pyx_n_s_g, __pyx_n_s_h, __pyx_n_s_nodeID); if (unlikely(!__pyx_tuple__87)) __PYX_ERR(0, 579, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__87);
+  __Pyx_GIVEREF(__pyx_tuple__87);
+  __pyx_codeobj__88 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__87, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetNodePreImage, 579, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__88)) __PYX_ERR(0, 579, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":604
+  /* "PythonGedLib.pyx":599
  *     return getNodePreImage(g, h, nodeID)
  * 
  * def PyGetDummyNode() :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the ID of a dummy node.
  */
-  __pyx_codeobj__90 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetDummyNode, 604, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__90)) __PYX_ERR(0, 604, __pyx_L1_error)
+  __pyx_codeobj__89 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetDummyNode, 599, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__89)) __PYX_ERR(0, 599, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":615
+  /* "PythonGedLib.pyx":610
  *     return getDummyNode()
  * 
  * def PyGetNodeMap(g,h) :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the Node Map, like C++ NodeMap.
  */
-  __pyx_tuple__91 = PyTuple_Pack(2, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__91)) __PYX_ERR(0, 615, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__91);
-  __Pyx_GIVEREF(__pyx_tuple__91);
-  __pyx_codeobj__92 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__91, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetNodeMap, 615, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__92)) __PYX_ERR(0, 615, __pyx_L1_error)
+  __pyx_tuple__90 = PyTuple_Pack(2, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__90)) __PYX_ERR(0, 610, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__90);
+  __Pyx_GIVEREF(__pyx_tuple__90);
+  __pyx_codeobj__91 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__90, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetNodeMap, 610, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__91)) __PYX_ERR(0, 610, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":632
+  /* "PythonGedLib.pyx":627
  *     return getNodeMap(g, h)
  * 
  * def PyGetAssignmentMatrix(g,h) :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the Assignment Matrix between two selected graphs g and h.
  */
-  __pyx_tuple__93 = PyTuple_Pack(2, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__93)) __PYX_ERR(0, 632, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__93);
-  __Pyx_GIVEREF(__pyx_tuple__93);
-  __pyx_codeobj__94 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__93, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetAssignmentMatrix, 632, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__94)) __PYX_ERR(0, 632, __pyx_L1_error)
+  __pyx_tuple__92 = PyTuple_Pack(2, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__92)) __PYX_ERR(0, 627, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__92);
+  __Pyx_GIVEREF(__pyx_tuple__92);
+  __pyx_codeobj__93 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__92, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetAssignmentMatrix, 627, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__93)) __PYX_ERR(0, 627, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":650
+  /* "PythonGedLib.pyx":645
  * 
  * 
  * def PyGetAllMap(g,h) :             # <<<<<<<<<<<<<<
  *     """
  *          Returns a vector which contains the forward and the backward maps between nodes of the two indicated graphs.
  */
-  __pyx_tuple__95 = PyTuple_Pack(2, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__95)) __PYX_ERR(0, 650, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__95);
-  __Pyx_GIVEREF(__pyx_tuple__95);
-  __pyx_codeobj__96 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__95, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetAllMap, 650, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__96)) __PYX_ERR(0, 650, __pyx_L1_error)
+  __pyx_tuple__94 = PyTuple_Pack(2, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__94)) __PYX_ERR(0, 645, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__94);
+  __Pyx_GIVEREF(__pyx_tuple__94);
+  __pyx_codeobj__95 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__94, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetAllMap, 645, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__95)) __PYX_ERR(0, 645, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":667
+  /* "PythonGedLib.pyx":662
  *     return getAllMap(g,h)
  * 
  * def PyGetRuntime(g,h) :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the runtime to compute the edit distance cost between two graphs g and h
  */
-  __pyx_tuple__97 = PyTuple_Pack(2, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__97)) __PYX_ERR(0, 667, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__97);
-  __Pyx_GIVEREF(__pyx_tuple__97);
-  __pyx_codeobj__98 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__97, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetRuntime, 667, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__98)) __PYX_ERR(0, 667, __pyx_L1_error)
+  __pyx_tuple__96 = PyTuple_Pack(2, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__96)) __PYX_ERR(0, 662, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__96);
+  __Pyx_GIVEREF(__pyx_tuple__96);
+  __pyx_codeobj__97 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__96, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyGetRuntime, 662, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__97)) __PYX_ERR(0, 662, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":684
+  /* "PythonGedLib.pyx":679
  *     return getRuntime(g,h)
  * 
  * def PyQuasimetricCost() :             # <<<<<<<<<<<<<<
  *     """
  *         Checks and returns if the edit costs are quasimetric.
  */
-  __pyx_codeobj__99 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyQuasimetricCost, 684, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__99)) __PYX_ERR(0, 684, __pyx_L1_error)
+  __pyx_codeobj__98 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyQuasimetricCost, 679, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__98)) __PYX_ERR(0, 679, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":700
+  /* "PythonGedLib.pyx":695
  *     return quasimetricCosts()
  * 
  * def PyHungarianLSAP(matrixCost) :             # <<<<<<<<<<<<<<
  *     """
  *         Applies the hungarian algorithm (LSAP) on a matrix Cost.
  */
-  __pyx_tuple__100 = PyTuple_Pack(1, __pyx_n_s_matrixCost); if (unlikely(!__pyx_tuple__100)) __PYX_ERR(0, 700, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__100);
-  __Pyx_GIVEREF(__pyx_tuple__100);
-  __pyx_codeobj__101 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__100, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyHungarianLSAP, 700, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__101)) __PYX_ERR(0, 700, __pyx_L1_error)
+  __pyx_tuple__99 = PyTuple_Pack(1, __pyx_n_s_matrixCost); if (unlikely(!__pyx_tuple__99)) __PYX_ERR(0, 695, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__99);
+  __Pyx_GIVEREF(__pyx_tuple__99);
+  __pyx_codeobj__100 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__99, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyHungarianLSAP, 695, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__100)) __PYX_ERR(0, 695, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":713
+  /* "PythonGedLib.pyx":708
  *     return hungarianLSAP(matrixCost)
  * 
  * def PyHungarianLSAPE(matrixCost) :             # <<<<<<<<<<<<<<
  *     """
  *         Applies the hungarian algorithm (LSAPE) on a matrix Cost.
  */
-  __pyx_tuple__102 = PyTuple_Pack(1, __pyx_n_s_matrixCost); if (unlikely(!__pyx_tuple__102)) __PYX_ERR(0, 713, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__102);
-  __Pyx_GIVEREF(__pyx_tuple__102);
-  __pyx_codeobj__103 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__102, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyHungarianLSAPE, 713, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__103)) __PYX_ERR(0, 713, __pyx_L1_error)
+  __pyx_tuple__101 = PyTuple_Pack(1, __pyx_n_s_matrixCost); if (unlikely(!__pyx_tuple__101)) __PYX_ERR(0, 708, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__101);
+  __Pyx_GIVEREF(__pyx_tuple__101);
+  __pyx_codeobj__102 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__101, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_PyHungarianLSAPE, 708, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__102)) __PYX_ERR(0, 708, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":752
+  /* "PythonGedLib.pyx":747
  *         :type message: string
  *     """
  *     def __init__(self, message):             # <<<<<<<<<<<<<<
  *         """
  *             Inits the error with its message.
  */
-  __pyx_tuple__104 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_message); if (unlikely(!__pyx_tuple__104)) __PYX_ERR(0, 752, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__104);
-  __Pyx_GIVEREF(__pyx_tuple__104);
-  __pyx_codeobj__105 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__104, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_init, 752, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__105)) __PYX_ERR(0, 752, __pyx_L1_error)
+  __pyx_tuple__103 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_message); if (unlikely(!__pyx_tuple__103)) __PYX_ERR(0, 747, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__103);
+  __Pyx_GIVEREF(__pyx_tuple__103);
+  __pyx_codeobj__104 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__103, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_init, 747, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__104)) __PYX_ERR(0, 747, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":768
+  /* "PythonGedLib.pyx":763
  *         :type message: string
  *     """
  *     def __init__(self, message):             # <<<<<<<<<<<<<<
  *         """
  *             Inits the error with its message.
  */
-  __pyx_tuple__106 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_message); if (unlikely(!__pyx_tuple__106)) __PYX_ERR(0, 768, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__106);
-  __Pyx_GIVEREF(__pyx_tuple__106);
-  __pyx_codeobj__107 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__106, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_init, 768, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__107)) __PYX_ERR(0, 768, __pyx_L1_error)
+  __pyx_tuple__105 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_message); if (unlikely(!__pyx_tuple__105)) __PYX_ERR(0, 763, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__105);
+  __Pyx_GIVEREF(__pyx_tuple__105);
+  __pyx_codeobj__106 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__105, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_init, 763, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__106)) __PYX_ERR(0, 763, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":784
+  /* "PythonGedLib.pyx":779
  *         :type message: string
  *     """
  *     def __init__(self, message):             # <<<<<<<<<<<<<<
  *         """
  *             Inits the error with its message.
  */
-  __pyx_tuple__108 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_message); if (unlikely(!__pyx_tuple__108)) __PYX_ERR(0, 784, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__108);
-  __Pyx_GIVEREF(__pyx_tuple__108);
-  __pyx_codeobj__109 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__108, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_init, 784, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__109)) __PYX_ERR(0, 784, __pyx_L1_error)
+  __pyx_tuple__107 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_message); if (unlikely(!__pyx_tuple__107)) __PYX_ERR(0, 779, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__107);
+  __Pyx_GIVEREF(__pyx_tuple__107);
+  __pyx_codeobj__108 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__107, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_init, 779, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__108)) __PYX_ERR(0, 779, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":798
+  /* "PythonGedLib.pyx":793
  * #########################################
  * 
  * def encodeYourMap(map) :             # <<<<<<<<<<<<<<
  *     """
  *         Encodes a string dictionnary to utf-8 for C++ functions
  */
-  __pyx_tuple__110 = PyTuple_Pack(4, __pyx_n_s_map, __pyx_n_s_res, __pyx_n_s_key, __pyx_n_s_value); if (unlikely(!__pyx_tuple__110)) __PYX_ERR(0, 798, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__110);
-  __Pyx_GIVEREF(__pyx_tuple__110);
-  __pyx_codeobj__111 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__110, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_encodeYourMap, 798, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__111)) __PYX_ERR(0, 798, __pyx_L1_error)
+  __pyx_tuple__109 = PyTuple_Pack(4, __pyx_n_s_map, __pyx_n_s_res, __pyx_n_s_key, __pyx_n_s_value); if (unlikely(!__pyx_tuple__109)) __PYX_ERR(0, 793, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__109);
+  __Pyx_GIVEREF(__pyx_tuple__109);
+  __pyx_codeobj__110 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__109, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_encodeYourMap, 793, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__110)) __PYX_ERR(0, 793, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":815
+  /* "PythonGedLib.pyx":810
  *     return res
  * 
  * def addRandomGraph(name, classe, listOfNodes, listOfEdges, ignoreDuplicates=True) :             # <<<<<<<<<<<<<<
  *     """
  *         Add a Graph (not GXL) on the environment. Be careful to respect the same format as GXL graphs for labelling nodes and edges.
  */
-  __pyx_tuple__112 = PyTuple_Pack(8, __pyx_n_s_name, __pyx_n_s_classe, __pyx_n_s_listOfNodes, __pyx_n_s_listOfEdges, __pyx_n_s_ignoreDuplicates, __pyx_n_s_id, __pyx_n_s_node, __pyx_n_s_edge); if (unlikely(!__pyx_tuple__112)) __PYX_ERR(0, 815, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__112);
-  __Pyx_GIVEREF(__pyx_tuple__112);
-  __pyx_codeobj__113 = (PyObject*)__Pyx_PyCode_New(5, 0, 8, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__112, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_addRandomGraph, 815, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__113)) __PYX_ERR(0, 815, __pyx_L1_error)
+  __pyx_tuple__111 = PyTuple_Pack(8, __pyx_n_s_name, __pyx_n_s_classe, __pyx_n_s_listOfNodes, __pyx_n_s_listOfEdges, __pyx_n_s_ignoreDuplicates, __pyx_n_s_id, __pyx_n_s_node, __pyx_n_s_edge); if (unlikely(!__pyx_tuple__111)) __PYX_ERR(0, 810, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__111);
+  __Pyx_GIVEREF(__pyx_tuple__111);
+  __pyx_codeobj__112 = (PyObject*)__Pyx_PyCode_New(5, 0, 8, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__111, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_addRandomGraph, 810, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__112)) __PYX_ERR(0, 810, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":842
+  /* "PythonGedLib.pyx":837
  *     return id
  * 
  * def addNxGraph(g, classe, ignoreDuplicates=True) :             # <<<<<<<<<<<<<<
  *     """
  *         Add a Graph (made by networkx) on the environment. Be careful to respect the same format as GXL graphs for labelling nodes and edges.
  */
-  __pyx_tuple__114 = PyTuple_Pack(6, __pyx_n_s_g, __pyx_n_s_classe, __pyx_n_s_ignoreDuplicates, __pyx_n_s_id, __pyx_n_s_node, __pyx_n_s_edge); if (unlikely(!__pyx_tuple__114)) __PYX_ERR(0, 842, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__114);
-  __Pyx_GIVEREF(__pyx_tuple__114);
-  __pyx_codeobj__115 = (PyObject*)__Pyx_PyCode_New(3, 0, 6, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__114, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_addNxGraph, 842, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__115)) __PYX_ERR(0, 842, __pyx_L1_error)
+  __pyx_tuple__113 = PyTuple_Pack(6, __pyx_n_s_g, __pyx_n_s_classe, __pyx_n_s_ignoreDuplicates, __pyx_n_s_id, __pyx_n_s_node, __pyx_n_s_edge); if (unlikely(!__pyx_tuple__113)) __PYX_ERR(0, 837, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__113);
+  __Pyx_GIVEREF(__pyx_tuple__113);
+  __pyx_codeobj__114 = (PyObject*)__Pyx_PyCode_New(3, 0, 6, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__113, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_addNxGraph, 837, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__114)) __PYX_ERR(0, 837, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":864
+  /* "PythonGedLib.pyx":859
  * 
  * 
  * def computeGedOnTwoGraphs(g1,g2, editCost, method, options, initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :             # <<<<<<<<<<<<<<
  *     """
  *         Computes the edit distance between two NX graphs.
  */
-  __pyx_tuple__116 = PyTuple_Pack(10, __pyx_n_s_g1, __pyx_n_s_g2, __pyx_n_s_editCost, __pyx_n_s_method, __pyx_n_s_options, __pyx_n_s_initOption, __pyx_n_s_g, __pyx_n_s_h, __pyx_n_s_resDistance, __pyx_n_s_resMapping); if (unlikely(!__pyx_tuple__116)) __PYX_ERR(0, 864, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__116);
-  __Pyx_GIVEREF(__pyx_tuple__116);
-  __pyx_codeobj__117 = (PyObject*)__Pyx_PyCode_New(6, 0, 10, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__116, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_computeGedOnTwoGraphs, 864, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__117)) __PYX_ERR(0, 864, __pyx_L1_error)
+  __pyx_tuple__115 = PyTuple_Pack(10, __pyx_n_s_g1, __pyx_n_s_g2, __pyx_n_s_editCost, __pyx_n_s_method, __pyx_n_s_options, __pyx_n_s_initOption, __pyx_n_s_g, __pyx_n_s_h, __pyx_n_s_resDistance, __pyx_n_s_resMapping); if (unlikely(!__pyx_tuple__115)) __PYX_ERR(0, 859, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__115);
+  __Pyx_GIVEREF(__pyx_tuple__115);
+  __pyx_codeobj__116 = (PyObject*)__Pyx_PyCode_New(6, 0, 10, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__115, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_computeGedOnTwoGraphs, 859, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__116)) __PYX_ERR(0, 859, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":907
+  /* "PythonGedLib.pyx":902
  *     return resDistance, resMapping
  * 
  * def computeEditDistanceOnNxGraphs(dataset, classes, editCost, method, options, initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :             # <<<<<<<<<<<<<<
  *     """
  * 
  */
-  __pyx_tuple__118 = PyTuple_Pack(13, __pyx_n_s_dataset, __pyx_n_s_classes, __pyx_n_s_editCost, __pyx_n_s_method, __pyx_n_s_options, __pyx_n_s_initOption, __pyx_n_s_graph, __pyx_n_s_truc, __pyx_n_s_listID, __pyx_n_s_resDistance, __pyx_n_s_resMapping, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__118)) __PYX_ERR(0, 907, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__118);
-  __Pyx_GIVEREF(__pyx_tuple__118);
-  __pyx_codeobj__119 = (PyObject*)__Pyx_PyCode_New(6, 0, 13, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__118, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_computeEditDistanceOnNxGraphs, 907, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__119)) __PYX_ERR(0, 907, __pyx_L1_error)
+  __pyx_tuple__117 = PyTuple_Pack(12, __pyx_n_s_dataset, __pyx_n_s_classes, __pyx_n_s_editCost, __pyx_n_s_method, __pyx_n_s_options, __pyx_n_s_initOption, __pyx_n_s_graph, __pyx_n_s_listID, __pyx_n_s_resDistance, __pyx_n_s_resMapping, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__117)) __PYX_ERR(0, 902, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__117);
+  __Pyx_GIVEREF(__pyx_tuple__117);
+  __pyx_codeobj__118 = (PyObject*)__Pyx_PyCode_New(6, 0, 12, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__117, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_computeEditDistanceOnNxGraphs, 902, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__118)) __PYX_ERR(0, 902, __pyx_L1_error)
 
-  /* "PythonGedLib.pyx":965
+  /* "PythonGedLib.pyx":959
  * 
  * 
  * def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, options="", initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :             # <<<<<<<<<<<<<<
  *     """
  *         Computes all the edit distance between each GXL graphs on the folder and the XMl file.
  */
-  __pyx_tuple__120 = PyTuple_Pack(9, __pyx_n_s_pathFolder, __pyx_n_s_pathXML, __pyx_n_s_editCost, __pyx_n_s_method, __pyx_n_s_options, __pyx_n_s_initOption, __pyx_n_s_listID, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__120)) __PYX_ERR(0, 965, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__120);
-  __Pyx_GIVEREF(__pyx_tuple__120);
-  __pyx_codeobj__121 = (PyObject*)__Pyx_PyCode_New(6, 0, 9, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__120, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_computeEditDistanceOnGXlGraphs, 965, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__121)) __PYX_ERR(0, 965, __pyx_L1_error)
+  __pyx_tuple__119 = PyTuple_Pack(9, __pyx_n_s_pathFolder, __pyx_n_s_pathXML, __pyx_n_s_editCost, __pyx_n_s_method, __pyx_n_s_options, __pyx_n_s_initOption, __pyx_n_s_listID, __pyx_n_s_g, __pyx_n_s_h); if (unlikely(!__pyx_tuple__119)) __PYX_ERR(0, 959, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__119);
+  __Pyx_GIVEREF(__pyx_tuple__119);
+  __pyx_codeobj__120 = (PyObject*)__Pyx_PyCode_New(6, 0, 9, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__119, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_export_home_lambertn_Documents, __pyx_n_s_computeEditDistanceOnGXlGraphs, 959, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__120)) __PYX_ERR(0, 959, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -15553,552 +15474,540 @@ PyMODINIT_FUNC PyInit_PythonGedLib(void)
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "PythonGedLib.pyx":93
+  /* "PythonGedLib.pyx":92
  * ###########################################
- * 
- * def appel() :             # <<<<<<<<<<<<<<
- *     """
- *         Calls an example only in C++. Nothing usefull, that's why you must ignore this function.
- */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_1appel, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 93, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_appel, __pyx_t_1) < 0) __PYX_ERR(0, 93, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "PythonGedLib.pyx":99
- *     appelle()
  * 
  * def PyIsInitialized() :             # <<<<<<<<<<<<<<
  *     """
  *         Checks and returns if the computation environment is initialized or not.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_3PyIsInitialized, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 99, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_1PyIsInitialized, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 92, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyIsInitialized, __pyx_t_1) < 0) __PYX_ERR(0, 99, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyIsInitialized, __pyx_t_1) < 0) __PYX_ERR(0, 92, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":110
+  /* "PythonGedLib.pyx":103
  *     return isInitialized()
  * 
  * def PyGetEditCostOptions() :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs the differents edit cost functions and returns the result.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_5PyGetEditCostOptions, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 110, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_3PyGetEditCostOptions, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 103, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetEditCostOptions, __pyx_t_1) < 0) __PYX_ERR(0, 110, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetEditCostOptions, __pyx_t_1) < 0) __PYX_ERR(0, 103, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":123
+  /* "PythonGedLib.pyx":116
  *     return getEditCostStringOptions()
  * 
  * def PyGetMethodOptions() :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs the differents method for edit distance computation between graphs and returns the result.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_7PyGetMethodOptions, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 123, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_5PyGetMethodOptions, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 116, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetMethodOptions, __pyx_t_1) < 0) __PYX_ERR(0, 123, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetMethodOptions, __pyx_t_1) < 0) __PYX_ERR(0, 116, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":135
+  /* "PythonGedLib.pyx":128
  *     return getMethodStringOptions()
  * 
  * def PyGetInitOptions() :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs the differents initialization parameters for the environment computation for graphs and returns the result.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_9PyGetInitOptions, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 135, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_7PyGetInitOptions, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetInitOptions, __pyx_t_1) < 0) __PYX_ERR(0, 135, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetInitOptions, __pyx_t_1) < 0) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":147
+  /* "PythonGedLib.pyx":140
  *     return getInitStringOptions()
  * 
  * def PyRestartEnv() :             # <<<<<<<<<<<<<<
  *     """
  *         Restarts the environment variable. All data related to it will be delete.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_11PyRestartEnv, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 147, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_9PyRestartEnv, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyRestartEnv, __pyx_t_1) < 0) __PYX_ERR(0, 147, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyRestartEnv, __pyx_t_1) < 0) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":156
+  /* "PythonGedLib.pyx":149
  *     restartEnv()
  * 
  * def PyLoadGXLGraph(pathFolder, pathXML) :             # <<<<<<<<<<<<<<
  *     """
  *         Loads some GXL graphes on the environment which is in a same folder, and present in the XMLfile.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_13PyLoadGXLGraph, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 156, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_11PyLoadGXLGraph, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 149, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyLoadGXLGraph, __pyx_t_1) < 0) __PYX_ERR(0, 156, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyLoadGXLGraph, __pyx_t_1) < 0) __PYX_ERR(0, 149, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":169
+  /* "PythonGedLib.pyx":162
  *     loadGXLGraph(pathFolder.encode('utf-8'), pathXML.encode('utf-8'))
  * 
  * def PyGetGraphIds() :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs the first and last IDs of the loaded graphs in the environment.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_15PyGetGraphIds, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_13PyGetGraphIds, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetGraphIds, __pyx_t_1) < 0) __PYX_ERR(0, 169, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetGraphIds, __pyx_t_1) < 0) __PYX_ERR(0, 162, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":180
+  /* "PythonGedLib.pyx":173
  *     return getGraphIds()
  * 
  * def PyGetAllGraphIds() :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs all the IDs of the loaded graphs in the environment.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_17PyGetAllGraphIds, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 180, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_15PyGetAllGraphIds, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 173, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetAllGraphIds, __pyx_t_1) < 0) __PYX_ERR(0, 180, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetAllGraphIds, __pyx_t_1) < 0) __PYX_ERR(0, 173, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":191
+  /* "PythonGedLib.pyx":184
  *     return getAllGraphIds()
  * 
  * def PyGetGraphClass(id) :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the class of a graph with its ID.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_19PyGetGraphClass, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 191, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_17PyGetGraphClass, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 184, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetGraphClass, __pyx_t_1) < 0) __PYX_ERR(0, 191, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetGraphClass, __pyx_t_1) < 0) __PYX_ERR(0, 184, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":205
+  /* "PythonGedLib.pyx":198
  *     return getGraphClass(id)
  * 
  * def PyGetGraphName(id) :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the name of a graph with its ID.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_21PyGetGraphName, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 205, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_19PyGetGraphName, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetGraphName, __pyx_t_1) < 0) __PYX_ERR(0, 205, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetGraphName, __pyx_t_1) < 0) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":219
+  /* "PythonGedLib.pyx":212
  *     return getGraphName(id)
  * 
  * def PyAddGraph(name="", classe="") :             # <<<<<<<<<<<<<<
  *     """
  *         Adds a empty graph on the environment, with its name and its class. Nodes and edges will be add in a second time.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_23PyAddGraph, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 219, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_21PyAddGraph, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 212, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyAddGraph, __pyx_t_1) < 0) __PYX_ERR(0, 219, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyAddGraph, __pyx_t_1) < 0) __PYX_ERR(0, 212, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":235
+  /* "PythonGedLib.pyx":228
  *     return addGraph(name.encode('utf-8'),classe.encode('utf-8'))
  * 
  * def PyAddNode(graphID, nodeID, nodeLabel):             # <<<<<<<<<<<<<<
  *     """
  *         Adds a node on a graph selected by its ID. A ID and a label for the node is required.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_25PyAddNode, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_23PyAddNode, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 228, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyAddNode, __pyx_t_1) < 0) __PYX_ERR(0, 235, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyAddNode, __pyx_t_1) < 0) __PYX_ERR(0, 228, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":251
+  /* "PythonGedLib.pyx":244
  *     addNode(graphID, nodeID.encode('utf-8'), encodeYourMap(nodeLabel))
  * 
  * def PyAddEdge(graphID, tail, head, edgeLabel, ignoreDuplicates = True) :             # <<<<<<<<<<<<<<
  *     """
  *         Adds an edge on a graph selected by its ID.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_27PyAddEdge, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 251, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_25PyAddEdge, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyAddEdge, __pyx_t_1) < 0) __PYX_ERR(0, 251, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyAddEdge, __pyx_t_1) < 0) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":271
+  /* "PythonGedLib.pyx":264
  *     addEdge(graphID, tail.encode('utf-8'), head.encode('utf-8'), encodeYourMap(edgeLabel), ignoreDuplicates)
  * 
  * def PyAddSymmetricalEdge(graphID, tail, head, edgeLabel) :             # <<<<<<<<<<<<<<
  *     """
  *         Adds a symmetrical edge on a graph selected by its ID.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_29PyAddSymmetricalEdge, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_27PyAddSymmetricalEdge, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyAddSymmetricalEdge, __pyx_t_1) < 0) __PYX_ERR(0, 271, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyAddSymmetricalEdge, __pyx_t_1) < 0) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":293
+  /* "PythonGedLib.pyx":286
  *     addEdge(graphID, headB, tailB, edgeLabelB, True)
  * 
  * def PyClearGraph(graphID) :             # <<<<<<<<<<<<<<
  *     """
  *         Deletes a graph, selected by its ID, to the environment.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_31PyClearGraph, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 293, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_29PyClearGraph, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 286, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyClearGraph, __pyx_t_1) < 0) __PYX_ERR(0, 293, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyClearGraph, __pyx_t_1) < 0) __PYX_ERR(0, 286, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":304
+  /* "PythonGedLib.pyx":297
  *     clearGraph(graphID)
  * 
  * def PyGetGraphInternalId(graphID) :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs and returns the internal Id of a graph, selected by its ID.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_33PyGetGraphInternalId, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 304, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_31PyGetGraphInternalId, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 297, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetGraphInternalId, __pyx_t_1) < 0) __PYX_ERR(0, 304, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetGraphInternalId, __pyx_t_1) < 0) __PYX_ERR(0, 297, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":318
+  /* "PythonGedLib.pyx":311
  *     return getGraphInternalId(graphID)
  * 
  * def PyGetGraphNumNodes(graphID) :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs and returns the number of nodes on a graph, selected by its ID.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_35PyGetGraphNumNodes, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 318, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_33PyGetGraphNumNodes, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 311, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetGraphNumNodes, __pyx_t_1) < 0) __PYX_ERR(0, 318, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetGraphNumNodes, __pyx_t_1) < 0) __PYX_ERR(0, 311, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":332
+  /* "PythonGedLib.pyx":325
  *     return getGraphNumNodes(graphID)
  * 
  * def PyGetGraphNumEdges(graphID) :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs and returns the number of edges on a graph, selected by its ID.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_37PyGetGraphNumEdges, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 332, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_35PyGetGraphNumEdges, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 325, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetGraphNumEdges, __pyx_t_1) < 0) __PYX_ERR(0, 332, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetGraphNumEdges, __pyx_t_1) < 0) __PYX_ERR(0, 325, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":346
+  /* "PythonGedLib.pyx":339
  *     return getGraphNumEdges(graphID)
  * 
  * def PyGetOriginalNodeIds(graphID) :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs and returns all th Ids of nodes on a graph, selected by its ID.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_39PyGetOriginalNodeIds, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_37PyGetOriginalNodeIds, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 339, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetOriginalNodeIds, __pyx_t_1) < 0) __PYX_ERR(0, 346, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetOriginalNodeIds, __pyx_t_1) < 0) __PYX_ERR(0, 339, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":360
+  /* "PythonGedLib.pyx":353
  *     return getGraphOriginalNodeIds(graphID)
  * 
  * def PyGetGraphNodeLabels(graphID) :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs and returns all the labels of nodes on a graph, selected by its ID.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_41PyGetGraphNodeLabels, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 360, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_39PyGetGraphNodeLabels, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 353, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetGraphNodeLabels, __pyx_t_1) < 0) __PYX_ERR(0, 360, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetGraphNodeLabels, __pyx_t_1) < 0) __PYX_ERR(0, 353, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":374
+  /* "PythonGedLib.pyx":367
  *     return getGraphNodeLabels(graphID)
  * 
  * def PyGetGraphEdges(graphID) :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs and returns all the edges on a graph, selected by its ID.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_43PyGetGraphEdges, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 374, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_41PyGetGraphEdges, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 367, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetGraphEdges, __pyx_t_1) < 0) __PYX_ERR(0, 374, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetGraphEdges, __pyx_t_1) < 0) __PYX_ERR(0, 367, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":388
+  /* "PythonGedLib.pyx":381
  *     return getGraphEdges(graphID)
  * 
  * def PyGetGraphAdjacenceMatrix(graphID) :             # <<<<<<<<<<<<<<
  *     """
  *         Searchs and returns the adjacence list of a graph, selected by its ID.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_45PyGetGraphAdjacenceMatrix, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 388, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_43PyGetGraphAdjacenceMatrix, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 381, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetGraphAdjacenceMatrix, __pyx_t_1) < 0) __PYX_ERR(0, 388, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetGraphAdjacenceMatrix, __pyx_t_1) < 0) __PYX_ERR(0, 381, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":402
+  /* "PythonGedLib.pyx":395
  *     return getGraphAdjacenceMatrix(graphID)
  * 
  * def PySetEditCost(editCost, editCostConstant = []) :             # <<<<<<<<<<<<<<
  *     """
  *         Sets an edit cost function to the environment, if its exists.
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 402, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 395, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_k__11 = __pyx_t_1;
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_47PySetEditCost, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 402, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_45PySetEditCost, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 395, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PySetEditCost, __pyx_t_1) < 0) __PYX_ERR(0, 402, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PySetEditCost, __pyx_t_1) < 0) __PYX_ERR(0, 395, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":420
+  /* "PythonGedLib.pyx":413
  *         raise EditCostError("This edit cost function doesn't exist, please see listOfEditCostOptions for selecting a edit cost function")
  * 
  * def PySetPersonalEditCost(editCostConstant = []) :             # <<<<<<<<<<<<<<
  *     """
  *         Sets an personal edit cost function to the environment.
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 420, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 413, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_k__14 = __pyx_t_1;
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_49PySetPersonalEditCost, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 420, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_47PySetPersonalEditCost, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 413, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PySetPersonalEditCost, __pyx_t_1) < 0) __PYX_ERR(0, 420, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PySetPersonalEditCost, __pyx_t_1) < 0) __PYX_ERR(0, 413, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":431
+  /* "PythonGedLib.pyx":424
  *     setPersonalEditCost(editCostConstant)
  * 
  * def PyInitEnv(initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :             # <<<<<<<<<<<<<<
  *     """
  *         Initializes the environment with the chosen edit cost function and graphs.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_51PyInitEnv, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 431, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_49PyInitEnv, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 424, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyInitEnv, __pyx_t_1) < 0) __PYX_ERR(0, 431, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyInitEnv, __pyx_t_1) < 0) __PYX_ERR(0, 424, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":448
+  /* "PythonGedLib.pyx":441
  *         raise InitError("This init option doesn't exist, please see listOfInitOptions for selecting an option. You can choose any options.")
  * 
  * def PySetMethod(method, options="") :             # <<<<<<<<<<<<<<
  *     """
  *         Sets a computation method to the environment, if its exists.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_53PySetMethod, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 448, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_51PySetMethod, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 441, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PySetMethod, __pyx_t_1) < 0) __PYX_ERR(0, 448, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PySetMethod, __pyx_t_1) < 0) __PYX_ERR(0, 441, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":466
+  /* "PythonGedLib.pyx":459
  *         raise MethodError("This method doesn't exist, please see listOfMethodOptions for selecting a method")
  * 
  * def PyInitMethod() :             # <<<<<<<<<<<<<<
  *     """
  *         Inits the environment with the set method.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_55PyInitMethod, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 466, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_53PyInitMethod, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 459, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyInitMethod, __pyx_t_1) < 0) __PYX_ERR(0, 466, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyInitMethod, __pyx_t_1) < 0) __PYX_ERR(0, 459, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":475
+  /* "PythonGedLib.pyx":468
  *     initMethod()
  * 
  * def PyGetInitime() :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the initialization time.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_57PyGetInitime, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 475, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_55PyGetInitime, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 468, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetInitime, __pyx_t_1) < 0) __PYX_ERR(0, 475, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetInitime, __pyx_t_1) < 0) __PYX_ERR(0, 468, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":484
+  /* "PythonGedLib.pyx":477
  *     return getInitime()
  * 
  * def PyRunMethod(g, h) :             # <<<<<<<<<<<<<<
  *     """
  *         Computes the edit distance between two graphs g and h, with the edit cost function and method computation selected.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_59PyRunMethod, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 484, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_57PyRunMethod, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 477, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyRunMethod, __pyx_t_1) < 0) __PYX_ERR(0, 484, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyRunMethod, __pyx_t_1) < 0) __PYX_ERR(0, 477, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":498
+  /* "PythonGedLib.pyx":491
  *     runMethod(g,h)
  * 
  * def PyGetUpperBound(g,h) :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the upper bound of the edit distance cost between two graphs g and h.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_61PyGetUpperBound, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 498, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_59PyGetUpperBound, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetUpperBound, __pyx_t_1) < 0) __PYX_ERR(0, 498, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetUpperBound, __pyx_t_1) < 0) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":515
+  /* "PythonGedLib.pyx":508
  *     return getUpperBound(g,h)
  * 
  * def PyGetLowerBound(g,h) :             # <<<<<<<<<<<<<<
  *     """
  *          Returns the lower bound of the edit distance cost between two graphs g and h.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_63PyGetLowerBound, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 515, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_61PyGetLowerBound, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 508, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetLowerBound, __pyx_t_1) < 0) __PYX_ERR(0, 515, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetLowerBound, __pyx_t_1) < 0) __PYX_ERR(0, 508, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":532
+  /* "PythonGedLib.pyx":525
  *     return getLowerBound(g,h)
  * 
  * def PyGetForwardMap(g,h) :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the forward map (or the half of the adjacence matrix) between nodes of the two indicated graphs.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_65PyGetForwardMap, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 532, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_63PyGetForwardMap, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 525, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetForwardMap, __pyx_t_1) < 0) __PYX_ERR(0, 532, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetForwardMap, __pyx_t_1) < 0) __PYX_ERR(0, 525, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":549
+  /* "PythonGedLib.pyx":542
  *     return getForwardMap(g,h)
  * 
  * def PyGetBackwardMap(g,h) :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the backward map (or the half of the adjacence matrix) between nodes of the two indicated graphs.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_67PyGetBackwardMap, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 549, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_65PyGetBackwardMap, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 542, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetBackwardMap, __pyx_t_1) < 0) __PYX_ERR(0, 549, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetBackwardMap, __pyx_t_1) < 0) __PYX_ERR(0, 542, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":566
+  /* "PythonGedLib.pyx":559
  *     return getBackwardMap(g,h)
  * 
  * def PyGetNodeImage(g,h,nodeID) :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the node's image in the adjacence matrix, if it exists.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_69PyGetNodeImage, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 566, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_67PyGetNodeImage, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 559, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetNodeImage, __pyx_t_1) < 0) __PYX_ERR(0, 566, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetNodeImage, __pyx_t_1) < 0) __PYX_ERR(0, 559, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":585
+  /* "PythonGedLib.pyx":579
  *     return getNodeImage(g, h, nodeID)
  * 
  * def PyGetNodePreImage(g,h,nodeID) :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the node's preimage in the adjacence matrix, if it exists.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_71PyGetNodePreImage, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 585, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_69PyGetNodePreImage, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 579, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetNodePreImage, __pyx_t_1) < 0) __PYX_ERR(0, 585, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetNodePreImage, __pyx_t_1) < 0) __PYX_ERR(0, 579, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":604
+  /* "PythonGedLib.pyx":599
  *     return getNodePreImage(g, h, nodeID)
  * 
  * def PyGetDummyNode() :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the ID of a dummy node.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_73PyGetDummyNode, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 604, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_71PyGetDummyNode, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 599, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetDummyNode, __pyx_t_1) < 0) __PYX_ERR(0, 604, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetDummyNode, __pyx_t_1) < 0) __PYX_ERR(0, 599, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":615
+  /* "PythonGedLib.pyx":610
  *     return getDummyNode()
  * 
  * def PyGetNodeMap(g,h) :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the Node Map, like C++ NodeMap.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_75PyGetNodeMap, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 615, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_73PyGetNodeMap, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 610, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetNodeMap, __pyx_t_1) < 0) __PYX_ERR(0, 615, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetNodeMap, __pyx_t_1) < 0) __PYX_ERR(0, 610, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":632
+  /* "PythonGedLib.pyx":627
  *     return getNodeMap(g, h)
  * 
  * def PyGetAssignmentMatrix(g,h) :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the Assignment Matrix between two selected graphs g and h.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_77PyGetAssignmentMatrix, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 632, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_75PyGetAssignmentMatrix, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 627, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetAssignmentMatrix, __pyx_t_1) < 0) __PYX_ERR(0, 632, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetAssignmentMatrix, __pyx_t_1) < 0) __PYX_ERR(0, 627, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":650
+  /* "PythonGedLib.pyx":645
  * 
  * 
  * def PyGetAllMap(g,h) :             # <<<<<<<<<<<<<<
  *     """
  *          Returns a vector which contains the forward and the backward maps between nodes of the two indicated graphs.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_79PyGetAllMap, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 650, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_77PyGetAllMap, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 645, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetAllMap, __pyx_t_1) < 0) __PYX_ERR(0, 650, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetAllMap, __pyx_t_1) < 0) __PYX_ERR(0, 645, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":667
+  /* "PythonGedLib.pyx":662
  *     return getAllMap(g,h)
  * 
  * def PyGetRuntime(g,h) :             # <<<<<<<<<<<<<<
  *     """
  *         Returns the runtime to compute the edit distance cost between two graphs g and h
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_81PyGetRuntime, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 667, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_79PyGetRuntime, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 662, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetRuntime, __pyx_t_1) < 0) __PYX_ERR(0, 667, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyGetRuntime, __pyx_t_1) < 0) __PYX_ERR(0, 662, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":684
+  /* "PythonGedLib.pyx":679
  *     return getRuntime(g,h)
  * 
  * def PyQuasimetricCost() :             # <<<<<<<<<<<<<<
  *     """
  *         Checks and returns if the edit costs are quasimetric.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_83PyQuasimetricCost, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 684, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_81PyQuasimetricCost, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 679, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyQuasimetricCost, __pyx_t_1) < 0) __PYX_ERR(0, 684, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyQuasimetricCost, __pyx_t_1) < 0) __PYX_ERR(0, 679, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":700
+  /* "PythonGedLib.pyx":695
  *     return quasimetricCosts()
  * 
  * def PyHungarianLSAP(matrixCost) :             # <<<<<<<<<<<<<<
  *     """
  *         Applies the hungarian algorithm (LSAP) on a matrix Cost.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_85PyHungarianLSAP, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 700, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_83PyHungarianLSAP, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 695, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyHungarianLSAP, __pyx_t_1) < 0) __PYX_ERR(0, 700, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyHungarianLSAP, __pyx_t_1) < 0) __PYX_ERR(0, 695, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":713
+  /* "PythonGedLib.pyx":708
  *     return hungarianLSAP(matrixCost)
  * 
  * def PyHungarianLSAPE(matrixCost) :             # <<<<<<<<<<<<<<
  *     """
  *         Applies the hungarian algorithm (LSAPE) on a matrix Cost.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_87PyHungarianLSAPE, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 713, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_85PyHungarianLSAPE, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 708, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyHungarianLSAPE, __pyx_t_1) < 0) __PYX_ERR(0, 713, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_PyHungarianLSAPE, __pyx_t_1) < 0) __PYX_ERR(0, 708, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":730
+  /* "PythonGedLib.pyx":725
  * #####################################################################
  * 
  * listOfEditCostOptions = PyGetEditCostOptions()             # <<<<<<<<<<<<<<
  * listOfMethodOptions = PyGetMethodOptions()
  * listOfInitOptions = PyGetInitOptions()
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyGetEditCostOptions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 730, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyGetEditCostOptions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 725, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -16111,24 +16020,24 @@ PyMODINIT_FUNC PyInit_PythonGedLib(void)
     }
   }
   if (__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 730, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 725, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else {
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 730, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 725, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_listOfEditCostOptions, __pyx_t_1) < 0) __PYX_ERR(0, 730, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_listOfEditCostOptions, __pyx_t_1) < 0) __PYX_ERR(0, 725, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":731
+  /* "PythonGedLib.pyx":726
  * 
  * listOfEditCostOptions = PyGetEditCostOptions()
  * listOfMethodOptions = PyGetMethodOptions()             # <<<<<<<<<<<<<<
  * listOfInitOptions = PyGetInitOptions()
  * 
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyGetMethodOptions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 731, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyGetMethodOptions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 726, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -16141,24 +16050,24 @@ PyMODINIT_FUNC PyInit_PythonGedLib(void)
     }
   }
   if (__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 731, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 726, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else {
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 731, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 726, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_listOfMethodOptions, __pyx_t_1) < 0) __PYX_ERR(0, 731, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_listOfMethodOptions, __pyx_t_1) < 0) __PYX_ERR(0, 726, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":732
+  /* "PythonGedLib.pyx":727
  * listOfEditCostOptions = PyGetEditCostOptions()
  * listOfMethodOptions = PyGetMethodOptions()
  * listOfInitOptions = PyGetInitOptions()             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyGetInitOptions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 732, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyGetInitOptions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 727, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -16171,248 +16080,248 @@ PyMODINIT_FUNC PyInit_PythonGedLib(void)
     }
   }
   if (__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 732, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 727, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else {
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 732, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 727, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_listOfInitOptions, __pyx_t_1) < 0) __PYX_ERR(0, 732, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_listOfInitOptions, __pyx_t_1) < 0) __PYX_ERR(0, 727, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":739
+  /* "PythonGedLib.pyx":734
  * #####################
  * 
  * class Error(Exception):             # <<<<<<<<<<<<<<
  *     """
  *         Class for error's management. This one is general.
  */
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 739, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 734, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_builtin_Exception);
   __Pyx_GIVEREF(__pyx_builtin_Exception);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_builtin_Exception);
-  __pyx_t_2 = __Pyx_CalculateMetaclass(NULL, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 739, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CalculateMetaclass(NULL, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 734, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_t_1, __pyx_n_s_Error, __pyx_n_s_Error, (PyObject *) NULL, __pyx_n_s_PythonGedLib, __pyx_kp_s_Class_for_error_s_management_Th); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 739, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_t_1, __pyx_n_s_Error, __pyx_n_s_Error, (PyObject *) NULL, __pyx_n_s_PythonGedLib, __pyx_kp_s_Class_for_error_s_management_Th); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 734, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_Error, __pyx_t_1, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 739, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_Error, __pyx_t_1, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 734, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Error, __pyx_t_4) < 0) __PYX_ERR(0, 739, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Error, __pyx_t_4) < 0) __PYX_ERR(0, 734, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":745
+  /* "PythonGedLib.pyx":740
  *     pass
  * 
  * class EditCostError(Error) :             # <<<<<<<<<<<<<<
  *     """
  *         Class for Edit Cost Error. Raise an error if an edit cost function doesn't exist in the library (not in listOfEditCostOptions).
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_Error); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 745, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_Error); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 745, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_CalculateMetaclass(NULL, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 745, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CalculateMetaclass(NULL, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_1, __pyx_t_2, __pyx_n_s_EditCostError, __pyx_n_s_EditCostError, (PyObject *) NULL, __pyx_n_s_PythonGedLib, __pyx_kp_s_Class_for_Edit_Cost_Error_Raise); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 745, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_1, __pyx_t_2, __pyx_n_s_EditCostError, __pyx_n_s_EditCostError, (PyObject *) NULL, __pyx_n_s_PythonGedLib, __pyx_kp_s_Class_for_Edit_Cost_Error_Raise); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "PythonGedLib.pyx":752
+  /* "PythonGedLib.pyx":747
  *         :type message: string
  *     """
  *     def __init__(self, message):             # <<<<<<<<<<<<<<
  *         """
  *             Inits the error with its message.
  */
-  __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_12PythonGedLib_13EditCostError_1__init__, 0, __pyx_n_s_EditCostError___init, NULL, __pyx_n_s_PythonGedLib, __pyx_d, ((PyObject *)__pyx_codeobj__105)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 752, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_12PythonGedLib_13EditCostError_1__init__, 0, __pyx_n_s_EditCostError___init, NULL, __pyx_n_s_PythonGedLib, __pyx_d, ((PyObject *)__pyx_codeobj__104)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 747, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_init, __pyx_t_4) < 0) __PYX_ERR(0, 752, __pyx_L1_error)
+  if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_init, __pyx_t_4) < 0) __PYX_ERR(0, 747, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "PythonGedLib.pyx":745
+  /* "PythonGedLib.pyx":740
  *     pass
  * 
  * class EditCostError(Error) :             # <<<<<<<<<<<<<<
  *     """
  *         Class for Edit Cost Error. Raise an error if an edit cost function doesn't exist in the library (not in listOfEditCostOptions).
  */
-  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_1, __pyx_n_s_EditCostError, __pyx_t_2, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 745, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_1, __pyx_n_s_EditCostError, __pyx_t_2, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_EditCostError, __pyx_t_4) < 0) __PYX_ERR(0, 745, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_EditCostError, __pyx_t_4) < 0) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":761
+  /* "PythonGedLib.pyx":756
  *         self.message = message
  * 
  * class MethodError(Error) :             # <<<<<<<<<<<<<<
  *     """
  *         Class for Method Error. Raise an error if a computation method doesn't exist in the library (not in listOfMethodOptions).
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_Error); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 761, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_Error); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 756, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 761, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 756, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_2);
   __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_CalculateMetaclass(NULL, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 761, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CalculateMetaclass(NULL, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 756, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_t_1, __pyx_n_s_MethodError, __pyx_n_s_MethodError, (PyObject *) NULL, __pyx_n_s_PythonGedLib, __pyx_kp_s_Class_for_Method_Error_Raise_an); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 761, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_t_1, __pyx_n_s_MethodError, __pyx_n_s_MethodError, (PyObject *) NULL, __pyx_n_s_PythonGedLib, __pyx_kp_s_Class_for_Method_Error_Raise_an); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 756, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "PythonGedLib.pyx":768
+  /* "PythonGedLib.pyx":763
  *         :type message: string
  *     """
  *     def __init__(self, message):             # <<<<<<<<<<<<<<
  *         """
  *             Inits the error with its message.
  */
-  __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_12PythonGedLib_11MethodError_1__init__, 0, __pyx_n_s_MethodError___init, NULL, __pyx_n_s_PythonGedLib, __pyx_d, ((PyObject *)__pyx_codeobj__107)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 768, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_12PythonGedLib_11MethodError_1__init__, 0, __pyx_n_s_MethodError___init, NULL, __pyx_n_s_PythonGedLib, __pyx_d, ((PyObject *)__pyx_codeobj__106)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 763, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_init, __pyx_t_4) < 0) __PYX_ERR(0, 768, __pyx_L1_error)
+  if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_init, __pyx_t_4) < 0) __PYX_ERR(0, 763, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "PythonGedLib.pyx":761
+  /* "PythonGedLib.pyx":756
  *         self.message = message
  * 
  * class MethodError(Error) :             # <<<<<<<<<<<<<<
  *     """
  *         Class for Method Error. Raise an error if a computation method doesn't exist in the library (not in listOfMethodOptions).
  */
-  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_MethodError, __pyx_t_1, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 761, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_MethodError, __pyx_t_1, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 756, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_MethodError, __pyx_t_4) < 0) __PYX_ERR(0, 761, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_MethodError, __pyx_t_4) < 0) __PYX_ERR(0, 756, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "PythonGedLib.pyx":777
+  /* "PythonGedLib.pyx":772
  *         self.message = message
  * 
  * class InitError(Error) :             # <<<<<<<<<<<<<<
  *     """
  *         Class for Init Error. Raise an error if an init option doesn't exist in the library (not in listOfInitOptions).
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_Error); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 777, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_Error); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 772, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 777, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 772, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_CalculateMetaclass(NULL, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 777, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CalculateMetaclass(NULL, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 772, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_1, __pyx_t_2, __pyx_n_s_InitError, __pyx_n_s_InitError, (PyObject *) NULL, __pyx_n_s_PythonGedLib, __pyx_kp_s_Class_for_Init_Error_Raise_an_e); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 777, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_1, __pyx_t_2, __pyx_n_s_InitError, __pyx_n_s_InitError, (PyObject *) NULL, __pyx_n_s_PythonGedLib, __pyx_kp_s_Class_for_Init_Error_Raise_an_e); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 772, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "PythonGedLib.pyx":784
+  /* "PythonGedLib.pyx":779
  *         :type message: string
  *     """
  *     def __init__(self, message):             # <<<<<<<<<<<<<<
  *         """
  *             Inits the error with its message.
  */
-  __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_12PythonGedLib_9InitError_1__init__, 0, __pyx_n_s_InitError___init, NULL, __pyx_n_s_PythonGedLib, __pyx_d, ((PyObject *)__pyx_codeobj__109)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 784, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_12PythonGedLib_9InitError_1__init__, 0, __pyx_n_s_InitError___init, NULL, __pyx_n_s_PythonGedLib, __pyx_d, ((PyObject *)__pyx_codeobj__108)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 779, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_init, __pyx_t_4) < 0) __PYX_ERR(0, 784, __pyx_L1_error)
+  if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_init, __pyx_t_4) < 0) __PYX_ERR(0, 779, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "PythonGedLib.pyx":777
+  /* "PythonGedLib.pyx":772
  *         self.message = message
  * 
  * class InitError(Error) :             # <<<<<<<<<<<<<<
  *     """
  *         Class for Init Error. Raise an error if an init option doesn't exist in the library (not in listOfInitOptions).
  */
-  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_1, __pyx_n_s_InitError, __pyx_t_2, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 777, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_1, __pyx_n_s_InitError, __pyx_t_2, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 772, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_InitError, __pyx_t_4) < 0) __PYX_ERR(0, 777, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_InitError, __pyx_t_4) < 0) __PYX_ERR(0, 772, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":798
+  /* "PythonGedLib.pyx":793
  * #########################################
  * 
  * def encodeYourMap(map) :             # <<<<<<<<<<<<<<
  *     """
  *         Encodes a string dictionnary to utf-8 for C++ functions
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_89encodeYourMap, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 798, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_87encodeYourMap, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 793, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_encodeYourMap, __pyx_t_2) < 0) __PYX_ERR(0, 798, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_encodeYourMap, __pyx_t_2) < 0) __PYX_ERR(0, 793, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":815
+  /* "PythonGedLib.pyx":810
  *     return res
  * 
  * def addRandomGraph(name, classe, listOfNodes, listOfEdges, ignoreDuplicates=True) :             # <<<<<<<<<<<<<<
  *     """
  *         Add a Graph (not GXL) on the environment. Be careful to respect the same format as GXL graphs for labelling nodes and edges.
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_91addRandomGraph, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 815, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_89addRandomGraph, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 810, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_addRandomGraph, __pyx_t_2) < 0) __PYX_ERR(0, 815, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_addRandomGraph, __pyx_t_2) < 0) __PYX_ERR(0, 810, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":842
+  /* "PythonGedLib.pyx":837
  *     return id
  * 
  * def addNxGraph(g, classe, ignoreDuplicates=True) :             # <<<<<<<<<<<<<<
  *     """
  *         Add a Graph (made by networkx) on the environment. Be careful to respect the same format as GXL graphs for labelling nodes and edges.
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_93addNxGraph, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 842, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_91addNxGraph, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 837, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_addNxGraph, __pyx_t_2) < 0) __PYX_ERR(0, 842, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_addNxGraph, __pyx_t_2) < 0) __PYX_ERR(0, 837, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":864
+  /* "PythonGedLib.pyx":859
  * 
  * 
  * def computeGedOnTwoGraphs(g1,g2, editCost, method, options, initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :             # <<<<<<<<<<<<<<
  *     """
  *         Computes the edit distance between two NX graphs.
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_95computeGedOnTwoGraphs, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 864, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_93computeGedOnTwoGraphs, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 859, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_computeGedOnTwoGraphs, __pyx_t_2) < 0) __PYX_ERR(0, 864, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_computeGedOnTwoGraphs, __pyx_t_2) < 0) __PYX_ERR(0, 859, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":907
+  /* "PythonGedLib.pyx":902
  *     return resDistance, resMapping
  * 
  * def computeEditDistanceOnNxGraphs(dataset, classes, editCost, method, options, initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :             # <<<<<<<<<<<<<<
  *     """
  * 
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_97computeEditDistanceOnNxGraphs, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 907, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_95computeEditDistanceOnNxGraphs, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 902, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_computeEditDistanceOnNxGraphs, __pyx_t_2) < 0) __PYX_ERR(0, 907, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_computeEditDistanceOnNxGraphs, __pyx_t_2) < 0) __PYX_ERR(0, 902, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "PythonGedLib.pyx":965
+  /* "PythonGedLib.pyx":959
  * 
  * 
  * def computeEditDistanceOnGXlGraphs(pathFolder, pathXML, editCost, method, options="", initOption = "EAGER_WITHOUT_SHUFFLED_COPIES") :             # <<<<<<<<<<<<<<
  *     """
  *         Computes all the edit distance between each GXL graphs on the folder and the XMl file.
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_99computeEditDistanceOnGXlGraphs, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 965, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_12PythonGedLib_97computeEditDistanceOnGXlGraphs, NULL, __pyx_n_s_PythonGedLib); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 959, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_computeEditDistanceOnGXlGraphs, __pyx_t_2) < 0) __PYX_ERR(0, 965, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_computeEditDistanceOnGXlGraphs, __pyx_t_2) < 0) __PYX_ERR(0, 959, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "PythonGedLib.pyx":1
