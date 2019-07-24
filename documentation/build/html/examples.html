@@ -25,6 +25,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="Python_GedLib 1.0 documentation" href="index.html" />
+    <link rel="next" title="Python GedLib module" href="doc.html" />
     <link rel="prev" title="How to add your own editCost class" href="editcost.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -49,6 +50,11 @@
 </pre></div>
 </div>
 <p>Use your path to access it, without changing the library architecture. After that, you are ready to use the library.</p>
+<p>When you want to make new computation, please use this function :</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">PythonGedLib</span><span class="o">.</span><span class="n">PyRestartEnv</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>All the graphs and results will be delete so make sure you don&#8217;t need it.</p>
 <div class="section" id="classique-case-with-gxl-graphs">
 <h2>Classique case with GXL graphs<a class="headerlink" href="#classique-case-with-gxl-graphs" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">PythonGedLib</span><span class="o">.</span><span class="n">PyLoadGXLGraph</span><span class="p">(</span><span class="s1">&#39;include/gedlib-master/data/datasets/Mutagenicity/data/&#39;</span><span class="p">,</span> <span class="s1">&#39;collections/MUTA_10.xml&#39;</span><span class="p">)</span>
@@ -163,6 +169,7 @@ Please ask Benoît Gauzere for this example !</p>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="editcost.html" title="previous chapter">How to add your own editCost class</a></li>
+      <li>Next: <a href="doc.html" title="next chapter">Python GedLib module</a></li>
   </ul></li>
 </ul>
 </div>

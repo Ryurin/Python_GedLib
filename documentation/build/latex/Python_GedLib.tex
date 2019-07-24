@@ -33,7 +33,7 @@
 
 
 \title{Python\_GedLib Documentation}
-\date{Jul 23, 2019}
+\date{Jul 24, 2019}
 \release{1.0}
 \author{Natacha Lambert}
 \newcommand{\sphinxlogo}{}
@@ -151,7 +151,7 @@ Before using, please read the first section to ensure a good start with the libr
 
 
 \chapter{How to install this library}
-\label{readme:welcome-to-python-gedlib-s-documentation}\label{readme:how-to-install-this-library}\label{readme::doc}
+\label{readme::doc}\label{readme:welcome-to-python-gedlib-s-documentation}\label{readme:how-to-install-this-library}
 Please Read \url{https://dbblumenthal.github.io/gedlib/} before using Python code.
 You can also find this module documentation in documentation/build/html folder.
 
@@ -253,7 +253,7 @@ Python library don't indicate each C++ error. If you have a restart causing by a
 
 
 \chapter{How to add your own editCost class}
-\label{editcost:how-to-add-your-own-editcost-class}\label{editcost::doc}
+\label{editcost::doc}\label{editcost:how-to-add-your-own-editcost-class}
 When you choose your cost function, you can decide some parameters to personalize the function. But if you have some graphs which its type doesn't correpond to the choices, you can create your edit cost function.
 
 For this, you have to write it in C++.
@@ -312,7 +312,7 @@ If you want more informations on C++, you can check the documentation of the ori
 
 
 \chapter{Examples}
-\label{examples:examples}\label{examples::doc}
+\label{examples::doc}\label{examples:examples}
 Before using each example, please make sure to put these lines on the beginnig of your code :
 
 \begin{Verbatim}[commandchars=\\\{\}]
@@ -321,6 +321,14 @@ Before using each example, please make sure to put these lines on the beginnig o
 \end{Verbatim}
 
 Use your path to access it, without changing the library architecture. After that, you are ready to use the library.
+
+When you want to make new computation, please use this function :
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyRestartEnv}\PYG{p}{(}\PYG{p}{)}
+\end{Verbatim}
+
+All the graphs and results will be delete so make sure you don't need it.
 
 
 \section{Classique case with GXL graphs}
@@ -448,7 +456,7 @@ Please ask Benoît Gauzere for this example !
 \phantomsection\label{doc:module-PythonGedLib}\index{PythonGedLib (module)}
 
 \chapter{Python GedLib module}
-\label{doc:python-gedlib-module}\label{doc::doc}
+\label{doc::doc}\label{doc:python-gedlib-module}
 This module allow to use a C++ library for edit distance between graphs (GedLib) with Python.
 
 

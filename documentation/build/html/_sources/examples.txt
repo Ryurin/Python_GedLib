@@ -10,6 +10,14 @@ Before using each example, please make sure to put these lines on the beginnig o
 
 Use your path to access it, without changing the library architecture. After that, you are ready to use the library. 
 
+When you want to make new computation, please use this function : 
+
+.. code-block:: python 
+
+  PythonGedLib.PyRestartEnv()
+
+All the graphs and results will be delete so make sure you don't need it. 
+
 Classique case with GXL graphs
 ------------------------------------
 .. code-block:: python 
