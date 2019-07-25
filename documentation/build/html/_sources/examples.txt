@@ -54,7 +54,7 @@ Classique case with NX graphs
 
   for graph in dataset :
     PythonGedLib.addNxGraph(graph, classes)
-  listID = PythonGedLib.PyGetGraphIds()
+  listID = PythonGedLib.PyGetAllGraphIds()
   PythonGedLib.PySetEditCost("CHEM_1")
 
   PythonGedLib.PyInitEnv()    

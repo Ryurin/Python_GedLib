@@ -33,7 +33,7 @@
 
 
 \title{Python\_GedLib Documentation}
-\date{Jul 24, 2019}
+\date{Jul 25, 2019}
 \release{1.0}
 \author{Natacha Lambert}
 \newcommand{\sphinxlogo}{}
@@ -151,7 +151,7 @@ Before using, please read the first section to ensure a good start with the libr
 
 
 \chapter{How to install this library}
-\label{readme::doc}\label{readme:welcome-to-python-gedlib-s-documentation}\label{readme:how-to-install-this-library}
+\label{readme:how-to-install-this-library}\label{readme:welcome-to-python-gedlib-s-documentation}\label{readme::doc}
 Please Read \url{https://dbblumenthal.github.io/gedlib/} before using Python code.
 You can also find this module documentation in documentation/build/html folder.
 
@@ -253,7 +253,7 @@ Python library don't indicate each C++ error. If you have a restart causing by a
 
 
 \chapter{How to add your own editCost class}
-\label{editcost::doc}\label{editcost:how-to-add-your-own-editcost-class}
+\label{editcost:how-to-add-your-own-editcost-class}\label{editcost::doc}
 When you choose your cost function, you can decide some parameters to personalize the function. But if you have some graphs which its type doesn't correpond to the choices, you can create your edit cost function.
 
 For this, you have to write it in C++.
@@ -312,7 +312,7 @@ If you want more informations on C++, you can check the documentation of the ori
 
 
 \chapter{Examples}
-\label{examples::doc}\label{examples:examples}
+\label{examples:examples}\label{examples::doc}
 Before using each example, please make sure to put these lines on the beginnig of your code :
 
 \begin{Verbatim}[commandchars=\\\{\}]
@@ -366,7 +366,7 @@ This function compute all edit distance between all graphs, even itself. You can
 \begin{Verbatim}[commandchars=\\\{\}]
 \PYG{k}{for} \PYG{n}{graph} \PYG{o+ow}{in} \PYG{n}{dataset} \PYG{p}{:}
   \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{addNxGraph}\PYG{p}{(}\PYG{n}{graph}\PYG{p}{,} \PYG{n}{classes}\PYG{p}{)}
-\PYG{n}{listID} \PYG{o}{=} \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetGraphIds}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{listID} \PYG{o}{=} \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetAllGraphIds}\PYG{p}{(}\PYG{p}{)}
 \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PySetEditCost}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{CHEM\PYGZus{}1}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
 
 \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyInitEnv}\PYG{p}{(}\PYG{p}{)}
@@ -456,7 +456,7 @@ Please ask Benoît Gauzere for this example !
 \phantomsection\label{doc:module-PythonGedLib}\index{PythonGedLib (module)}
 
 \chapter{Python GedLib module}
-\label{doc::doc}\label{doc:python-gedlib-module}
+\label{doc:python-gedlib-module}\label{doc::doc}
 This module allow to use a C++ library for edit distance between graphs (GedLib) with Python.
 
 

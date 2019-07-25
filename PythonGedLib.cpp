@@ -1696,6 +1696,7 @@ static const char __pyx_k_Graphs_loaded[] = "Graphs loaded ! ";
 static const char __pyx_k_PyGetGraphIds[] = "PyGetGraphIds";
 static const char __pyx_k_PySetEditCost[] = "PySetEditCost";
 static const char __pyx_k_encodeYourMap[] = "encodeYourMap";
+static const char __pyx_k_get_edge_data[] = "get_edge_data";
 static const char __pyx_k_PyGetDummyNode[] = "PyGetDummyNode";
 static const char __pyx_k_PyGetGraphName[] = "PyGetGraphName";
 static const char __pyx_k_PyGetNodeImage[] = "PyGetNodeImage";
@@ -1861,6 +1862,7 @@ static PyObject *__pyx_n_s_file;
 static PyObject *__pyx_n_s_g;
 static PyObject *__pyx_n_s_g1;
 static PyObject *__pyx_n_s_g2;
+static PyObject *__pyx_n_s_get_edge_data;
 static PyObject *__pyx_n_s_graph;
 static PyObject *__pyx_n_s_graphID;
 static PyObject *__pyx_n_s_h;
@@ -7257,6 +7259,9 @@ static PyObject *__pyx_pf_12PythonGedLib_90addNxGraph(CYTHON_UNUSED PyObject *__
   Py_ssize_t __pyx_t_9;
   PyObject *__pyx_t_10 = NULL;
   PyObject *__pyx_t_11 = NULL;
+  PyObject *__pyx_t_12 = NULL;
+  PyObject *__pyx_t_13 = NULL;
+  PyObject *__pyx_t_14 = NULL;
   __Pyx_RefNannySetupContext("addNxGraph", 0);
 
   /* "PythonGedLib.pyx":851
@@ -7264,7 +7269,7 @@ static PyObject *__pyx_pf_12PythonGedLib_90addNxGraph(CYTHON_UNUSED PyObject *__
  *     """
  *     id = PyAddGraph(g.name, classe)             # <<<<<<<<<<<<<<
  *     for node in g.nodes :
- *         PyAddNode(id, node[0], node[1])
+ *         PyAddNode(id, str(node), g.node[node])
  */
   __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyAddGraph); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 851, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -7304,7 +7309,7 @@ static PyObject *__pyx_pf_12PythonGedLib_90addNxGraph(CYTHON_UNUSED PyObject *__
  *     """
  *     id = PyAddGraph(g.name, classe)
  *     for node in g.nodes :             # <<<<<<<<<<<<<<
- *         PyAddNode(id, node[0], node[1])
+ *         PyAddNode(id, str(node), g.node[node])
  *     for edge in g.edges :
  */
   __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_g, __pyx_n_s_nodes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 852, __pyx_L1_error)
@@ -7355,23 +7360,32 @@ static PyObject *__pyx_pf_12PythonGedLib_90addNxGraph(CYTHON_UNUSED PyObject *__
     /* "PythonGedLib.pyx":853
  *     id = PyAddGraph(g.name, classe)
  *     for node in g.nodes :
- *         PyAddNode(id, node[0], node[1])             # <<<<<<<<<<<<<<
+ *         PyAddNode(id, str(node), g.node[node])             # <<<<<<<<<<<<<<
  *     for edge in g.edges :
- *         PyAddEdge(id, edge[0], edge[1], edge[2], ignoreDuplicates)
+ *         PyAddEdge(id, str(edge[0]), str(edge[1]), g.get_edge_data(edge[0],edge[1]), ignoreDuplicates)
  */
     __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_PyAddNode); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 853, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_node, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 853, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 853, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_node, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 853, __pyx_L1_error)
+    __Pyx_INCREF(__pyx_v_node);
+    __Pyx_GIVEREF(__pyx_v_node);
+    PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_node);
+    __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_3, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 853, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_8 = NULL;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_g, __pyx_n_s_node); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 853, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_8 = PyObject_GetItem(__pyx_t_3, __pyx_v_node); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 853, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_t_3 = NULL;
     __pyx_t_9 = 0;
     if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_6))) {
-      __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_6);
-      if (likely(__pyx_t_8)) {
+      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_6);
+      if (likely(__pyx_t_3)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_6);
-        __Pyx_INCREF(__pyx_t_8);
+        __Pyx_INCREF(__pyx_t_3);
         __Pyx_INCREF(function);
         __Pyx_DECREF_SET(__pyx_t_6, function);
         __pyx_t_9 = 1;
@@ -7379,18 +7393,18 @@ static PyObject *__pyx_pf_12PythonGedLib_90addNxGraph(CYTHON_UNUSED PyObject *__
     }
     __pyx_t_10 = PyTuple_New(3+__pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 853, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
-    if (__pyx_t_8) {
-      __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_8); __pyx_t_8 = NULL;
+    if (__pyx_t_3) {
+      __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_3); __pyx_t_3 = NULL;
     }
     __Pyx_INCREF(__pyx_v_id);
     __Pyx_GIVEREF(__pyx_v_id);
     PyTuple_SET_ITEM(__pyx_t_10, 0+__pyx_t_9, __pyx_v_id);
-    __Pyx_GIVEREF(__pyx_t_3);
-    PyTuple_SET_ITEM(__pyx_t_10, 1+__pyx_t_9, __pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_4);
-    PyTuple_SET_ITEM(__pyx_t_10, 2+__pyx_t_9, __pyx_t_4);
-    __pyx_t_3 = 0;
+    PyTuple_SET_ITEM(__pyx_t_10, 1+__pyx_t_9, __pyx_t_4);
+    __Pyx_GIVEREF(__pyx_t_8);
+    PyTuple_SET_ITEM(__pyx_t_10, 2+__pyx_t_9, __pyx_t_8);
     __pyx_t_4 = 0;
+    __pyx_t_8 = 0;
     __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_10, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 853, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
@@ -7401,7 +7415,7 @@ static PyObject *__pyx_pf_12PythonGedLib_90addNxGraph(CYTHON_UNUSED PyObject *__
  *     """
  *     id = PyAddGraph(g.name, classe)
  *     for node in g.nodes :             # <<<<<<<<<<<<<<
- *         PyAddNode(id, node[0], node[1])
+ *         PyAddNode(id, str(node), g.node[node])
  *     for edge in g.edges :
  */
   }
@@ -7409,9 +7423,9 @@ static PyObject *__pyx_pf_12PythonGedLib_90addNxGraph(CYTHON_UNUSED PyObject *__
 
   /* "PythonGedLib.pyx":854
  *     for node in g.nodes :
- *         PyAddNode(id, node[0], node[1])
+ *         PyAddNode(id, str(node), g.node[node])
  *     for edge in g.edges :             # <<<<<<<<<<<<<<
- *         PyAddEdge(id, edge[0], edge[1], edge[2], ignoreDuplicates)
+ *         PyAddEdge(id, str(edge[0]), str(edge[1]), g.get_edge_data(edge[0],edge[1]), ignoreDuplicates)
  *     return id
  */
   __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_g, __pyx_n_s_edges); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 854, __pyx_L1_error)
@@ -7460,9 +7474,9 @@ static PyObject *__pyx_pf_12PythonGedLib_90addNxGraph(CYTHON_UNUSED PyObject *__
     __pyx_t_2 = 0;
 
     /* "PythonGedLib.pyx":855
- *         PyAddNode(id, node[0], node[1])
+ *         PyAddNode(id, str(node), g.node[node])
  *     for edge in g.edges :
- *         PyAddEdge(id, edge[0], edge[1], edge[2], ignoreDuplicates)             # <<<<<<<<<<<<<<
+ *         PyAddEdge(id, str(edge[0]), str(edge[1]), g.get_edge_data(edge[0],edge[1]), ignoreDuplicates)             # <<<<<<<<<<<<<<
  *     return id
  * 
  */
@@ -7470,53 +7484,100 @@ static PyObject *__pyx_pf_12PythonGedLib_90addNxGraph(CYTHON_UNUSED PyObject *__
     __Pyx_GOTREF(__pyx_t_6);
     __pyx_t_10 = __Pyx_GetItemInt(__pyx_v_edge, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 855, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
-    __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_edge, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 855, __pyx_L1_error)
+    __pyx_t_8 = PyTuple_New(1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 855, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __Pyx_GIVEREF(__pyx_t_10);
+    PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_10);
+    __pyx_t_10 = 0;
+    __pyx_t_10 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_8, NULL); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 855, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_10);
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+    __pyx_t_8 = __Pyx_GetItemInt(__pyx_v_edge, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 855, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 855, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_edge, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 855, __pyx_L1_error)
+    __Pyx_GIVEREF(__pyx_t_8);
+    PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_8);
+    __pyx_t_8 = 0;
+    __pyx_t_8 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_4, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 855, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_g, __pyx_n_s_get_edge_data); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 855, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_8 = NULL;
+    __pyx_t_11 = __Pyx_GetItemInt(__pyx_v_edge, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 855, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_11);
+    __pyx_t_12 = __Pyx_GetItemInt(__pyx_v_edge, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 855, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_12);
+    __pyx_t_13 = NULL;
+    __pyx_t_9 = 0;
+    if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_3))) {
+      __pyx_t_13 = PyMethod_GET_SELF(__pyx_t_3);
+      if (likely(__pyx_t_13)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+        __Pyx_INCREF(__pyx_t_13);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_3, function);
+        __pyx_t_9 = 1;
+      }
+    }
+    __pyx_t_14 = PyTuple_New(2+__pyx_t_9); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 855, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_14);
+    if (__pyx_t_13) {
+      __Pyx_GIVEREF(__pyx_t_13); PyTuple_SET_ITEM(__pyx_t_14, 0, __pyx_t_13); __pyx_t_13 = NULL;
+    }
+    __Pyx_GIVEREF(__pyx_t_11);
+    PyTuple_SET_ITEM(__pyx_t_14, 0+__pyx_t_9, __pyx_t_11);
+    __Pyx_GIVEREF(__pyx_t_12);
+    PyTuple_SET_ITEM(__pyx_t_14, 1+__pyx_t_9, __pyx_t_12);
+    __pyx_t_11 = 0;
+    __pyx_t_12 = 0;
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_14, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 855, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_t_3 = NULL;
     __pyx_t_9 = 0;
     if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_6))) {
-      __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_6);
-      if (likely(__pyx_t_8)) {
+      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_6);
+      if (likely(__pyx_t_3)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_6);
-        __Pyx_INCREF(__pyx_t_8);
+        __Pyx_INCREF(__pyx_t_3);
         __Pyx_INCREF(function);
         __Pyx_DECREF_SET(__pyx_t_6, function);
         __pyx_t_9 = 1;
       }
     }
-    __pyx_t_11 = PyTuple_New(5+__pyx_t_9); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 855, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_11);
-    if (__pyx_t_8) {
-      __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_8); __pyx_t_8 = NULL;
+    __pyx_t_14 = PyTuple_New(5+__pyx_t_9); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 855, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_14);
+    if (__pyx_t_3) {
+      __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_14, 0, __pyx_t_3); __pyx_t_3 = NULL;
     }
     __Pyx_INCREF(__pyx_v_id);
     __Pyx_GIVEREF(__pyx_v_id);
-    PyTuple_SET_ITEM(__pyx_t_11, 0+__pyx_t_9, __pyx_v_id);
+    PyTuple_SET_ITEM(__pyx_t_14, 0+__pyx_t_9, __pyx_v_id);
     __Pyx_GIVEREF(__pyx_t_10);
-    PyTuple_SET_ITEM(__pyx_t_11, 1+__pyx_t_9, __pyx_t_10);
+    PyTuple_SET_ITEM(__pyx_t_14, 1+__pyx_t_9, __pyx_t_10);
+    __Pyx_GIVEREF(__pyx_t_8);
+    PyTuple_SET_ITEM(__pyx_t_14, 2+__pyx_t_9, __pyx_t_8);
     __Pyx_GIVEREF(__pyx_t_4);
-    PyTuple_SET_ITEM(__pyx_t_11, 2+__pyx_t_9, __pyx_t_4);
-    __Pyx_GIVEREF(__pyx_t_3);
-    PyTuple_SET_ITEM(__pyx_t_11, 3+__pyx_t_9, __pyx_t_3);
+    PyTuple_SET_ITEM(__pyx_t_14, 3+__pyx_t_9, __pyx_t_4);
     __Pyx_INCREF(__pyx_v_ignoreDuplicates);
     __Pyx_GIVEREF(__pyx_v_ignoreDuplicates);
-    PyTuple_SET_ITEM(__pyx_t_11, 4+__pyx_t_9, __pyx_v_ignoreDuplicates);
+    PyTuple_SET_ITEM(__pyx_t_14, 4+__pyx_t_9, __pyx_v_ignoreDuplicates);
     __pyx_t_10 = 0;
+    __pyx_t_8 = 0;
     __pyx_t_4 = 0;
-    __pyx_t_3 = 0;
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_11, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 855, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_14, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 855, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+    __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
     /* "PythonGedLib.pyx":854
  *     for node in g.nodes :
- *         PyAddNode(id, node[0], node[1])
+ *         PyAddNode(id, str(node), g.node[node])
  *     for edge in g.edges :             # <<<<<<<<<<<<<<
- *         PyAddEdge(id, edge[0], edge[1], edge[2], ignoreDuplicates)
+ *         PyAddEdge(id, str(edge[0]), str(edge[1]), g.get_edge_data(edge[0],edge[1]), ignoreDuplicates)
  *     return id
  */
   }
@@ -7524,7 +7585,7 @@ static PyObject *__pyx_pf_12PythonGedLib_90addNxGraph(CYTHON_UNUSED PyObject *__
 
   /* "PythonGedLib.pyx":856
  *     for edge in g.edges :
- *         PyAddEdge(id, edge[0], edge[1], edge[2], ignoreDuplicates)
+ *         PyAddEdge(id, str(edge[0]), str(edge[1]), g.get_edge_data(edge[0],edge[1]), ignoreDuplicates)
  *     return id             # <<<<<<<<<<<<<<
  * 
  * 
@@ -7552,6 +7613,9 @@ static PyObject *__pyx_pf_12PythonGedLib_90addNxGraph(CYTHON_UNUSED PyObject *__
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_10);
   __Pyx_XDECREF(__pyx_t_11);
+  __Pyx_XDECREF(__pyx_t_12);
+  __Pyx_XDECREF(__pyx_t_13);
+  __Pyx_XDECREF(__pyx_t_14);
   __Pyx_AddTraceback("PythonGedLib.addNxGraph", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
@@ -14458,6 +14522,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_g, __pyx_k_g, sizeof(__pyx_k_g), 0, 0, 1, 1},
   {&__pyx_n_s_g1, __pyx_k_g1, sizeof(__pyx_k_g1), 0, 0, 1, 1},
   {&__pyx_n_s_g2, __pyx_k_g2, sizeof(__pyx_k_g2), 0, 0, 1, 1},
+  {&__pyx_n_s_get_edge_data, __pyx_k_get_edge_data, sizeof(__pyx_k_get_edge_data), 0, 0, 1, 1},
   {&__pyx_n_s_graph, __pyx_k_graph, sizeof(__pyx_k_graph), 0, 0, 1, 1},
   {&__pyx_n_s_graphID, __pyx_k_graphID, sizeof(__pyx_k_graphID), 0, 0, 1, 1},
   {&__pyx_n_s_h, __pyx_k_h, sizeof(__pyx_k_h), 0, 0, 1, 1},

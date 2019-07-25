@@ -32,18 +32,18 @@ def afficheMatrix(mat) :
             line+=" "
         print(line)
 
-##def createNxGraph() :
-##    G = nx.Graph()
-##    G.add_node("1", {"chem" : "C"})
-##    G.add_node("2", {"chem" : "0"})
-##    G.add_edges_from("1", "2", {"valence": "1"})
-##    G.add_node("3", {"chem" : "N"})
-##    G.add_node("4", {"chem" : "C"})
-##    G.add_edges_from("3", "4", {"valence": "1"})
-##    G.add_edges_from("3", "2", {"valence": "1"})
-##    return G
-##
-##createNxGraph()
+def createNxGraph() :
+    G = nx.Graph()
+    G.add_node("1", chem = "C")
+    G.add_node("2", chem = "0")
+    G.add_edge("1", "2", valence = "1")
+    G.add_node("3", chem = "N")
+    G.add_node("4", chem = "C")
+    G.add_edge("3", "4", valence = "1")
+    G.add_edge("3", "2", valence = "1")
+    return G
+
+#G = createNxGraph()
 
 def addGraphTest() :
     PythonGedLib.PyRestartEnv()
@@ -126,15 +126,15 @@ def nxTest(dataset) :
     PythonGedLib.PyRestartEnv()
     
     for graph in dataset :
-        PythonGedLib.addNxGraph(graph, classes)
+        PythonGedLib.addNxGraph(graph, "")
         
-    listID = PythonGedLib.PyGetGraphIds()
+    listID = PythonGedLib.PyGetAllGraphIds()
     PythonGedLib.PySetEditCost("CHEM_1")
     PythonGedLib.PyInitEnv()
-
     PythonGedLib.PySetMethod("IPFP", "")
     PythonGedLib.PyInitMethod()
 
+    print(listID)
     g = listID[0]
     h = listID[1]
 
@@ -142,7 +142,8 @@ def nxTest(dataset) :
 
     print("Node Map : ", PythonGedLib.PyGetNodeMap(g,h))
     print ("Upper Bound = " + str(PythonGedLib.PyGetUpperBound(g,h)) + ", Lower Bound = " + str(PythonGedLib.PyGetLowerBound(g,h)) + ", Runtime = " + str(PythonGedLib.PyGetRuntime(g,h)))
-    
+
+#dataset = [createNxGraph(), createNxGraph()]
 #nxTest(dataset)
 
 def LSAPETest(matrixCost) :

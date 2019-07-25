@@ -850,9 +850,9 @@ def addNxGraph(g, classe, ignoreDuplicates=True) :
     """
     id = PyAddGraph(g.name, classe)
     for node in g.nodes :
-        PyAddNode(id, node[0], node[1])
+        PyAddNode(id, str(node), g.node[node])
     for edge in g.edges :
-        PyAddEdge(id, edge[0], edge[1], edge[2], ignoreDuplicates)
+        PyAddEdge(id, str(edge[0]), str(edge[1]), g.get_edge_data(edge[0],edge[1]), ignoreDuplicates)
     return id
 
 
