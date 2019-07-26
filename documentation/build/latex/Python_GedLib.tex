@@ -33,7 +33,7 @@
 
 
 \title{Python\_GedLib Documentation}
-\date{Jul 25, 2019}
+\date{Jul 26, 2019}
 \release{1.0}
 \author{Natacha Lambert}
 \newcommand{\sphinxlogo}{}
@@ -151,7 +151,7 @@ Before using, please read the first section to ensure a good start with the libr
 
 
 \chapter{How to install this library}
-\label{readme:how-to-install-this-library}\label{readme:welcome-to-python-gedlib-s-documentation}\label{readme::doc}
+\label{readme:welcome-to-python-gedlib-s-documentation}\label{readme:how-to-install-this-library}\label{readme::doc}
 Please Read \url{https://dbblumenthal.github.io/gedlib/} before using Python code.
 You can also find this module documentation in documentation/build/html folder.
 
@@ -432,8 +432,27 @@ Please read the documentation before using and respect the types.
 
 \section{Median computation}
 \label{examples:median-computation}
-Coming soon ...
-Please ask Benoît Gauzere for this example !
+An example is available in the Median\_Example folder. It contains the necessary to compute a median graph. You can launch xp-letter-gbr.py to compute median graph on all letters in the dataset, or median.py for le letter Z.
+
+To summarize the use, you can follow this example :
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{pygraph} \PYG{c+c1}{\PYGZsh{}Available with the median example}
+\PYG{k+kn}{from} \PYG{n+nn}{median} \PYG{k+kn}{import} \PYG{n}{draw\PYGZus{}Letter\PYGZus{}graph}\PYG{p}{,} \PYG{n}{compute\PYGZus{}median}\PYG{p}{,} \PYG{n}{compute\PYGZus{}median\PYGZus{}set}
+
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyLoadGXLGraph}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{../include/gedlib\PYGZhy{}master/data/datasets/Letter/HIGH/}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{../include/gedlib\PYGZhy{}master/data/collections/Letter\PYGZus{}Z.xml}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PySetEditCost}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{LETTER}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyInitEnv}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PySetMethod}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{IPFP}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyInitMethod}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{listID} \PYG{o}{=} \PYG{n}{PythonGedLib}\PYG{o}{.}\PYG{n}{PyGetAllGraphIds}\PYG{p}{(}\PYG{p}{)}
+
+\PYG{n}{dataset}\PYG{p}{,}\PYG{n}{my\PYGZus{}y} \PYG{o}{=} \PYG{n}{pygraph}\PYG{o}{.}\PYG{n}{utils}\PYG{o}{.}\PYG{n}{graphfiles}\PYG{o}{.}\PYG{n}{loadDataset}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{../include/gedlib\PYGZhy{}master/data/datasets/Letter/HIGH/Letter\PYGZus{}Z.cxl}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{median}\PYG{p}{,} \PYG{n}{sod}\PYG{p}{,} \PYG{n}{sods\PYGZus{}path}\PYG{p}{,}\PYG{n}{set\PYGZus{}median} \PYG{o}{=} \PYG{n}{compute\PYGZus{}median}\PYG{p}{(}\PYG{n}{PythonGedLib}\PYG{p}{,}\PYG{n}{listID}\PYG{p}{,}\PYG{n}{dataset}\PYG{p}{,}\PYG{n}{verbose}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{)}
+\PYG{n}{draw\PYGZus{}Letter\PYGZus{}graph}\PYG{p}{(}\PYG{n}{median}\PYG{p}{)}
+\end{Verbatim}
+
+Please use the function in the median.py code to simplify your use. You can adapt this example to your case. Also, some function in the PythonGedLib module can make the work easier. Ask Benoît Gauzere if you want more information.
 
 
 \section{Hungarian algorithm}

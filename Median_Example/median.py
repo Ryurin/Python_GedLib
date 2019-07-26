@@ -3,7 +3,7 @@ import pathlib
 import numpy as np
 import networkx as nx
 
-sys.path.insert(0, "/export/home/lambertn/Documents/Python_GedLib/")
+sys.path.insert(0, "../")
 
 from ctypes import *
 lib1 = cdll.LoadLibrary('../lib/fann/libdoublefann.so')
@@ -13,7 +13,7 @@ lib4 = cdll.LoadLibrary('../lib/nomad/libsgtelib.so')
 
 import PythonGedLib
 
-sys.path.insert(0, "/export/home/lambertn/Documents/Python_GedLib/Median_Example/optim-graphes/")
+sys.path.insert(0, "optim-graphes/")
 import pygraph
 
 def replace_graph_in_env(script, graph, old_id, label='median'):
@@ -203,7 +203,7 @@ if __name__ == "__main__":
     dataset,my_y = pygraph.utils.graphfiles.loadDataset("../include/gedlib-master/data/datasets/Letter/HIGH/Letter_Z.cxl")
 
     listID = PythonGedLib.PyGetAllGraphIds()
-    median, sod = compute_median(PythonGedLib,listID,dataset,verbose=True)
+    median, sod , sods_path, set_median = compute_median(PythonGedLib,listID,dataset,verbose=True)
     
     print(sod)
     draw_Letter_graph(median)

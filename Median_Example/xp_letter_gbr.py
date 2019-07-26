@@ -4,7 +4,7 @@ import pathlib
 import numpy as np
 import networkx as nx
 
-sys.path.insert(0, "/export/home/lambertn/Documents/Python_GedLib/")
+sys.path.insert(0, "../")
 
 from ctypes import *
 lib1 = cdll.LoadLibrary('../lib/fann/libdoublefann.so')
@@ -14,7 +14,7 @@ lib4 = cdll.LoadLibrary('../lib/nomad/libsgtelib.so')
 
 import PythonGedLib
 
-sys.path.insert(0, "/export/home/lambertn/Documents/Python_GedLib/Median_Example/optim-graphes/")
+sys.path.insert(0, "optim-graphes/")
 import pygraph
 
 from median import draw_Letter_graph, compute_median, compute_median_set

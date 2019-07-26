@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="Python_GedLib 1.0 documentation" href="index.html" />
-    <link rel="next" title="&lt;no title&gt;" href="doc.html" />
+    <link rel="next" title="Python GedLib module" href="doc.html" />
     <link rel="prev" title="How to add your own editCost class" href="editcost.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -137,8 +137,24 @@
 </div>
 <div class="section" id="median-computation">
 <h2>Median computation<a class="headerlink" href="#median-computation" title="Permalink to this headline">¶</a></h2>
-<p>Coming soon ...
-Please ask Benoît Gauzere for this example !</p>
+<p>An example is available in the Median_Example folder. It contains the necessary to compute a median graph. You can launch xp-letter-gbr.py to compute median graph on all letters in the dataset, or median.py for le letter Z.</p>
+<p>To summarize the use, you can follow this example :</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pygraph</span> <span class="c1">#Available with the median example</span>
+<span class="kn">from</span> <span class="nn">median</span> <span class="kn">import</span> <span class="n">draw_Letter_graph</span><span class="p">,</span> <span class="n">compute_median</span><span class="p">,</span> <span class="n">compute_median_set</span>
+
+<span class="n">PythonGedLib</span><span class="o">.</span><span class="n">PyLoadGXLGraph</span><span class="p">(</span><span class="s1">&#39;../include/gedlib-master/data/datasets/Letter/HIGH/&#39;</span><span class="p">,</span> <span class="s1">&#39;../include/gedlib-master/data/collections/Letter_Z.xml&#39;</span><span class="p">)</span>
+<span class="n">PythonGedLib</span><span class="o">.</span><span class="n">PySetEditCost</span><span class="p">(</span><span class="s2">&quot;LETTER&quot;</span><span class="p">)</span>
+<span class="n">PythonGedLib</span><span class="o">.</span><span class="n">PyInitEnv</span><span class="p">()</span>
+<span class="n">PythonGedLib</span><span class="o">.</span><span class="n">PySetMethod</span><span class="p">(</span><span class="s2">&quot;IPFP&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">PythonGedLib</span><span class="o">.</span><span class="n">PyInitMethod</span><span class="p">()</span>
+<span class="n">listID</span> <span class="o">=</span> <span class="n">PythonGedLib</span><span class="o">.</span><span class="n">PyGetAllGraphIds</span><span class="p">()</span>
+
+<span class="n">dataset</span><span class="p">,</span><span class="n">my_y</span> <span class="o">=</span> <span class="n">pygraph</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">graphfiles</span><span class="o">.</span><span class="n">loadDataset</span><span class="p">(</span><span class="s2">&quot;../include/gedlib-master/data/datasets/Letter/HIGH/Letter_Z.cxl&quot;</span><span class="p">)</span>
+<span class="n">median</span><span class="p">,</span> <span class="n">sod</span><span class="p">,</span> <span class="n">sods_path</span><span class="p">,</span><span class="n">set_median</span> <span class="o">=</span> <span class="n">compute_median</span><span class="p">(</span><span class="n">PythonGedLib</span><span class="p">,</span><span class="n">listID</span><span class="p">,</span><span class="n">dataset</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">draw_Letter_graph</span><span class="p">(</span><span class="n">median</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Please use the function in the median.py code to simplify your use. You can adapt this example to your case. Also, some function in the PythonGedLib module can make the work easier. Ask Benoît Gauzere if you want more information.</p>
 </div>
 <div class="section" id="hungarian-algorithm">
 <h2>Hungarian algorithm<a class="headerlink" href="#hungarian-algorithm" title="Permalink to this headline">¶</a></h2>
@@ -169,7 +185,7 @@ Please ask Benoît Gauzere for this example !</p>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="editcost.html" title="previous chapter">How to add your own editCost class</a></li>
-      <li>Next: <a href="doc.html" title="next chapter">&lt;no title&gt;</a></li>
+      <li>Next: <a href="doc.html" title="next chapter">Python GedLib module</a></li>
   </ul></li>
 </ul>
 </div>

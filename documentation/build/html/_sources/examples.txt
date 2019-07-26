@@ -118,9 +118,27 @@ Please read the documentation before using and respect the types.
 Median computation
 ------------------------------------
 
-Coming soon ... 
-Please ask Benoît Gauzere for this example ! 
+An example is available in the Median_Example folder. It contains the necessary to compute a median graph. You can launch xp-letter-gbr.py to compute median graph on all letters in the dataset, or median.py for le letter Z. 
 
+To summarize the use, you can follow this example : 
+
+.. code-block:: python
+ 
+  import pygraph #Available with the median example
+  from median import draw_Letter_graph, compute_median, compute_median_set
+
+  PythonGedLib.PyLoadGXLGraph('../include/gedlib-master/data/datasets/Letter/HIGH/', '../include/gedlib-master/data/collections/Letter_Z.xml')
+  PythonGedLib.PySetEditCost("LETTER")
+  PythonGedLib.PyInitEnv()
+  PythonGedLib.PySetMethod("IPFP", "")
+  PythonGedLib.PyInitMethod()
+  listID = PythonGedLib.PyGetAllGraphIds()
+
+  dataset,my_y = pygraph.utils.graphfiles.loadDataset("../include/gedlib-master/data/datasets/Letter/HIGH/Letter_Z.cxl")
+  median, sod, sods_path,set_median = compute_median(PythonGedLib,listID,dataset,verbose=True)
+  draw_Letter_graph(median)
+
+Please use the function in the median.py code to simplify your use. You can adapt this example to your case. Also, some function in the PythonGedLib module can make the work easier. Ask Benoît Gauzere if you want more information.     
 
 Hungarian algorithm
 ------------------------------------
