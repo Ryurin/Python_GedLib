@@ -64,7 +64,7 @@ public:
 	 * @param[in] edit_costs Select one of the predefined edit costs.
 	 * @param[in] edit_cost_constants Constants passed to the constructor of the edit cost class selected by @p edit_costs.
 	 */
-	void set_edit_costs(Options::EditCosts edit_costs,  std::vector<double> edit_cost_constants = {});
+	void set_edit_costs(Options::EditCosts edit_costs, std::initializer_list<double> edit_cost_constants = {});
 
 	/*!
 	 * @brief Sets the edit costs to user defined edit costs.
@@ -113,7 +113,9 @@ public:
 	 * @return The ID of the newly loaded graph.
 	 * @note If @p graph_id is set to ged::undefined(), all graphs contained in the environment have to be re-initialized.
 	 */
-	GEDGraph::GraphID load_exchange_graph(const ged::ExchangeGraph<UserNodeID, UserNodeLabel, UserEdgeLabel> & exchange_graph, GEDGraph::GraphID graph_id = ged::undefined(), const std::string & graph_name = "", const std::string & graph_class = "");
+	GEDGraph::GraphID load_exchange_graph(const ged::ExchangeGraph<UserNodeID, UserNodeLabel, UserEdgeLabel> & exchange_graph,
+			GEDGraph::GraphID graph_id = ged::undefined(), Options::ExchangeGraphType exchange_graph_type = Options::ExchangeGraphType::ADJ_MATRIX,
+			const std::string & graph_name = "", const std::string & graph_class = "");
 
 	/*!
 	 * @brief Load graph given in the [GXL file format](http://www.gupro.de/GXL/).
@@ -130,7 +132,8 @@ public:
 	 * and the template parameters @p UserNodeLabel and @p UserEdgeLabel are set to ged::GXLLabel.
 	 */
 	GEDGraph::GraphID load_gxl_graph(const std::string & file_name, Options::GXLNodeEdgeType node_type, Options::GXLNodeEdgeType edge_type,
-			const std::unordered_set<std::string> & irrelevant_node_attributes, const std::unordered_set<std::string> & irrelevant_edge_attributes, GEDGraph::GraphID graph_id = ged::undefined(), const std::string & graph_class = "");
+			const std::unordered_set<std::string> & irrelevant_node_attributes, const std::unordered_set<std::string> & irrelevant_edge_attributes,
+			GEDGraph::GraphID graph_id = ged::undefined(), const std::string & graph_class = "");
 
 	/*!
 	 * @brief Loads graphs given in the [GXL file format](http://www.gupro.de/GXL/).
@@ -149,10 +152,31 @@ public:
 			const std::unordered_set<std::string> & irrelevant_node_attributes = std::unordered_set<std::string>(), const std::unordered_set<std::string> & irrelevant_edge_attributes = std::unordered_set<std::string>());
 
 	/*!
+	 * @brief Saves graph contained in the environment in the [GXL file format](http://www.gupro.de/GXL/).
+	 * @param[in] graph_id ID of the graph that should be saved as GXL file.
+	 * @param[in,out] gxl_file_name Name of GXL file.
+	 * @warning Calls to this method create a compiler error unless the template parameters @p UserNodeID is set to ged::GXLUserNodeID
+	 * and the template parameters @p UserNodeLabel and @p UserEdgeLabel are set to ged::GXLLabel.
+	 */
+	void save_as_gxl_graph(GEDGraph::GraphID graph_id, const std::string & gxl_file_name) const;
+
+	/*!
 	 * @brief Initializes the environment.
 	 * @param[in] init_type Select initialization type.
 	 */
 	void init(Options::InitType init_type = Options::InitType::EAGER_WITHOUT_SHUFFLED_COPIES);
+
+	/*!
+	 * @brief Check if the environment is initialized.
+	 * @return True if the environment is initialized.
+	 */
+	bool initialized() const;
+
+	/*!
+	 * @brief Returns the initialization type of the last initialization.
+	 * @return Initialization type.
+	 */
+	Options::InitType get_init_type() const;
 
 	/*!
 	 * @brief Sets the GEDMethod to be used by run_method().
@@ -185,6 +209,34 @@ public:
 	 * @return The number of graphs (without shuffled copies).
 	 */
 	std::size_t num_graphs() const;
+
+	/*!
+	 * @brief Returns the number of node labels.
+	 * @return Number of pairwise different node labels contained in the environment.
+	 * @note If @p 1 is returned, the nodes are unlabeled.
+	 */
+	std::size_t num_node_labels() const;
+
+	/*!
+	 * @brief Returns node label.
+	 * @param[in] label_id ID of node label that should be returned. Must be between 1 and num_node_labels().
+	 * @return Node label for selected label ID.
+	 */
+	UserNodeLabel get_node_label(LabelID label_id) const;
+
+	/*!
+	 * @brief Returns the number of edge labels.
+	 * @return Number of pairwise different edge labels contained in the environment.
+	 * @note If @p 1 is returned, the edges are unlabeled.
+	 */
+	std::size_t num_edge_labels() const;
+
+	/*!
+	 * @brief Returns edge label.
+	 * @param[in] label_id ID of edge label that should be returned. Must be between 1 and num_node_labels().
+	 * @return Edge label for selected label ID.
+	 */
+	UserEdgeLabel get_edge_label(LabelID label_id) const;
 
 	/*!
 	 * @brief Returns lower bound for edit distance between the input graphs.
@@ -234,10 +286,16 @@ public:
 
 	/*!
 	 * @brief Returns ged::ExchangeGraph representation.
-	 * @param graph_id ID of the selected graph.
+	 * @param[in] graph_id ID of the selected graph.
+	 * @param[in] adj_matrix Set to @p true to construct and adjacency matrix @p adj_matrix and a hash-map
+	 * @p edge_labels, which has a key for each pair @p (i,j) such that @p adj_matrix[i][j] equals 1.
+	 * @param[in] adj_lists Construct adjacency lists for all nodes, i.e., a vector @p adj_lists that, for each node
+	 * @p i and each edge @p (i,j), contains a vector with entries of the form @p (j,edge_label).
+	 * @param[in] edge_list Construct a list of all edges that contains entries of the form @p ((i,j),edge_label).
 	 * @return ged::ExchangeGraph representation of the selected graph.
 	 */
-	ExchangeGraph<UserNodeID, UserNodeLabel, UserEdgeLabel> get_graph(GEDGraph::GraphID graph_id) const;
+	ExchangeGraph<UserNodeID, UserNodeLabel, UserEdgeLabel> get_graph(GEDGraph::GraphID graph_id, bool adj_matrix = true,
+			bool adj_lists = false, bool edge_list = false) const;
 
 	/*!
 	 * @brief Returns the graph class.
@@ -272,6 +330,64 @@ public:
 	 */
 	double get_avg_num_nodes() const;
 
+	/*!
+	 * @brief Returns node relabeling cost.
+	 * @param[in] node_label_1 First node label.
+	 * @param[in] node_label_2 Second node label.
+	 * @return Node relabeling cost for the given node labels.
+	 */
+	double node_rel_cost(const UserNodeLabel & node_label_1, const UserNodeLabel & node_label_2) const;
+
+	/*!
+	 * @brief Returns node deletion cost.
+	 * @param[in] node_label Node label.
+	 * @return Cost of deleting node with given label.
+	 */
+	double node_del_cost(const UserNodeLabel & node_label) const;
+
+	/*!
+	 * @brief Returns node insertion cost.
+	 * @param[in] node_label Node label.
+	 * @return Cost of inserting node with given label.
+	 */
+	double node_ins_cost(const UserNodeLabel & node_label) const;
+
+	/*!
+	 * @brief Computes median node label.
+	 * @param[in] node_labels The node labels whose median should be computed.
+	 * @return Median of the given node labels.
+	 */
+	UserNodeLabel median_node_label(const std::vector<UserNodeLabel> & node_labels) const;
+
+	/*!
+	 * @brief Returns edge relabeling cost.
+	 * @param[in] edge_label_1 First edge label.
+	 * @param[in] edge_label_2 Second edge label.
+	 * @return Edge relabeling cost for the given edge labels.
+	 */
+	double edge_rel_cost(const UserEdgeLabel & edge_label_1, const UserEdgeLabel & edge_label_2) const;
+
+	/*!
+	 * @brief Returns edge deletion cost.
+	 * @param[in] edge_label Edge label.
+	 * @return Cost of deleting edge with given label.
+	 */
+	double edge_del_cost(const UserEdgeLabel & edge_label) const;
+
+	/*!
+	 * @brief Returns edge insertion cost.
+	 * @param[in] edge_label Edge label.
+	 * @return Cost of inserting edge with given label.
+	 */
+	double edge_ins_cost(const UserEdgeLabel & edge_label) const;
+
+	/*!
+	 * @brief Computes median edge label.
+	 * @param[in] edge_labels The edge labels whose median should be computed.
+	 * @return Median of the given edge labels.
+	 */
+	UserEdgeLabel median_edge_label(const std::vector<UserEdgeLabel> & edge_labels) const;
+
 private:
 
 	bool initialized_;
@@ -302,7 +418,9 @@ private:
 
 	GEDGraph::GraphID add_or_clear_shuffled_graph_copy_(GEDGraph::GraphID graph_id);
 
-	std::string to_string_(UserNodeID node_id);
+	std::string to_string_(UserNodeID node_id) const;
+
+	std::string gxl_label_to_string_(GXLLabel gxl_label) const;
 
 };
 

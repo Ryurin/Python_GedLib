@@ -18,6 +18,7 @@
 #include <iostream>
 #include "GedLibBind.h"
 #include "../include/gedlib-master/src/env/ged_env.hpp"
+#include "../include/gedlib-master/median/src/median_graph_estimator.hpp"
 
 using namespace std;
 
@@ -474,6 +475,40 @@ std::vector<std::vector<double>> hungarianLSAPE(std::vector<std::vector<double>>
 	res.push_back(translatePointer(u, nrows));
 	res.push_back(translatePointer(v, ncols));
 	return res;
+}
+
+void medianLetter(pathFolder, pathXML, editCost, method, options="", initOption = "EAGER_WITHOUT_SHUFFLED_COPIES"){
+	
+	if(isInitialized()){
+		restartEnv();
+	}
+	setEditCost(editCost);
+	
+	/*std::string letter_class("A");
+	if (argc > 1) {
+		letter_class = std::string(argv[1]);
+	}*/
+	std::string seed("0");
+	/*if (argc > 2) {
+		seed = std::string(argv[2]);
+	}*/
+	
+	loadGXLGraph(pathFolder, pathXML);
+	std::vector<std::size_t> graph_ids = getAllGraphIds();
+	std::size_t median_id = env.add_graph("median", "");
+	
+	initEnv(initOption);
+	
+	setMethod(method);
+	
+	ged::MedianGraphEstimator<ged::GXLNodeID, ged::GXLLabel, ged::GXLLabel> median_estimator(&env, false);
+	median_estimator.set_options("--init-type RANDOM --randomness PSEUDO --seed " + seed);
+	median_estimator.run(graph_ids, median_id);
+	std::string gxl_file_name("../output/gen_median_Letter_HIGH_" + letter_class + ".gxl");
+	env.save_as_gxl_graph(median_id, gxl_file_name);
+	
+	/*std::string tikz_file_name("../output/gen_median_Letter_HIGH_" + letter_class + ".tex");
+	save_letter_graph_as_tikz_file(env.get_graph(median_id), tikz_file_name);*/
 }
 
 /*!

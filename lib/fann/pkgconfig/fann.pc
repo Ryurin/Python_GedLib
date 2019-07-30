@@ -1,7 +1,7 @@
-prefix=/export/home/lambertn/Documents/Cython_GedLib_2/include/gedlib-master/ext/fann.2.2.0
-exec_prefix=/export/home/lambertn/Documents/Cython_GedLib_2/include/gedlib-master/ext/fann.2.2.0/bin
-libdir=/export/home/lambertn/Documents/Cython_GedLib_2/include/gedlib-master/ext/fann.2.2.0/lib
-includedir=/export/home/lambertn/Documents/Cython_GedLib_2/include/gedlib-master/ext/fann.2.2.0/include
+prefix=/export/home/lambertn/Documents/Python_GedLib/include/gedlib-master/ext/fann.2.2.0
+exec_prefix=/export/home/lambertn/Documents/Python_GedLib/include/gedlib-master/ext/fann.2.2.0/bin
+libdir=/export/home/lambertn/Documents/Python_GedLib/include/gedlib-master/ext/fann.2.2.0/lib
+includedir=/export/home/lambertn/Documents/Python_GedLib/include/gedlib-master/ext/fann.2.2.0/include
  
 Name: fann
 Description: Fast Artificial Neural Network Library
