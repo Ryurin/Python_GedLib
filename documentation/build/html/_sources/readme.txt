@@ -5,7 +5,7 @@ Please Read https://dbblumenthal.github.io/gedlib/ before using Python code.
 You can also find this module documentation in documentation/build/html folder. 
 
 Running the script
-------------------
+-----------------------
 
 After donwloading the entire folder, you can run test.py to ensure the library works. 
 
@@ -24,28 +24,48 @@ After this step, you can use the same lines as Python3 for import, it will be ok
 
 
 A problem with the library ? 
-------------------
+---------------------------------
 
-Maybe the version of GedLib or another library can be a problem. If it is, you can re-install GedLib for your computer. You can download it on this git : https://dbblumenthal.github.io/gedlib/
+If the library isn't found, you can recompile the Python library. Please delete PythonGedLib.so, PythonGedLib.cpp and build folder. Then use this command on a linux shell ::
+
+  python3 setup.py build_ext --inplace
+
+You can make it with Python 2 but make sure you use the same version with your code and the compilation.
+
+If it's doesn't work, maybe the version of GedLib or another library can be a problem. If it is, you can re-install GedLib for your computer. You can download it on this git : https://dbblumenthal.github.io/gedlib/
 
 You have to install Gedlib with the Python installer after that. 
 Just call::
 
   python3 install.py
 
-Make the links like indicate on the documentation. Use the same architecture like this library, but just change the .so and folders with your installation.
+Make the links like indicate on the documentation. Use the same architecture like this library, but just change the .so and folders with your installation. 
 
-After that, if it's doesn't work, you can recompile the Python library. Please delete PythonGedLib.so, PythonGedLib.cpp and build folder. Then use this command on a linux shell ::
+Some functions is added on this version. Please go to include/gedlib-master/src/env folder. You have to add these line in the node_map.hpp::
 
-  python3 setup.py build_ext --inplace
+  std::vector<GEDGraph::NodeID> get_forward_map() const;
+  std::vector<GEDGraph::NodeID> get_backward_map() const;
 
-You can make it with Python 2 but make sure you use the same version with your code and the compilation.
+And these line in the node_map.ipp::
 
-If you have a problem, you can contact me on : natacha.lambert@unicaen.fr
+  std::vector<GEDGraph::NodeID> NodeMap::get_forward_map() const{return forward_map_;}
+  std::vector<GEDGraph::NodeID> NodeMap::get_backward_map() const{return backward_map_;}
+
+At the end, please replace the set_edit_costs in ged_env.hpp::
+
+  void set_edit_costs(Options::EditCosts edit_costs, std::vector<double> edit_cost_constants = {});
+
+Same in ged_env.ipp::
+
+  template<class UserNodeID, class UserNodeLabel, class UserEdgeLabel> void GEDEnv<UserNodeID, UserNodeLabel, UserEdgeLabel>::set_edit_costs(Options::EditCosts edit_costs, std::vector<double> edit_cost_constants) {ged_data_.set_edit_costs_(edit_costs, edit_cost_constants);}
+
+You can recompile the Python library with setup command, after that. 
+
+If your problem is still here, you can contact me on : natacha.lambert@unicaen.fr
 
 
 How to use this library
-------------------
+---------------------------------
 
 This library allow to compute edit distance between two graphs. You have to follow these steps to use it : 
 
@@ -78,6 +98,6 @@ Please read the documentation for more examples and functions.
 
 
 An advice if you don't code in a shell
-------------------
+-------------------------------------------
 
 Python library don't indicate each C++ error. If you have a restart causing by an error in your code, please use on a linux shell for having C++ errors. 

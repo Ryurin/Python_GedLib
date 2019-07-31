@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="Python_GedLib 1.0 documentation" href="index.html" />
-    <link rel="next" title="Python GedLib module" href="doc.html" />
+    <link rel="next" title="How to add your own editCost class" href="editcost.html" />
     <link rel="prev" title="Welcome to Python_GedLib’s documentation!" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -63,19 +63,38 @@ You can also find this module documentation in documentation/build/html folder.<
 </div>
 <div class="section" id="a-problem-with-the-library">
 <h2>A problem with the library ?<a class="headerlink" href="#a-problem-with-the-library" title="Permalink to this headline">¶</a></h2>
-<p>Maybe the version of GedLib or another library can be a problem. If it is, you can re-install GedLib for your computer. You can download it on this git : <a class="reference external" href="https://dbblumenthal.github.io/gedlib/">https://dbblumenthal.github.io/gedlib/</a></p>
+<p>If the library isn&#8217;t found, you can recompile the Python library. Please delete PythonGedLib.so, PythonGedLib.cpp and build folder. Then use this command on a linux shell</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build_ext</span> <span class="o">--</span><span class="n">inplace</span>
+</pre></div>
+</div>
+<p>You can make it with Python 2 but make sure you use the same version with your code and the compilation.</p>
+<p>If it&#8217;s doesn&#8217;t work, maybe the version of GedLib or another library can be a problem. If it is, you can re-install GedLib for your computer. You can download it on this git : <a class="reference external" href="https://dbblumenthal.github.io/gedlib/">https://dbblumenthal.github.io/gedlib/</a></p>
 <p>You have to install Gedlib with the Python installer after that.
 Just call:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">install</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <p>Make the links like indicate on the documentation. Use the same architecture like this library, but just change the .so and folders with your installation.</p>
-<p>After that, if it&#8217;s doesn&#8217;t work, you can recompile the Python library. Please delete PythonGedLib.so, PythonGedLib.cpp and build folder. Then use this command on a linux shell</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build_ext</span> <span class="o">--</span><span class="n">inplace</span>
+<p>Some functions is added on this version. Please go to include/gedlib-master/src/env folder. You have to add these line in the node_map.hpp:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">GEDGraph</span><span class="p">::</span><span class="n">NodeID</span><span class="o">&gt;</span> <span class="n">get_forward_map</span><span class="p">()</span> <span class="n">const</span><span class="p">;</span>
+<span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">GEDGraph</span><span class="p">::</span><span class="n">NodeID</span><span class="o">&gt;</span> <span class="n">get_backward_map</span><span class="p">()</span> <span class="n">const</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>You can make it with Python 2 but make sure you use the same version with your code and the compilation.</p>
-<p>If you have a problem, you can contact me on : <a class="reference external" href="mailto:natacha&#46;lambert&#37;&#52;&#48;unicaen&#46;fr">natacha<span>&#46;</span>lambert<span>&#64;</span>unicaen<span>&#46;</span>fr</a></p>
+<p>And these line in the node_map.ipp:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">GEDGraph</span><span class="p">::</span><span class="n">NodeID</span><span class="o">&gt;</span> <span class="n">NodeMap</span><span class="p">::</span><span class="n">get_forward_map</span><span class="p">()</span> <span class="n">const</span><span class="p">{</span><span class="k">return</span> <span class="n">forward_map_</span><span class="p">;}</span>
+<span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">GEDGraph</span><span class="p">::</span><span class="n">NodeID</span><span class="o">&gt;</span> <span class="n">NodeMap</span><span class="p">::</span><span class="n">get_backward_map</span><span class="p">()</span> <span class="n">const</span><span class="p">{</span><span class="k">return</span> <span class="n">backward_map_</span><span class="p">;}</span>
+</pre></div>
+</div>
+<p>At the end, please replace the set_edit_costs in ged_env.hpp:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">set_edit_costs</span><span class="p">(</span><span class="n">Options</span><span class="p">::</span><span class="n">EditCosts</span> <span class="n">edit_costs</span><span class="p">,</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">edit_cost_constants</span> <span class="o">=</span> <span class="p">{});</span>
+</pre></div>
+</div>
+<p>Same in ged_env.ipp:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">UserNodeID</span><span class="p">,</span> <span class="k">class</span> <span class="nc">UserNodeLabel</span><span class="p">,</span> <span class="k">class</span> <span class="nc">UserEdgeLabel</span><span class="o">&gt;</span> <span class="n">void</span> <span class="n">GEDEnv</span><span class="o">&lt;</span><span class="n">UserNodeID</span><span class="p">,</span> <span class="n">UserNodeLabel</span><span class="p">,</span> <span class="n">UserEdgeLabel</span><span class="o">&gt;</span><span class="p">::</span><span class="n">set_edit_costs</span><span class="p">(</span><span class="n">Options</span><span class="p">::</span><span class="n">EditCosts</span> <span class="n">edit_costs</span><span class="p">,</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">edit_cost_constants</span><span class="p">)</span> <span class="p">{</span><span class="n">ged_data_</span><span class="o">.</span><span class="n">set_edit_costs_</span><span class="p">(</span><span class="n">edit_costs</span><span class="p">,</span> <span class="n">edit_cost_constants</span><span class="p">);}</span>
+</pre></div>
+</div>
+<p>You can recompile the Python library with setup command, after that.</p>
+<p>If your problem is still here, you can contact me on : <a class="reference external" href="mailto:natacha&#46;lambert&#37;&#52;&#48;unicaen&#46;fr">natacha<span>&#46;</span>lambert<span>&#64;</span>unicaen<span>&#46;</span>fr</a></p>
 </div>
 <div class="section" id="how-to-use-this-library">
 <h2>How to use this library<a class="headerlink" href="#how-to-use-this-library" title="Permalink to this headline">¶</a></h2>
@@ -122,7 +141,7 @@ Just call:</p>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="index.html" title="previous chapter">Welcome to Python_GedLib&#8217;s documentation!</a></li>
-      <li>Next: <a href="doc.html" title="next chapter">Python GedLib module</a></li>
+      <li>Next: <a href="editcost.html" title="next chapter">How to add your own editCost class</a></li>
   </ul></li>
 </ul>
 </div>

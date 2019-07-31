@@ -52,8 +52,8 @@ ged_method_{nullptr} {}
 template<class UserNodeID, class UserNodeLabel, class UserEdgeLabel>
 void
 GEDEnv<UserNodeID, UserNodeLabel, UserEdgeLabel>::
-set_edit_costs(Options::EditCosts edit_costs, std::initializer_list<double> edit_cost_constants) {
-	ged_data_.set_edit_costs_(edit_costs, std::vector<double>(edit_cost_constants));
+set_edit_costs(Options::EditCosts edit_costs, std::vector<double> edit_cost_constants) {
+	ged_data_.set_edit_costs_(edit_costs, edit_cost_constants);
 }
 
 template<class UserNodeID, class UserNodeLabel, class UserEdgeLabel>

@@ -2,74 +2,74 @@
 \def\bigletter#1{{\Large\sffamily#1}\nopagebreak\vspace{1mm}}
 
   \bigletter A
-  \item addNxGraph() (in module PythonGedLib), \hyperpage{23}
-  \item addRandomGraph() (in module PythonGedLib), \hyperpage{23}
+  \item addNxGraph() (in module PythonGedLib), \hyperpage{25}
+  \item addRandomGraph() (in module PythonGedLib), \hyperpage{25}
 
   \indexspace
   \bigletter C
-  \item computeEditDistanceOnGXlGraphs() (in module PythonGedLib), \hyperpage{23}
-  \item computeEditDistanceOnNxGraphs() (in module PythonGedLib), \hyperpage{24}
-  \item computeGedOnTwoGraphs() (in module PythonGedLib), \hyperpage{24}
+  \item computeEditDistanceOnGXlGraphs() (in module PythonGedLib), \hyperpage{25}
+  \item computeEditDistanceOnNxGraphs() (in module PythonGedLib), \hyperpage{26}
+  \item computeGedOnTwoGraphs() (in module PythonGedLib), \hyperpage{26}
 
   \indexspace
   \bigletter E
-  \item EditCostError, \hyperpage{11}
-  \item encodeYourMap() (in module PythonGedLib), \hyperpage{25}
-  \item Error, \hyperpage{11}
+  \item EditCostError, \hyperpage{13}
+  \item encodeYourMap() (in module PythonGedLib), \hyperpage{27}
+  \item Error, \hyperpage{13}
 
   \indexspace
   \bigletter I
-  \item InitError, \hyperpage{11}
+  \item InitError, \hyperpage{13}
 
   \indexspace
   \bigletter M
-  \item MethodError, \hyperpage{11}
+  \item MethodError, \hyperpage{13}
 
   \indexspace
   \bigletter P
-  \item PyAddEdge() (in module PythonGedLib), \hyperpage{11}
-  \item PyAddGraph() (in module PythonGedLib), \hyperpage{12}
-  \item PyAddNode() (in module PythonGedLib), \hyperpage{12}
-  \item PyAddSymmetricalEdge() (in module PythonGedLib), \hyperpage{12}
-  \item PyClearGraph() (in module PythonGedLib), \hyperpage{12}
-  \item PyGetAllGraphIds() (in module PythonGedLib), \hyperpage{13}
-  \item PyGetAllMap() (in module PythonGedLib), \hyperpage{13}
-  \item PyGetAssignmentMatrix() (in module PythonGedLib), \hyperpage{13}
-  \item PyGetBackwardMap() (in module PythonGedLib), \hyperpage{14}
-  \item PyGetDummyNode() (in module PythonGedLib), \hyperpage{14}
-  \item PyGetEditCostOptions() (in module PythonGedLib), \hyperpage{14}
-  \item PyGetForwardMap() (in module PythonGedLib), \hyperpage{14}
-  \item PyGetGraphAdjacenceMatrix() (in module PythonGedLib), \hyperpage{15}
-  \item PyGetGraphClass() (in module PythonGedLib), \hyperpage{15}
-  \item PyGetGraphEdges() (in module PythonGedLib), \hyperpage{15}
-  \item PyGetGraphIds() (in module PythonGedLib), \hyperpage{15}
-  \item PyGetGraphInternalId() (in module PythonGedLib), \hyperpage{16}
-  \item PyGetGraphName() (in module PythonGedLib), \hyperpage{16}
-  \item PyGetGraphNodeLabels() (in module PythonGedLib), \hyperpage{16}
-  \item PyGetGraphNumEdges() (in module PythonGedLib), \hyperpage{16}
-  \item PyGetGraphNumNodes() (in module PythonGedLib), \hyperpage{16}
-  \item PyGetInitime() (in module PythonGedLib), \hyperpage{17}
-  \item PyGetInitOptions() (in module PythonGedLib), \hyperpage{17}
-  \item PyGetLowerBound() (in module PythonGedLib), \hyperpage{17}
-  \item PyGetMethodOptions() (in module PythonGedLib), \hyperpage{17}
-  \item PyGetNodeImage() (in module PythonGedLib), \hyperpage{18}
-  \item PyGetNodeMap() (in module PythonGedLib), \hyperpage{18}
-  \item PyGetNodePreImage() (in module PythonGedLib), \hyperpage{19}
-  \item PyGetOriginalNodeIds() (in module PythonGedLib), \hyperpage{19}
-  \item PyGetRuntime() (in module PythonGedLib), \hyperpage{19}
-  \item PyGetUpperBound() (in module PythonGedLib), \hyperpage{20}
-  \item PyHungarianLSAP() (in module PythonGedLib), \hyperpage{20}
-  \item PyHungarianLSAPE() (in module PythonGedLib), \hyperpage{20}
-  \item PyInitEnv() (in module PythonGedLib), \hyperpage{20}
-  \item PyInitMethod() (in module PythonGedLib), \hyperpage{21}
-  \item PyIsInitialized() (in module PythonGedLib), \hyperpage{21}
-  \item PyLoadGXLGraph() (in module PythonGedLib), \hyperpage{21}
-  \item PyQuasimetricCost() (in module PythonGedLib), \hyperpage{21}
-  \item PyRestartEnv() (in module PythonGedLib), \hyperpage{21}
-  \item PyRunMethod() (in module PythonGedLib), \hyperpage{22}
-  \item PySetEditCost() (in module PythonGedLib), \hyperpage{22}
-  \item PySetMethod() (in module PythonGedLib), \hyperpage{22}
-  \item PySetPersonalEditCost() (in module PythonGedLib), \hyperpage{22}
-  \item PythonGedLib (module), \hyperpage{9}
+  \item PyAddEdge() (in module PythonGedLib), \hyperpage{13}
+  \item PyAddGraph() (in module PythonGedLib), \hyperpage{14}
+  \item PyAddNode() (in module PythonGedLib), \hyperpage{14}
+  \item PyAddSymmetricalEdge() (in module PythonGedLib), \hyperpage{14}
+  \item PyClearGraph() (in module PythonGedLib), \hyperpage{14}
+  \item PyGetAllGraphIds() (in module PythonGedLib), \hyperpage{15}
+  \item PyGetAllMap() (in module PythonGedLib), \hyperpage{15}
+  \item PyGetAssignmentMatrix() (in module PythonGedLib), \hyperpage{15}
+  \item PyGetBackwardMap() (in module PythonGedLib), \hyperpage{16}
+  \item PyGetDummyNode() (in module PythonGedLib), \hyperpage{16}
+  \item PyGetEditCostOptions() (in module PythonGedLib), \hyperpage{16}
+  \item PyGetForwardMap() (in module PythonGedLib), \hyperpage{16}
+  \item PyGetGraphAdjacenceMatrix() (in module PythonGedLib), \hyperpage{17}
+  \item PyGetGraphClass() (in module PythonGedLib), \hyperpage{17}
+  \item PyGetGraphEdges() (in module PythonGedLib), \hyperpage{17}
+  \item PyGetGraphIds() (in module PythonGedLib), \hyperpage{17}
+  \item PyGetGraphInternalId() (in module PythonGedLib), \hyperpage{18}
+  \item PyGetGraphName() (in module PythonGedLib), \hyperpage{18}
+  \item PyGetGraphNodeLabels() (in module PythonGedLib), \hyperpage{18}
+  \item PyGetGraphNumEdges() (in module PythonGedLib), \hyperpage{18}
+  \item PyGetGraphNumNodes() (in module PythonGedLib), \hyperpage{18}
+  \item PyGetInitime() (in module PythonGedLib), \hyperpage{19}
+  \item PyGetInitOptions() (in module PythonGedLib), \hyperpage{19}
+  \item PyGetLowerBound() (in module PythonGedLib), \hyperpage{19}
+  \item PyGetMethodOptions() (in module PythonGedLib), \hyperpage{19}
+  \item PyGetNodeImage() (in module PythonGedLib), \hyperpage{20}
+  \item PyGetNodeMap() (in module PythonGedLib), \hyperpage{20}
+  \item PyGetNodePreImage() (in module PythonGedLib), \hyperpage{21}
+  \item PyGetOriginalNodeIds() (in module PythonGedLib), \hyperpage{21}
+  \item PyGetRuntime() (in module PythonGedLib), \hyperpage{21}
+  \item PyGetUpperBound() (in module PythonGedLib), \hyperpage{22}
+  \item PyHungarianLSAP() (in module PythonGedLib), \hyperpage{22}
+  \item PyHungarianLSAPE() (in module PythonGedLib), \hyperpage{22}
+  \item PyInitEnv() (in module PythonGedLib), \hyperpage{22}
+  \item PyInitMethod() (in module PythonGedLib), \hyperpage{23}
+  \item PyIsInitialized() (in module PythonGedLib), \hyperpage{23}
+  \item PyLoadGXLGraph() (in module PythonGedLib), \hyperpage{23}
+  \item PyQuasimetricCost() (in module PythonGedLib), \hyperpage{23}
+  \item PyRestartEnv() (in module PythonGedLib), \hyperpage{23}
+  \item PyRunMethod() (in module PythonGedLib), \hyperpage{24}
+  \item PySetEditCost() (in module PythonGedLib), \hyperpage{24}
+  \item PySetMethod() (in module PythonGedLib), \hyperpage{24}
+  \item PySetPersonalEditCost() (in module PythonGedLib), \hyperpage{24}
+  \item PythonGedLib (module), \hyperpage{11}
 
 \end{theindex}

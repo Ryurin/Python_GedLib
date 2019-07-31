@@ -33,7 +33,7 @@
 
 
 \title{Python\_GedLib Documentation}
-\date{Jul 26, 2019}
+\date{Jul 31, 2019}
 \release{1.0}
 \author{Natacha Lambert}
 \newcommand{\sphinxlogo}{}
@@ -151,7 +151,7 @@ Before using, please read the first section to ensure a good start with the libr
 
 
 \chapter{How to install this library}
-\label{readme:welcome-to-python-gedlib-s-documentation}\label{readme:how-to-install-this-library}\label{readme::doc}
+\label{readme:welcome-to-python-gedlib-s-documentation}\label{readme::doc}\label{readme:how-to-install-this-library}
 Please Read \url{https://dbblumenthal.github.io/gedlib/} before using Python code.
 You can also find this module documentation in documentation/build/html folder.
 
@@ -180,7 +180,15 @@ After this step, you can use the same lines as Python3 for import, it will be ok
 
 \section{A problem with the library ?}
 \label{readme:a-problem-with-the-library}
-Maybe the version of GedLib or another library can be a problem. If it is, you can re-install GedLib for your computer. You can download it on this git : \url{https://dbblumenthal.github.io/gedlib/}
+If the library isn't found, you can recompile the Python library. Please delete PythonGedLib.so, PythonGedLib.cpp and build folder. Then use this command on a linux shell
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{python3} \PYG{n}{setup}\PYG{o}{.}\PYG{n}{py} \PYG{n}{build\PYGZus{}ext} \PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{n}{inplace}
+\end{Verbatim}
+
+You can make it with Python 2 but make sure you use the same version with your code and the compilation.
+
+If it's doesn't work, maybe the version of GedLib or another library can be a problem. If it is, you can re-install GedLib for your computer. You can download it on this git : \url{https://dbblumenthal.github.io/gedlib/}
 
 You have to install Gedlib with the Python installer after that.
 Just call:
@@ -191,15 +199,35 @@ Just call:
 
 Make the links like indicate on the documentation. Use the same architecture like this library, but just change the .so and folders with your installation.
 
-After that, if it's doesn't work, you can recompile the Python library. Please delete PythonGedLib.so, PythonGedLib.cpp and build folder. Then use this command on a linux shell
+Some functions is added on this version. Please go to include/gedlib-master/src/env folder. You have to add these line in the node\_map.hpp:
 
 \begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{python3} \PYG{n}{setup}\PYG{o}{.}\PYG{n}{py} \PYG{n}{build\PYGZus{}ext} \PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{n}{inplace}
+\PYG{n}{std}\PYG{p}{:}\PYG{p}{:}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{GEDGraph}\PYG{p}{:}\PYG{p}{:}\PYG{n}{NodeID}\PYG{o}{\PYGZgt{}} \PYG{n}{get\PYGZus{}forward\PYGZus{}map}\PYG{p}{(}\PYG{p}{)} \PYG{n}{const}\PYG{p}{;}
+\PYG{n}{std}\PYG{p}{:}\PYG{p}{:}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{GEDGraph}\PYG{p}{:}\PYG{p}{:}\PYG{n}{NodeID}\PYG{o}{\PYGZgt{}} \PYG{n}{get\PYGZus{}backward\PYGZus{}map}\PYG{p}{(}\PYG{p}{)} \PYG{n}{const}\PYG{p}{;}
 \end{Verbatim}
 
-You can make it with Python 2 but make sure you use the same version with your code and the compilation.
+And these line in the node\_map.ipp:
 
-If you have a problem, you can contact me on : \href{mailto:natacha.lambert@unicaen.fr}{natacha.lambert@unicaen.fr}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{std}\PYG{p}{:}\PYG{p}{:}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{GEDGraph}\PYG{p}{:}\PYG{p}{:}\PYG{n}{NodeID}\PYG{o}{\PYGZgt{}} \PYG{n}{NodeMap}\PYG{p}{:}\PYG{p}{:}\PYG{n}{get\PYGZus{}forward\PYGZus{}map}\PYG{p}{(}\PYG{p}{)} \PYG{n}{const}\PYG{p}{\PYGZob{}}\PYG{k}{return} \PYG{n}{forward\PYGZus{}map\PYGZus{}}\PYG{p}{;}\PYG{p}{\PYGZcb{}}
+\PYG{n}{std}\PYG{p}{:}\PYG{p}{:}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{GEDGraph}\PYG{p}{:}\PYG{p}{:}\PYG{n}{NodeID}\PYG{o}{\PYGZgt{}} \PYG{n}{NodeMap}\PYG{p}{:}\PYG{p}{:}\PYG{n}{get\PYGZus{}backward\PYGZus{}map}\PYG{p}{(}\PYG{p}{)} \PYG{n}{const}\PYG{p}{\PYGZob{}}\PYG{k}{return} \PYG{n}{backward\PYGZus{}map\PYGZus{}}\PYG{p}{;}\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
+
+At the end, please replace the set\_edit\_costs in ged\_env.hpp:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{void} \PYG{n}{set\PYGZus{}edit\PYGZus{}costs}\PYG{p}{(}\PYG{n}{Options}\PYG{p}{:}\PYG{p}{:}\PYG{n}{EditCosts} \PYG{n}{edit\PYGZus{}costs}\PYG{p}{,} \PYG{n}{std}\PYG{p}{:}\PYG{p}{:}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{double}\PYG{o}{\PYGZgt{}} \PYG{n}{edit\PYGZus{}cost\PYGZus{}constants} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{p}{\PYGZcb{}}\PYG{p}{)}\PYG{p}{;}
+\end{Verbatim}
+
+Same in ged\_env.ipp:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{template}\PYG{o}{\PYGZlt{}}\PYG{k}{class} \PYG{n+nc}{UserNodeID}\PYG{p}{,} \PYG{k}{class} \PYG{n+nc}{UserNodeLabel}\PYG{p}{,} \PYG{k}{class} \PYG{n+nc}{UserEdgeLabel}\PYG{o}{\PYGZgt{}} \PYG{n}{void} \PYG{n}{GEDEnv}\PYG{o}{\PYGZlt{}}\PYG{n}{UserNodeID}\PYG{p}{,} \PYG{n}{UserNodeLabel}\PYG{p}{,} \PYG{n}{UserEdgeLabel}\PYG{o}{\PYGZgt{}}\PYG{p}{:}\PYG{p}{:}\PYG{n}{set\PYGZus{}edit\PYGZus{}costs}\PYG{p}{(}\PYG{n}{Options}\PYG{p}{:}\PYG{p}{:}\PYG{n}{EditCosts} \PYG{n}{edit\PYGZus{}costs}\PYG{p}{,} \PYG{n}{std}\PYG{p}{:}\PYG{p}{:}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{double}\PYG{o}{\PYGZgt{}} \PYG{n}{edit\PYGZus{}cost\PYGZus{}constants}\PYG{p}{)} \PYG{p}{\PYGZob{}}\PYG{n}{ged\PYGZus{}data\PYGZus{}}\PYG{o}{.}\PYG{n}{set\PYGZus{}edit\PYGZus{}costs\PYGZus{}}\PYG{p}{(}\PYG{n}{edit\PYGZus{}costs}\PYG{p}{,} \PYG{n}{edit\PYGZus{}cost\PYGZus{}constants}\PYG{p}{)}\PYG{p}{;}\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
+
+You can recompile the Python library with setup command, after that.
+
+If your problem is still here, you can contact me on : \href{mailto:natacha.lambert@unicaen.fr}{natacha.lambert@unicaen.fr}
 
 
 \section{How to use this library}
@@ -475,7 +503,7 @@ Please use the function in the median.py code to simplify your use. You can adap
 \phantomsection\label{doc:module-PythonGedLib}\index{PythonGedLib (module)}
 
 \chapter{Python GedLib module}
-\label{doc:python-gedlib-module}\label{doc::doc}
+\label{doc::doc}\label{doc:python-gedlib-module}
 This module allow to use a C++ library for edit distance between graphs (GedLib) with Python.
 
 
